@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon-logs" class="cls-1" d="M14,212v-1.714H29V212H14Zm0-5.143H29v1.714H14v-1.714Zm0-3.429H29v1.715H14v-1.715ZM14,200H29v1.714H14V200Z" transform="translate(-14 -200)"/>
+</svg>

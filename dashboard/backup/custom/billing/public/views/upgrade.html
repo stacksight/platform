@@ -1,0 +1,74 @@
+<div id="upgradePlanPage" ng-init="vmb.plans();" class="tab-content m-lg">
+    <h2 class="light">Upgrade to {{vmb.planToUpgrade.name}} plan</h2>
+    <span class="under-title">{{vmb.planToUpgrade.description}}</span>
+    <div class="side-bar right">
+        <!-- <div ng-transclude=""></div>
+        <div class="wrapper-tabs" ng-class="{'down': !data.isCollapse &amp;&amp; data.src === 'stack'}">
+        </div> -->
+    </div>
+    <div class="left-side">
+        <div class="form">
+            <form name="billingDetails">
+                <div class="form-item-1">
+                    <label class="label">Email adress</label>
+                    <input name="name" type="text" class="input-text" ng-model="vmb.global.user.email" placeholder="Email adress" readonly>
+                </div>
+                <div class="form-item-1">
+                    <label class="label">Full name</label>
+                    <input name="name" type="text" class="input-text" placeholder="Full name" ng-model="vmb.global.user.name">
+                </div>
+                <div class="form-item-1">
+                    <label class="label">Country</label>
+                    <select name="country" class="input-text" placeholder="Country" ng-model="vmb.global.user.location.country">
+                        <option value="USA">USA</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Israel">Israel</option>
+                    </select>
+                </div>
+                <div class="form-item-group">
+                    <div class="form-item-1 left">
+                        <label class="label">State</label>
+                         <input name="country" type="text" class="input-text" placeholder="State" ng-model="vmb.global.user.location.state">
+                       <!--  <select name="country" class="input-text" placeholder="State" ng-model="vmb.global.user.location.state">
+                            <option value="USA">USA</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Israel">Israel</option>
+                        </select> -->
+                    </div>
+                    <div class="form-item-1 right">
+                        <label class="label">City</label>
+                        <input name="name" type="text" class="input-text" placeholder="City" ng-model="vmb.global.user.location.city">
+                    </div>
+                </div>
+                <div class="clear clearfix"></div>
+                <div class="form-item-1">
+                    <label class="label">Street</label>
+                    <input name="name" type="text" class="input-text" placeholder="Street" ng-model="vmb.global.user.location.street">
+                </div>
+                <div class="form-item-1">
+                    <label class="label">Zip code</label>
+                    <input name="name" type="text" class="input-text" placeholder="Zip code" ng-model="vmb.global.user.location.zipcode">
+                </div>
+            </form>
+        </div>
+        <div class="promotion">
+            <span>Promotion code:</span>
+            <div class="form-item-1">
+                <input type="text" ng-model="token" placeholder="ENTER COUPON CODE" />
+                <button ng-click="vmb.applyCoupon(token);" class="btn rnd-btn red">Apply</button>
+            </div>
+            <div class="result ok" ng-show="vmb.successApplyCoupon">
+                <span>{{vmb.couponAppliedText}}</span>
+            </div>
+        </div>
+        <div class="form-item-1">
+            <button class="btn rnd-btn red lg" ng-click="vmb.subscribe();" ng-class="{disabled: vmb.payClicked}">Continue to payment</button>
+            <a ui-sref="plans" class="cancel-button">Cancel</a>
+        </div>
+    </div>
+    <div class="right-side">
+        <plan data="vmb.currentPlan" features="vmb.features" class="from"></plan>
+        <span class="arrow"></span>
+        <plan data="vmb.planToUpgrade" promo="vmb.successApplyCoupon" features="vmb.features" class="to"></plan>
+    </div>
+</div>

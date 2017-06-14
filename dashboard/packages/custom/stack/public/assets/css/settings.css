@@ -1,0 +1,76 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, settings.scss */
+#settingsTab {
+  background: #ffffff;
+}
+/* line 6, settings.scss */
+#settingsTab .middle {
+  margin-top: 46px;
+}
+/* line 9, settings.scss */
+#settingsTab form {
+  width: 100%;
+  max-width: 500px;
+}
+/* line 13, settings.scss */
+#settingsTab div.select2 {
+  height: inherit !important;
+}
+/* line 15, settings.scss */
+#settingsTab div.select2 .select2-drop {
+  position: initial;
+}
+/* line 18, settings.scss */
+#settingsTab div.select2 .select2-results {
+  max-height: 120px;
+}
+/* line 23, settings.scss */
+#settingsTab .select2-search input {
+  padding: 0;
+  height: initial !important;
+}
+/* line 28, settings.scss */
+#settingsTab .left-col,
+#settingsTab .right-col {
+  float: left;
+  width: 50%;
+}
+/* line 33, settings.scss */
+#settingsTab .right-col {
+  padding-left: 32px;
+  margin-top: -12px;
+}
+/* line 37, settings.scss */
+#settingsTab .wrapper-input {
+  margin: 10px 0;
+}

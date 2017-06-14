@@ -1,0 +1,31 @@
+<div class="plan" ng-class="(data.popular) ? 'is_popular' : 'no_popular'">
+    <div ng-class="(currentPlan._id == data._id) ? 'opacity' : ''">
+        <div class="top">
+            <div class="name">{{data.name}}</div>
+            <div class="popular" ng-if="!promo && data.popular" ng-show="data.popular">Most Popular</div>
+            <div class="popular" ng-if="promo && data.popular" ng-show="data.popular">Promo applied</div>
+            <div class="applied" ng-if="promo && !data.popular">Promo applied</div>
+        </div>
+        <div class="pBody">
+            <div ng-class="(src === 'plans') ? 'with-button' : ''">
+                <div class="price" ng-if="!data.contactUs">
+                    <span><sup><small>$</small></sup>{{data.amount/100}}</span>
+                    <span>/{{data.interval | limitTo:2}}</span>
+                </div>
+                <div class="price contact-us" ng-if="data.contactUs">Contact us</div>
+                <div class="desc">{{data.description}}</div>
+                <div ng-if="data.coupon"><b>{{data.coupon.id}}</b></div>
+                <hr/>
+                <ul>
+                    <li ng-repeat="feature in data.features" ng-if="feature.active && feature.locatedIn.indexOf('card') > -1">
+                        <span>{{feature.description}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="to-bottom">
+                <a ng-show="src === 'plans' && !data.contactUs" ui-sref="upgrade plan({id: data._id})" class="rnd-btn red" ng-class="{green: data.popular, disabled: disabled}">{{btnText}}</a>
+                <a ng-show="data.contactUs" class="rnd-btn red" href="mailto:{{global.stsEmail}}">{{btnText}}</a>
+            </div>
+        </div>
+    </div>
+</div>

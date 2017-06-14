@@ -1,0 +1,41 @@
+<div>
+    <div class="wrapper-notification-settings">
+        <div class="disflex">
+            <label class="wrapper-checkbox red sm">
+                <input type="checkbox" name="cb-{{data.name}}" ng-model="global.user.profile.notifications[data.name].active" id="cb-{{data.name}}" ng-true-value="'true'" />
+                <label for="cb-{{data.name}}"></label>
+            </label>
+            <label class="flex-grow-1 cb-space">{{data.label}}</label>
+            <label>{{data.description}}</label>
+            <label ng-click="data.edit=!data.edit" class="link grey">
+                <a href="" ng-show="!data.edit">Edit</a>
+                <a href="" ng-show="data.edit">Close</a>
+            </label>
+        </div>
+        <div class="line"></div>
+        <form name="notificationSettingsForm" ng-show="data.edit">
+            <div class="column">
+                <div>FREQUENCY</div>
+                <div ng-repeat="value in frequencyOpts" class="frequency-opt">
+                    <input type="radio" id="radio-1-{{$index}}-{{data.name}}" name="{{data.name}}" class="regular-radio" checked="" ng-model="global.user.profile.notifications[data.name].frequency" ng-value="value.value" ng-disabled="!value.enabled">
+                    <label for="radio-1-{{$index}}-{{data.name}}"></label><span>{{value.label}}</span>
+                    <br>
+                </div>
+            </div>
+            <div class="column">
+                <div>NOTIFY BY</div>
+                <div ng-repeat="value in notifyByOpts">
+                    <div class="wrapper-checkbox red sm" ng-class="{disabled: !value.enabled}">
+                        <input type="checkbox" name="cb-{{data.name}}-{{value.value}}" checklist-model="global.user.profile.notifications[data.name].notifyBy" id="cb-{{data.name}}-{{value.value}}" checklist-value="value.value" ng-disabled="!value.enabled"/>
+                        <label for="cb-{{data.name}}-{{value.value}}"></label>
+                    </div>
+                    <span class="cb-space cb-label">{{value.label}}</span>
+                    <span ng-if="!value.enabled" ng-bind-html="value.message" class="cb-msg"></span>
+                    <!--    <input type="checkbox" checklist-model="global.user.profile.notifications[data.name].notifyBy" checklist-value="value.value" />
+                    <label for="cb-{{data.name}}-{{value.value}}"></label> -->
+                    <!--   <input type="checkbox" checklist-model="global.user.profile.notifications[data.name].notifyBy" checklist-value="value.value"> {{value.label}} -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

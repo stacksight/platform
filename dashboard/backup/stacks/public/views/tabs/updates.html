@@ -1,0 +1,32 @@
+<section id="updatesTab" ng-controller="UpdatesController as vm" class="full-height" ng-init="vm.find()">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title">stack updates</div>
+        </div>
+    </div>
+    <div class="middle" ng-class="{anchor: vm.anchor, 'with-timeline': vm.histogram.length > 1}">
+        <div ng-include="'subscribe'"></div>
+        <div class="updates middle-content" id="updatesContent">
+            <div ng-show="vm.lastUpdated" class="ng-hide last-update">Last updated: {{vm.lastUpdated | date: 'medium'}}</div>
+            <div ng-repeat="key in vm.objectKeys(vm.updates)">
+                <div ng-if="key=='critical'" class="type-title critical">{{vm.updates.critical.length}} critical updates required</div>
+                <div ng-if="key==='available'" class="type-title">{{vm.updates.available.length }} updates available </div>
+                <div ng-repeat="update in vm.updates[key]">
+                    <div class="update" ng-class="key">
+                        <div class="title">{{update.title}}</div>
+                        <div class="_row">
+                            <div>current version</div>
+                            <div class="version">{{update.current_version}}</div>
+                        </div>
+                        <div class="_row">
+                            <div>recommended version</div>
+                            <div class="version">{{update.latest_version}}</div>
+                            <div ng-if="update.release_ts">({{update.release_ts * 1000 | date: 'dd MMM, yyyy'}})</div>
+                            <div><a ng-href="{{update.release_link}}" target="_blank">release notes</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

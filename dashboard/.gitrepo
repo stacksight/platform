@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@gitlab.linnovate.net:stacksight/dashboard.git
+	branch = master
+	commit = 5b42303c6b53eed8704144893022258bb5688c14
+	parent = 0b413dfe87cbf80f19f5982a42bd920d17cd9d8e
+	cmdver = 0.3.1

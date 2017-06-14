@@ -1,0 +1,15 @@
+<div class="wrapper-input embed-code">
+    <div ng-if="data.platform.indexOf('drupal') > -1 && src !== 'settings'">
+        <div ng-init="data.vDrupal=7">Select your Drupal version.</div>
+        <div class="wrapper-input input-include-element">
+            <select name="drupalVersionSelect" ng-model="data.vDrupal" ng-change="data.platform='drupal' + data.vDrupal">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        </div>
+    </div>
+    <pre>
+<button class="btn trans border copy-code" clipboard text="text[data.platform]"><i class="fa fa-clone"></i>copy</button>{{text[data.platform]}}
+    </pre>
+</div>

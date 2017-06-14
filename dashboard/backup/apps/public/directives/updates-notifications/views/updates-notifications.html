@@ -1,0 +1,4 @@
+<div id="updatesNotifications">
+    <div class="din notification critical" ng-if="data.critical.length">{{data.critical.length}}</div>
+    <div class="din notification available" ng-if="data.critical.length === 0 && data.available.length > 0">{{data.available.length}}</div>
+</div>

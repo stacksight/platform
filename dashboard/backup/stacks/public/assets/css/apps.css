@@ -1,0 +1,462 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, apps.scss */
+#appsPage .add-app {
+  position: absolute;
+  top: 50px;
+  z-index: 9999;
+  margin-top: -50px;
+  right: 215px;
+}
+/* line 10, apps.scss */
+#appsPage .add-app button {
+  padding: 12px 66px;
+  background-color: #ff9000;
+  text-shadow: 0px 2px 1px #FF7000;
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: none;
+  border-radius: 23px;
+}
+/* line 22, apps.scss */
+#appsPage .app-context {
+  width: 20%;
+  background: #F6F7FC;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+/* line 31, apps.scss */
+#appsPage .pcolor0 {
+  background-color: #005e80;
+}
+/* line 34, apps.scss */
+#appsPage .pcolor1 {
+  background-color: #ef5350;
+}
+/* line 37, apps.scss */
+#appsPage .pcolor2 {
+  background-color: #536dfe;
+}
+/* line 40, apps.scss */
+#appsPage .pcolor3 {
+  background-color: #00897b;
+}
+/* line 43, apps.scss */
+#appsPage .pcolor4 {
+  background-color: #fbc02d;
+}
+/* line 46, apps.scss */
+#appsPage .services {
+  padding: 20px 70px;
+}
+/* line 51, apps.scss */
+#appsPage .app-fixed-header {
+  position: fixed;
+  top: 50px;
+  width: calc(100% - $sideBarWidth);
+  height: 59px;
+  background-color: #f3f3f3;
+  z-index: 2;
+  /*.select {
+      height: $appHeaderHeight;
+      background: transparent;
+      border: none;
+      font-size: 2em;
+      text-transform: capitalize;
+      font-weight: bold;
+      margin-left: 20px;
+  }*/
+}
+/* line 67, apps.scss */
+#appsPage .app-fixed-header .ui-select-container {
+  display: inline-block;
+  margin-left: 20px;
+  max-width: 30%;
+}
+/* line 72, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-match {
+  height: 100%;
+  line-height: 59px;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+/* line 80, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-match:focus {
+  outline: none;
+}
+/* line 83, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-match .ui-select-toggle {
+  background: transparent;
+  border: none;
+}
+/* line 89, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown {
+  border: solid 1px #e4e4e4;
+  min-width: 500px;
+}
+/* line 92, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown .select2-search {
+  background-color: #f3f3f3;
+  padding: 11px 13px;
+}
+/* line 95, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown .select2-search input {
+  border: solid 1px #e4e4e4;
+  height: 47px !important;
+  padding: 0 15px;
+}
+/* line 101, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown .select2-result-label {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*.env {
+      border: $border;
+      margin-left: 20px;
+      font-weight: normal;
+  }*/
+}
+/* line 106, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown .select2-result-label .fa {
+  font-size: 2em;
+  margin: 0 20px;
+  font-weight: normal;
+}
+/* line 116, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown .select2-result-label .env {
+  font-size: 0.8em;
+  color: #B7B7B7;
+  text-align: right;
+  font-weight: bold;
+  margin-left: 20px;
+}
+/* line 131, apps.scss */
+#appsPage .app-fixed-header .ui-select-container .ui-select-dropdown .select2-result-label .env span {
+  border: solid 1px #e4e4e4;
+  padding: 1px 10px;
+  border-radius: 4px;
+}
+/* line 140, apps.scss */
+#appsPage .app-fixed-header .wrapper-apps {
+  text-transform: capitalize;
+  margin-left: 20px;
+  display: inline-block;
+}
+/* line 144, apps.scss */
+#appsPage .app-fixed-header .wrapper-apps .selected {
+  font-size: 2em;
+  line-height: 59px;
+  font-weight: bold;
+}
+/* line 149, apps.scss */
+#appsPage .app-fixed-header .wrapper-apps ul {
+  display: block;
+}
+/* line 153, apps.scss */
+#appsPage .app-fixed-header .envs {
+  display: inline-block;
+  float: right;
+}
+/* line 156, apps.scss */
+#appsPage .app-fixed-header .envs .env {
+  display: inline-block;
+  line-height: 59px;
+  margin: 0 13px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #AEAEAE;
+}
+/* line 165, apps.scss */
+#appsPage .app-fixed-header .envs .env span {
+  padding: 8px 20px;
+  border-radius: 40px;
+}
+/* line 169, apps.scss */
+#appsPage .app-fixed-header .envs .env.active {
+  color: white;
+  pointer-events: auto;
+}
+/* line 172, apps.scss */
+#appsPage .app-fixed-header .envs .env.active span {
+  background-color: #464a55;
+}
+/* line 176, apps.scss */
+#appsPage .app-fixed-header .envs .env.disable {
+  pointer-events: none;
+}
+/* line 183, apps.scss */
+#appsPage .apps {
+  padding-top: 10px;
+  background: #f3f3f3;
+}
+/* line 186, apps.scss */
+#appsPage .apps ul {
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 190, apps.scss */
+#appsPage .apps li {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  width: 23.5%;
+  height: 330px;
+  margin: 11px 10px 0 10px;
+  vertical-align: top;
+  float: left;
+  box-shadow: 0px 3px 3px 0px rgba(0, 1, 1, 0.25);
+  border: solid 1px #e4e4e4;
+}
+/* line 202, apps.scss */
+#appsPage .apps li:hover .app {
+  height: 23%;
+}
+/* line 204, apps.scss */
+#appsPage .apps li:hover .app .top {
+  height: 0;
+  padding: 0;
+}
+/* line 211, apps.scss */
+#appsPage .apps li .app {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: white;
+  margin: auto;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transition: height 200ms;
+}
+/* line 220, apps.scss */
+#appsPage .apps li .app .top {
+  height: 77%;
+  -webkit-transition: height 200ms;
+  padding-top: 10px;
+}
+/* line 225, apps.scss */
+#appsPage .apps li .app .top .pic, #appsPage .apps li .app .top .app-bg {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+}
+/* line 229, apps.scss */
+#appsPage .apps li .app .top .pic.pic, #appsPage .apps li .app .top .app-bg.pic {
+  /*background-image: url('https://api.url2png.com/v6/P4DE5D1C99D8EF/4578a31bd2e38db8fcbfa8764f121325/png/?url=dropmark.in&thumbnail_max_width=300&viewport=1024x1024');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 235, apps.scss */
+#appsPage .apps li .app .top .pic.app-bg.mean, #appsPage .apps li .app .top .app-bg.app-bg.mean {
+  background-image: url(/apps/assets/img/platforms/mean-bg.png);
+  background-repeat: no-repeat;
+  /*background-size: contain;*/
+  background-color: #19617a;
+  background-position: 50%;
+}
+/* line 242, apps.scss */
+#appsPage .apps li .app .top .pic.app-bg.wordpress, #appsPage .apps li .app .top .app-bg.app-bg.wordpress {
+  background-image: url(/apps/assets/img/platforms/wordpress-bg.png);
+  background-repeat: no-repeat;
+  /*background-color: rgb(0, 114, 140);*/
+  background-color: #e4e4e4;
+  background-size: 100px;
+  background-position: 50%;
+}
+/* line 250, apps.scss */
+#appsPage .apps li .app .top .pic.app-bg.meteor, #appsPage .apps li .app .top .app-bg.app-bg.meteor {
+  background-image: url(/apps/assets/img/platforms/meteor.png);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: contain;
+  /*background-position: 50%;*/
+}
+/* line 261, apps.scss */
+#appsPage .apps li .app .bottom {
+  /*height: 20%;*/
+  padding: 12px;
+}
+/* line 264, apps.scss */
+#appsPage .apps li .app .bottom .b-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: table;
+  /*	.cloud {
+  		width: 40px;
+  		height: 40px;
+  		background: orange;
+  		margin-top: 10px;
+  		float: left;
+  	}
+  	.hide-app {
+  		position: absolute;
+  		right: 0;
+  		top: 0;
+  	}*/
+}
+/* line 269, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform, #appsPage .apps li .app .bottom .b-content .env {
+  display: table-cell;
+}
+/* line 271, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.platform, #appsPage .apps li .app .bottom .b-content .env.platform {
+  vertical-align: middle;
+  position: relative;
+  width: 35px;
+  height: 50px;
+}
+/* line 276, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.platform span, #appsPage .apps li .app .bottom .b-content .env.platform span {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+}
+/* line 285, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.platform span.mean, #appsPage .apps li .app .bottom .b-content .env.platform span.mean {
+  background-image: url(/apps/assets/img/platforms/mean.png);
+}
+/* line 288, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.platform span.wordpress, #appsPage .apps li .app .bottom .b-content .env.platform span.wordpress {
+  background-image: url(/apps/assets/img/platforms/wordpress.jpg);
+}
+/* line 291, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.platform span.meteor, #appsPage .apps li .app .bottom .b-content .env.platform span.meteor {
+  background-image: url(/apps/assets/img/platforms/meteor.jpg);
+}
+/* line 296, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.env, #appsPage .apps li .app .bottom .b-content .env.env {
+  vertical-align: bottom;
+  font-size: 0.8em;
+  color: #B7B7B7;
+  text-align: right;
+  font-weight: bold;
+}
+/* line 311, apps.scss */
+#appsPage .apps li .app .bottom .b-content .platform.env span, #appsPage .apps li .app .bottom .b-content .env.env span {
+  border: solid 1px #e4e4e4;
+  padding: 1px 10px;
+  border-radius: 4px;
+}
+/* line 320, apps.scss */
+#appsPage .apps li .app .bottom .b-content .name div:first-child {
+  font-size: 1.4em;
+}
+/* line 323, apps.scss */
+#appsPage .apps li .app .bottom .b-content .name div:last-child {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+/* line 327, apps.scss */
+#appsPage .apps li .app .bottom .b-content .name div:last-child a:after {
+  margin-top: 0;
+}
+/* line 350, apps.scss */
+#appsPage .apps li .app-services {
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 30px;
+  padding-top: 20%;
+}
+/* line 357, apps.scss */
+#appsPage .apps li .app-services ._label {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+/* line 362, apps.scss */
+#appsPage .apps li .app-services .wrapper-input input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: solid 1px #E5E5E5;
+  padding: 10px;
+}
+/* line 370, apps.scss */
+#appsPage .apps li .app-services .link {
+  border-bottom: solid 1px #E5E5E5;
+}
+/* line 373, apps.scss */
+#appsPage .apps li .app-services .link a:after {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 385, apps.scss */
+  body #appsPage .app-fixed-header {
+    width: 76%;
+  }
+  /* line 387, apps.scss */
+  body #appsPage .app-fixed-header .ui-select-container .ui-select-match {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 394, apps.scss */
+  body #appsPage .app-fixed-header .envs .env {
+    margin: 0;
+  }
+
+  /* line 397, apps.scss */
+  body #appsPage .app-fixed-header .envs .env span {
+    padding: 8px 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 403, apps.scss */
+  body #appsPage .app-fixed-header {
+    width: 100%;
+  }
+  /* line 406, apps.scss */
+  body #appsPage .app-fixed-header .envs .env {
+    font-size: 0.6em;
+  }
+  /* line 408, apps.scss */
+  body #appsPage .app-fixed-header .envs .env span {
+    padding: 4px 6px;
+    margin: 3px;
+  }
+}

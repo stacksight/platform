@@ -1,0 +1,15 @@
+<div class="gauge text-center" d3-gauge width="400" height="210"
+     id="gauge-security"
+     min-value="0"
+     max-value="security.point_max"
+     start-color="#d05350"
+     middle-color="#f2cd32"
+     end-color="#7cb65c"
+     over-color="#ebebeb"
+     step="100"
+     value="security.point_cur">
+</div>
+<div class="container text-center">
+    <h4><strong>Security Strenth: {{widget.nativedata.point_cur}}</strong></h4>
+    <span>Maximum score: {{widget.nativedata.point_max}}</span>
+</div>

@@ -1,0 +1,63 @@
+@import "mean-compass/sass/base";
+
+#dashboarStacksTab{
+
+  #stack-event-list{
+    .counter-bar{
+      height: 58px;
+      margin-bottom: 12px;
+      background: $white;
+      ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        li{
+          float: left;
+          width: 25%;
+          border-right: 1px solid #eaeaea;
+          text-align: center;
+          line-height: 58px;
+          color: $green;
+          font-size: 18px;
+          sup{
+            font-size: 12px;
+          }
+          &.red{
+            color: $red;
+          }
+          span{
+            &.ico{
+              width: 18px;
+              height: 18px;
+              padding-right: 22px;
+              &.ico-lock{
+                width: 13px;
+                height: 17px;
+                background: url('/apps/assets/img/ico/health-icon-lock.png') no-repeat 0px 3px;
+              }
+              &.ico-timer{
+                width: 15px;
+                height: 17px;
+                background: url('/apps/assets/img/ico/health-icon-timer.png') no-repeat 0px 3px;
+              }
+              &.ico-pulse{
+                width: 17px;
+                height: 14px;
+                background: url('/apps/assets/img/ico/health-icon-pulse.png') no-repeat 0px 5px;
+                margin-top: 3px;
+              }
+              &.ico-warning{
+                width: 17px;
+                height: 17px;
+                background: url('/apps/assets/img/ico/health-icon-warning.png') no-repeat 0px 3px;
+              }
+            }
+          }
+          &:last-child{
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}

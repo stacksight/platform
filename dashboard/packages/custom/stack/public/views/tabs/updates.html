@@ -1,0 +1,154 @@
+<section id="updatesTab" ng-controller="UpdatesController as vm" class="full-height" ng-init="vm.find()">
+    <div class="content-side">
+        <div class="cell-container">
+            <div class="content-block">
+                <div class="middle" ng-class="{anchor: vm.anchor, 'with-timeline': vm.histogram.length > 1}">
+                    <div class="updates middle-content" id="updatesContent">
+                        <div class="insights">
+                            <div class="insights-header">
+                                <h3>Insights</h3>
+                                <select name="select_insights" id="select_insights">
+                                    <option value="">All</option>
+                                    <option value="1">Num#1</option>
+                                    <option value="2">Num#2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div ng-show="vm.lastUpdated" class="ng-hide last-update">Last updated: {{vm.lastUpdated | date: 'medium'}}</div>
+                        <div ng-repeat="key in vm.objectKeys(vm.updates)">
+                            <!--<div ng-if="key=='critical'" class="type-title critical">{{vm.updates.critical.length}} critical updates required</div>-->
+                            <!--<div ng-if="key==='available'" class="type-title">{{vm.updates.available.length }} updates available </div>-->
+                            <ul class="updates-list" ng-class="(key=='critical') ? 'critical' : 'not-critical'">
+                                <li ng-repeat="update in vm.updates[key]" ng-click="vm.selectUpdate(update)"
+                                    ng-class="(vm.update_selected == update.$$hashKey) ? 'selected' : ''">
+                                    <div class="cell"  ng-class="(key=='critical') ? 'critical' : ''">
+                                        <div class="text">
+                                            <div class="title">{{update.title}} <span ng-if="key=='critical'" class="security-label">Security Update</span></div>
+                                            <div class="description">
+                                                Current Version <span class="version">{{update.current_version}}</span>
+                                                <i class="fa fa-long-arrow-right"></i>
+                                                Recommended Version
+                                                <span class="version">{{update.latest_version}}</span>
+                                                <span ng-if="update.release_ts">({{update.release_ts * 1000 | date: 'dd MMM, yyyy'}})</span>
+                                            </div>
+                                        </div>
+                                        <!--<div class="ico-v-container">-->
+                                            <!--<span class="ico ico-lock"></span>-->
+                                            <!--<span class="ico-value lock-ico-value green"><span class="value">+85</span></span>-->
+                                        <!--</div>-->
+                                        <div class="button-v-container">
+                                            <a target="_blank" ng-href="{{update.release_link}}">Update</a>
+                                        </div>
+                                    </div>
+
+                                    <hr/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="right-side">
+        <div class="cell-container stack-health ico-block">
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-lock"></span>
+                <span class="ico-value lock-ico-value green">85</span>
+            </div>
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-timer"></span>
+                <span class="ico-value timer-ico-value green">85</span>
+            </div>
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-pulse"></span>
+                <span class="ico-value pulse-ico-value red">45 <sup class="percent">%</sup></span>
+            </div>
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-warning"></span>
+                <span class="ico-value pulse-ico-value green">0</span>
+            </div>
+        </div>
+        <div class="updates-info">
+            <div class="header">
+                <h3>Views</h3>
+            </div>
+            <div class="middle">
+                <div class="top">
+                    <div class="head"><h3>You need Views if</h3></div>
+                    <div class="body">
+                        <ul>
+                            <li>You like the default front page view, but you find you want to sort it differently.</li>
+                            <li>You like the default taxonomy/term view, but you find you want to sort it differently; for example, alphabetically.</li>
+                            <li>You use /tracker, but you want to restrict it to posts of a certain type.</li>
+                            <li>You like the idea of the 'article' module, but it doesn't display articles the way you like.</li>
+                            <li>You want a way to display a block with the 5 most recent posts of some particular type.</li>
+                            <li>You want to provide 'unread forum posts'.</li>
+                            <li>You want a monthly archive similar to the typical Movable Type/Wordpress archives that displays a link to the in the form of
+                                "Month, YYYY (X)" where X is the number of posts that month, and displays them in a block. The links lead to a simple list of posts for
+                                that month.</li>
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <button>More</button>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="head"><h3>Project information</h3></div>
+                    <div class="body">
+                        Maintenance status: <a href="#">Seeking co-maintainer(s)</a>><br>
+                        Development status: <a href="#">Under active development</a><br>
+                        Reported installs: 892,607 sites currently report using this module. View usage statistics.<br>
+                        Downloads: 8,551,949<br>
+                        Automated tests: Enabled<br>
+                        Last modified: February 27, 2016<br>
+                        Stable releases are covered by the security advisory policy.<br>
+                        Look for the shield icon below.<br>
+                    </div>
+                    <div class="versions">
+                        <div class="row">
+                            <div class="header update-block">
+                                <div class="col-sm-3">Version</div>
+                                <div class="col-sm-6">Download</div>
+                                <div class="col-sm-3">Date</div>
+                            </div>
+                            <div class="group">
+                                <div class="green update-block">
+                                    <div class="ico col-sm-3"><i class="fa fa-check-circle"></i> 6.x-3.2</div>
+                                    <div class="col-sm-6"><a href="#">tar.gz (1.1 MB) | zip (1.27 MB)</a></div>
+                                    <div class="col-sm-3">2015-Feb-11</div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="yellow update-block">
+                                    <div class="ico col-sm-3"><i class="fa fa-circle-o"></i> 6.x-3.2</div>
+                                    <div class="col-sm-6"><a href="#">tar.gz (1.1 MB) | zip (1.27 MB)</a></div>
+                                    <div class="col-sm-3">2015-Feb-11</div>
+                                </div>
+                                <div class="yellow update-block">
+                                    <div class="ico col-sm-3"><i class="fa fa-circle-o"></i> 6.x-3.2</div>
+                                    <div class="col-sm-6"><a href="#">tar.gz (1.1 MB) | zip (1.27 MB)</a></div>
+                                    <div class="col-sm-3">2015-Feb-11</div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="red update-block">
+                                    <div class="ico col-sm-3"><i class="fa fa-exclamation-circle"></i> 6.x-3.2</div>
+                                    <div class="col-sm-6"><a href="#">tar.gz (1.1 MB) | zip (1.27 MB)</a></div>
+                                    <div class="col-sm-3">2015-Feb-11</div>
+                                </div>
+                                <div class="red update-block">
+                                    <div class="ico col-sm-3"><i class="fa fa-exclamation-circle"></i> 6.x-3.2</div>
+                                    <div class="col-sm-6"><a href="#">tar.gz (1.1 MB) | zip (1.27 MB)</a></div>
+                                    <div class="col-sm-3">2015-Feb-11</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+</section>

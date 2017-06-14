@@ -1,0 +1,9 @@
+<div id="plansPage" ng-init="vmb.plans();" class="tab-content">
+    <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}">{{alert.msg}}</uib-alert>
+    <side-bar data="vmb.sideBarData"></side-bar>
+    <div class="title">Plans</div>
+    <div class="sub-title">Stacksight enables cross platfrom management from one site to multi-sites network. We offer few pricing plans to manage all open source apps without constant juggling between different plug-ins and tools.</div>
+    <div class="wrapper-plans">
+        <plan ng-repeat="plan in vmb.plans | orderBy:'weight'" data="plan" features="vmb.features" current-plan="vmb.currentPlan" src="plans"></plan>
+    </div>
+</div>

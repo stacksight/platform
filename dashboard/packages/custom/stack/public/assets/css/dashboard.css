@@ -1,0 +1,220 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, dashboard.scss */
+#dashboardChartTab {
+  background-color: #ffffff;
+  clear: both;
+}
+/* line 7, dashboard.scss */
+#dashboardChartTab .middle {
+  overflow: visible;
+  margin-top: 0;
+}
+/* line 10, dashboard.scss */
+#dashboardChartTab .middle .middle-content {
+  padding: 6px;
+  position: relative;
+  padding-top: 13px;
+}
+/* line 14, dashboard.scss */
+#dashboardChartTab .middle .middle-content .date-picker {
+  position: absolute;
+  right: 16px;
+  width: 166px;
+  border-radius: 0;
+  top: -34px;
+  z-index: 20;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+}
+/* line 25, dashboard.scss */
+#dashboardChartTab .middle .middle-content .tabs .mark {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 23px;
+}
+/* line 37, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights {
+  padding: 0 21px;
+  position: relative;
+}
+/* line 41, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .insights-header h3 {
+  line-height: 34px;
+}
+/* line 44, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .insights-header select {
+  min-width: 140px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+  line-height: 34px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 0px;
+  background: #ffffff;
+  -webkit-appearance: none;
+}
+/* line 59, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content {
+  margin-top: 24px;
+}
+/* line 61, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 64, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 14px 0;
+  clear: both;
+  overflow: hidden;
+}
+/* line 69, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .title {
+  font-weight: 600;
+}
+/* line 72, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .text {
+  width: calc(100% - 80px);
+  float: left;
+}
+/* line 76, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container {
+  float: right;
+  width: 80px;
+  margin-top: 4px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+/* line 83, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico-value {
+  display: block;
+  margin: 6px 0px 0 0;
+  color: #58b754;
+}
+/* line 87, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico-value .value {
+  font-size: 22px;
+  padding-right: 6px;
+  font-weight: 600;
+}
+/* line 93, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico {
+  width: 18px;
+  height: 18px;
+  padding-right: 22px;
+  float: right;
+  margin-right: 4px;
+  background-color: #58b754;
+}
+/* line 100, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico.ico-lock {
+  width: 16px;
+  height: 21px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-lock.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-lock.svg") no-repeat 50% 50%;
+  margin-top: 10px;
+}
+/* line 107, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico.ico-timer {
+  width: 19px;
+  height: 21px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-timer.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-timer.svg") no-repeat 50% 50%;
+  margin-top: 10px;
+}
+/* line 114, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico.ico-pulse {
+  width: 19px;
+  height: 15px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-pulse.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-pulse.svg") no-repeat 50% 50%;
+  margin-top: 3px;
+  margin-top: 13px;
+}
+/* line 122, dashboard.scss */
+#dashboardChartTab .middle .middle-content .insights .content ul li .ico-v-container .ico.ico-warning {
+  width: 20px;
+  height: 20px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-warning.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-warning.svg") no-repeat 50% 50%;
+  margin-top: 3px;
+  margin-top: 10px;
+}
+/* line 140, dashboard.scss */
+#dashboardChartTab .title {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+/* line 146, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold {
+  max-width: 540px;
+  margin-left: 30px;
+}
+/* line 150, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li {
+  height: 70px;
+  padding: 8px 0;
+}
+/* line 153, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .platform {
+    /* width: 48px;
+height: 48px;
+margin-top: 4px;
+background-size: contain;*/
+}
+/* line 159, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .info {
+  line-height: 1;
+}
+/* line 161, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .info h4 {
+  font-size: 1.4em;
+  color: #7A529F;
+}
+/* line 166, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .info span.domain {
+  font-size: 0.8em;
+  text-transform: initial;
+}

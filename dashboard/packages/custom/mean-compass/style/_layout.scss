@@ -1,0 +1,539 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    .content {
+        margin-top: $headerHeight;
+    }
+    &.logs,
+    &.events,
+    &.sessions,
+    &.info,
+    &.updates,
+    &[class*="health"],
+    &.settings,
+    &.dashboard,
+    &[class*="stack-integrations"],
+    &[class*="builds"],
+    &.repo,
+    &.availability,
+    &.inventory,
+    &.apps,
+    &.stacks,
+    &.company,
+    &[class*="profile-"],
+    &[class*="company-"],
+    &[class*="stacks-"],
+    &[class*="stack-"],
+    &[class*="app-"],
+    &[class*="apps-"]{
+        background: #f3f3f3;
+        overflow-y: hidden;
+        overflow: auto;
+        .content {
+            margin-top: 50px;
+            overflow: hidden;
+        }
+        .tab-content {
+            padding: 12px;
+            margin-left: $sideBarWidthFull;
+            margin-top: 0;
+            overflow: auto;
+            background: #f3f3f3;
+        }
+    }
+    &.stacks,
+    &.stacks-dashboard,
+    &.stacks-inventory,
+    &.stacks-collaborators,
+    &.stacks-people,
+    &.company,
+    &.company-main-dashboard,
+    &.company-main-inventory,
+    &.company-main-people,
+    &.company-main-dashboard-withparam,
+    &.company-main-dashboard-tour
+    {
+        .tab-content {
+            margin-left: $sideBarWidth;
+        }
+    }
+    &.register,
+    &.login,
+    &.forgot-password,
+    &.reset-tokenId {
+        background: $red;
+        background: url('/users/assets/img/background.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        .navbar,
+        .account {
+            display: none;
+        }
+    }
+    &[class*="apps"],
+    &[class*="app"] {
+        background: rgb(243, 243, 243);
+        &.apps {
+            overflow: auto;
+        }
+    }
+    &.plans {
+        .tab-content {
+            margin-right: $sideBarWidth;
+            margin-left: 57px;
+            padding: 20px;
+        }
+    }
+    .side-bar {
+        z-index: 1101 !important;
+        position: fixed;
+        top: $headerHeight - 2px;
+        bottom: 0;
+        width: $sideBarWidthFull;
+        height: 100%;
+        background: $grey;
+        z-index: 1029;
+        color: white;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        transition-property: width;
+        overflow: auto;
+        a {
+            color: white;
+        }
+        &.right {
+            right: 0;
+        }
+        & + .fa {
+            position: fixed;
+            top: 0;
+            color: white;
+            font-size: 1em;
+            line-height: $headerHeight;
+            z-index: 1029;
+            display: none;
+        }
+        .panel-group {
+            .panel {
+                margin: 0 auto;
+                background: transparent;
+                border: none;
+                width: 100%;
+                padding-top: 8px;
+                .panel-heading {
+                    background: transparent;
+                    color: rgb(142, 119, 163);
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding-bottom: 0;
+                    .panel-title {
+                        font-size: 11px;
+                        font-weight: bold;
+                        border-bottom: solid 1px #917AA8;
+                        padding-bottom: 16px;
+                    }
+                }
+                .panel-collapse {
+                    .panel-body {
+                        padding: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .side-bar-link {
+            position: relative;
+            line-height: 45px;
+            border-left: solid 3px transparent;
+            cursor: pointer;
+            clear: both;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+            overflow: hidden;
+            .tabtext, a {
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                width: calc(100% - 45px);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: block;
+                overflow: hidden;
+            }
+            &.active,
+            &:hover {
+                background-color: $darkGrey;
+                border-width: 3px;
+            }
+            &.red {
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 1em;
+                &.active,
+                &:hover {
+                    border-left-color: $red;
+                }
+            }
+            &.grey {
+                font-weight: normal;
+                text-transform: none;
+                font-size: 1.2em;
+                &.active,
+                &:hover {
+                    border-left-color: #121826;
+                }
+                a {
+                    padding-left: 0;
+                }
+            }
+            span {
+                vertical-align: middle;
+                padding-left: 4px;
+                &.ico-sidebar{
+                    display: block;
+                    width: 45px;
+                    height: 45px;
+                    float: left;
+                    &.Dashboard, &.dashboard{
+                        background: url("/stacks/assets/img/ico/icon-dashboard.svg") no-repeat 50%;
+                    }
+                    &.Stacks,  &.stacks{
+                        background: url("/stacks/assets/img/ico/icon-stacks.svg") no-repeat 50%;
+                    }
+                    &.Tour,  &.tour{
+                        background: url("/stacks/assets/img/ico/icon-question.svg") no-repeat 50%;
+                    }
+                    &.Collaborators, &.collaborators{
+                        background: url("/stacks/assets/img/ico/icon-collaborators.svg") no-repeat 50%;
+                    }
+                    &.Inventory, &.inventory{
+                        background: url("/stacks/assets/img/ico/icon-inventory.svg") no-repeat 50%;
+                    }
+                    &.People, &.people{
+                        background: url("/stacks/assets/img/ico/icon-people.svg") no-repeat 50%;
+                    }
+                    &.Policy, &.policy{
+                        background: url("/stacks/assets/img/ico/icon-policy.svg") no-repeat 50%;
+                    }
+                    &.Settings, &.settings{
+                        background: url("/stacks/assets/img/ico/icon-settings.svg") no-repeat 50%;
+                    }
+                    &.Events, &.events{
+                        background: url("/stacks/assets/img/ico/icon-events.svg") no-repeat 50%;
+                    }
+                    &.Health, &.health{
+                        background: url("/stacks/assets/img/ico/iocn-health.svg") no-repeat 50%;
+                    }
+                    &.Logs, &.logs{
+                        background: url("/stacks/assets/img/ico/icon-logs.svg") no-repeat 50%;
+                    }
+                    &.Updates, &.updates{
+                        background: url("/stacks/assets/img/ico/icon-sessions.svg") no-repeat 50%;
+                    }
+
+                    &.Integrations, &.integrations{
+                        background: url("/profile/assets/img/icon-notifications.png") no-repeat 50%;
+                    }
+                    &.Password, &.password{
+                        background: url("/profile/assets/img/icon-password.png") no-repeat 50%;
+                    }
+                    &.Upgrade_plan, &.upgrade_plan{
+                        background: url("/profile/assets/img/icon-upgrade_plan.png") no-repeat 50%;
+                    }
+                    &.Billing, &.billing{
+                        background: url("/profile/assets/img/icon-billing.png") no-repeat 50%;
+                    }
+                    &.Sessions, &.sessions{
+                        background: url("/stacks/assets/img/ico/icon-settings.svg") no-repeat 50%;
+                    }
+                    &.Builds, &.builds{
+                        background: url("/stacks/assets/img/ico/icon-builds.svg") no-repeat 50%;
+                    }
+                    &.Profile, &.profile{
+                        background: url("/profile/assets/img/icon-profile.png") no-repeat 50%;
+                    }
+                    &.Notifications, &.notifications{
+                        background: url("/profile/assets/img/icon-notifications.png") no-repeat 50%;
+                    }
+                }
+            }
+            &.title {
+                border-bottom: solid 1px #5D6067;
+                //margin-left: 3px;
+                &.active,
+                &:hover {
+                    background: $grey;
+                    border-left-color: transparent;
+                }
+            }
+            &.disable {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+            i {
+                vertical-align: middle;
+                position: absolute;
+                top: 50%;
+                margin-top: -9px;
+                right: 10px;
+                font-size: 1.1em;
+            }
+            .platform {
+                overflow: hidden;
+                margin-top: 4px;
+                display: block;
+                float: left;
+                margin-left: 8px;
+            }
+        }
+        .side-bar-title {
+            text-transform: capitalize;
+            //font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.4em;
+            margin-left: 13px;
+            span {
+                vertical-align: middle;
+                padding-left: 4px;
+                &.ico-sidebar {
+                    display: block;
+                    width: 24px;
+                    height: 27px;
+                    float: left;
+                    &.Levelup, &.levelup{
+                        background: url("/stacks/assets/img/ico/icon-levelup.svg") no-repeat 50%;
+                    }
+                }
+            }
+        }
+        .wrapper-tabs {
+            width: 100%;
+            &.down {
+                /* position: absolute; */
+                /* bottom: 57px; */
+            }
+        }
+        .template {
+            position: absolute;
+            right: 0;
+            &.updates {
+                margin-right: 10px;
+                display: inline-block;
+                .notification {
+                    position: relative !important;
+                }
+            }
+        }
+        .subtabs {
+            .side-bar-link {
+                padding-left: 70px;
+                border-left-color: $grey;
+                width: 100%;
+                &.active,
+                &:hover {
+                    border-left-color: $darkerGrey;
+                    background-color: $darkerGrey;
+                }
+            }
+        }
+    }
+    &.stacks,
+    &.stacks-dashboard,
+    &.stacks-inventory,
+    &.stacks-collaborators,
+    &.stacks-people,
+    &.company,
+    &.company-main-dashboard,
+    &.company-main-inventory,
+    &.company-main-people,
+    &.company-main-dashboard-withparam,
+    &.company-main-dashboard-tour{
+        .side-bar {
+            width: $sideBarWidth;
+            .side-bar-link {
+                line-height: 36px;
+                height: 91px;
+                border-bottom: 1px solid #595e67;
+                white-space: nowrap;
+                text-align: center;
+                .tabtext, a {
+                    width: auto;
+                    white-space: nowrap;
+                    text-align: center;
+                }
+                    &.red{
+                    border-left: none;
+                    &:hover {
+                        border-left: none;
+                    }
+                }
+                span {
+                    &.ico-sidebar{
+                        margin: 0 auto;
+                        float: none;
+                        &.Dashboard, &.dashboard{
+                            background: url("/stacks/assets/img/ico/icon-dashboard.svg") no-repeat 50% 100%;
+                        }
+                        &.Stacks,  &.stacks{
+                            background: url("/stacks/assets/img/ico/icon-stacks.svg") no-repeat 50% 100%;
+                        }
+                        &.Tour,  &.tour{
+                            background: url("/stacks/assets/img/ico/icon-question.svg") no-repeat 50% 100%;
+                        }
+                        &.Collaborators, &.collaborators{
+                            background: url("/stacks/assets/img/ico/icon-collaborators.svg") no-repeat 50% 100%;
+                        }
+                        &.Inventory, &.inventory{
+                            background: url("/stacks/assets/img/ico/icon-stacks.svg") no-repeat 50%  100%;
+                        }
+                        &.Policy, &.policy{
+                            background: url("/stacks/assets/img/ico/icon-policy.svg") no-repeat 50% 100%;
+                        }
+                        &.Settings, &.settings{
+                            background: url("/stacks/assets/img/ico/icon-settings.svg") no-repeat 50% 100%;
+                        }
+                        &.Events, &.events{
+                            background: url("/stacks/assets/img/ico/icon-events.svg") no-repeat 50% 100%;
+                        }
+                        &.Health, &.health{
+                            background: url("/stacks/assets/img/ico/iocn-health.svg") no-repeat 50% 100%;
+                        }
+                        &.Logs, &.logs{
+                            background: url("/stacks/assets/img/ico/icon-logs.svg") no-repeat 50% 100%;
+                        }
+                        &.Updates, &.updates{
+                            background: url("/stacks/assets/img/ico/icon-sessions.svg") no-repeat 50% 100%;
+                        }
+                        &.Integrations, &.integrations{
+                            background: url("/stacks/assets/img/ico/icon-integrations.svg") no-repeat 50% 100%;
+                        }
+                        &.Sessions, &.sessions{
+                            background: url("/stacks/assets/img/ico/icon-settings.svg") no-repeat 50% 100%;
+                        }
+                        &.Builds, &.builds{
+                            background: url("/stacks/assets/img/ico/icon-builds.svg") no-repeat 50% 100%;
+                        }
+                        &.People, &.people{
+                            background: url("/stacks/assets/img/ico/icon-collaborators.svg") no-repeat 50%  100%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &[class*="profile-"]
+    {
+        //padding: $mainContentPadding;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        &.logs,
+        &.events,
+        &.sessions,
+        &.info {
+            .tab-content {
+                margin-left: $sideBar1024Width;
+            }
+        }
+        .side-bar {
+            //width: $sideBar1024Width;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        &.logs,
+        &.events,
+        &.sessions,
+        &.info {
+            .tab-content {
+                margin-left: 0;
+            }
+        }
+        .side-bar {
+            font-size: 0;
+            width: 0;
+            & + .fa {
+                display: block;
+            }
+            .side-bar-link.active {
+                background: transparent;
+                border-color: transparent;
+            }
+            &.test {
+                width: $sideBar480Width;
+                font-size: 1em;
+                .side-bar-link.active {
+                    background-color: #1D1E22;
+                    border-left: solid 5px $red;
+                }
+            }
+        }
+    }
+}
+
+
+#small-screen-dummy{
+    color: #ffffff;
+    .header{
+        text-align: center;
+        padding: 38px 0;
+    }
+    span{
+        display: block;
+        text-align: center;
+        font-weight: 100;
+        &.first{
+            margin-top: 60px;
+            font-size: 24px;
+            padding: 0 20px;
+        }
+        &.second{
+            margin-top: 12px;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+    }
+    a, button{
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        line-height: 36px;
+        margin: 28px 24px 64px 24px;
+        background: #5bb754;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+.introjs-hints{
+    display: none;
+}
+@media screen and (max-width: 640px) {
+    body{
+        background: #2c3036 !important;
+        #application-body, .introjs-hints{
+            display: none !important;
+        }
+    }
+    #small-screen-dummy{
+        display: block !important;
+    }
+}
+@media screen and (min-width: 641px) {
+    #small-screen-dummy{
+        display: none !important;
+    }
+    #application-body{
+        display: block !important;
+    }
+}

@@ -1,0 +1,99 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 2, dashboard.scss */
+#dashboardChartTab {
+  background-color: #ffffff;
+}
+/* line 4, dashboard.scss */
+#dashboardChartTab .middle-content {
+  padding: 6px;
+  position: relative;
+  padding-top: 13px;
+}
+/* line 8, dashboard.scss */
+#dashboardChartTab .middle-content .date-picker {
+  position: absolute;
+  right: 6px;
+  width: 166px;
+  border-radius: 0;
+  top: 11px;
+  z-index: 20;
+}
+/* line 17, dashboard.scss */
+#dashboardChartTab .middle-content .tabs .mark {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 23px;
+}
+/* line 30, dashboard.scss */
+#dashboardChartTab .title {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+/* line 36, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold {
+  max-width: 540px;
+  margin-left: 30px;
+}
+/* line 40, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li {
+  height: 70px;
+  padding: 8px 0;
+}
+/* line 43, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .platform {
+    /* width: 48px;
+height: 48px;
+margin-top: 4px;
+background-size: contain;*/
+}
+/* line 49, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .info {
+  line-height: 1;
+}
+/* line 51, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .info h4 {
+  font-size: 1.4em;
+  color: #7A529F;
+}
+/* line 56, dashboard.scss */
+#dashboardChartTab .stacks-bwlow-threshold .sites-list li .info span.domain {
+  font-size: 0.8em;
+  text-transform: initial;
+}

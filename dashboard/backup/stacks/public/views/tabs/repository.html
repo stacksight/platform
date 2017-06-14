@@ -1,0 +1,33 @@
+<section id="repoTab" ng-controller="RepositoryController as vmr" class="full-height" ng-init="vmr.find()">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title">repository events</div>
+        </div>
+    </div>
+    <div class="middle" infinite-scroll='vmr.loadMore()' infinite-scroll-disabled='vmr.busy' infinite-scroll-distance='1' ng-class="{anchor: vmr.anchor, 'with-timeline': vmr.histogram.length > 1}" infinite-scroll-container="'.middle'" infinite-scroll-parent="true" scroll>
+        <div ng-include="'subscribe'"></div>
+        <div class="middle-content">
+            <div ng-repeat="action in vmr.docs">
+                <pre ng-include="action.src + '-template'"></pre>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITLAB ===============================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='gitlab-template'>
+    <b>Created at: </b><span>{{action._source.created}}</span><br>
+    <b>Gitlab </b> <u>repo</u>: {{action._source.data.repository.name}} <u>user</u>: {{action._source.data.user_name}}
+    <div>{{ action._source.data.object_attributes | json:4 }}</div>
+    <div>{{ action._source.data.commits | json:4 }}</div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITHUB ===============================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='github-template'>
+    <b>Created at: </b><span>{{action._source.created}}</span><br>
+    <b>Github </b> <u>repo</u>: {{action._source.data.repository.name}} <u>user</u>: {{action._source.data.sender.login || action._source.data.pusher.name}}
+    <div>{{ action._source.data.head_commit | json:4 }}</div>
+    <div>{{ action._source.data.issue | json:4 }}</div>
+</script>

@@ -1,0 +1,1859 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 23, stack.scss */
+.stack-dashboard .header,
+.stack-events .header,
+.stack-logs .header,
+.stack-updates .header,
+.stack-health .header,
+.stack-health-type .header,
+.stack-inventory .header,
+.stack-people .header,
+.stack-availability .header,
+.stack-integrations-main .header,
+.stack-integrations-service .header,
+.stack-integrations-service-settings .header,
+.stack-settings .header,
+.stack-sessions .header,
+.stack-peoplewithparam .header,
+.stack-settings .header,
+.stack-integrations .header,
+.stack-builds .header,
+.stack-builds-service .header {
+  height: 54px;
+  clear: both;
+  margin: 5px 0 0 0;
+  width: calc(82.5% - 7px);
+  padding-left: 55px;
+  padding-bottom: 64px;
+  position: fixed;
+  top: 44px;
+  background: #f3f3f3;
+  z-index: 201;
+  padding-top: 12px;
+}
+/* line 35, stack.scss */
+.stack-dashboard .header .stack-logo,
+.stack-events .header .stack-logo,
+.stack-logs .header .stack-logo,
+.stack-updates .header .stack-logo,
+.stack-health .header .stack-logo,
+.stack-health-type .header .stack-logo,
+.stack-inventory .header .stack-logo,
+.stack-people .header .stack-logo,
+.stack-availability .header .stack-logo,
+.stack-integrations-main .header .stack-logo,
+.stack-integrations-service .header .stack-logo,
+.stack-integrations-service-settings .header .stack-logo,
+.stack-settings .header .stack-logo,
+.stack-sessions .header .stack-logo,
+.stack-peoplewithparam .header .stack-logo,
+.stack-settings .header .stack-logo,
+.stack-integrations .header .stack-logo,
+.stack-builds .header .stack-logo,
+.stack-builds-service .header .stack-logo {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 101;
+}
+/* line 47, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks,
+.stack-events .header .drop-list-of-stacks,
+.stack-logs .header .drop-list-of-stacks,
+.stack-updates .header .drop-list-of-stacks,
+.stack-health .header .drop-list-of-stacks,
+.stack-health-type .header .drop-list-of-stacks,
+.stack-inventory .header .drop-list-of-stacks,
+.stack-people .header .drop-list-of-stacks,
+.stack-availability .header .drop-list-of-stacks,
+.stack-integrations-main .header .drop-list-of-stacks,
+.stack-integrations-service .header .drop-list-of-stacks,
+.stack-integrations-service-settings .header .drop-list-of-stacks,
+.stack-settings .header .drop-list-of-stacks,
+.stack-sessions .header .drop-list-of-stacks,
+.stack-peoplewithparam .header .drop-list-of-stacks,
+.stack-settings .header .drop-list-of-stacks,
+.stack-integrations .header .drop-list-of-stacks,
+.stack-builds .header .drop-list-of-stacks,
+.stack-builds-service .header .drop-list-of-stacks {
+  background: #ffffff;
+  height: 412px;
+  position: absolute;
+  display: block;
+  width: calc(((100% - 290px) / 2) + 55px);
+  z-index: 100;
+  top: -12px;
+  left: -4px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.1);
+  padding-top: 82px;
+}
+/* line 58, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks input,
+.stack-events .header .drop-list-of-stacks input,
+.stack-logs .header .drop-list-of-stacks input,
+.stack-updates .header .drop-list-of-stacks input,
+.stack-health .header .drop-list-of-stacks input,
+.stack-health-type .header .drop-list-of-stacks input,
+.stack-inventory .header .drop-list-of-stacks input,
+.stack-people .header .drop-list-of-stacks input,
+.stack-availability .header .drop-list-of-stacks input,
+.stack-integrations-main .header .drop-list-of-stacks input,
+.stack-integrations-service .header .drop-list-of-stacks input,
+.stack-integrations-service-settings .header .drop-list-of-stacks input,
+.stack-settings .header .drop-list-of-stacks input,
+.stack-sessions .header .drop-list-of-stacks input,
+.stack-peoplewithparam .header .drop-list-of-stacks input,
+.stack-settings .header .drop-list-of-stacks input,
+.stack-integrations .header .drop-list-of-stacks input,
+.stack-builds .header .drop-list-of-stacks input,
+.stack-builds-service .header .drop-list-of-stacks input {
+  width: 100%;
+  border: 1px solid #efefef;
+  border-right: none;
+  border-left: none;
+  line-height: 50px;
+  padding: 0 20px 0 42px;
+  color: #e3e3e3;
+  font-size: 16px;
+  font-weight: 300;
+  background: url("/stacks/assets/img/ico_search.png") no-repeat 12px;
+}
+/* line 70, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-events .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-logs .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-updates .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-health .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-health-type .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-inventory .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-people .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-availability .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-integrations-main .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-integrations-service .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-integrations-service-settings .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-settings .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-sessions .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-peoplewithparam .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-settings .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-integrations .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-builds .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-builds-service .header .drop-list-of-stacks ::-webkit-input-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 74, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-events .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-logs .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-updates .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-health .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-health-type .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-inventory .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-people .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-availability .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-integrations-main .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-integrations-service .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-integrations-service-settings .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-settings .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-sessions .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-peoplewithparam .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-settings .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-integrations .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-builds .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-builds-service .header .drop-list-of-stacks ::-moz-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 78, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks :-moz-placeholder,
+.stack-events .header .drop-list-of-stacks :-moz-placeholder,
+.stack-logs .header .drop-list-of-stacks :-moz-placeholder,
+.stack-updates .header .drop-list-of-stacks :-moz-placeholder,
+.stack-health .header .drop-list-of-stacks :-moz-placeholder,
+.stack-health-type .header .drop-list-of-stacks :-moz-placeholder,
+.stack-inventory .header .drop-list-of-stacks :-moz-placeholder,
+.stack-people .header .drop-list-of-stacks :-moz-placeholder,
+.stack-availability .header .drop-list-of-stacks :-moz-placeholder,
+.stack-integrations-main .header .drop-list-of-stacks :-moz-placeholder,
+.stack-integrations-service .header .drop-list-of-stacks :-moz-placeholder,
+.stack-integrations-service-settings .header .drop-list-of-stacks :-moz-placeholder,
+.stack-settings .header .drop-list-of-stacks :-moz-placeholder,
+.stack-sessions .header .drop-list-of-stacks :-moz-placeholder,
+.stack-peoplewithparam .header .drop-list-of-stacks :-moz-placeholder,
+.stack-settings .header .drop-list-of-stacks :-moz-placeholder,
+.stack-integrations .header .drop-list-of-stacks :-moz-placeholder,
+.stack-builds .header .drop-list-of-stacks :-moz-placeholder,
+.stack-builds-service .header .drop-list-of-stacks :-moz-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 82, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-events .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-logs .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-updates .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-health .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-health-type .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-inventory .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-people .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-availability .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-integrations-main .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-integrations-service .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-integrations-service-settings .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-settings .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-sessions .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-peoplewithparam .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-settings .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-integrations .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-builds .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-builds-service .header .drop-list-of-stacks :-ms-input-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 86, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ul,
+.stack-events .header .drop-list-of-stacks ul,
+.stack-logs .header .drop-list-of-stacks ul,
+.stack-updates .header .drop-list-of-stacks ul,
+.stack-health .header .drop-list-of-stacks ul,
+.stack-health-type .header .drop-list-of-stacks ul,
+.stack-inventory .header .drop-list-of-stacks ul,
+.stack-people .header .drop-list-of-stacks ul,
+.stack-availability .header .drop-list-of-stacks ul,
+.stack-integrations-main .header .drop-list-of-stacks ul,
+.stack-integrations-service .header .drop-list-of-stacks ul,
+.stack-integrations-service-settings .header .drop-list-of-stacks ul,
+.stack-settings .header .drop-list-of-stacks ul,
+.stack-sessions .header .drop-list-of-stacks ul,
+.stack-peoplewithparam .header .drop-list-of-stacks ul,
+.stack-settings .header .drop-list-of-stacks ul,
+.stack-integrations .header .drop-list-of-stacks ul,
+.stack-builds .header .drop-list-of-stacks ul,
+.stack-builds-service .header .drop-list-of-stacks ul {
+  height: 278px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+/* line 91, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ul li,
+.stack-events .header .drop-list-of-stacks ul li,
+.stack-logs .header .drop-list-of-stacks ul li,
+.stack-updates .header .drop-list-of-stacks ul li,
+.stack-health .header .drop-list-of-stacks ul li,
+.stack-health-type .header .drop-list-of-stacks ul li,
+.stack-inventory .header .drop-list-of-stacks ul li,
+.stack-people .header .drop-list-of-stacks ul li,
+.stack-availability .header .drop-list-of-stacks ul li,
+.stack-integrations-main .header .drop-list-of-stacks ul li,
+.stack-integrations-service .header .drop-list-of-stacks ul li,
+.stack-integrations-service-settings .header .drop-list-of-stacks ul li,
+.stack-settings .header .drop-list-of-stacks ul li,
+.stack-sessions .header .drop-list-of-stacks ul li,
+.stack-peoplewithparam .header .drop-list-of-stacks ul li,
+.stack-settings .header .drop-list-of-stacks ul li,
+.stack-integrations .header .drop-list-of-stacks ul li,
+.stack-builds .header .drop-list-of-stacks ul li,
+.stack-builds-service .header .drop-list-of-stacks ul li {
+  overflow: hidden;
+  padding: 11px 22px 11px 16px;
+  cursor: pointer;
+}
+/* line 95, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ul li:hover,
+.stack-events .header .drop-list-of-stacks ul li:hover,
+.stack-logs .header .drop-list-of-stacks ul li:hover,
+.stack-updates .header .drop-list-of-stacks ul li:hover,
+.stack-health .header .drop-list-of-stacks ul li:hover,
+.stack-health-type .header .drop-list-of-stacks ul li:hover,
+.stack-inventory .header .drop-list-of-stacks ul li:hover,
+.stack-people .header .drop-list-of-stacks ul li:hover,
+.stack-availability .header .drop-list-of-stacks ul li:hover,
+.stack-integrations-main .header .drop-list-of-stacks ul li:hover,
+.stack-integrations-service .header .drop-list-of-stacks ul li:hover,
+.stack-integrations-service-settings .header .drop-list-of-stacks ul li:hover,
+.stack-settings .header .drop-list-of-stacks ul li:hover,
+.stack-sessions .header .drop-list-of-stacks ul li:hover,
+.stack-peoplewithparam .header .drop-list-of-stacks ul li:hover,
+.stack-settings .header .drop-list-of-stacks ul li:hover,
+.stack-integrations .header .drop-list-of-stacks ul li:hover,
+.stack-builds .header .drop-list-of-stacks ul li:hover,
+.stack-builds-service .header .drop-list-of-stacks ul li:hover {
+  background: #e3e3e3;
+}
+/* line 98, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ul li .stack-logo,
+.stack-events .header .drop-list-of-stacks ul li .stack-logo,
+.stack-logs .header .drop-list-of-stacks ul li .stack-logo,
+.stack-updates .header .drop-list-of-stacks ul li .stack-logo,
+.stack-health .header .drop-list-of-stacks ul li .stack-logo,
+.stack-health-type .header .drop-list-of-stacks ul li .stack-logo,
+.stack-inventory .header .drop-list-of-stacks ul li .stack-logo,
+.stack-people .header .drop-list-of-stacks ul li .stack-logo,
+.stack-availability .header .drop-list-of-stacks ul li .stack-logo,
+.stack-integrations-main .header .drop-list-of-stacks ul li .stack-logo,
+.stack-integrations-service .header .drop-list-of-stacks ul li .stack-logo,
+.stack-integrations-service-settings .header .drop-list-of-stacks ul li .stack-logo,
+.stack-settings .header .drop-list-of-stacks ul li .stack-logo,
+.stack-sessions .header .drop-list-of-stacks ul li .stack-logo,
+.stack-peoplewithparam .header .drop-list-of-stacks ul li .stack-logo,
+.stack-settings .header .drop-list-of-stacks ul li .stack-logo,
+.stack-integrations .header .drop-list-of-stacks ul li .stack-logo,
+.stack-builds .header .drop-list-of-stacks ul li .stack-logo,
+.stack-builds-service .header .drop-list-of-stacks ul li .stack-logo {
+  position: relative;
+  display: block;
+  float: left;
+  width: 28px;
+  height: 28px;
+  top: 5px;
+  left: 0;
+}
+/* line 107, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ul li h3,
+.stack-events .header .drop-list-of-stacks ul li h3,
+.stack-logs .header .drop-list-of-stacks ul li h3,
+.stack-updates .header .drop-list-of-stacks ul li h3,
+.stack-health .header .drop-list-of-stacks ul li h3,
+.stack-health-type .header .drop-list-of-stacks ul li h3,
+.stack-inventory .header .drop-list-of-stacks ul li h3,
+.stack-people .header .drop-list-of-stacks ul li h3,
+.stack-availability .header .drop-list-of-stacks ul li h3,
+.stack-integrations-main .header .drop-list-of-stacks ul li h3,
+.stack-integrations-service .header .drop-list-of-stacks ul li h3,
+.stack-integrations-service-settings .header .drop-list-of-stacks ul li h3,
+.stack-settings .header .drop-list-of-stacks ul li h3,
+.stack-sessions .header .drop-list-of-stacks ul li h3,
+.stack-peoplewithparam .header .drop-list-of-stacks ul li h3,
+.stack-settings .header .drop-list-of-stacks ul li h3,
+.stack-integrations .header .drop-list-of-stacks ul li h3,
+.stack-builds .header .drop-list-of-stacks ul li h3,
+.stack-builds-service .header .drop-list-of-stacks ul li h3 {
+  font-weight: bold;
+  color: #454a54;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 32px;
+  line-height: 18px;
+  display: block;
+  position: relative;
+}
+/* line 122, stack.scss */
+.stack-dashboard .header .drop-list-of-stacks ul li .url,
+.stack-events .header .drop-list-of-stacks ul li .url,
+.stack-logs .header .drop-list-of-stacks ul li .url,
+.stack-updates .header .drop-list-of-stacks ul li .url,
+.stack-health .header .drop-list-of-stacks ul li .url,
+.stack-health-type .header .drop-list-of-stacks ul li .url,
+.stack-inventory .header .drop-list-of-stacks ul li .url,
+.stack-people .header .drop-list-of-stacks ul li .url,
+.stack-availability .header .drop-list-of-stacks ul li .url,
+.stack-integrations-main .header .drop-list-of-stacks ul li .url,
+.stack-integrations-service .header .drop-list-of-stacks ul li .url,
+.stack-integrations-service-settings .header .drop-list-of-stacks ul li .url,
+.stack-settings .header .drop-list-of-stacks ul li .url,
+.stack-sessions .header .drop-list-of-stacks ul li .url,
+.stack-peoplewithparam .header .drop-list-of-stacks ul li .url,
+.stack-settings .header .drop-list-of-stacks ul li .url,
+.stack-integrations .header .drop-list-of-stacks ul li .url,
+.stack-builds .header .drop-list-of-stacks ul li .url,
+.stack-builds-service .header .drop-list-of-stacks ul li .url {
+  font-size: 10px;
+  color: #454a54;
+  font-weight: lighter;
+  padding-left: 32px;
+  line-height: 10px;
+}
+/* line 133, stack.scss */
+.stack-dashboard .header .info-head,
+.stack-events .header .info-head,
+.stack-logs .header .info-head,
+.stack-updates .header .info-head,
+.stack-health .header .info-head,
+.stack-health-type .header .info-head,
+.stack-inventory .header .info-head,
+.stack-people .header .info-head,
+.stack-availability .header .info-head,
+.stack-integrations-main .header .info-head,
+.stack-integrations-service .header .info-head,
+.stack-integrations-service-settings .header .info-head,
+.stack-settings .header .info-head,
+.stack-sessions .header .info-head,
+.stack-peoplewithparam .header .info-head,
+.stack-settings .header .info-head,
+.stack-integrations .header .info-head,
+.stack-builds .header .info-head,
+.stack-builds-service .header .info-head {
+  width: calc(100% - 290px);
+  position: relative;
+  z-index: 101;
+}
+/* line 137, stack.scss */
+.stack-dashboard .header .info-head .left,
+.stack-events .header .info-head .left,
+.stack-logs .header .info-head .left,
+.stack-updates .header .info-head .left,
+.stack-health .header .info-head .left,
+.stack-health-type .header .info-head .left,
+.stack-inventory .header .info-head .left,
+.stack-people .header .info-head .left,
+.stack-availability .header .info-head .left,
+.stack-integrations-main .header .info-head .left,
+.stack-integrations-service .header .info-head .left,
+.stack-integrations-service-settings .header .info-head .left,
+.stack-settings .header .info-head .left,
+.stack-sessions .header .info-head .left,
+.stack-peoplewithparam .header .info-head .left,
+.stack-settings .header .info-head .left,
+.stack-integrations .header .info-head .left,
+.stack-builds .header .info-head .left,
+.stack-builds-service .header .info-head .left {
+  float: left;
+  padding-top: 3px;
+  width: 50%;
+  position: relative;
+}
+/* line 142, stack.scss */
+.stack-dashboard .header .info-head .left h3,
+.stack-events .header .info-head .left h3,
+.stack-logs .header .info-head .left h3,
+.stack-updates .header .info-head .left h3,
+.stack-health .header .info-head .left h3,
+.stack-health-type .header .info-head .left h3,
+.stack-inventory .header .info-head .left h3,
+.stack-people .header .info-head .left h3,
+.stack-availability .header .info-head .left h3,
+.stack-integrations-main .header .info-head .left h3,
+.stack-integrations-service .header .info-head .left h3,
+.stack-integrations-service-settings .header .info-head .left h3,
+.stack-settings .header .info-head .left h3,
+.stack-sessions .header .info-head .left h3,
+.stack-peoplewithparam .header .info-head .left h3,
+.stack-settings .header .info-head .left h3,
+.stack-integrations .header .info-head .left h3,
+.stack-builds .header .info-head .left h3,
+.stack-builds-service .header .info-head .left h3 {
+  font-weight: bold;
+  color: #454a54;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 155, stack.scss */
+.stack-dashboard .header .info-head .middle,
+.stack-events .header .info-head .middle,
+.stack-logs .header .info-head .middle,
+.stack-updates .header .info-head .middle,
+.stack-health .header .info-head .middle,
+.stack-health-type .header .info-head .middle,
+.stack-inventory .header .info-head .middle,
+.stack-people .header .info-head .middle,
+.stack-availability .header .info-head .middle,
+.stack-integrations-main .header .info-head .middle,
+.stack-integrations-service .header .info-head .middle,
+.stack-integrations-service-settings .header .info-head .middle,
+.stack-settings .header .info-head .middle,
+.stack-sessions .header .info-head .middle,
+.stack-peoplewithparam .header .info-head .middle,
+.stack-settings .header .info-head .middle,
+.stack-integrations .header .info-head .middle,
+.stack-builds .header .info-head .middle,
+.stack-builds-service .header .info-head .middle {
+  float: left;
+  margin-top: 4px !important;
+  padding-right: 24px;
+  border-right: 1px solid #d3d3d3;
+  width: 50%;
+  height: 44px;
+  padding-top: 12px;
+  overflow: visible;
+}
+/* line 164, stack.scss */
+.stack-dashboard .header .info-head .middle .tags,
+.stack-events .header .info-head .middle .tags,
+.stack-logs .header .info-head .middle .tags,
+.stack-updates .header .info-head .middle .tags,
+.stack-health .header .info-head .middle .tags,
+.stack-health-type .header .info-head .middle .tags,
+.stack-inventory .header .info-head .middle .tags,
+.stack-people .header .info-head .middle .tags,
+.stack-availability .header .info-head .middle .tags,
+.stack-integrations-main .header .info-head .middle .tags,
+.stack-integrations-service .header .info-head .middle .tags,
+.stack-integrations-service-settings .header .info-head .middle .tags,
+.stack-settings .header .info-head .middle .tags,
+.stack-sessions .header .info-head .middle .tags,
+.stack-peoplewithparam .header .info-head .middle .tags,
+.stack-settings .header .info-head .middle .tags,
+.stack-integrations .header .info-head .middle .tags,
+.stack-builds .header .info-head .middle .tags,
+.stack-builds-service .header .info-head .middle .tags {
+  float: right;
+}
+/* line 166, stack.scss */
+.stack-dashboard .header .info-head .middle .tags .add-tag,
+.stack-events .header .info-head .middle .tags .add-tag,
+.stack-logs .header .info-head .middle .tags .add-tag,
+.stack-updates .header .info-head .middle .tags .add-tag,
+.stack-health .header .info-head .middle .tags .add-tag,
+.stack-health-type .header .info-head .middle .tags .add-tag,
+.stack-inventory .header .info-head .middle .tags .add-tag,
+.stack-people .header .info-head .middle .tags .add-tag,
+.stack-availability .header .info-head .middle .tags .add-tag,
+.stack-integrations-main .header .info-head .middle .tags .add-tag,
+.stack-integrations-service .header .info-head .middle .tags .add-tag,
+.stack-integrations-service-settings .header .info-head .middle .tags .add-tag,
+.stack-settings .header .info-head .middle .tags .add-tag,
+.stack-sessions .header .info-head .middle .tags .add-tag,
+.stack-peoplewithparam .header .info-head .middle .tags .add-tag,
+.stack-settings .header .info-head .middle .tags .add-tag,
+.stack-integrations .header .info-head .middle .tags .add-tag,
+.stack-builds .header .info-head .middle .tags .add-tag,
+.stack-builds-service .header .info-head .middle .tags .add-tag {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: #448aff;
+  color: #FFFFFF;
+  float: right;
+  line-height: 16px;
+  margin: 3px 0 0 3px;
+  padding: 0;
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+}
+/* line 180, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input_dropdown,
+.stack-events .header .info-head .middle .tags #tag-input_dropdown,
+.stack-logs .header .info-head .middle .tags #tag-input_dropdown,
+.stack-updates .header .info-head .middle .tags #tag-input_dropdown,
+.stack-health .header .info-head .middle .tags #tag-input_dropdown,
+.stack-health-type .header .info-head .middle .tags #tag-input_dropdown,
+.stack-inventory .header .info-head .middle .tags #tag-input_dropdown,
+.stack-people .header .info-head .middle .tags #tag-input_dropdown,
+.stack-availability .header .info-head .middle .tags #tag-input_dropdown,
+.stack-integrations-main .header .info-head .middle .tags #tag-input_dropdown,
+.stack-integrations-service .header .info-head .middle .tags #tag-input_dropdown,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input_dropdown,
+.stack-settings .header .info-head .middle .tags #tag-input_dropdown,
+.stack-sessions .header .info-head .middle .tags #tag-input_dropdown,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input_dropdown,
+.stack-settings .header .info-head .middle .tags #tag-input_dropdown,
+.stack-integrations .header .info-head .middle .tags #tag-input_dropdown,
+.stack-builds .header .info-head .middle .tags #tag-input_dropdown,
+.stack-builds-service .header .info-head .middle .tags #tag-input_dropdown {
+  position: absolute;
+  right: -20px;
+  top: 22px;
+}
+/* line 185, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input,
+.stack-events .header .info-head .middle .tags #tag-input,
+.stack-logs .header .info-head .middle .tags #tag-input,
+.stack-updates .header .info-head .middle .tags #tag-input,
+.stack-health .header .info-head .middle .tags #tag-input,
+.stack-health-type .header .info-head .middle .tags #tag-input,
+.stack-inventory .header .info-head .middle .tags #tag-input,
+.stack-people .header .info-head .middle .tags #tag-input,
+.stack-availability .header .info-head .middle .tags #tag-input,
+.stack-integrations-main .header .info-head .middle .tags #tag-input,
+.stack-integrations-service .header .info-head .middle .tags #tag-input,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input,
+.stack-settings .header .info-head .middle .tags #tag-input,
+.stack-sessions .header .info-head .middle .tags #tag-input,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input,
+.stack-settings .header .info-head .middle .tags #tag-input,
+.stack-integrations .header .info-head .middle .tags #tag-input,
+.stack-builds .header .info-head .middle .tags #tag-input,
+.stack-builds-service .header .info-head .middle .tags #tag-input {
+  float: right;
+}
+/* line 187, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input input,
+.stack-events .header .info-head .middle .tags #tag-input input,
+.stack-logs .header .info-head .middle .tags #tag-input input,
+.stack-updates .header .info-head .middle .tags #tag-input input,
+.stack-health .header .info-head .middle .tags #tag-input input,
+.stack-health-type .header .info-head .middle .tags #tag-input input,
+.stack-inventory .header .info-head .middle .tags #tag-input input,
+.stack-people .header .info-head .middle .tags #tag-input input,
+.stack-availability .header .info-head .middle .tags #tag-input input,
+.stack-integrations-main .header .info-head .middle .tags #tag-input input,
+.stack-integrations-service .header .info-head .middle .tags #tag-input input,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input input,
+.stack-settings .header .info-head .middle .tags #tag-input input,
+.stack-sessions .header .info-head .middle .tags #tag-input input,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input input,
+.stack-settings .header .info-head .middle .tags #tag-input input,
+.stack-integrations .header .info-head .middle .tags #tag-input input,
+.stack-builds .header .info-head .middle .tags #tag-input input,
+.stack-builds-service .header .info-head .middle .tags #tag-input input {
+  border: 1px solid #eeeeee;
+  margin-top: -5px;
+  margin-left: 3px;
+  z-index: 1000;
+  display: block;
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 11px;
+  position: absolute;
+  right: -20px;
+}
+/* line 199, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-holder {
+  position: relative;
+}
+/* line 201, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-holder:after,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-holder:after {
+  content: '';
+  position: absolute;
+  right: 104px;
+  top: -4px;
+  width: 60px;
+  height: 26px;
+  z-index: 999999;
+  background: -moz-linear-gradient(left, rgba(243, 243, 243, 0) 0%, #F3F3F3 53%, #F3F3F3 100%);
+  background: -webkit-linear-gradient(left, rgba(243, 243, 243, 0) 0%, #F3F3F3 53%, #F3F3F3 100%);
+  background: linear-gradient(to right, rgba(243, 243, 243, 0) 0%, #f3f3f3 53%, #f3f3f3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#F3F3F3', GradientType=1);
+}
+/* line 216, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown {
+  border-color: #ececec;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  width: 250px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 9999;
+  position: absolute;
+  /*top: 32px;
+  left: 0px;
+  */
+  margin-top: -6px;
+  background-color: #ffffff;
+}
+/* line 233, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-searching {
+  color: #acacac;
+  font-size: 14px;
+}
+/* line 238, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-description {
+  font-size: 14px;
+}
+/* line 242, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-row {
+  padding: 5px;
+  color: #000000;
+  margin-bottom: 4px;
+  clear: both;
+}
+/* line 249, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-selected-row {
+  background-color: lightblue;
+  color: #ffffff;
+}
+/* line 254, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-image-holder {
+  padding-top: 2px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+/* line 261, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-image {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border-color: #ececec;
+  border-style: solid;
+  border-width: 1px;
+}
+/* line 270, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-image-default {
+  /* Add your own default image here
+   background-image: url('/assets/default.png');
+  */
+  background-position: center;
+  background-size: contain;
+  height: 34px;
+  width: 34px;
+}
+/* line 279, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown {
+  margin: -1px 0 0 3px;
+  width: 124px;
+  border-radius: 0px;
+  border: 1px solid #e2e2e2;
+  position: inherit;
+  padding: 0;
+}
+/* line 286, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row, .stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching {
+  color: #010101;
+  font-size: 11px;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 8px;
+  line-height: 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* line 287, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row, .stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row {
+  background: #F3F3F3;
+  color: #010101;
+}
+/* line 299, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title, .stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title {
+  order: 2;
+}
+/* line 302, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description, .stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description {
+  order: 1;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #71c06d;
+  line-height: 6px;
+  display: block;
+  padding-top: 6px;
+}
+/* line 312, stack.scss */
+.stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child, .stack-dashboard .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-events .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-logs .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-updates .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-health .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-health-type .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-inventory .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-people .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-availability .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-integrations-main .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-integrations-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-integrations-service-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-sessions .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-peoplewithparam .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-settings .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-integrations .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-builds .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-builds-service .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child {
+  border-bottom: none;
+}
+/* line 318, stack.scss */
+.stack-dashboard .header .info-head .middle .tags ul,
+.stack-events .header .info-head .middle .tags ul,
+.stack-logs .header .info-head .middle .tags ul,
+.stack-updates .header .info-head .middle .tags ul,
+.stack-health .header .info-head .middle .tags ul,
+.stack-health-type .header .info-head .middle .tags ul,
+.stack-inventory .header .info-head .middle .tags ul,
+.stack-people .header .info-head .middle .tags ul,
+.stack-availability .header .info-head .middle .tags ul,
+.stack-integrations-main .header .info-head .middle .tags ul,
+.stack-integrations-service .header .info-head .middle .tags ul,
+.stack-integrations-service-settings .header .info-head .middle .tags ul,
+.stack-settings .header .info-head .middle .tags ul,
+.stack-sessions .header .info-head .middle .tags ul,
+.stack-peoplewithparam .header .info-head .middle .tags ul,
+.stack-settings .header .info-head .middle .tags ul,
+.stack-integrations .header .info-head .middle .tags ul,
+.stack-builds .header .info-head .middle .tags ul,
+.stack-builds-service .header .info-head .middle .tags ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 50px;
+  max-width: calc(50% - 70px);
+  height: 22px;
+  overflow: hidden;
+}
+/* line 327, stack.scss */
+.stack-dashboard .header .info-head .middle .tags ul li,
+.stack-events .header .info-head .middle .tags ul li,
+.stack-logs .header .info-head .middle .tags ul li,
+.stack-updates .header .info-head .middle .tags ul li,
+.stack-health .header .info-head .middle .tags ul li,
+.stack-health-type .header .info-head .middle .tags ul li,
+.stack-inventory .header .info-head .middle .tags ul li,
+.stack-people .header .info-head .middle .tags ul li,
+.stack-availability .header .info-head .middle .tags ul li,
+.stack-integrations-main .header .info-head .middle .tags ul li,
+.stack-integrations-service .header .info-head .middle .tags ul li,
+.stack-integrations-service-settings .header .info-head .middle .tags ul li,
+.stack-settings .header .info-head .middle .tags ul li,
+.stack-sessions .header .info-head .middle .tags ul li,
+.stack-peoplewithparam .header .info-head .middle .tags ul li,
+.stack-settings .header .info-head .middle .tags ul li,
+.stack-integrations .header .info-head .middle .tags ul li,
+.stack-builds .header .info-head .middle .tags ul li,
+.stack-builds-service .header .info-head .middle .tags ul li {
+  cursor: default;
+  float: left;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-right: 3px;
+  padding: 4px 8px;
+  font-size: 9px;
+  color: #454a54;
+}
+/* line 328, stack.scss */
+.stack-dashboard .header .info-head .middle .tags ul li:hover,
+.stack-events .header .info-head .middle .tags ul li:hover,
+.stack-logs .header .info-head .middle .tags ul li:hover,
+.stack-updates .header .info-head .middle .tags ul li:hover,
+.stack-health .header .info-head .middle .tags ul li:hover,
+.stack-health-type .header .info-head .middle .tags ul li:hover,
+.stack-inventory .header .info-head .middle .tags ul li:hover,
+.stack-people .header .info-head .middle .tags ul li:hover,
+.stack-availability .header .info-head .middle .tags ul li:hover,
+.stack-integrations-main .header .info-head .middle .tags ul li:hover,
+.stack-integrations-service .header .info-head .middle .tags ul li:hover,
+.stack-integrations-service-settings .header .info-head .middle .tags ul li:hover,
+.stack-settings .header .info-head .middle .tags ul li:hover,
+.stack-sessions .header .info-head .middle .tags ul li:hover,
+.stack-peoplewithparam .header .info-head .middle .tags ul li:hover,
+.stack-settings .header .info-head .middle .tags ul li:hover,
+.stack-integrations .header .info-head .middle .tags ul li:hover,
+.stack-builds .header .info-head .middle .tags ul li:hover,
+.stack-builds-service .header .info-head .middle .tags ul li:hover {
+  border: 1px solid #878787;
+}
+/* line 329, stack.scss */
+.stack-dashboard .header .info-head .middle .tags ul li:hover i,
+.stack-events .header .info-head .middle .tags ul li:hover i,
+.stack-logs .header .info-head .middle .tags ul li:hover i,
+.stack-updates .header .info-head .middle .tags ul li:hover i,
+.stack-health .header .info-head .middle .tags ul li:hover i,
+.stack-health-type .header .info-head .middle .tags ul li:hover i,
+.stack-inventory .header .info-head .middle .tags ul li:hover i,
+.stack-people .header .info-head .middle .tags ul li:hover i,
+.stack-availability .header .info-head .middle .tags ul li:hover i,
+.stack-integrations-main .header .info-head .middle .tags ul li:hover i,
+.stack-integrations-service .header .info-head .middle .tags ul li:hover i,
+.stack-integrations-service-settings .header .info-head .middle .tags ul li:hover i,
+.stack-settings .header .info-head .middle .tags ul li:hover i,
+.stack-sessions .header .info-head .middle .tags ul li:hover i,
+.stack-peoplewithparam .header .info-head .middle .tags ul li:hover i,
+.stack-settings .header .info-head .middle .tags ul li:hover i,
+.stack-integrations .header .info-head .middle .tags ul li:hover i,
+.stack-builds .header .info-head .middle .tags ul li:hover i,
+.stack-builds-service .header .info-head .middle .tags ul li:hover i {
+  display: block;
+}
+/* line 334, stack.scss */
+.stack-dashboard .header .info-head .middle .tags ul li i,
+.stack-events .header .info-head .middle .tags ul li i,
+.stack-logs .header .info-head .middle .tags ul li i,
+.stack-updates .header .info-head .middle .tags ul li i,
+.stack-health .header .info-head .middle .tags ul li i,
+.stack-health-type .header .info-head .middle .tags ul li i,
+.stack-inventory .header .info-head .middle .tags ul li i,
+.stack-people .header .info-head .middle .tags ul li i,
+.stack-availability .header .info-head .middle .tags ul li i,
+.stack-integrations-main .header .info-head .middle .tags ul li i,
+.stack-integrations-service .header .info-head .middle .tags ul li i,
+.stack-integrations-service-settings .header .info-head .middle .tags ul li i,
+.stack-settings .header .info-head .middle .tags ul li i,
+.stack-sessions .header .info-head .middle .tags ul li i,
+.stack-peoplewithparam .header .info-head .middle .tags ul li i,
+.stack-settings .header .info-head .middle .tags ul li i,
+.stack-integrations .header .info-head .middle .tags ul li i,
+.stack-builds .header .info-head .middle .tags ul li i,
+.stack-builds-service .header .info-head .middle .tags ul li i {
+  float: right;
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 3px;
+  display: none;
+  float: right;
+}
+/* line 342, stack.scss */
+.stack-dashboard .header .info-head .middle .tags ul li:last-child,
+.stack-events .header .info-head .middle .tags ul li:last-child,
+.stack-logs .header .info-head .middle .tags ul li:last-child,
+.stack-updates .header .info-head .middle .tags ul li:last-child,
+.stack-health .header .info-head .middle .tags ul li:last-child,
+.stack-health-type .header .info-head .middle .tags ul li:last-child,
+.stack-inventory .header .info-head .middle .tags ul li:last-child,
+.stack-people .header .info-head .middle .tags ul li:last-child,
+.stack-availability .header .info-head .middle .tags ul li:last-child,
+.stack-integrations-main .header .info-head .middle .tags ul li:last-child,
+.stack-integrations-service .header .info-head .middle .tags ul li:last-child,
+.stack-integrations-service-settings .header .info-head .middle .tags ul li:last-child,
+.stack-settings .header .info-head .middle .tags ul li:last-child,
+.stack-sessions .header .info-head .middle .tags ul li:last-child,
+.stack-peoplewithparam .header .info-head .middle .tags ul li:last-child,
+.stack-settings .header .info-head .middle .tags ul li:last-child,
+.stack-integrations .header .info-head .middle .tags ul li:last-child,
+.stack-builds .header .info-head .middle .tags ul li:last-child,
+.stack-builds-service .header .info-head .middle .tags ul li:last-child {
+  margin-right: 0px;
+}
+/* line 360, stack.scss */
+.stack-dashboard .header .right,
+.stack-events .header .right,
+.stack-logs .header .right,
+.stack-updates .header .right,
+.stack-health .header .right,
+.stack-health-type .header .right,
+.stack-inventory .header .right,
+.stack-people .header .right,
+.stack-availability .header .right,
+.stack-integrations-main .header .right,
+.stack-integrations-service .header .right,
+.stack-integrations-service-settings .header .right,
+.stack-settings .header .right,
+.stack-sessions .header .right,
+.stack-peoplewithparam .header .right,
+.stack-settings .header .right,
+.stack-integrations .header .right,
+.stack-builds .header .right,
+.stack-builds-service .header .right {
+  float: right;
+  padding-left: 24px;
+  width: 290px;
+  margin-top: 4px;
+}
+/* line 365, stack.scss */
+.stack-dashboard .header .right ul,
+.stack-events .header .right ul,
+.stack-logs .header .right ul,
+.stack-updates .header .right ul,
+.stack-health .header .right ul,
+.stack-health-type .header .right ul,
+.stack-inventory .header .right ul,
+.stack-people .header .right ul,
+.stack-availability .header .right ul,
+.stack-integrations-main .header .right ul,
+.stack-integrations-service .header .right ul,
+.stack-integrations-service-settings .header .right ul,
+.stack-settings .header .right ul,
+.stack-sessions .header .right ul,
+.stack-peoplewithparam .header .right ul,
+.stack-settings .header .right ul,
+.stack-integrations .header .right ul,
+.stack-builds .header .right ul,
+.stack-builds-service .header .right ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 369, stack.scss */
+.stack-dashboard .header .right ul.users li,
+.stack-events .header .right ul.users li,
+.stack-logs .header .right ul.users li,
+.stack-updates .header .right ul.users li,
+.stack-health .header .right ul.users li,
+.stack-health-type .header .right ul.users li,
+.stack-inventory .header .right ul.users li,
+.stack-people .header .right ul.users li,
+.stack-availability .header .right ul.users li,
+.stack-integrations-main .header .right ul.users li,
+.stack-integrations-service .header .right ul.users li,
+.stack-integrations-service-settings .header .right ul.users li,
+.stack-settings .header .right ul.users li,
+.stack-sessions .header .right ul.users li,
+.stack-peoplewithparam .header .right ul.users li,
+.stack-settings .header .right ul.users li,
+.stack-integrations .header .right ul.users li,
+.stack-builds .header .right ul.users li,
+.stack-builds-service .header .right ul.users li {
+  float: left;
+  margin-right: 8px;
+}
+/* line 370, stack.scss */
+.stack-dashboard .header .right ul.users li:last-child,
+.stack-events .header .right ul.users li:last-child,
+.stack-logs .header .right ul.users li:last-child,
+.stack-updates .header .right ul.users li:last-child,
+.stack-health .header .right ul.users li:last-child,
+.stack-health-type .header .right ul.users li:last-child,
+.stack-inventory .header .right ul.users li:last-child,
+.stack-people .header .right ul.users li:last-child,
+.stack-availability .header .right ul.users li:last-child,
+.stack-integrations-main .header .right ul.users li:last-child,
+.stack-integrations-service .header .right ul.users li:last-child,
+.stack-integrations-service-settings .header .right ul.users li:last-child,
+.stack-settings .header .right ul.users li:last-child,
+.stack-sessions .header .right ul.users li:last-child,
+.stack-peoplewithparam .header .right ul.users li:last-child,
+.stack-settings .header .right ul.users li:last-child,
+.stack-integrations .header .right ul.users li:last-child,
+.stack-builds .header .right ul.users li:last-child,
+.stack-builds-service .header .right ul.users li:last-child {
+  margin-right: 0;
+}
+/* line 375, stack.scss */
+.stack-dashboard .header .right ul.users li a,
+.stack-events .header .right ul.users li a,
+.stack-logs .header .right ul.users li a,
+.stack-updates .header .right ul.users li a,
+.stack-health .header .right ul.users li a,
+.stack-health-type .header .right ul.users li a,
+.stack-inventory .header .right ul.users li a,
+.stack-people .header .right ul.users li a,
+.stack-availability .header .right ul.users li a,
+.stack-integrations-main .header .right ul.users li a,
+.stack-integrations-service .header .right ul.users li a,
+.stack-integrations-service-settings .header .right ul.users li a,
+.stack-settings .header .right ul.users li a,
+.stack-sessions .header .right ul.users li a,
+.stack-peoplewithparam .header .right ul.users li a,
+.stack-settings .header .right ul.users li a,
+.stack-integrations .header .right ul.users li a,
+.stack-builds .header .right ul.users li a,
+.stack-builds-service .header .right ul.users li a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+/* line 376, stack.scss */
+.stack-dashboard .header .right ul.users li a:hover,
+.stack-events .header .right ul.users li a:hover,
+.stack-logs .header .right ul.users li a:hover,
+.stack-updates .header .right ul.users li a:hover,
+.stack-health .header .right ul.users li a:hover,
+.stack-health-type .header .right ul.users li a:hover,
+.stack-inventory .header .right ul.users li a:hover,
+.stack-people .header .right ul.users li a:hover,
+.stack-availability .header .right ul.users li a:hover,
+.stack-integrations-main .header .right ul.users li a:hover,
+.stack-integrations-service .header .right ul.users li a:hover,
+.stack-integrations-service-settings .header .right ul.users li a:hover,
+.stack-settings .header .right ul.users li a:hover,
+.stack-sessions .header .right ul.users li a:hover,
+.stack-peoplewithparam .header .right ul.users li a:hover,
+.stack-settings .header .right ul.users li a:hover,
+.stack-integrations .header .right ul.users li a:hover,
+.stack-builds .header .right ul.users li a:hover,
+.stack-builds-service .header .right ul.users li a:hover {
+  text-decoration: none;
+}
+/* line 379, stack.scss */
+.stack-dashboard .header .right ul.users li a img,
+.stack-events .header .right ul.users li a img,
+.stack-logs .header .right ul.users li a img,
+.stack-updates .header .right ul.users li a img,
+.stack-health .header .right ul.users li a img,
+.stack-health-type .header .right ul.users li a img,
+.stack-inventory .header .right ul.users li a img,
+.stack-people .header .right ul.users li a img,
+.stack-availability .header .right ul.users li a img,
+.stack-integrations-main .header .right ul.users li a img,
+.stack-integrations-service .header .right ul.users li a img,
+.stack-integrations-service-settings .header .right ul.users li a img,
+.stack-settings .header .right ul.users li a img,
+.stack-sessions .header .right ul.users li a img,
+.stack-peoplewithparam .header .right ul.users li a img,
+.stack-settings .header .right ul.users li a img,
+.stack-integrations .header .right ul.users li a img,
+.stack-builds .header .right ul.users li a img,
+.stack-builds-service .header .right ul.users li a img {
+  width: 45px;
+  height: 45px;
+}
+/* line 380, stack.scss */
+.stack-dashboard .header .right ul.users li a img.user_add,
+.stack-events .header .right ul.users li a img.user_add,
+.stack-logs .header .right ul.users li a img.user_add,
+.stack-updates .header .right ul.users li a img.user_add,
+.stack-health .header .right ul.users li a img.user_add,
+.stack-health-type .header .right ul.users li a img.user_add,
+.stack-inventory .header .right ul.users li a img.user_add,
+.stack-people .header .right ul.users li a img.user_add,
+.stack-availability .header .right ul.users li a img.user_add,
+.stack-integrations-main .header .right ul.users li a img.user_add,
+.stack-integrations-service .header .right ul.users li a img.user_add,
+.stack-integrations-service-settings .header .right ul.users li a img.user_add,
+.stack-settings .header .right ul.users li a img.user_add,
+.stack-sessions .header .right ul.users li a img.user_add,
+.stack-peoplewithparam .header .right ul.users li a img.user_add,
+.stack-settings .header .right ul.users li a img.user_add,
+.stack-integrations .header .right ul.users li a img.user_add,
+.stack-builds .header .right ul.users li a img.user_add,
+.stack-builds-service .header .right ul.users li a img.user_add {
+  width: 27px;
+  height: 20px;
+}
+/* line 395, stack.scss */
+.stack-dashboard .header .right ul.users li a.user_add,
+.stack-events .header .right ul.users li a.user_add,
+.stack-logs .header .right ul.users li a.user_add,
+.stack-updates .header .right ul.users li a.user_add,
+.stack-health .header .right ul.users li a.user_add,
+.stack-health-type .header .right ul.users li a.user_add,
+.stack-inventory .header .right ul.users li a.user_add,
+.stack-people .header .right ul.users li a.user_add,
+.stack-availability .header .right ul.users li a.user_add,
+.stack-integrations-main .header .right ul.users li a.user_add,
+.stack-integrations-service .header .right ul.users li a.user_add,
+.stack-integrations-service-settings .header .right ul.users li a.user_add,
+.stack-settings .header .right ul.users li a.user_add,
+.stack-sessions .header .right ul.users li a.user_add,
+.stack-peoplewithparam .header .right ul.users li a.user_add,
+.stack-settings .header .right ul.users li a.user_add,
+.stack-integrations .header .right ul.users li a.user_add,
+.stack-builds .header .right ul.users li a.user_add,
+.stack-builds-service .header .right ul.users li a.user_add {
+  background: #448aff;
+}
+/* line 398, stack.scss */
+.stack-dashboard .header .right ul.users li a.hidden_users,
+.stack-events .header .right ul.users li a.hidden_users,
+.stack-logs .header .right ul.users li a.hidden_users,
+.stack-updates .header .right ul.users li a.hidden_users,
+.stack-health .header .right ul.users li a.hidden_users,
+.stack-health-type .header .right ul.users li a.hidden_users,
+.stack-inventory .header .right ul.users li a.hidden_users,
+.stack-people .header .right ul.users li a.hidden_users,
+.stack-availability .header .right ul.users li a.hidden_users,
+.stack-integrations-main .header .right ul.users li a.hidden_users,
+.stack-integrations-service .header .right ul.users li a.hidden_users,
+.stack-integrations-service-settings .header .right ul.users li a.hidden_users,
+.stack-settings .header .right ul.users li a.hidden_users,
+.stack-sessions .header .right ul.users li a.hidden_users,
+.stack-peoplewithparam .header .right ul.users li a.hidden_users,
+.stack-settings .header .right ul.users li a.hidden_users,
+.stack-integrations .header .right ul.users li a.hidden_users,
+.stack-builds .header .right ul.users li a.hidden_users,
+.stack-builds-service .header .right ul.users li a.hidden_users {
+  background: #e4e4e4;
+  color: #7f7f7f;
+  line-height: 45px;
+  font-size: 24px;
+}
+/* line 409, stack.scss */
+.stack-dashboard .header .url,
+.stack-events .header .url,
+.stack-logs .header .url,
+.stack-updates .header .url,
+.stack-health .header .url,
+.stack-health-type .header .url,
+.stack-inventory .header .url,
+.stack-people .header .url,
+.stack-availability .header .url,
+.stack-integrations-main .header .url,
+.stack-integrations-service .header .url,
+.stack-integrations-service-settings .header .url,
+.stack-settings .header .url,
+.stack-sessions .header .url,
+.stack-peoplewithparam .header .url,
+.stack-settings .header .url,
+.stack-integrations .header .url,
+.stack-builds .header .url,
+.stack-builds-service .header .url {
+  font-size: 13px;
+  color: #454a54;
+  font-weight: lighter;
+}
+/* line 414, stack.scss */
+.stack-dashboard .header i.fa-caret-down,
+.stack-events .header i.fa-caret-down,
+.stack-logs .header i.fa-caret-down,
+.stack-updates .header i.fa-caret-down,
+.stack-health .header i.fa-caret-down,
+.stack-health-type .header i.fa-caret-down,
+.stack-inventory .header i.fa-caret-down,
+.stack-people .header i.fa-caret-down,
+.stack-availability .header i.fa-caret-down,
+.stack-integrations-main .header i.fa-caret-down,
+.stack-integrations-service .header i.fa-caret-down,
+.stack-integrations-service-settings .header i.fa-caret-down,
+.stack-settings .header i.fa-caret-down,
+.stack-sessions .header i.fa-caret-down,
+.stack-peoplewithparam .header i.fa-caret-down,
+.stack-settings .header i.fa-caret-down,
+.stack-integrations .header i.fa-caret-down,
+.stack-builds .header i.fa-caret-down,
+.stack-builds-service .header i.fa-caret-down {
+  cursor: pointer;
+  padding-left: 14px;
+  font-size: 14px;
+  position: absolute;
+  top: 9px;
+}
+/* line 423, stack.scss */
+.stack-dashboard .on-open-dropdown i.fa-caret-down,
+.stack-events .on-open-dropdown i.fa-caret-down,
+.stack-logs .on-open-dropdown i.fa-caret-down,
+.stack-updates .on-open-dropdown i.fa-caret-down,
+.stack-health .on-open-dropdown i.fa-caret-down,
+.stack-health-type .on-open-dropdown i.fa-caret-down,
+.stack-inventory .on-open-dropdown i.fa-caret-down,
+.stack-people .on-open-dropdown i.fa-caret-down,
+.stack-availability .on-open-dropdown i.fa-caret-down,
+.stack-integrations-main .on-open-dropdown i.fa-caret-down,
+.stack-integrations-service .on-open-dropdown i.fa-caret-down,
+.stack-integrations-service-settings .on-open-dropdown i.fa-caret-down,
+.stack-settings .on-open-dropdown i.fa-caret-down,
+.stack-sessions .on-open-dropdown i.fa-caret-down,
+.stack-peoplewithparam .on-open-dropdown i.fa-caret-down,
+.stack-settings .on-open-dropdown i.fa-caret-down,
+.stack-integrations .on-open-dropdown i.fa-caret-down,
+.stack-builds .on-open-dropdown i.fa-caret-down,
+.stack-builds-service .on-open-dropdown i.fa-caret-down {
+  position: absolute;
+  top: 9px;
+  right: -4px;
+  cursor: pointer;
+  padding-left: 6px;
+  font-size: 14px;
+}
+
+/* line 434, stack.scss */
+.stack-dashboard .content-side {
+  width: calc(100% - 478px);
+  float: left;
+  overflow: hidden;
+  margin-top: 63px;
+}
+/* line 439, stack.scss */
+.stack-dashboard .content-side .cell-container {
+  width: 100%;
+  padding: 0;
+  float: left;
+}
+/* line 443, stack.scss */
+.stack-dashboard .content-side .cell-container div[uib-tooltip-classes] {
+  font-size: 14px;
+  z-index: 99999999;
+  text-align: center;
+  max-width: 240px;
+}
+/* line 449, stack.scss */
+.stack-dashboard .content-side .cell-container .content-block {
+  background: #FFFFFF;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 454, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block {
+  font-size: 28px;
+  margin-top: 18px;
+  width: 440px;
+  font-weight: 300;
+  height: 34px;
+  overflow: hidden;
+}
+/* line 461, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .value {
+  float: left;
+}
+/* line 464, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block:last-child {
+  border-right: none;
+}
+/* line 467, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico-value {
+  float: left;
+  vertical-align: baseline;
+}
+/* line 471, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .green {
+  color: #80C06A;
+}
+/* line 473, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .green .ico {
+  background-color: #80C06A;
+}
+/* line 479, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .red {
+  color: #EE534F;
+}
+/* line 481, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .red .ico {
+  background-color: #EE534F;
+}
+/* line 487, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .orange {
+  color: #EDA42F;
+}
+/* line 489, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .orange .ico {
+  background-color: #EDA42F;
+}
+/* line 495, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico-sub-block {
+  border-right: 1px solid #eaeaea;
+  text-align: center;
+}
+/* line 496, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico-sub-block:last-child {
+  border-right: none;
+}
+/* line 501, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico-sub-block .ico-v-container {
+  display: inline-block;
+}
+/* line 505, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block sup {
+  font-size: 18px;
+}
+/* line 508, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico {
+  width: 18px;
+  height: 18px;
+  padding-right: 22px;
+  float: left;
+  margin-right: 4px;
+}
+/* line 515, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico.ico-lock {
+  width: 16px;
+  height: 21px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-lock.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-lock.svg") no-repeat 50% 50%;
+  margin-top: 10px;
+}
+/* line 522, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico.ico-timer {
+  width: 19px;
+  height: 21px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-timer.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-timer.svg") no-repeat 50% 50%;
+  margin-top: 10px;
+}
+/* line 529, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico.ico-pulse {
+  width: 19px;
+  height: 15px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-pulse.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-pulse.svg") no-repeat 50% 50%;
+  margin-top: 3px;
+  margin-top: 13px;
+}
+/* line 537, stack.scss */
+.stack-dashboard .content-side .cell-container .ico-block .ico.ico-warning {
+  width: 20px;
+  height: 20px;
+  -webkit-mask: url("/stack/assets/img/ico/health-icon-warning.svg") no-repeat 50% 50%;
+  mask: url("/stack/assets/img/ico/health-icon-warning.svg") no-repeat 50% 50%;
+  margin-top: 3px;
+  margin-top: 10px;
+}
+/* line 549, stack.scss */
+.stack-dashboard .right-side {
+  width: 478px;
+  float: right;
+}
+/* line 552, stack.scss */
+.stack-dashboard .right-side .cell-container {
+  background: #FFFFFF;
+  height: 54px;
+  line-height: 54px;
+  width: 468px;
+  clear: both;
+  margin: 0 0 14px 0;
+  padding: 0;
+  float: right;
+}
+/* line 563, stack.scss */
+.stack-dashboard .right-side #stack-event-list {
+  top: calc(50px + 74px);
+  background: #FFFFFF;
+  float: right;
+  width: 468px;
+  box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+/* line 570, stack.scss */
+.stack-dashboard .right-side #stack-event-list .middle, .stack-dashboard .right-side #stack-event-list .middle-content {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+/* line 575, stack.scss */
+.stack-dashboard .right-side #stack-event-list #eventsTab {
+  padding: 12px;
+}
+/* line 578, stack.scss */
+.stack-dashboard .right-side #stack-event-list #events-header {
+  top: 124px !important;
+}
+/* line 580, stack.scss */
+.stack-dashboard .right-side #stack-event-list #events-header .title {
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 6px;
+}
+/* line 586, stack.scss */
+.stack-dashboard .right-side #stack-event-list #events-header .search {
+  margin-top: 18px;
+  overflow: hidden;
+  padding-bottom: 18px;
+}
+/* line 590, stack.scss */
+.stack-dashboard .right-side #stack-event-list #events-header .search input[type="text"] {
+  border: 1px solid #ececec;
+  height: 32px;
+  padding: 0 11px;
+  line-height: 30px;
+  float: left;
+  width: 274px;
+}
+/* line 598, stack.scss */
+.stack-dashboard .right-side #stack-event-list #events-header .search select {
+  float: right;
+  height: 32px;
+  border: 1px solid #ececec;
+  border-radius: 0px;
+  background: #FFFFFF;
+  width: 142px;
+  -webkit-appearance: none;
+  padding: 0 11px;
+  margin-right: 0px;
+  text-transform: capitalize;
+}
+/* line 616, stack.scss */
+.stack-dashboard .right-side #stack-event-list #eventsTab .events .event .wrapper-icon {
+  margin-right: 12px;
+  float: left;
+}
+/* line 620, stack.scss */
+.stack-dashboard .right-side #stack-event-list #eventsTab .events .event .e-content {
+  width: 85%;
+}
+/* line 622, stack.scss */
+.stack-dashboard .right-side #stack-event-list #eventsTab .events .event .e-content .e-time {
+  width: 60px;
+  float: right;
+}
+
+/* line 634, stack.scss */
+.subscribe-header {
+  padding: 10px 17px;
+}
+/* line 636, stack.scss */
+.subscribe-header ul {
+  display: table;
+  width: 100%;
+  background-color: #3D434E;
+  color: white;
+}
+/* line 641, stack.scss */
+.subscribe-header ul li {
+  display: table-cell;
+  height: 80px;
+  vertical-align: middle;
+}
+/* line 645, stack.scss */
+.subscribe-header ul li:first-child {
+  font-size: 2em;
+  color: #EE534F;
+}

@@ -1,0 +1,4 @@
+<div class="autocomplete-search">
+    <input type="text" ng-model="asyncSelected" placeholder="Find Extensions..." uib-typeahead="data[options.searchField][0] for data in getData($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control" typeahead-on-select="callback($item, $model, $label)" typeahead-min-length="2" ng-change="_change()" typeahead-editable="false" ng-enter="enter();" typeahead-focus-first="false">
+    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+</div>

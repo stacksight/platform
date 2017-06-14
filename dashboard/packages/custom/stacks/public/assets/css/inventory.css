@@ -1,0 +1,75 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, inventory.scss */
+#inventoryTab #stacks-list .actions {
+  margin-right: 0px;
+}
+/* line 7, inventory.scss */
+#inventoryTab #stacks-list .actions button {
+  line-height: 0;
+}
+/* line 11, inventory.scss */
+#inventoryTab #stacks-list .header-list {
+  padding: 9px;
+  line-height: 22px !important;
+}
+/* line 14, inventory.scss */
+#inventoryTab #stacks-list .header-list .cell-container {
+  display: table;
+  height: 44px;
+  padding: 9px;
+}
+/* line 18, inventory.scss */
+#inventoryTab #stacks-list .header-list .cell-container .title {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 23, inventory.scss */
+#inventoryTab #stacks-list .header-list .stack-check {
+  padding-left: 11px;
+  max-width: 42px;
+}
+/* line 29, inventory.scss */
+#inventoryTab .capitalize {
+  text-transform: capitalize;
+}
+/* line 32, inventory.scss */
+#inventoryTab .search-banner {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 8px;
+  position: relative;
+}
+/* line 37, inventory.scss */
+#inventoryTab .search-banner input {
+  border-radius: 0;
+}

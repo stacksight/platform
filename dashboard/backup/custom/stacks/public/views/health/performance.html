@@ -1,0 +1,81 @@
+<div class="col-xs-12">
+    <button class="btn rnd-btn red pull-right" ng-click="rescan('performance');">rescan</button>
+    <uib-tabset id="googlespeed">
+        <uib-tab ng-repeat="(key, gtab) in performance.tabs" active="gtab.active" disable="gtab.disabled">
+            <uib-tab-heading>
+                <span>
+                    <img ng-src="/stacks/assets/img/icon-{{gtab.key}}.png" alt="icon" />
+                    <span class="m-r-xs header-icon {{gtab.key}}">
+                        <i class="fa" ng-class="(header_ico[gtab.key] == 'necessarily') ? 'fa-times-circle icon-red' : ((header_ico[gtab.key] == 'desirable') ? 'fa-exclamation-circle icon-yellow' : 'fa-check-circle icon-green')"></i>
+                    </span>
+                </span>
+                <span class="pd-l-sm">{{gtab.title}}</span>
+            </uib-tab-heading>
+            <div class="m-t-md" id="points-block">
+                <div ng-repeat="(key, group) in gtab.content.ruleGroups">
+                    <div class="pointsdetail" ng-class="group.score > 80 ? 'green' : group.score > 40 ? 'yellow' : 'red' ">
+                        <div class="score">{{group.score}} / 100</div>
+                        <div class="score-desc">{{key}} SCORE</div>
+                    </div>
+                </div>
+                <div class="clearfix m-b-lg"></div>
+            </div>
+            <div class="col-md-8 ex-{{gtab.title}}">
+                <div ng-repeat="(info_key, info) in gtab.content.formattedResults.ruleResults">
+                    <div ng-repeat="(infoblock_key, info_block) in info">
+                        <div ng-repeat="(infoobj_key, info_obj) in info_block">
+                            <div>
+                                <div class="clearfix" ng-switch="infoblock_key">
+                                    <div class="">
+                                        <span class="m-r-xs icon" ng-switch-when="1_necessarily">
+                                            <i class="fa fa-times-circle icon-red"></i>
+                                        </span>
+                                        <span class="m-r-xs icon" ng-switch-when="2_desirable">
+                                            <i class="fa fa-exclamation-circle icon-yellow"></i>
+                                        </span>
+                                        <span class="m-r-xs icon" ng-switch-when="3_done">
+                                            <i class="fa fa-check-circle icon-green"></i>
+                                        </span>
+                                        <strong>{{info_obj.localizedRuleName}}</strong>
+                                    </div>
+                                </div>
+                                <div class="clearfix m-t-sm m-l-md">
+                                    <a href="javascript:void(0)" ng-click="performance.collapsed[info_obj.index].isCollapsed = !performance.collapsed[info_obj.index].isCollapsed">Show details</a>
+                                    <div uib-collapse="performance.collapsed[info_obj.index].isCollapsed">
+                                        <div class="clearfix m-t-sm">
+                                            <div class="text-left m-b-md">
+                                                <div ng-bind-html="info_block[infoobj_key].summary.format" class="m-t-md"></div>
+                                            </div>
+                                            <div class="well ng-hide" ng-show="info_block[infoobj_key].urlBlocks">
+                                                <div ng-repeat="urlBlock in info_block[infoobj_key].urlBlocks">
+                                                    <div ng-bind-html="urlBlock.header.format" class="m-t-md"></div>
+                                                    <div class="well m-t-sm ng-hide" ng-show="urlBlock.urls">
+                                                        <div ng-repeat="url in urlBlock.urls">
+                                                            <small ng-bind-html="url.result.format | linky"></small>
+                                                            <hr ng-show="urlBlock.urls.length > 1"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="m-t-md">
+                                                    <a href="javascript:void(0)" ng-click="performance.collapsed[info_obj.index].isCollapsed = !performance.collapsed[info_obj.index].isCollapsed">Hide details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="screenshot {{gtab.key}}">
+                    <div class="screenshot-img-container">
+                        <img ng-src="data:{{gtab.content.screenshot.mime_type}};base64,{{gtab.content.screenshot.data}}" alt="{{gtab.key}}" />
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

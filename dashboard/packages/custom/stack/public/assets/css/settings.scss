@@ -1,0 +1,40 @@
+@import "mean-compass/sass/base";
+
+
+#settingsTab {
+    background: #ffffff;
+    .middle {
+        margin-top: $appsSearchPannel;
+    }
+    form {
+        width: 100%;
+        max-width: 500px;
+    }
+    div.select2 {
+        height: inherit !important;
+        .select2-drop {
+            position: initial;
+        }
+        .select2-results {
+            max-height: 120px;
+        }
+    }
+    .select2-search {
+        input {
+            padding: 0;
+            height: initial !important;
+        }
+    }
+    .left-col,
+    .right-col {
+        float: left;
+        width: 50%;
+    }
+    .right-col {
+        padding-left: 32px;
+        margin-top: -12px;
+    }
+    .wrapper-input {
+        margin: 10px 0;
+    }
+}

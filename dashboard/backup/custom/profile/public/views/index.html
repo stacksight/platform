@@ -1,0 +1,13 @@
+<div id="ProfilePage">
+    <div class="sub-header">
+        <div class="title">{{global.user.name}}</div>
+    </div>
+    <ul class="tabs">
+        <li ng-repeat="tab in tabs" class="tab-title link" ui-sref="{{tab.link}}" ui-sref-active="red">
+            <a>{{tab.title}}</a>
+        </li>
+    </ul>
+    <hr class="tabs-line"/>
+    <!-- <side-bar tabs="tabs" src="profile"></side-bar> -->
+    <div ui-view class="tab-content"></div>
+</div>

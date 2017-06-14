@@ -1,0 +1,158 @@
+<div class="modal-header">
+  <span class="b-wixmedia-image__header-message">
+    <span ng-if="images.length === 1">Selected image:<span class="b-wixmedia-image__header-name">{{image.title}}</span> </span>
+    <span ng-if="images.length > 1">Multiple images<span class="b-wixmedia-image__header-name">{{image.title}}</span> </span>
+    <div ng-click="changeImage()" class="btn btn-info"><i class="fa fa-file-image-o"></i> Change</div>
+  </span>
+</div>
+
+<div class="modal-body">
+  <div class="row">
+    <div class="b-wixmedia-image__settings col-md-4">
+      <accordion close-others="true">
+        <accordion-group heading="Dimensions" is-open="true">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-sm-7 control-label">Width</label>
+              <div class="col-sm-5">
+                <input type="number" class="form-control" ng-model="params.width">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-7 control-label">Height</label>
+              <div class="col-sm-5">
+                <input type="number" class="form-control" ng-model="params.height">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Mode</label>
+              <div class="col-sm-8">
+                <select ng-model="params.mode" class="form-control"><option value="fit">Fit</option><option value="fill">Fill</option><option value="canvas">Canvas</option><option value="crop">Crop</option></select>              </div>
+            </div>
+            <div class="form-group" ng-show="params.mode === 'fill' || params.mode === 'canvas'">
+              <label class="col-sm-4 control-label multiline">Alignment</label>
+              <div class="col-sm-8">
+                <select ng-model="params.fill_alignment" class="form-control"><option value="c">Center</option><option value="t">Top</option><option value="b">Bottom</option><option value="l">Left</option><option value="r">Right</option><option value="f">Face</option><option value="fs">Faces</option></select>
+              </div>
+            </div>
+            <div class="form-group" ng-show="params.mode === 'canvas'">
+              <label class="col-sm-4 control-label multiline">Color</label>
+              <div class="col-sm-8">
+                <input type="color" class="form-control" ng-model="params.canvas_color">
+              </div>
+            </div>
+            <div class="form-group" ng-show="params.mode === 'fill' || params.mode === 'fit'">
+              <label class="col-sm-4 control-label multiline">Resize algorithm</label>
+              <div class="col-sm-8">
+                <select ng-model="params.algorithm" class="form-control"><option value="auto">Auto</option><option value="1">Point</option><option value="2">Box</option><option value="3">Triangle</option><option value="4">Hermite</option><option value="5">Hanning</option><option value="6">Hamming</option><option value="7">Blackman</option><option value="8">Gaussian</option><option value="9">Quadratic</option><option value="10">Cubic</option><option value="11">Catrom</option><option value="12">Mitchell</option><option value="13">Jinc</option><option value="14">Sinc</option><option value="15">SincFast</option><option value="16">Kaiser</option><option value="17">Welch</option><option value="18">Parzen</option><option value="19">Bohman</option><option value="20">Bartlett</option><option value="21">Lagrange</option><option value="22">Lanczos</option><option value="23">LanczosSharp</option><option value="24">Lanczos2</option><option value="25">Lanczos2Sharp</option><option value="26">Robidoux</option><option value="27">RobidouxSharp</option><option value="28">Cosine</option></select>
+              </div>
+            </div>
+            <div class="form-group" ng-show="params.mode === 'crop'">
+              <label class="col-sm-4 control-label">X</label>
+              <div class="col-sm-8">
+                <input type="number" class="form-control" ng-model="params.crop_x">
+              </div>
+            </div>
+            <div class="form-group" ng-show="params.mode === 'crop'">
+              <label class="col-sm-4 control-label">Y</label>
+              <div class="col-sm-8">
+                <input type="number" class="form-control" ng-model="params.crop_y">
+              </div>
+            </div>
+
+          </form>
+        </accordion-group>
+        <accordion-group heading="Adjustment">
+          <div class="form-group">
+            <label class="col-sm-7 control-label">Brightness</label>
+            <div class="col-sm-5">
+              <input type="number" class="form-control" ng-model="params.brightness" min="1" max="100">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-7 control-label">Contrast</label>
+            <div class="col-sm-5">
+              <input type="number" class="form-control" ng-model="params.contrast" min="1" max="100">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-7 control-label">Saturation</label>
+            <div class="col-sm-5">
+              <input type="number" class="form-control" ng-model="params.saturation" min="1" max="100">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-7 control-label">Hue</label>
+            <div class="col-sm-5">
+              <input type="number" class="form-control" ng-model="params.hue" min="1" max="100">
+            </div>
+          </div>
+
+
+        </accordion-group>
+        <accordion-group heading="Filter">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" ng-model="params.oil"> Oil
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" ng-model="params.neg"> Negate
+                </label>
+              </div>
+            </div>
+          </div>
+        </accordion-group>
+        <accordion-group heading="JPEG Options">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-sm-8 control-label">Quality</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" ng-model="params.quality">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" ng-model="params.progressive"> Progressive
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </accordion-group>
+      </accordion>
+    </div>
+    <div class="col-md-8">
+      <div ng-if="images.length === 1" class="b-wixmedia-image__preview-zone">
+        <div class="b-wixmedia-image__spinner" ng-show="updateInProgress"></div>
+        <img class="b-wixmedia-image__preview-zone-image" imageonload="syncImage()" ng-src="{{editedImages[0]}}" alt="">
+        <img class="b-wixmedia-image__preview-zone-image" ng-src="{{backgroundImage}}" alt="">
+      </div>
+      <div ng-if="images.length > 1" class="b-wixmedia-image__preview-zone">
+        <carousel style="height: {{params.height}}px">
+          <slide ng-repeat="img in editedImages">
+            <img ng-src="{{img}}" style="margin:auto;">
+          </slide>
+        </carousel>
+      </div>
+      <div ng-if="previewHTML" class="b-wixmedia-image__snippet-zone">
+        <h5>Preview your HTML here:</h5>
+        <pre>{{previewHTML}}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <div class="b-wixmedia-image__footer-buttons">
+    <button ng-click="proceed()" type="button" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i>Insert HTML</button>
+  </div>
+</div>

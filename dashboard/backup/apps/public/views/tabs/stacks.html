@@ -1,0 +1,209 @@
+<div ng-if="vm.app" class="view-app  full-height" id="stacksTab">
+    <div ng-controller="StacksController as vms" class="middle">
+        <div class="middle-content {{vms.filer_view}}">
+
+            <div class="top-header list-header">
+                <div class="title">
+                    <h3>{{vm.app.name}} Stacks ({{(vm.app.stacks | filter:vms.search:strict).length}})</h3>
+                </div>
+                <div class="add-stack">
+                    <button class="btn btn-default button-add-stack red" ng-click="vms.openModal()"><i class="fa fa-plus"></i> Add stack</button>
+                </div>
+
+                <div class="search-banner">
+                    <input type="text" ng-model="vms.search.name" placeholder="Search Stacks" auto-focus/>
+                </div>
+                <div class="view-type">
+                    <div class="filter-block">
+                        <div class="filter-icon" ng-click="vms.change_view_filter('grid')">
+                            <span class="grid">
+                                <i class="fa fa-th" ng-class="(vms.filer_view == 'grid') ? 'active' : ''"></i>
+                            </span>
+                        </div>
+                        <div class="filter-icon" ng-click="vms.change_view_filter('list')">
+                            <span class="list">
+                            <i class="fa fa-bars" ng-class="(vms.filer_view == 'list') ? 'active' : ''"></i>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper-cubes" ng-if="vms.filer_view == 'grid'">
+
+                <div ng-include="'plus-cube'" class="add-plus-class"></div>
+                <div ng-include="'platforms-cube'" class="add-platform-cube-class" ng-show="vm.viewCube.platforms"></div>
+                <div ng-include="'add-stack-cube'" class="add-cube-class" ng-show="vm.viewCube.add"></div>
+
+                <div ng-repeat="stack in vm.app.stacks | filter:vms.search:strict" class="cube cursor-pointer" ng-init="stack.edit=false; stack.origName = stack.name" ng-class="{clicked: stack.edit}">
+                    <a href="" class="settings">
+                        <i class="fa fa-cog" ng-click="stack.edit=!stack.edit; $event.stopPropagation();$event.preventDefault();"></i>
+                    </a>
+                    <div class="front" ng-click="vms.moveToStack(stack)">
+                        <div class="wrapper-sm-cubes">
+                            <div class="sm-cube">
+                                <updates-notifications data="vm.stacksUpdates[stack._id]"></updates-notifications>
+                                <div class="platform" ng-class="stack.platform">
+                                </div>
+                            </div>
+                        </div>
+                        <h3><a>{{stack.name}}</a></h3>
+                        <h6 class="created" ng-if="!vm.stacksUpdates[stack._id].critical.length && !vm.stacksUpdates[stack._id].available.length">
+                            <span>created</span>
+                            <span am-time-ago="stack.created"></span>
+                        </h6>
+                        <h6 class="updates">
+                            <ng-pluralize ng-show="vm.stacksUpdates[stack._id].critical.length" count="vm.stacksUpdates[stack._id].critical.length" when="{
+                            '1': '1 update required',
+                            'other': '{} updates required'}" class="critical">
+                            </ng-pluralize>
+                            <span ng-if="vm.stacksUpdates[stack._id].critical.length && vm.stacksUpdates[stack._id].available.length">|</span>
+                            <ng-pluralize ng-show="vm.stacksUpdates[stack._id].available.length" count="vm.stacksUpdates[stack._id].available.length"
+                                when="{
+                                 '1': '1 update available',
+                                 'other': '{} updates available'}" class="available">
+                            </ng-pluralize ">
+                        </h6>
+                    </div>
+                    <div class="back ">
+                        <form name="updateStack " role="form " ng-submit="vms.update(updateStack.$valid, stack)
+                                    " novalidate class="form-horizontal ">
+                            <div class="form-group ">
+                                <div class="col-md-12 ">
+                                    <input name="name " type="text " class="form-control " data-ng-model="stack.name " id="name " required>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-md-12 ">
+                                    <input name="id " type="text " class="form-control " data-ng-model="stack._id " id="id " required readonly>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-md-12 ">
+                                    <input name="host " type="text " class="form-control " data-ng-model="stack.host " id="host
+                                    " placeholder="domain ">
+                                </div>
+                            </div>
+                            <div class="form-group actions ">
+                                <button>UPDATE</button>
+                                <a href=" " ng-click="stack.name=stack.origName ; stack.edit=false; ">CANCEL</a> |
+                                <a href=" " ng-click="vms.delete(stack); "> DELETE</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bottom-buttons ">
+                        <ul>
+                            <li><a href=" ">Health</a></li>
+                            <li><a href=" ">Events</a></li>
+                            <li><a href=" ">Logs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <ng-include src=" 'stacks-list' " ng-if="vms.filer_view=='list' "></ng-include>
+    </div>
+</div>
+
+<script type="text/ng-template" id='stacks-list'>
+    <div class="middle-content">
+        <div class="col-xs-12 bordered header-list " ng-if="vm.app.stacks.length ">
+            <div class="cell-container col-sm-1 border ">
+                <span class="title ">Type</span>
+            </div>
+            <div class="cell-container col-sm-3 border ">
+                <span class="title ">Name</span>
+            </div>
+            <div class="cell-container col-sm-2 border ">
+                <span class="title ">Last Updated</span>
+            </div>
+            <div class="cell-container col-sm-2 border ">
+                <span class="title ">Updates</span>
+            </div>
+            <div class="cell-container col-sm-4 border ">
+                <span class="title ">Quick links</span>
+            </div>
+        </div>
+        <div class="cube list cursor-pointer" ng-repeat="stack in vm.app.stacks | filter:vms.search:strict" ng-init="stack.edit=false;
+                                    stack.origName=stack.name " ng-class="{clicked: stack.edit} " ng-click="vms.moveToStack(stack)">
+            <div class="cell-container col-sm-1 border ">
+                <span class="platform {{stack.platform}} "></span>
+            </div>
+            <div class="cell-container col-sm-3 border stack-name ">
+                {{stack.name}}
+            </div>
+            <div class="cell-container col-sm-2 border created " am-time-ago="stack.updated "> </div>
+            <div class="cell-container col-sm-2 border updates ">
+                <div ui-sref="stack.updates({id: stack._id})" ng-show="vm.stacksUpdates " ng-class="stack.insightClass || 'green' " class="cursor-pointer">{{stack.updatesText || 'Everything is upto date'}}</div>
+            </div>
+            <div class="cell-container col-sm-4 border links ">
+                <ul>
+                    <li ng-repeat="link in stack.links " ng-if="link.views.indexOf( 'grid')> -1">
+                        <a ui-sref="{{link.link}}(link.params)">{{link.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="addStackModal">
+    <div id="appPage">
+        <div class="modal-body view-app" id="modalWindow">
+            <i class="fa fa-times" ng-click="vmodal.closeModal()"></i>
+            <div class="middle-content">
+                <div class="wrapper-cubes">
+                    <div ng-include="vmodal.template" class="add-cube-class"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== PLUS CUBE ============================================ -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='plus-cube'>
+    <div class="cube trans" ng-show="vm.viewCube.plus">
+        <div ng-click="vm.viewCube.add = true; vm.viewCube.platforms = false; vm.viewCube.plus = false;" class="cursor-pointer">
+            <span class="plus">+</span>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== PLATFORMS CUBE ======================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='platforms-cube'>
+    <div class="cube add-stack plus">
+        <h3>Add new stack to <b>{{vm.app.name}}</b></h3>
+        <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && value.enable" class="platform cursor-pointer" ui-sref="app.addStack({appId:vm.app._id, platform: key})" ng-class="key" ng-click="vmodal.closeModal()">
+        </div>
+        <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && !value.enable" class="platform disable" ng-class="key">
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== ADD STACK CUBE ======================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='add-stack-cube'>
+    <div class="cube add-stack">
+        <h3><strong>Add a stack</strong></h3>
+        <form name="addStack" role="form" ng-submit="vm.addStack();" novalidate class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input name="host" type="text" class="form-control" ng-model="vm.stack.host" id="host" required placeholder="http://" http-prefix>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input name="name" type="text" class="form-control" ng-model="vm.stack.name" id="name" placeholder="stack name">
+                </div>
+            </div>
+            <div class="form-group actions">
+                <a href="" class="active" ng-click="vm.viewCube.platforms=true; vm.viewCube.add = false; vm.viewCube.add = false;">WEB</a>
+                <a href="" ng-click="vm.viewCube.platforms=true; vm.viewCube.add = false; vm.viewCube.add = false; vmodal.openLocalModal();">LOCAL</a>
+            </div>
+            <button ng-click="vmodal.closeModal();">Add</button>
+        </form>
+    </div>
+</script>

@@ -1,0 +1,211 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 3, events.scss */
+#eventsTab {
+  background: #FFFFFF;
+}
+/* line 9, events.scss */
+#eventsTab .top .colorful-border .stick {
+  height: 4px;
+}
+/* line 14, events.scss */
+#eventsTab .top .search-banner .tag-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -18px;
+  width: 37px;
+  height: 37px;
+  border: solid 1px #e0e0e0;
+  border-radius: 50%;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+/* line 25, events.scss */
+#eventsTab .top .search-banner .tag-btn .fa {
+  line-height: 37px;
+  display: block;
+  text-align: center;
+  color: #EE534F;
+}
+/* line 32, events.scss */
+#eventsTab .top .search-banner .packages-filter {
+  position: absolute;
+  right: 0;
+  border: solid 1px #e0e0e0;
+  text-transform: capitalize;
+  font-weight: bold;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+}
+/* line 42, events.scss */
+#eventsTab .top .search-banner .packages-filter .pkg {
+  padding: 8px 15px;
+  border-bottom: solid 1px #e0e0e0;
+  width: 285px;
+}
+/* line 46, events.scss */
+#eventsTab .top .search-banner .packages-filter .pkg .icon {
+  font-size: 1.3em;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+}
+/* line 55, events.scss */
+#eventsTab .top .search-banner .packages-filter .pkg .wrapper-checkbox {
+  float: right;
+  margin-right: 37px;
+}
+/* line 60, events.scss */
+#eventsTab .top .search-banner .packages-filter .names {
+  padding-left: 50px;
+}
+/* line 62, events.scss */
+#eventsTab .top .search-banner .packages-filter .names .name {
+  padding: 5px;
+}
+/* line 69, events.scss */
+#eventsTab .date-top {
+  display: none;
+}
+/* line 74, events.scss */
+#eventsTab .middle .events .event {
+  position: relative;
+  min-height: 40px;
+  margin: 35px 0;
+  margin-left: 10px;
+  display: block;
+}
+/* line 80, events.scss */
+#eventsTab .middle .events .event .wrapper-icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+/* line 84, events.scss */
+#eventsTab .middle .events .event .wrapper-icon .icon {
+  font-size: 1.8em;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+}
+/* line 92, events.scss */
+#eventsTab .middle .events .event .wrapper-icon .icon.platform.web {
+  background-color: white !important;
+}
+/* line 97, events.scss */
+#eventsTab .middle .events .event .e-content {
+  display: inline-block;
+  width: 92%;
+}
+/* line 100, events.scss */
+#eventsTab .middle .events .event .e-content .type {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.429em;
+  margin-right: 4px;
+}
+/* line 106, events.scss */
+#eventsTab .middle .events .event .e-content .e-template {
+  font-size: 1.214em;
+}
+/* line 109, events.scss */
+#eventsTab .middle .events .event .e-content .username {
+  color: #8864AC;
+  font-weight: bold;
+}
+/* line 113, events.scss */
+#eventsTab .middle .events .event .e-content .name {
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 117, events.scss */
+#eventsTab .middle .events .event .e-content .pkg-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+/* line 122, events.scss */
+#eventsTab .middle .events .event .e-content .e-time {
+  color: #a5a5a5;
+  font-size: 1.05em;
+  width: 36px;
+}
+/* line 128, events.scss */
+#eventsTab .middle .events .event .component {
+  margin: 18px 0;
+}
+/* line 130, events.scss */
+#eventsTab .middle .events .event .component img {
+  max-width: 500px;
+}
+/* line 135, events.scss */
+#eventsTab .middle .events .event .file img {
+  max-width: 500px;
+  margin: 20px 0;
+}
+/* line 141, events.scss */
+#eventsTab .middle .events .event .user .component {
+  width: 275px;
+  max-width: 290px;
+  max-height: 155px;
+  height: 140px;
+  border: solid 1px #e4e4e4;
+}
+/* line 147, events.scss */
+#eventsTab .middle .events .event .user .component img {
+  float: left;
+  border-radius: 50%;
+  /*max-width: 40%;*/
+  /*max-height: 80%;*/
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /*top: 50%;
+  margin-top: -50px;*/
+  background-color: #eee;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/* line 160, events.scss */
+#eventsTab .middle .events .event .user .component img + div {
+  font-weight: bold;
+  margin-top: 20px;
+}

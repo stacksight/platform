@@ -1,0 +1,613 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 7, general.scss */
+#inventoryTab .checkbox_block,
+#integrationsTab .checkbox_block,
+#dashboardChartTab .checkbox_block,
+.spmenu .checkbox_block {
+  float: left;
+  margin-right: 14px;
+}
+/* line 11, general.scss */
+#inventoryTab .checkbox_block span.title,
+#integrationsTab .checkbox_block span.title,
+#dashboardChartTab .checkbox_block span.title,
+.spmenu .checkbox_block span.title {
+  padding-left: 26px;
+  font-size: 14px;
+}
+/* line 18, general.scss */
+#inventoryTab .list-header .filter-list,
+#integrationsTab .list-header .filter-list,
+#dashboardChartTab .list-header .filter-list,
+.spmenu .list-header .filter-list {
+  font-size: 22px;
+  padding-left: 6px;
+}
+/* line 22, general.scss */
+#inventoryTab .list-header .filter-title,
+#integrationsTab .list-header .filter-title,
+#dashboardChartTab .list-header .filter-title,
+.spmenu .list-header .filter-title {
+  font-size: 36px;
+}
+/* line 25, general.scss */
+#inventoryTab .list-header .filter-list-table,
+#integrationsTab .list-header .filter-list-table,
+#dashboardChartTab .list-header .filter-list-table,
+.spmenu .list-header .filter-list-table {
+  margin: 0;
+  padding: 0;
+  border-collapse: separate;
+}
+/* line 29, general.scss */
+#inventoryTab .list-header .filter-list-table i,
+#integrationsTab .list-header .filter-list-table i,
+#dashboardChartTab .list-header .filter-list-table i,
+.spmenu .list-header .filter-list-table i {
+  padding: 0 14px 0 0px;
+}
+/* line 33, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element) td,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element) td,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element) td,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element) td {
+  border: 1px solid transparent;
+}
+/* line 35, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element) td:first-child,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element) td:first-child,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element) td:first-child,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element) td:first-child {
+  padding-left: 20px !important;
+}
+/* line 39, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element):hover, #inventoryTab .list-header .filter-list-table tr:not(.last-filter-element).active,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element):hover,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element).active,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element):hover,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element).active,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element):hover,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element).active {
+  cursor: pointer;
+}
+/* line 43, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element):hover td, #inventoryTab .list-header .filter-list-table tr:not(.last-filter-element).active td,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element):hover td,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element).active td,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element):hover td,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element).active td,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element):hover td,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element).active td {
+  border-top-color: #ececec;
+  border-bottom-color: #ececec;
+}
+/* line 46, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element):hover td :not(i), #inventoryTab .list-header .filter-list-table tr:not(.last-filter-element).active td :not(i),
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element):hover td :not(i),
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element).active td :not(i),
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element):hover td :not(i),
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element).active td :not(i),
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element):hover td :not(i),
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element).active td :not(i) {
+  color: #ee534f;
+}
+/* line 50, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element):hover td i:hover, #inventoryTab .list-header .filter-list-table tr:not(.last-filter-element).active td i:hover,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element):hover td i:hover,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element).active td i:hover,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element):hover td i:hover,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element).active td i:hover,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element):hover td i:hover,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element).active td i:hover {
+  color: #ee534f;
+}
+/* line 54, general.scss */
+#inventoryTab .list-header .filter-list-table tr:not(.last-filter-element):hover td:first-child, #inventoryTab .list-header .filter-list-table tr:not(.last-filter-element).active td:first-child,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element):hover td:first-child,
+#integrationsTab .list-header .filter-list-table tr:not(.last-filter-element).active td:first-child,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element):hover td:first-child,
+#dashboardChartTab .list-header .filter-list-table tr:not(.last-filter-element).active td:first-child,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element):hover td:first-child,
+.spmenu .list-header .filter-list-table tr:not(.last-filter-element).active td:first-child {
+  border-left: 4px solid #ee534f;
+  padding-left: 17px !important;
+}
+/* line 64, general.scss */
+#inventoryTab .list-header .filter-list-table tr.last-filter-element,
+#integrationsTab .list-header .filter-list-table tr.last-filter-element,
+#dashboardChartTab .list-header .filter-list-table tr.last-filter-element,
+.spmenu .list-header .filter-list-table tr.last-filter-element {
+  cursor: pointer;
+  background: #f9f9f9;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 36px;
+}
+/* line 65, general.scss */
+#inventoryTab .list-header .filter-list-table tr.last-filter-element td,
+#integrationsTab .list-header .filter-list-table tr.last-filter-element td,
+#dashboardChartTab .list-header .filter-list-table tr.last-filter-element td,
+.spmenu .list-header .filter-list-table tr.last-filter-element td {
+  padding-left: 20px !important;
+}
+/* line 68, general.scss */
+#inventoryTab .list-header .filter-list-table tr.last-filter-element:hover,
+#integrationsTab .list-header .filter-list-table tr.last-filter-element:hover,
+#dashboardChartTab .list-header .filter-list-table tr.last-filter-element:hover,
+.spmenu .list-header .filter-list-table tr.last-filter-element:hover {
+  color: #ee534f;
+}
+/* line 76, general.scss */
+#inventoryTab .list-header .filter-list-table tr.last-filter-element i,
+#integrationsTab .list-header .filter-list-table tr.last-filter-element i,
+#dashboardChartTab .list-header .filter-list-table tr.last-filter-element i,
+.spmenu .list-header .filter-list-table tr.last-filter-element i {
+  padding: 0 6px 0 0px;
+}
+/* line 85, general.scss */
+#inventoryTab .sites-list li,
+#integrationsTab .sites-list li,
+#dashboardChartTab .sites-list li,
+.spmenu .sites-list li {
+  height: 94px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #dedede;
+  background: none;
+  clear: both;
+}
+/* line 92, general.scss */
+#inventoryTab .sites-list li .platform,
+#integrationsTab .sites-list li .platform,
+#dashboardChartTab .sites-list li .platform,
+.spmenu .sites-list li .platform {
+  background-color: #FFFFFF;
+  width: 64px;
+  height: 64px;
+  margin-top: 4px;
+  margin-right: 20px;
+  float: left;
+}
+/* line 100, general.scss */
+#inventoryTab .sites-list li .badge,
+#integrationsTab .sites-list li .badge,
+#dashboardChartTab .sites-list li .badge,
+.spmenu .sites-list li .badge {
+  border: solid 3px #EE534F;
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
+  background: transparent;
+  color: #EE534F;
+  line-height: 39px;
+  /*-6 border width */
+  padding: 0;
+  font-size: 1em;
+}
+/* line 111, general.scss */
+#inventoryTab .sites-list li .info,
+#integrationsTab .sites-list li .info,
+#dashboardChartTab .sites-list li .info,
+.spmenu .sites-list li .info {
+  float: left;
+}
+/* line 113, general.scss */
+#inventoryTab .sites-list li .info span.domain,
+#integrationsTab .sites-list li .info span.domain,
+#dashboardChartTab .sites-list li .info span.domain,
+.spmenu .sites-list li .info span.domain {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #454a54;
+}
+/* line 118, general.scss */
+#inventoryTab .sites-list li .info h4,
+#integrationsTab .sites-list li .info h4,
+#dashboardChartTab .sites-list li .info h4,
+.spmenu .sites-list li .info h4 {
+  color: #ee534f;
+  font-size: 24px;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* line 124, general.scss */
+#inventoryTab .sites-list li .info span.platform-type,
+#integrationsTab .sites-list li .info span.platform-type,
+#dashboardChartTab .sites-list li .info span.platform-type,
+.spmenu .sites-list li .info span.platform-type {
+  color: #979797;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+/* line 130, general.scss */
+#inventoryTab .sites-list li.grid,
+#integrationsTab .sites-list li.grid,
+#dashboardChartTab .sites-list li.grid,
+.spmenu .sites-list li.grid {
+  width: 240px;
+  text-align: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 240px;
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+  border: solid 1px #e4e4e4;
+  border-radius: 20px;
+}
+/* line 140, general.scss */
+#inventoryTab .sites-list li.grid .info,
+#inventoryTab .sites-list li.grid .platform,
+#integrationsTab .sites-list li.grid .info,
+#integrationsTab .sites-list li.grid .platform,
+#dashboardChartTab .sites-list li.grid .info,
+#dashboardChartTab .sites-list li.grid .platform,
+.spmenu .sites-list li.grid .info,
+.spmenu .sites-list li.grid .platform {
+  width: 100%;
+  border: none;
+}
+/* line 145, general.scss */
+#inventoryTab .sites-list li.grid .info,
+#integrationsTab .sites-list li.grid .info,
+#dashboardChartTab .sites-list li.grid .info,
+.spmenu .sites-list li.grid .info {
+  margin-top: 24px;
+}
+/* line 152, general.scss */
+#inventoryTab#inventoryTab .autocomplete-search,
+#integrationsTab#inventoryTab .autocomplete-search,
+#dashboardChartTab#inventoryTab .autocomplete-search,
+.spmenu#inventoryTab .autocomplete-search {
+  height: 100%;
+}
+/* line 155, general.scss */
+#inventoryTab#inventoryTab .label-sm,
+#integrationsTab#inventoryTab .label-sm,
+#dashboardChartTab#inventoryTab .label-sm,
+.spmenu#inventoryTab .label-sm {
+  font-size: 0.7em;
+}
+
+/* line 162, general.scss */
+#components-list-block + div.popover {
+  min-width: 450px;
+  position: absolute;
+  top: 67px !important;
+  right: 0;
+  left: initial !important;
+  height: 100%;
+}
+
+/* line 171, general.scss */
+.filter-state {
+  margin-top: 14px;
+}
+
+/* line 175, general.scss */
+.popover, .spmenu {
+  min-width: 256px;
+  font-weight: normal;
+  border-radius: 0;
+}
+/* line 179, general.scss */
+.popover.bottom, .spmenu.bottom {
+  border-radius: 0;
+  padding: 0;
+  width: inherit !important;
+  bottom: initial !important;
+  max-width: 400px;
+}
+/* line 187, general.scss */
+.popover .popover-title, .spmenu .popover-title {
+  background: transparent;
+  font-weight: bold;
+  border: none;
+  padding: 16px 14px 10px 14px;
+  font-size: 16px;
+}
+/* line 194, general.scss */
+.popover .button-close, .spmenu .button-close {
+  position: absolute;
+  top: 15px;
+  right: 7px;
+  color: #a5a5a5;
+  font-size: 14px;
+}
+/* line 201, general.scss */
+.popover .popover-content, .spmenu .popover-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0px;
+}
+/* line 206, general.scss */
+.popover .popover-content .component-wrapper, .spmenu .popover-content .component-wrapper {
+  margin-top: 112px;
+  overflow: auto;
+}
+/* line 210, general.scss */
+.popover .popover-content .component-enabled-wrapper, .spmenu .popover-content .component-enabled-wrapper {
+  margin-top: 70px;
+  overflow: auto;
+}
+/* line 216, general.scss */
+.popover .popover, .spmenu .popover {
+  z-index: 10000;
+}
+/* line 219, general.scss */
+.popover .popup-content, .spmenu .popup-content {
+  padding: 6px;
+}
+/* line 222, general.scss */
+.popover .popup-content .title-pre-content, .spmenu .popup-content .title-pre-content {
+  font-size: 18px;
+  padding: 0px 10px 10px 10px;
+  margin-top: -6px;
+}
+/* line 228, general.scss */
+.popover .popup-content-visible-columns, .spmenu .popup-content-visible-columns {
+  max-height: 350px;
+  max-width: 274px;
+}
+/* line 233, general.scss */
+.popover .popup-content-filters-list, .spmenu .popup-content-filters-list {
+  max-height: 350px;
+  padding: 6px 0px 0px 0px;
+  max-width: 274px;
+}
+/* line 238, general.scss */
+.popover .popup-select-filters-list, .spmenu .popup-select-filters-list {
+  min-width: 348px;
+  padding: 0;
+  max-height: none;
+}
+/* line 243, general.scss */
+.popover .form-group, .spmenu .form-group {
+  display: none;
+}
+/* line 246, general.scss */
+.popover table, .spmenu table {
+  width: 100%;
+}
+/* line 249, general.scss */
+.popover tr, .spmenu tr {
+  border-bottom: 1px solid #ffffff;
+}
+/* line 251, general.scss */
+.popover tr.success, .spmenu tr.success {
+  background-color: #ddffdd !important;
+}
+/* line 254, general.scss */
+.popover tr.danger, .spmenu tr.danger {
+  background-color: #ffdddd !important;
+}
+/* line 257, general.scss */
+.popover tr.warning, .spmenu tr.warning {
+  background-color: #ffffdd !important;
+}
+/* line 261, general.scss */
+.popover tr, .popover td, .popover th, .spmenu tr, .spmenu td, .spmenu th {
+  height: 25px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: capitalize;
+}
+/* line 267, general.scss */
+.popover td, .popover th, .spmenu td, .spmenu th {
+  padding-left: 12px !important;
+}
+
+/* line 271, general.scss */
+.popover-title {
+  padding: 16px 14px 10px 14px !important;
+}
+
+/* line 275, general.scss */
+#modal-filters {
+  overflow: hidden;
+}
+/* line 277, general.scss */
+#modal-filters ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 280, general.scss */
+#modal-filters ul li {
+  margin: 0;
+  padding: 0;
+  height: 25px;
+}
+/* line 284, general.scss */
+#modal-filters ul li a {
+  color: #454a54;
+  line-height: 25px;
+  border: none;
+}
+/* line 288, general.scss */
+#modal-filters ul li a:hover {
+  color: #ee534f;
+  text-decoration: none;
+}
+/* line 295, general.scss */
+#modal-filters ul:not(.list-of-options) {
+  padding: 12px 0px 12px 0px;
+  width: 40%;
+  float: left;
+  border: none;
+  overflow: hidden;
+  border-right: 1px solid #d9d9d9;
+}
+/* line 303, general.scss */
+#modal-filters ul:not(.list-of-options) li a {
+  padding: 0 0 0 19px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 309, general.scss */
+#modal-filters ul:not(.list-of-options) li:hover, #modal-filters ul:not(.list-of-options) li.active {
+  border-left: 5px solid #ee534f;
+}
+/* line 311, general.scss */
+#modal-filters ul:not(.list-of-options) li:hover a, #modal-filters ul:not(.list-of-options) li.active a {
+  padding: 0 0 0 14px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+/* line 321, general.scss */
+#modal-filters .tab-content {
+  float: left;
+  border-left: 1px solid #d9d9d9;
+  margin-left: -1px;
+  padding: 12px;
+  width: 60%;
+}
+
+/* line 331, general.scss */
+.modal .modal-content {
+  border-radius: 0;
+}
+/* line 336, general.scss */
+.modal .modal-content #table-view-filters-enabled tr td, .modal .modal-content #table-edit-filters-enabled tr td {
+  padding: 10px;
+}
+/* line 338, general.scss */
+.modal .modal-content #table-view-filters-enabled tr td select, .modal .modal-content #table-edit-filters-enabled tr td select {
+  color: #000000;
+  min-width: 312px;
+  display: block;
+  border: 1px solid #e8e8e8;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0 12px;
+  position: relative;
+  height: 42px;
+  border-radius: 0 !important;
+  background: transparent;
+  float: left;
+  display: block;
+}
+/* line 353, general.scss */
+.modal .modal-content #table-view-filters-enabled tr td select:not(:first-child), .modal .modal-content #table-edit-filters-enabled tr td select:not(:first-child) {
+  margin-left: 10px;
+}
+/* line 357, general.scss */
+.modal .modal-content #table-view-filters-enabled tr td input, .modal .modal-content #table-edit-filters-enabled tr td input {
+  color: #000000;
+  width: 100%;
+  display: block;
+  border: 1px solid #e8e8e8;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0 12px;
+  position: relative;
+  height: 42px;
+  border-radius: 0 !important;
+  background: transparent;
+  float: left;
+  display: block;
+}
+/* line 380, general.scss */
+.modal .modal-content .tabs-modal-content {
+  margin-top: 20px;
+}
+/* line 383, general.scss */
+.modal .modal-content .filter-dummy-select {
+  margin-top: 20px;
+  color: #c3c5c8;
+  width: 200px;
+  display: block;
+  border: 1px solid #e8e8e8;
+  line-height: 40px;
+  font-style: italic;
+  font-size: 12px;
+  padding: 0 12px;
+  position: relative;
+}
+/* line 394, general.scss */
+.modal .modal-content .filter-dummy-select i {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+}
+/* line 403, general.scss */
+.modal .modal-header {
+  border: none;
+  padding: 20px 20px 8px 20px;
+}
+/* line 404, general.scss */
+.modal .modal-header h3 {
+  font-size: 20px;
+}
+/* line 411, general.scss */
+.modal .modal-content .button-close-modal {
+  position: absolute;
+  color: #ebebeb;
+  top: 2px;
+  right: 10px;
+  font-size: 24px;
+}
+/* line 418, general.scss */
+.modal .modal-content .button-close {
+  color: #adadad;
+  font-size: 24px;
+}
+/* line 423, general.scss */
+.modal .modal-body {
+  padding: 0px 20px;
+}
+/* line 425, general.scss */
+.modal .modal-body textarea {
+  width: 100%;
+  padding: 20px;
+}
+/* line 430, general.scss */
+.modal .modal-footer {
+  text-align: left;
+  border-top: none;
+}
+/* line 433, general.scss */
+.modal .modal-footer .rnd-btn {
+  width: 160px;
+  line-height: 20px;
+}
+/* line 437, general.scss */
+.modal .modal-footer .no-styles {
+  background: transparent;
+  border: none;
+  padding-left: 32px;
+}

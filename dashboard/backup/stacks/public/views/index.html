@@ -1,0 +1,178 @@
+<section id="dashboarStacksTab" ng-controller="StacksController as vm" class="full-height" ng-init="vm.init()">
+  <side-bar data="vm.sideBarData"></side-bar>
+  <div class="tab-content full-height">
+    <div ui-view class="full-height with-sidebar-content">
+      <div id="stacks-list">
+        <div class="top-header list-header">
+          <div class="title">
+            <h3>Stacks <strong ng-if="vm.selected_stacks_count > 0">({{vm.selected_stacks_count}} stacks selected)</strong></h3>
+          </div>
+          <div class="actions">
+            <button ng-click="vm.stacksAction()">{{vm.action_for_stacks}}</button>
+            <button uib-popover-html="'Some options there'" class="" popover-placement="right"><i class="fa fa-caret-down"></i></button>
+          </div>
+          <div class="add-stack">
+            <button class="btn btn-default button-add-stack blue" ng-click="vms.openModal()"><i class="fa fa-plus"></i> Add stack</button>
+          </div>
+
+          <div class="search-banner">
+            <input type="text" ng-model="vms.search.name" placeholder="Search Stacks" auto-focus/>
+            <button class="advanced-search"><span class="ico-filter"></span> Advanced search</button>
+          </div>
+        </div>
+        <div class="middle-content">
+          <div class="col-xs-12 bordered header-list " ng-if="vm.app.stacks.length ">
+            <div class="cell-container col-sm-1 border ">
+
+            </div>
+            <div class="cell-container col-sm-3 border ">
+              <span class="title ">Stack</span>
+            </div>
+            <div class="cell-container col-sm-3 border ">
+              <span class="title ">Health</span>
+            </div>
+            <div class="cell-container col-sm-5 border ">
+              <span class="title ">Insights</span>
+            </div>
+          </div>
+          <div class="cube list cursor-pointer" ng-repeat="stack in vm.app.stacks | filter:vms.search:strict" ng-init="stack.edit=false;
+                                    stack.origName=stack.name; vm.stacks = vm.app.stacks " ng-class="(vm.selectState == stack._id || ($first == true && vm.selectState == false) ) ? 'selected' : '' " ng-click="vm.selectStack(stack)">
+            <div ng-include="'add-stack-cube'" class="add-cube-class" ng-show="vm.viewCube.add"></div>
+            <div class="cell-container col-sm-1 border stack-check">
+              <label class="wrapper-checkbox red sm">
+                <input type="checkbox" name="cb-{{stack._id}}" ng-model="vm.selected_stacks[stack._id]" id="cb-{{stack._id}}" ng-true-value="'true'" />
+                <label for="cb-{{stack._id}}"></label>
+              </label>
+            </div>
+            <div class="cell-container col-sm-3 border stack-container">
+              <div class="title">
+                <span class="platform {{stack.platform}} "></span>
+                <span class="stack-name">{{stack.name}}</span>
+              </div>
+              <div class="tags">
+                <ul>
+                  <li>sla</li>
+                  <li>our site</li>
+                  <li>drupal site</li>
+                  <li>some additional site</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="cell-container col-sm-3 border stack-health">
+              <div class="col-sm-4 ico-block no-padding">
+                <span class="ico lock-ico"></span>
+                <span class="ico-value lock-ico-value green">85</span>
+                <img src="/apps/assets/img/ico/chart_tmp.png" alt=""/>
+              </div>
+              <div class="col-sm-4 ico-block no-padding">
+                <span class="ico timer-ico"></span>
+                <span class="ico-value timer-ico-value green">85</span>
+                <img src="/apps/assets/img/ico/chart_tmp.png" alt=""/>
+              </div>
+              <div class="col-sm-4 ico-block no-padding">
+                <span class="ico pulse-ico"></span>
+                <span class="ico-value pulse-ico-value red">45 <sup class="percent">%</sup></span>
+                <img src="/apps/assets/img/ico/chart_tmp.png" alt=""/>
+              </div>
+            </div>
+            <div class="cell-container col-sm-5 border updates stack-insights">
+              <div ui-sref="stack.updates({id: stack._id})" ng-show="vm.stacksUpdates " ng-class="stack.insightClass || 'green' " class="cursor-pointer">
+                {{stack.updatesText || 'Everything is upto date'}}
+                <button class="additional-button">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="stack-event-list" ng-controller="EventsController as vm" ng-init="vm.find(); vm.eventsControlller = vm" ng-if="vm.stacks_ready == true">
+        <div id="eventsTab">
+          <div class="middle" scroll s-down="vm.loadMore()" s-all="vm.fixedHeader()" ng-class="{anchor: vm.anchor, 'with-timeline': vm.histogram.length > 1}">
+            <div ng-include="'subscribe'"></div>
+            <div class="events middle-content">
+              <div ng-if="vm.docs.length > 0 || vm.exists_any_events == true" id="events-header" class="text-center">
+                <div class="title">
+                  Events
+                </div>
+                <div class="search">
+                  <input type="text" placeholder="Search" ng-model="vm.searchEvent"/>
+                  <select name="event_type" id="search_event_type_options" ng-model="vm.searchEventType">
+                    <option value="">All events</option>
+                    <option value="type1">Type#1</option>
+                    <option value="type2">Type#2</option>
+                  </select>
+                </div>
+              </div>
+              <div ng-if="vm.docs.length == 0 && !vm.busy" id="ev-no-data" class="text-center">
+                <img ng-src="/stacks/assets/img/empty-stacks.jpg" alt="not-found" />
+                <span class="clear clearfix no-found-text">No events logged</span>
+              </div>
+              <div ng-repeat="event in vm.docs">
+                <div class="group-title date" ng-class="{show: event._created !== vm.docs[$index -1]._created}">
+                  <hr/>
+                  <div class="group-title-label">{{::event._source.created | date: 'MMM d, yyyy'}}</div>
+                </div>
+                <div class="group-title session" id="{{sessionKey}}" ng-class="{show: event._source.session !== vm.docs[$index -1]._source.session}">
+                  <hr/>
+                  <div class="group-title-label">{{::event._source.session}}</div>
+                </div>
+                <div class="event" id="{{$index}}">
+                  <div class="wrapper-icon" ng-include="'icon-template'"></div>
+                  <div class="e-content">
+                    <div ng-include="'e-title'"></div>
+                    <div ng-include="::event.template" ng-class="::event._source.subtype || event._source.type" class="e-template"></div>
+                  </div>
+                </div>
+              </div>
+              <div ng-show="vm.busy" class="loader red">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/ng-template" id='platforms-cube'>
+  <div class="cube add-stack plus">
+    <h3>Add new stack to <b>{{vm.app.name}}</b></h3>
+    <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && value.enable" class="platform cursor-pointer" ui-sref="app.addStack({appId:vm.app._id, platform: key})" ng-class="key" ng-click="vmodal.closeModal()">
+    </div>
+    <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && !value.enable" class="platform disable" ng-class="key">
+    </div>
+  </div>
+</script>
+<script type="text/ng-template" id="addStackModal">
+  <div id="appPage">
+    <div class="modal-body view-app" id="modalWindow">
+      <i class="fa fa-times" ng-click="vmodal.closeModal()"></i>
+      <div class="middle-content">
+        <div class="wrapper-cubes">
+          <div ng-include="vmodal.template" class="add-cube-class"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/ng-template" id='add-stack-cube'>
+  <div class="cube add-stack">
+    <h3><strong>Add a stack</strong></h3>
+    <form name="addStack" role="form" ng-submit="vm.addStack();" novalidate class="form-horizontal">
+      <div class="form-group">
+        <div class="col-md-12">
+          <input name="host" type="text" class="form-control" ng-model="vm.stack.host" id="host" required placeholder="http://" http-prefix>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-12">
+          <input name="name" type="text" class="form-control" ng-model="vm.stack.name" id="name" placeholder="stack name">
+        </div>
+      </div>
+      <div class="form-group actions">
+        <a href="" class="active" ng-click="vm.viewCube.platforms=true; vm.viewCube.add = false; vm.viewCube.add = false;">WEB</a>
+        <a href="" ng-click="vm.viewCube.platforms=true; vm.viewCube.add = false; vm.viewCube.add = false; vmodal.openLocalModal();">LOCAL</a>
+      </div>
+      <button ng-click="vmodal.closeModal();">Add</button>
+    </form>
+  </div>
+</script>

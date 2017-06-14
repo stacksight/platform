@@ -1,0 +1,117 @@
+
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+   
+
+@import "compass";
+
+
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+
+//-- Fonts
+
+$fonts-path: '/mean-compass/assets/fonts/';
+
+//-- Images
+
+$themeImgUrl: '../mean-compass/assets/img/';
+
+$packageName: 'mean-compass';
+
+$packageImgUrl: '../' + $packageName + '/assets/img/';
+
+
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+
+
+$icons-smart-layout:smart;
+@import "icons-smart/*.png";
+  
+
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+
+
+$blue:rgb(25, 97, 122);
+$authBlue: rgb(1, 91, 126);
+$lightBlue:#26b2c0;
+$lightRed: #c95e56;
+$purple:rgb(123, 82, 160);   
+$purple1:#7A529F;
+$bordo:#AB5149;
+$pink:#D98E7B;
+$beige:#f9f2e8;
+$error-red:#FC4639;
+$red:#c95e56;
+$orange: #EDA42F;
+$dark-green:#527A21;
+$light-green:#D9E4B9;
+$appGrey: #f3f3f3;
+$appLightGrey :#FBFBFB;
+$green: #80C06A;
+$red: #EE534F;
+$white: #FFFFFF;
+$bluev2: #448aff;
+
+$text1:#050505;
+$text2:#393939;
+$text3:#3a3a3a;
+$text4:#424242;
+$text5:#474546;
+$text6:#515151;
+$text7:#525252;
+$text8:#5c5c5c;
+$text9:#777777;
+$text10:rgba(64, 66, 66, 0.46);
+$text11:#3c3c3c;
+$text12:rgba(5, 5, 5, 0.6);
+$text13:#3e3e3e;
+$text14:#838383;
+$text15:#505050;
+$text16:#595959;
+$text17:#474646;
+$text18:#474848;
+$text19:#8D8D8D;
+
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+$border: solid 1px #e4e4e4;
+$mainContentPadding: 25px 35px;
+$sideBarWidth: 106px;
+$sideBarWidthFull: 16.5%;
+$sideBar1024Width: 24%;
+$sideBar480Width: 50%;
+$headerHeight: 50px;
+$appHeaderHeight: 59px;
+$appsSearchPannel: 46px;
+$appsInventoryPannel: 66px;
+$appsTopHeight: $headerHeight + $appsSearchPannel;
+$networkWidth: 100%;
+$centerPadding: 0 6%;
+$appContextWidth: 20%;
+$server: rgb(111, 196, 128);
+$client: rgb(136, 100, 172);
+$db: rgb(97, 167, 219);
+$borderColor: rgb(224, 224, 224);
+$grey: #3D434E;
+$darkGrey: #2c3036;
+$darkerGrey: #202328;
+$disableColor: #AEAEAE;
+
+$eventBarWidth: 478px;
+$eventBarWidthClear: 468px;
+
+$topWidth: 0;
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/

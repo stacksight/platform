@@ -1,0 +1,53 @@
+<div class="" data-ng-controller="ExampleController">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <h1>WixMedia temporary dashboard</h1>
+  <ul>
+    <li><a ui-sref="wixmedia settings">Wixmedia Settings</a></li>
+    <li><a ui-sref="wixmedia example page">Wixmedia Examples</a></li>
+  </ul>
+  <p><button class="btn btn-primary" data-ng-click="open()">Open Media Manager</button></p>
+  <hr/>
+
+  <tabset>
+    <tab heading="Image Example">
+      <div style="margin-top:20px" class="row">
+        <div class="col-md-4">
+          <wixmedia-image ng-model="images.asideImage" style="width: 350px; height: 350px;" width="350" height="350"></wixmedia-image>
+        </div>
+        <div class="col-md-8">
+          <h3>Textarea demo</h3>
+          <textarea rows=3 style="width: 100%;" ng-if="previewHTML">{{previewHTML}}</textarea>
+        </div>
+      </div>
+    </tab>
+    <tab heading="Inline editing Example">
+
+      <h2> Inline Editing Example </h2>
+      <div class="row">
+        <div class="col-md-8">
+          <div name="content"  ng-init="content=' Before we embark on the journey of identifying world-class web developers, we must first define exactly what we mean by “web development”.\n Are we referring to the development of a web site? Or the development of a web service? Or the development of a complex web-based application? \n The truth is that web development is an extremely broad term that can legitimately encompass any or all of the above. Accordingly, this guide touches on multiple aspects of web development, some or all of which will be relevant to the specific context in which you may be looking to hire.'" data-ng-model="content" editable options='{"buttons": ["bold", "italic", "underline", "anchor", "header1", "header2", "quote", "orderedlist", "unorderedlist", "image"], "placeholder": "Document Title", "disableToolbar": false, "forcePlainText": false, "disableReturn": false}'></div>
+          <p>
+            This guide intentionally focuses on the conceptual and architectural underpinnings of web development, rather than delving into the specifics of any specific web technologies (such as JavaScript, Ruby on Rails, PHP, and so on). Accordingly, this guide presents “technology-agnostic” web developer interview questions relating to:
+          </p>
+          Client-side (browser-based development)
+          Server-side
+          Transport
+          Database
+        </div>
+        <div class="col-md-4">
+          <wixmedia-image ng-model="profileImage" style="width: 200px; height: 200px;" placeholderText="Add Profile Image" width="200" height="200"></wixmedia-image>
+        </div>
+      </div>
+      <div style="margin-top:20px" class="row">
+        <div class="col-md-4">
+          <wixmedia-image ng-model="sideImage" style="width: 350px; height: 350px;" width="350" height="350"></wixmedia-image>
+        </div>
+        <div class="col-md-8">
+          <h3>Client side</h3>
+          <p>Browser-based development presents numerous unique challenges to the developer, ranging from cross-browser anomalies, to sandbox limitations, to diverse performance characteristics across a wide array of client platforms and devices. Adept client-side web developers will be highly skilled at navigating these obstacles.</p>
+        </div>
+      </div>
+      
+    </tab>
+  </tabset>
+</div>

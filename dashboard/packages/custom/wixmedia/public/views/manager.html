@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <span class="b-wixmedia-manager__header-message">Your image files can be up to 25MB and in JPEG, PNG & GIF formats.</span>
+  <div class="b-wixmedia-manager__header-buttons">
+    <label for="wixUploadImage"><div class="btn btn-warning" ng-disabled="uploadInProgress"><i class="fa" ng-class="{
+      'fa-spin': uploadInProgress,
+      'fa-refresh': uploadInProgress,
+      'fa-cloud-upload': !uploadInProgress
+    }"></i><button>{{ uploadInProgress ? ' Uploading...' : ' Upload images' }}</button>
+    <input id="wixUploadImage" type="file" nv-file-select uploader="uploader" type="button">
+    </div></label>
+  </div>
+</div>
+
+<div class="modal-body">
+  <div class="row">
+  <div class="b-wixmedia-manager__collections col-md-3">
+    <ul class="b-wixmedia-manager__collections-list">
+      <li class="b-wixmedia-manager__collections-list-item"
+          data-ng-repeat="item in collections"
+          data-ng-class="{ 'b-wixmedia-manager__collections-list-item_active': item === activeCollection }"
+      ><p ng-click="selectFolder(item)">{{item.title}}</p>
+        <a class="b-wixmedia-manager__collections-list-item-remove" ng-click="removeFolder(item)"><i class="fa fa-trash"></i></a>
+      </li>
+    </ul>
+    <div class="b-wixmedia-manager__collections-footer"><a ng-click="addNewFolder()"><i class="fa fa-plus-circle"></i> Add New Folder</a></div>
+  </div>
+  <div class="b-wixmedia-manager__collection-items col-md-9">
+    <ul class="b-wixmedia-manager__collection-items-list">
+      <li ng-click="selectImage(item)" class="b-wixmedia-manager__collection-item" ng-class="{ 'b-wixmedia-manager__collection-item_selected': selectedImages.indexOf(item) !== -1 }" ng-repeat="item in activeCollection.items">
+        <div class="b-wixmedia-manager__collection-item-titlebar">{{item.title}}</div>
+        <div class="b-wixmedia-manager__collection-item-image" ng-style="{'background-image': 'url(http://media.wixapps.net/{{item.public_properties.user}}/images/{{item.public_properties.image}}/v1/fill/w_180,h_180/{{item.public_properties.fileName}})'}"></div>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <span class="b-wixmedia-manager__footer-message"></span>
+  <div class="b-wixmedia-manager__footer-buttons">
+    <button ng-click="proceed()" ng-disabled="!selectedImages.length" type="button" class="btn btn-primary"><i class="fa fa-pencil-square-o"></i> {{selectedImages.length <= 1 ? 'Select image' : 'Select images'}}</button>
+  </div>
+
+</div>

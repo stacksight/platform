@@ -1,0 +1,45 @@
+<section id="billingTab" class="wrapper-coloumns" ng-init="vmb.init();">
+    <div ng-include="'plan-info'" class="coloumn"></div>
+    <div ng-include="'card-info'" class="coloumn"></div>
+    <div ng-include="'billing-history'" class="coloumn"></div>
+</section>
+<!-- ########################################################################################### -->
+<!-- ==================================== PLAN ================================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='plan-info'>
+    <div class="col-title">your plan</div>
+    <div class="plan">
+        <div class="name">{{vmb.currentPlan.name}}</div>
+        <ul>
+            <li ng-repeat="feature in vmb.currentPlan.features" ng-if="feature.active && feature.locatedIn.indexOf('card') > -1"><span>{{feature.description}}</span></li>
+        </ul>
+    </div>
+    <div>
+        <a ui-sref="plans" class="btn rnd-btn green md">Upgrade plan</a>
+        <span class="link"><a href="">Cancel Plan</a></span>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== CARD ================================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='card-info'>
+    <div class="col-title">card info</div>
+    <div>
+        <div>{{vmb.currentCard.name}}</div>
+        <div>{{vmb.currentCard.last4}}</div>
+    </div>
+    <div>
+        <button class="btn trans rnd-btn red" ng-click="vmb.addCard();" ng-if="vmb.global.user.profile.billing[vmb.billingProvider]">change card</button>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== HISTORY ==============================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='billing-history'>
+    <div class="col-title">billing history</div>
+    <div class="charge" ng-repeat="charge in vmb.charges">
+        <span class="date">{{charge.created * 1000 | date:"MMMM d yyyy"}}</span> &nbsp; &nbsp;
+        <span>{{charge.amount/100}}<small>$</small></span>&nbsp; &nbsp;
+        <span>{{charge.status}}</span>
+    </div>
+</script>

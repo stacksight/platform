@@ -1,0 +1,71 @@
+@import "mean-compass/sass/base";
+
+//@media (min-width: 1200px) {
+  .content {
+    .container {
+      padding:0;
+      width:$networkWidth;
+    }
+  }
+//}
+
+.navbar {
+  position:fixed;
+  height:$headerHeight;
+  min-height:$headerHeight;
+  .page-header{
+    padding:0;
+    width:$networkWidth;
+    margin:0 auto;
+    height: 100%;
+    .inner {
+      .account {
+        height: 100%;
+        .text-edit {
+          padding: 0;
+        }
+      }
+      .navbar-nav {
+        height: 100%;
+        li {
+          a {
+            &:focus, &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.dropdown{
+  margin-left:10px;
+  font-size:1em;
+  height: 100%;
+  .dropdown-toggle {
+    line-height: $headerHeight;
+    padding: 0 18px !important;
+  }
+  .dropdown-menu {
+    margin-left: -30px;
+  }
+}
+
+.dropdown .user-name {
+  margin-right: 16px;
+}
+.dropdown .profile-pic {
+  border-radius: 50%;
+  margin-right: 8px;
+  max-width: 31px;
+  max-height: 31px;
+}
+
+.page-header .main-menu {
+  margin-right:300px;
+}
+
+.page-header .main-menu ul {
+  font-size: 1.3em;
+}

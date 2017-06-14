@@ -1,0 +1,74 @@
+<div data-ng-controller="RegisterCtrl">
+    <div ng-repeat="error in registerError">
+        <div class="alert alert-danger animated fadeIn">{{error.msg}}</div>
+    </div>
+    <!-- <div class="alert alert-danger animated fadeIn" ng-show="registerError">{{registerError}}</div> -->
+    <form id="register_form" name="registerForm" ng-submit="register(registerForm.$valid)" novalidate>
+        <h2>Sign Up</h2>
+        <div class="input-wrapper">
+            <input required id="name" type="text" name="name" placeholder="Full Name" ng-model="user.name">
+            <div class="error_message" ng-show="registerForm.$submitted && registerForm.name.$invalid">Invalid name</div>
+            <span class="pic user"></span>
+        </div>
+        <div class="input-wrapper">
+            <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="user.email">
+            <div class="error_message" ng-show="registerForm.$submitted && registerForm.email.$invalid">Invalid email address</div>
+            <span class="pic email"></span>
+        </div>
+        <!--<div class="input-wrapper">
+            <input required id="username" type="text" name="username" placeholder="Username" ng-model="user.username">
+            <div class="error_message" ng-show="registerForm.$submitted && registerForm.username.$invalid">Invalid username</div>
+            <span class="pic username"></span>
+        </div>-->
+        <div class="input-wrapper">
+            <input required id="password_block" name="password" type="{{input.type}}" placeholder="{{input.placeholder}}" ng-model="user.password" ng-minlength="8" ng-maxlength="20">
+            <div class="error_message" ng-show="registerForm.$submitted && registerForm.password.$invalid">
+                <span ng-show="registerForm.password.$error.required">Invalid password</span>
+                <span ng-show="registerForm.password.$error.maxlength || registerForm.password.$error.minlength">Password range: 8-20 characters</span>
+            </div>
+            <span class="pic password {{input.iconClass}}" ng-click="togglePasswordVisible()">
+                <div class="hide_text_password">
+                    {{input.tooltipText}}
+                </div>
+            </span>
+        </div>
+        <div class="input-wrapper">
+            <input required id="confirm_password" name="confirm_password" type="{{input.type}}" placeholder="{{input.placeholderConfirmPass}}" ng-model="user.confirmPassword" ng-minlength="8" ng-maxlength="20">
+            <div class="error_message" ng-show="registerForm.$submitted && registerForm.confirm_password.$invalid">
+                <span ng-show="registerForm.confirm_password.$error.required">Invalid password</span>
+                <span ng-show="registerForm.confirm_password.$error.maxlength || registerForm.confirm_password.$error.minlength">Password range: 8-20 characters</span>
+            </div>
+            <span class="pic password {{input.iconClassConfirmPass}}" ng-click="togglePasswordConfirmVisible()">
+                <div class="hide_text_password">
+                  {{input.tooltipTextConfirmPass}}
+                </div>
+            </span>
+        </div>
+        <div class="input-wrapper">
+            <label class="wrapper-checkbox red sm">
+                <input type="checkbox" name="cb-terms-condition" ng-model="user.tercond" id="cb-terms-condition" ng-required="user.tercond" required class="">
+                <label for="cb-terms-condition"></label>
+            </label>
+            <label class="terms-condition">I have read and accepted the <a href="http://stacksight.io/blog/terms-and-conditions/" target="_blank">Terms and Conditions</a>.</label>
+            <div class="error_message" ng-show="registerForm.$submitted && !user.tercond">
+                <span ng-show="!user.tercond">You must accept the Terms</span>
+            </div>
+        </div>
+        <div class="button_register">
+            <button type="submit" class="submit_button">Sign up</button>
+        </div>
+        <div class="toggle-action">
+            <p>Already have an account?</p>
+            <a ui-sref='auth.login'>Log in</a>
+        </div>
+         <!--<div class="login-w-soc">
+            <div class="title">Or register with:</div>
+            <ul class="soc-networks">
+                <li><a href="/auth/facebook" class="facebook"></a></li>
+                 <li><a href="/auth/google" class="google"></a></li>
+                 <li><a href="/auth/linkedin" class="linkedin"></a></li>
+                <li><a href="#" class="github"></a></li>
+            </ul>
+        </div>-->
+    </form>
+</div>

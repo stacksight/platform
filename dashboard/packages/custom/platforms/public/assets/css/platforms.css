@@ -1,0 +1,240 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 3, platforms.scss */
+#PlatformPage .middle-content {
+  margin: 20px;
+  background: white;
+}
+/* line 7, platforms.scss */
+#PlatformPage .platform {
+  vertical-align: middle;
+}
+/* line 10, platforms.scss */
+#PlatformPage .explanations {
+  width: 100%;
+}
+/* line 12, platforms.scss */
+#PlatformPage .explanations .explanation-item {
+  margin: 40px 0;
+}
+/* line 14, platforms.scss */
+#PlatformPage .explanations .explanation-item .label {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: #EE534F;
+}
+/* line 19, platforms.scss */
+#PlatformPage .explanations .explanation-item .field {
+  font-size: 1.1em;
+  /*                .wrapper-input {
+      position: relative;
+      input, select {
+          width: 100%;
+          height: 45px;
+          border: $border;
+          padding: 0 10px;
+      }
+      .btn.trans {
+          font-weight: normal;
+          font-size: 0.7em;
+          i {
+              margin-right: 5px;
+          }
+      }
+  }*/
+}
+/* line 37, platforms.scss */
+#PlatformPage .explanations .explanation-item .field div {
+  margin: 10px 0;
+}
+/* line 40, platforms.scss */
+#PlatformPage .explanations .explanation-item .field .btn.done {
+  padding: 15px 100px;
+}
+/* line 47, platforms.scss */
+#PlatformPage .embed-code .copy-code {
+  position: absolute;
+  right: 10px;
+}
+/* line 51, platforms.scss */
+#PlatformPage .embed-code select {
+  width: 75px;
+}
+
+/* line 57, platforms.scss */
+.platform {
+  overflow: hidden;
+}
+/* line 60, platforms.scss */
+.platform.drupal {
+  background-image: url("/platforms/assets/img/drupal.png");
+}
+/* line 63, platforms.scss */
+.platform.mean {
+  background-image: url("/platforms/assets/img/mean.png");
+}
+/* line 66, platforms.scss */
+.platform.wordpress {
+  background-image: url("/platforms/assets/img/wordpress.png");
+}
+/* line 69, platforms.scss */
+.platform.wix {
+  background-image: url("/platforms/assets/img/wix.png");
+}
+/* line 72, platforms.scss */
+.platform.nodejs {
+  background-image: url("/platforms/assets/img/nodejs.png");
+}
+/* line 75, platforms.scss */
+.platform.php {
+  background-image: url("/platforms/assets/img/php.png");
+}
+/* line 78, platforms.scss */
+.platform.meteor {
+  background-image: url("/platforms/assets/img/meteor.png");
+}
+/* line 81, platforms.scss */
+.platform[class*="magento"] {
+  background-image: url("/platforms/assets/img/magento.png");
+}
+/* line 84, platforms.scss */
+.platform[class*="symfony"] {
+  background-image: url("/platforms/assets/img/php.png");
+}
+/* line 87, platforms.scss */
+.platform.web {
+  background-image: url("/platforms/assets/img/web.png");
+}
+/* line 92, platforms.scss */
+.platform.sm {
+  width: 32px;
+  height: 32px;
+  background-image: url("/platforms/assets/img/logos.png");
+}
+/* line 96, platforms.scss */
+.platform.sm.drupal {
+  background-position: -23px -75px !important;
+}
+/* line 99, platforms.scss */
+.platform.sm.wordpress {
+  background-position: -94px -75px !important;
+}
+/* line 102, platforms.scss */
+.platform.sm.mean {
+  background-position: -159px -75px !important;
+}
+/* line 105, platforms.scss */
+.platform.sm.meteor {
+  background-position: -228px -75px !important;
+}
+/* line 108, platforms.scss */
+.platform.sm.joomla {
+  background-position: -396px -75px !important;
+}
+/* line 111, platforms.scss */
+.platform.sm.moodle {
+  background-position: -365px -75px !important;
+}
+/* line 114, platforms.scss */
+.platform.sm[class*="magento"] {
+  background-position: -432px -75px !important;
+}
+/* line 117, platforms.scss */
+.platform.sm.php {
+  background-position: -642px -75px !important;
+}
+/* line 120, platforms.scss */
+.platform.sm.nodejs {
+  background-position: -568px -75px !important;
+}
+/* line 123, platforms.scss */
+.platform.sm.web {
+  background-position: -812px -75px !important;
+}
+/* line 126, platforms.scss */
+.platform.sm[class*="symfony"] {
+  background-position: -646px -75px !important;
+}
+/* line 130, platforms.scss */
+.platform.md {
+  transform: scale(0.6);
+}
+
+/* line 135, platforms.scss */
+.platform_checked {
+  border: solid 1px #e4e4e4;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 4px 4px 0px;
+}
+/* line 143, platforms.scss */
+.platform_checked.disable {
+  border: solid 1px #e4e4e4;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 148, platforms.scss */
+.platform_checked .checked {
+  display: none;
+}
+/* line 152, platforms.scss */
+.platform_checked.selected .checked {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  background: url("/stacks/assets/img/checked-o.png");
+}
+/* line 162, platforms.scss */
+.platform_checked:hover, .platform_checked.selected {
+  border-width: 1px;
+  border-color: #5c99ff;
+  position: relative;
+}
+/* line 167, platforms.scss */
+.platform_checked.sm {
+  width: 40px !important;
+  height: 40px !important;
+}
+/* line 170, platforms.scss */
+.platform_checked.sm.wordpress {
+  background-position: -725px -75px !important;
+}
+/* line 173, platforms.scss */
+.platform_checked.sm:hover {
+  border-width: 1px;
+}

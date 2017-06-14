@@ -1,0 +1,29 @@
+<div id="dashboardChartTab" ng-controller="GroupDashboardController as vmc" ng-show="vm.app" class="full-height">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title">Chart Demo</div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="health middle-content" style="background-color: #fff">
+            <canvas class="chart chart-line-with-line"
+            chart-data="theChart.data" chart-colours="theChart.colors"
+            chart-redline = "theChart.redline"
+            chart-labels="theChart.labels" chart-legend="false"
+            chart-series="theChart.series" chart-click="theChart.click"
+            chart-options="options" chart-hover="onHover" width="800" height="240">
+            </canvas>
+            <div class="chart-legend">
+                <ul class="line-legend">
+                    <li ng-repeat="(key, value) in theChart.series">
+                        <span ng-style="{ 'border-radius': 0, 'border': '2px solid '+theChart.colors[key],  'background' : ((show[key] === true) ? theChart.colors[key] : 'white'), 'cursor': 'pointer'}"
+                        title="Show/hide corresponding line on chart"
+                        ng-click="show[key] = !show[key]; handleShow()">
+                        </span>
+                        {{ value }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

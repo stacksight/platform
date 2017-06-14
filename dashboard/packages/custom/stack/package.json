@@ -1,0 +1,14 @@
+{
+  "name": "stack",
+  "version": "0.0.1",
+  "description": "Some description of stack",
+  "author": {
+    "name": "mean scaffold"
+  },
+  "mean": "0.4.3",
+  "dependencies": {},
+  "license": "MIT",
+  "scripts": {
+    "postinstall" : "bower install"
+  }
+}

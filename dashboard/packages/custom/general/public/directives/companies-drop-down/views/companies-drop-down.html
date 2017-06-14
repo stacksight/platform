@@ -1,0 +1,25 @@
+<div class="stack-companies-list evbar">
+    <div ng-show="needToShow">
+        <i class="fa fa-angle-double-right"></i>
+        <a class="total"  ng-if="!isShowCaret" ui-sref="company.main.dashboard({ companyId: stParams.companyId })">
+            {{selected_company.name}} <strong ng-if="selectedStacks > 0">({{selectedStacks}} stacks selected)</strong>
+        </a>
+        <span class="total" ng-if="isShowCaret">
+            {{selected_company.name}}
+            <strong ng-if="selectedStacks > 0">({{selectedStacks}} stacks selected)</strong>
+        </span>
+        <div class="btn-group" uib-dropdown>
+        <span id="btn-append-to-body" type="button" class="" uib-dropdown-toggle ng-if="isShowCaret">
+            <i class="fa fa-caret-down"></i>
+        </span>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                <li role="menuitem">
+                    <a href="javascript:void(0)" ng-click="setCompany(defaultCompany)">{{defaultCompany.name}}</a>
+                </li>
+                <li role="menuitem" ng-repeat="company in companies">
+                    <a href="javascript:void(0)" ng-click="setCompany(company)">{{company.name}} <strong>({{company.permission}})</strong></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

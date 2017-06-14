@@ -1,0 +1,203 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, logs.scss */
+#logsTab .middle .left-side {
+  width: 70%;
+  float: left;
+  height: 100%;
+  /*padding-top: 25px;*/
+  padding-left: 15px;
+}
+/* line 11, logs.scss */
+#logsTab .middle .left-side.wide {
+  width: 100%;
+}
+/* line 14, logs.scss */
+#logsTab .middle .left-side .logs {
+  /*                font-family: monospace;
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100% - 250px);
+  .date-title {
+      background: #fff;
+      margin: 1rem 0;
+      padding: .5rem 0;
+      line-height: 1.2rem;
+      font-size: 1.2em;
+      font-family: Lato,appleLogo,sans-serif;
+      color: #555459;
+      font-weight: 900;
+      text-align: center;
+      cursor: default;
+      clear: both;
+      position: relative;
+      hr {
+          position: absolute;
+          border-top: 1px solid #DDD;
+          width: 100%;
+          top: 1.1rem;
+          margin: 0;
+      }
+      .date-title-label {
+          background: #fff;
+          padding: 0 1rem;
+          display: inline-block;
+          margin: 0 auto;
+          position: relative;
+      }
+  }*/
+}
+/* line 47, logs.scss */
+#logsTab .middle .left-side .logs .log {
+  position: relative;
+  border-left: solid 3px transparent;
+  padding-left: 5px;
+}
+/* line 51, logs.scss */
+#logsTab .middle .left-side .logs .log .l-content {
+  max-width: 85%;
+}
+/* line 54, logs.scss */
+#logsTab .middle .left-side .logs .log.error {
+  background: #f1e5e5;
+  border-left: solid 3px #770101;
+}
+/* line 58, logs.scss */
+#logsTab .middle .left-side .logs .log:hover {
+  background: #E7EFF2;
+  border-left: solid 3px #106584;
+}
+/* line 62, logs.scss */
+#logsTab .middle .left-side .logs .log .l-right-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 15%;
+}
+/* line 67, logs.scss */
+#logsTab .middle .left-side .logs .log .l-right-content .ip {
+  color: #737171;
+}
+/* line 71, logs.scss */
+#logsTab .middle .left-side .logs .log .l-session {
+  position: absolute;
+  top: 0;
+  right: 110px;
+}
+/* line 77, logs.scss */
+#logsTab .middle .left-side .logs .add-comment {
+  position: absolute;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background: #F05417;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -5px;
+  cursor: pointer;
+}
+/* line 88, logs.scss */
+#logsTab .middle .left-side .logs .comment {
+  text-align: center;
+  color: #8DC540;
+  font-weight: bold;
+  width: 100%;
+}
+/* line 96, logs.scss */
+#logsTab .middle .right-side {
+  float: right;
+  height: 100%;
+  width: 30%;
+}
+/* line 100, logs.scss */
+#logsTab .middle .right-side .stable-data {
+  border: solid 1px #e5e5e5;
+  padding: 10px 3px;
+  margin-top: -1px;
+}
+/* line 104, logs.scss */
+#logsTab .middle .right-side .stable-data .item {
+  display: inline-block;
+  margin: 5px 10px;
+}
+/* line 107, logs.scss */
+#logsTab .middle .right-side .stable-data .item .title {
+  color: #BCBCBC;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+/* line 112, logs.scss */
+#logsTab .middle .right-side .stable-data .item .d-content {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 118, logs.scss */
+#logsTab .middle .right-side .dynamic-data {
+  text-align: center;
+}
+/* line 120, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu,
+#logsTab .middle .right-side .dynamic-data .memory {
+  display: inline-block;
+  margin-top: 20px;
+}
+/* line 124, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu svg,
+#logsTab .middle .right-side .dynamic-data .memory svg {
+  width: auto;
+  height: auto;
+}
+/* line 128, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu .outer-bar,
+#logsTab .middle .right-side .dynamic-data .memory .outer-bar {
+  stroke-width: 10px;
+}
+/* line 132, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.cpu .widget-container .progress-bar,
+#logsTab .middle .right-side .dynamic-data .memory.cpu .widget-container .progress-bar {
+  stroke: #8DC540;
+}
+/* line 135, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.cpu .widget-container .normal,
+#logsTab .middle .right-side .dynamic-data .memory.cpu .widget-container .normal {
+  stroke: #c4c4c4;
+}
+/* line 140, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.memory .widget-container .progress-bar,
+#logsTab .middle .right-side .dynamic-data .memory.memory .widget-container .progress-bar {
+  stroke: #F05417;
+}
+/* line 143, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.memory .widget-container .normal,
+#logsTab .middle .right-side .dynamic-data .memory.memory .widget-container .normal {
+  stroke: #c4c4c4;
+}

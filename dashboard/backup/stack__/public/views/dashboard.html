@@ -1,0 +1,90 @@
+<div id="stack-dashboard">
+    <div class="content-side">
+        <div class="cell-container">
+            <div class="header">
+                <span class="stack-logo platform" ng-class="stack.platform"></span>
+                <div class="top">
+                    <h3>{{stack.data.title}}</h3>
+                </div>
+                <div class="bottom">
+                    <span class="url">{{vms.stack.host}}</span>
+                    <div class="tags">
+                        <angucomplete-alt id="tag-input"
+                          pause="300"
+                          selected-object="addTag"
+                          local-data="search_tags"
+                          local-search-async="localSearch"
+                          title-field="value"
+                          description-field="desc"
+                          minlength="1"
+                          input-class="tag-input"
+                          match-class="highlight" ng-if="show_taginput"
+                        />
+                        <span ng-if="!show_taginput" ng-click="showInputTags()" class="add-tag"><i class="fa fa-plus"></i></span>
+                        <ul ng-if="vms.stack.tags">
+                            <li ng-repeat="tag in vms.stack.tags">{{tag.value}} <i class="fa fa-times" ng-click="removeTag(tag)"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <section id="dashboardChartTab" ng-controller="GroupDashboardController as vmd" class="full-height" ng-init="vmd.init()">
+                    <div class="middle">
+                        <div class="health middle-content">
+                            <input date-range-picker class="form-control date-picker" type="text" ng-model="vmd.datePicker.date" min="vmd.datePicker.min" max="vmd.datePicker.max" options="vmd.datePicker.opts" />
+                            <ul class="tabs">
+                                <li ng-repeat="key in notSorted(tabs)" class="tab-title link" ng-init="value = tabs[key]" ui-sref="{{value.link}}" ui-sref-active="red">
+                                    <a>{{value.title}}
+                                        <div class="mark" ng-class="vmd.avgGroupScore[key].class || 'purple-bg'">{{vmd.avgGroupScore[key].avgScore || '?'}}</div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="tabs-line" />
+                            <div class="middle m-n">
+                                <div class="header">
+                                    <div class="left">
+                                        <div>
+                                            <h2>{{tabs[vmd.currentType].inner_title}}</h2>
+                                        </div>
+                                        <div>
+                                            <h4>{{tabs[vmd.currentType].description}}</h4></div>
+                                    </div>
+                                    <div class="right">
+                                        <span class="score">{{vmd.avgGroupScore[vmd.currentType].avgScore}}</span>
+                                        <span class="desc">{{tabs[vmd.currentType].score_title | uppercase}}</span>
+                                    </div>
+                                </div>
+                                <div class="health middle-content clearfix clear" style="background-color: #fff">
+                                    <line-chart options="generalChart"></line-chart>
+                                    <div ng-init="vmd.initType('general');"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="cell-container stack-health ico-block">
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-lock"></span>
+                <span class="ico-value lock-ico-value green">85</span>
+            </div>
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-timer"></span>
+                <span class="ico-value timer-ico-value green">85</span>
+            </div>
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-pulse"></span>
+                <span class="ico-value pulse-ico-value red">45 <sup class="percent">%</sup></span>
+            </div>
+            <div class="col-sm-3 no-padding ico-sub-block">
+                <span class="ico ico-warning"></span>
+                <span class="ico-value pulse-ico-value green">0</span>
+            </div>
+        </div>
+        <events-bar ng-ids="stackId"></events-bar>
+    </div>
+
+</div>

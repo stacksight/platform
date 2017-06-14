@@ -1,0 +1,22 @@
+@import "mean-compass/sass/base";
+
+.stack-inventory{
+    .with-sidebar-content {
+      .middle {
+        margin-top: 40px !important;
+        .middle-content {
+          padding: 0px !important;
+          .last-update{
+            padding: 10px 0;
+            font-size: 22px;
+            font-weight: 100;
+          }
+          .list-group-item,
+          .list-group-item:last-child,
+          .list-group-item:first-child {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+}

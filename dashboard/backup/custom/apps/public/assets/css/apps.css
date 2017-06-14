@@ -1,0 +1,1758 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* TODO: make sprite for platforms icons (like sm class) */
+/*APPS AND STACKS*/
+/* line 9, apps.scss */
+#appsPage,
+#appPage,
+#modalWindow,
+#modalWindowLocal {
+  /*LIST APPS*/
+}
+/* line 14, apps.scss */
+#appsPage .top-header .search-banner,
+#appPage .top-header .search-banner,
+#modalWindow .top-header .search-banner,
+#modalWindowLocal .top-header .search-banner {
+  width: 90%;
+  display: inline-block;
+}
+/* line 17, apps.scss */
+#appsPage .top-header .search-banner input,
+#appPage .top-header .search-banner input,
+#modalWindow .top-header .search-banner input,
+#modalWindowLocal .top-header .search-banner input {
+  width: 100%;
+  height: 38px;
+  padding-left: 12px;
+  border: solid 1px #e4e4e4;
+}
+/* line 24, apps.scss */
+#appsPage .top-header .view-type,
+#appPage .top-header .view-type,
+#modalWindow .top-header .view-type,
+#modalWindowLocal .top-header .view-type {
+  width: 6%;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 32, apps.scss */
+#appsPage .middle-content .top-header,
+#appPage .middle-content .top-header,
+#modalWindow .middle-content .top-header,
+#modalWindowLocal .middle-content .top-header {
+  width: 100%;
+}
+/* line 34, apps.scss */
+#appsPage .middle-content .top-header .title,
+#appPage .middle-content .top-header .title,
+#modalWindow .middle-content .top-header .title,
+#modalWindowLocal .middle-content .top-header .title {
+  float: left;
+}
+/* line 36, apps.scss */
+#appsPage .middle-content .top-header .title h3,
+#appPage .middle-content .top-header .title h3,
+#modalWindow .middle-content .top-header .title h3,
+#modalWindowLocal .middle-content .top-header .title h3 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/* line 42, apps.scss */
+#appsPage .middle-content .top-header .add-stack,
+#appPage .middle-content .top-header .add-stack,
+#modalWindow .middle-content .top-header .add-stack,
+#modalWindowLocal .middle-content .top-header .add-stack {
+  float: right;
+}
+/* line 44, apps.scss */
+#appsPage .middle-content .top-header .add-stack .btn,
+#appPage .middle-content .top-header .add-stack .btn,
+#modalWindow .middle-content .top-header .add-stack .btn,
+#modalWindowLocal .middle-content .top-header .add-stack .btn {
+  padding: 10px 50px;
+}
+/* line 49, apps.scss */
+#appsPage .middle-content .table,
+#appPage .middle-content .table,
+#modalWindow .middle-content .table,
+#modalWindowLocal .middle-content .table {
+  margin: 0;
+}
+/* line 53, apps.scss */
+#appsPage .middle-content.list .add-plus-class,
+#appPage .middle-content.list .add-plus-class,
+#modalWindow .middle-content.list .add-plus-class,
+#modalWindowLocal .middle-content.list .add-plus-class {
+  margin-top: -54px;
+}
+/* line 56, apps.scss */
+#appsPage .middle-content.list .add-cube-class,
+#appsPage .middle-content.list .add-platform-cube-class,
+#appPage .middle-content.list .add-cube-class,
+#appPage .middle-content.list .add-platform-cube-class,
+#modalWindow .middle-content.list .add-cube-class,
+#modalWindow .middle-content.list .add-platform-cube-class,
+#modalWindowLocal .middle-content.list .add-cube-class,
+#modalWindowLocal .middle-content.list .add-platform-cube-class {
+  width: 100%;
+}
+/* line 60, apps.scss */
+#appsPage .middle-content.list .cube,
+#appPage .middle-content.list .cube,
+#modalWindow .middle-content.list .cube,
+#modalWindowLocal .middle-content.list .cube {
+  width: initial;
+  min-height: initial;
+  margin: 0 0 0 20px;
+  height: initial;
+  padding: 0;
+  max-height: initial;
+}
+/* line 67, apps.scss */
+#appsPage .middle-content.list .cube.add-stack,
+#appPage .middle-content.list .cube.add-stack,
+#modalWindow .middle-content.list .cube.add-stack,
+#modalWindowLocal .middle-content.list .cube.add-stack {
+  padding: 36px;
+}
+/* line 71, apps.scss */
+#appsPage .middle-content.list .cube.trans > div,
+#appPage .middle-content.list .cube.trans > div,
+#modalWindow .middle-content.list .cube.trans > div,
+#modalWindowLocal .middle-content.list .cube.trans > div {
+  margin: 0px;
+  position: relative;
+}
+/* line 75, apps.scss */
+#appsPage .middle-content.list .cube.trans .plus,
+#appPage .middle-content.list .cube.trans .plus,
+#modalWindow .middle-content.list .cube.trans .plus,
+#modalWindowLocal .middle-content.list .cube.trans .plus {
+  padding: 0px 16px;
+  font-size: 2.5em;
+}
+/* line 82, apps.scss */
+#appsPage .middle-content .st-sort-ascent:after,
+#appPage .middle-content .st-sort-ascent:after,
+#modalWindow .middle-content .st-sort-ascent:after,
+#modalWindowLocal .middle-content .st-sort-ascent:after {
+  content: "\f0d8";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-left: 18px;
+}
+/* line 90, apps.scss */
+#appsPage .middle-content .st-sort-descent:after,
+#appPage .middle-content .st-sort-descent:after,
+#modalWindow .middle-content .st-sort-descent:after,
+#modalWindowLocal .middle-content .st-sort-descent:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-left: 18px;
+}
+/* line 99, apps.scss */
+#appsPage .platform,
+#appPage .platform,
+#modalWindow .platform,
+#modalWindowLocal .platform {
+  border: solid 1px #e4e4e4;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 106, apps.scss */
+#appsPage .platform.disable,
+#appPage .platform.disable,
+#modalWindow .platform.disable,
+#modalWindowLocal .platform.disable {
+  border: none;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 111, apps.scss */
+#appsPage .platform:hover,
+#appPage .platform:hover,
+#modalWindow .platform:hover,
+#modalWindowLocal .platform:hover {
+  border-width: 3px;
+}
+/* line 114, apps.scss */
+#appsPage .platform.sm,
+#appPage .platform.sm,
+#modalWindow .platform.sm,
+#modalWindowLocal .platform.sm {
+  width: 40px !important;
+  height: 40px !important;
+}
+/* line 117, apps.scss */
+#appsPage .platform.sm.wordpress,
+#appPage .platform.sm.wordpress,
+#modalWindow .platform.sm.wordpress,
+#modalWindowLocal .platform.sm.wordpress {
+  background-position: -725px -75px !important;
+}
+/* line 120, apps.scss */
+#appsPage .platform.sm:hover,
+#appPage .platform.sm:hover,
+#modalWindow .platform.sm:hover,
+#modalWindowLocal .platform.sm:hover {
+  border-width: 1px;
+}
+/* line 125, apps.scss */
+#appsPage .wrapper-search-input,
+#appPage .wrapper-search-input,
+#modalWindow .wrapper-search-input,
+#modalWindowLocal .wrapper-search-input {
+  max-width: 1182px;
+  margin: auto;
+  padding: 0px;
+}
+/* line 131, apps.scss */
+#appsPage .wrapper-cubes,
+#appPage .wrapper-cubes,
+#modalWindow .wrapper-cubes,
+#modalWindowLocal .wrapper-cubes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1182px;
+  margin: auto;
+  padding: 20px 0;
+}
+/* line 137, apps.scss */
+#appsPage .wrapper-cubes .add-stack,
+#appPage .wrapper-cubes .add-stack,
+#modalWindow .wrapper-cubes .add-stack,
+#modalWindowLocal .wrapper-cubes .add-stack {
+  margin-top: 25px;
+}
+/* line 140, apps.scss */
+#appsPage .wrapper-cubes .add-stack .button-add-stack,
+#appPage .wrapper-cubes .add-stack .button-add-stack,
+#modalWindow .wrapper-cubes .add-stack .button-add-stack,
+#modalWindowLocal .wrapper-cubes .add-stack .button-add-stack {
+  float: right;
+  line-height: 40px;
+  padding: 0 46px;
+}
+/* line 145, apps.scss */
+#appsPage .wrapper-cubes .add-stack .button-add-stack.red,
+#appPage .wrapper-cubes .add-stack .button-add-stack.red,
+#modalWindow .wrapper-cubes .add-stack .button-add-stack.red,
+#modalWindowLocal .wrapper-cubes .add-stack .button-add-stack.red {
+  background: #ee534f;
+  color: #ffffff;
+}
+/* line 169, apps.scss */
+#appsPage .wrapper-cubes .owner-ico,
+#appPage .wrapper-cubes .owner-ico,
+#modalWindow .wrapper-cubes .owner-ico,
+#modalWindowLocal .wrapper-cubes .owner-ico {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  margin-right: 10px;
+  float: left;
+}
+/* line 177, apps.scss */
+#appsPage .wrapper-cubes .owner-ico img,
+#appPage .wrapper-cubes .owner-ico img,
+#modalWindow .wrapper-cubes .owner-ico img,
+#modalWindowLocal .wrapper-cubes .owner-ico img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* line 183, apps.scss */
+#appsPage .wrapper-cubes .right-count-circle,
+#appPage .wrapper-cubes .right-count-circle,
+#modalWindow .wrapper-cubes .right-count-circle,
+#modalWindowLocal .wrapper-cubes .right-count-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px;
+  background: #ee534f;
+  line-height: 0;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* line 195, apps.scss */
+#appsPage .wrapper-cubes .cube,
+#appPage .wrapper-cubes .cube,
+#modalWindow .wrapper-cubes .cube,
+#modalWindowLocal .wrapper-cubes .cube {
+  position: relative;
+  width: 360px;
+  min-height: 280px;
+  margin: 17px;
+  background: white;
+  text-align: center;
+  padding: 10px 40px 40px 40px;
+  height: 320px;
+  max-height: 380px;
+}
+/* line 197, apps.scss */
+#appsPage .wrapper-cubes .cube.clicked .bottom-buttons,
+#appPage .wrapper-cubes .cube.clicked .bottom-buttons,
+#modalWindow .wrapper-cubes .cube.clicked .bottom-buttons,
+#modalWindowLocal .wrapper-cubes .cube.clicked .bottom-buttons {
+  display: none;
+}
+/* line 210, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack,
+#appPage .wrapper-cubes .cube.add-stack,
+#modalWindow .wrapper-cubes .cube.add-stack,
+#modalWindowLocal .wrapper-cubes .cube.add-stack {
+  padding: 20px;
+}
+/* line 213, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack form input,
+#appPage .wrapper-cubes .cube.add-stack form input,
+#modalWindow .wrapper-cubes .cube.add-stack form input,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form input {
+  font-weight: 100;
+  height: 54px;
+}
+/* line 217, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack form .actions,
+#appPage .wrapper-cubes .cube.add-stack form .actions,
+#modalWindow .wrapper-cubes .cube.add-stack form .actions,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions {
+  border: 1px solid #e9e9e9;
+  height: 40px;
+  padding-top: 8px;
+  margin: 0 0px;
+}
+/* line 222, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack form .actions a,
+#appPage .wrapper-cubes .cube.add-stack form .actions a,
+#modalWindow .wrapper-cubes .cube.add-stack form .actions a,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a {
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 32px;
+  background: #FFFFFF;
+  padding: 9px 30px;
+  color: #000000;
+  width: 82px;
+}
+/* line 224, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack form .actions a:hover,
+#appPage .wrapper-cubes .cube.add-stack form .actions a:hover,
+#modalWindow .wrapper-cubes .cube.add-stack form .actions a:hover,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a:hover {
+  text-decoration: none;
+}
+/* line 228, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack form .actions a.active,
+#appPage .wrapper-cubes .cube.add-stack form .actions a.active,
+#modalWindow .wrapper-cubes .cube.add-stack form .actions a.active,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a.active {
+  background: #EE534F;
+  color: #ffffff;
+}
+/* line 239, apps.scss */
+#appsPage .wrapper-cubes .cube.add-stack form button,
+#appPage .wrapper-cubes .cube.add-stack form button,
+#modalWindow .wrapper-cubes .cube.add-stack form button,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form button {
+  height: 45px;
+  background: #EE534F;
+  border: none;
+  color: #ffffff;
+  width: 143px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+/* line 250, apps.scss */
+#appsPage .wrapper-cubes .cube .bottom-buttons,
+#appPage .wrapper-cubes .cube .bottom-buttons,
+#modalWindow .wrapper-cubes .cube .bottom-buttons,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+/* line 256, apps.scss */
+#appsPage .wrapper-cubes .cube .bottom-buttons ul,
+#appPage .wrapper-cubes .cube .bottom-buttons ul,
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul {
+  margin: 0;
+  padding: 0;
+  height: 53px;
+  background: #ee534f;
+  -webkit-box-shadow: inset 0px 16px 24px -15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 16px 24px -15px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 16px 24px -15px rgba(0, 0, 0, 0.4);
+}
+/* line 264, apps.scss */
+#appsPage .wrapper-cubes .cube .bottom-buttons ul li,
+#appPage .wrapper-cubes .cube .bottom-buttons ul li,
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li {
+  margin: 0;
+  padding: 0;
+  width: 33.33333%;
+  float: left;
+  line-height: 53px;
+  border-right: 1px solid #e53531;
+}
+/* line 265, apps.scss */
+#appsPage .wrapper-cubes .cube .bottom-buttons ul li:nth-last-child,
+#appPage .wrapper-cubes .cube .bottom-buttons ul li:nth-last-child,
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li:nth-last-child,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li:nth-last-child {
+  border-right: none;
+}
+/* line 274, apps.scss */
+#appsPage .wrapper-cubes .cube .bottom-buttons ul li a,
+#appPage .wrapper-cubes .cube .bottom-buttons ul li a,
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li a,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li a {
+  color: #FFFFFF;
+}
+/* line 275, apps.scss */
+#appsPage .wrapper-cubes .cube .bottom-buttons ul li a:hover,
+#appPage .wrapper-cubes .cube .bottom-buttons ul li a:hover,
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li a:hover,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li a:hover {
+  text-decoration: none;
+}
+/* line 283, apps.scss */
+#appsPage .wrapper-cubes .cube .settings,
+#appPage .wrapper-cubes .cube .settings,
+#modalWindow .wrapper-cubes .cube .settings,
+#modalWindowLocal .wrapper-cubes .cube .settings {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 2em;
+  color: #f3f3f3;
+}
+/* line 290, apps.scss */
+#appsPage .wrapper-cubes .cube h3,
+#appPage .wrapper-cubes .cube h3,
+#modalWindow .wrapper-cubes .cube h3,
+#modalWindowLocal .wrapper-cubes .cube h3 {
+  margin-top: 0;
+  padding-left: 10px;
+  font-weight: 300;
+}
+/* line 296, apps.scss */
+#appsPage .wrapper-cubes .cube h3 a,
+#appPage .wrapper-cubes .cube h3 a,
+#modalWindow .wrapper-cubes .cube h3 a,
+#modalWindowLocal .wrapper-cubes .cube h3 a {
+  text-align: center;
+  margin-top: 0;
+  color: #EE534F;
+  margin-bottom: 5px;
+}
+/* line 303, apps.scss */
+#appsPage .wrapper-cubes .cube h6,
+#appPage .wrapper-cubes .cube h6,
+#modalWindow .wrapper-cubes .cube h6,
+#modalWindowLocal .wrapper-cubes .cube h6 {
+  text-align: center;
+  font-size: 0.9em;
+}
+/* line 306, apps.scss */
+#appsPage .wrapper-cubes .cube h6.updates,
+#appPage .wrapper-cubes .cube h6.updates,
+#modalWindow .wrapper-cubes .cube h6.updates,
+#modalWindowLocal .wrapper-cubes .cube h6.updates {
+  text-transform: capitalize;
+}
+/* line 308, apps.scss */
+#appsPage .wrapper-cubes .cube h6.updates .critical,
+#appPage .wrapper-cubes .cube h6.updates .critical,
+#modalWindow .wrapper-cubes .cube h6.updates .critical,
+#modalWindowLocal .wrapper-cubes .cube h6.updates .critical {
+  color: #EE534F;
+}
+/* line 313, apps.scss */
+#appsPage .wrapper-cubes .cube hr,
+#appPage .wrapper-cubes .cube hr,
+#modalWindow .wrapper-cubes .cube hr,
+#modalWindowLocal .wrapper-cubes .cube hr {
+  margin: 9px 0;
+}
+/* line 316, apps.scss */
+#appsPage .wrapper-cubes .cube .collaborator,
+#appPage .wrapper-cubes .cube .collaborator,
+#modalWindow .wrapper-cubes .cube .collaborator,
+#modalWindowLocal .wrapper-cubes .cube .collaborator {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  margin: 0 1px;
+}
+/* line 323, apps.scss */
+#appsPage .wrapper-cubes .cube .collaborator img,
+#appPage .wrapper-cubes .cube .collaborator img,
+#modalWindow .wrapper-cubes .cube .collaborator img,
+#modalWindowLocal .wrapper-cubes .cube .collaborator img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* line 328, apps.scss */
+#appsPage .wrapper-cubes .cube .collaborator:first-child,
+#appPage .wrapper-cubes .cube .collaborator:first-child,
+#modalWindow .wrapper-cubes .cube .collaborator:first-child,
+#modalWindowLocal .wrapper-cubes .cube .collaborator:first-child {
+  color: grey;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 27px;
+}
+/* line 335, apps.scss */
+#appsPage .wrapper-cubes .cube .wrapper-sm-cubes,
+#appPage .wrapper-cubes .cube .wrapper-sm-cubes,
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes {
+  text-align: center;
+  /*background: $appGrey;*/
+}
+/* line 338, apps.scss */
+#appsPage .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube,
+#appPage .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube,
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube {
+  position: relative;
+  display: inline-block;
+  width: 83px;
+  height: 83px;
+  margin: 30px 3px;
+  vertical-align: middle;
+}
+/* line 345, apps.scss */
+#appsPage .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name,
+#appPage .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name,
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name {
+  font-weight: bold;
+}
+/* line 347, apps.scss */
+#appsPage .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name a,
+#appPage .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name a,
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name a,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name a {
+  color: #333;
+}
+/* line 352, apps.scss */
+#appsPage .wrapper-cubes .cube .wrapper-sm-cubes .notification,
+#appPage .wrapper-cubes .cube .wrapper-sm-cubes .notification,
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .notification,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .notification {
+  top: -3px;
+  right: -9px;
+}
+/* line 357, apps.scss */
+#appsPage .wrapper-cubes .cube .back,
+#appsPage .wrapper-cubes .cube .front,
+#appPage .wrapper-cubes .cube .back,
+#appPage .wrapper-cubes .cube .front,
+#modalWindow .wrapper-cubes .cube .back,
+#modalWindow .wrapper-cubes .cube .front,
+#modalWindowLocal .wrapper-cubes .cube .back,
+#modalWindowLocal .wrapper-cubes .cube .front {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background: white;
+}
+/* line 365, apps.scss */
+#appsPage .wrapper-cubes .cube .back.front,
+#appsPage .wrapper-cubes .cube .front.front,
+#appPage .wrapper-cubes .cube .back.front,
+#appPage .wrapper-cubes .cube .front.front,
+#modalWindow .wrapper-cubes .cube .back.front,
+#modalWindow .wrapper-cubes .cube .front.front,
+#modalWindowLocal .wrapper-cubes .cube .back.front,
+#modalWindowLocal .wrapper-cubes .cube .front.front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  padding-top: 12px;
+}
+/* line 377, apps.scss */
+#appsPage .wrapper-cubes .cube .back.back,
+#appsPage .wrapper-cubes .cube .front.back,
+#appPage .wrapper-cubes .cube .back.back,
+#appPage .wrapper-cubes .cube .front.back,
+#modalWindow .wrapper-cubes .cube .back.back,
+#modalWindow .wrapper-cubes .cube .front.back,
+#modalWindowLocal .wrapper-cubes .cube .back.back,
+#modalWindowLocal .wrapper-cubes .cube .front.back {
+  position: absolute;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  top: 53px;
+  z-index: -1;
+}
+/* line 389, apps.scss */
+#appsPage .wrapper-cubes .cube.clicked .front,
+#appPage .wrapper-cubes .cube.clicked .front,
+#modalWindow .wrapper-cubes .cube.clicked .front,
+#modalWindowLocal .wrapper-cubes .cube.clicked .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+/* line 397, apps.scss */
+#appsPage .wrapper-cubes .cube.clicked .back,
+#appPage .wrapper-cubes .cube.clicked .back,
+#modalWindow .wrapper-cubes .cube.clicked .back,
+#modalWindowLocal .wrapper-cubes .cube.clicked .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  z-index: 200;
+  z-index: 0;
+}
+/* line 407, apps.scss */
+#appsPage .wrapper-cubes .cube.trans,
+#appPage .wrapper-cubes .cube.trans,
+#modalWindow .wrapper-cubes .cube.trans,
+#modalWindowLocal .wrapper-cubes .cube.trans {
+  background: transparent;
+}
+/* line 409, apps.scss */
+#appsPage .wrapper-cubes .cube.trans div,
+#appPage .wrapper-cubes .cube.trans div,
+#modalWindow .wrapper-cubes .cube.trans div,
+#modalWindowLocal .wrapper-cubes .cube.trans div {
+  top: 50%;
+  position: relative;
+  margin-top: -45px;
+}
+/* line 413, apps.scss */
+#appsPage .wrapper-cubes .cube.trans div span.plus,
+#appPage .wrapper-cubes .cube.trans div span.plus,
+#modalWindow .wrapper-cubes .cube.trans div span.plus,
+#modalWindowLocal .wrapper-cubes .cube.trans div span.plus {
+  background: white;
+  padding: 0px 36px;
+  font-size: 4.5em;
+  color: #8D8D8D;
+}
+/* line 422, apps.scss */
+#appsPage .wrapper-cubes .cube.list,
+#appPage .wrapper-cubes .cube.list,
+#modalWindow .wrapper-cubes .cube.list,
+#modalWindowLocal .wrapper-cubes .cube.list {
+  min-height: auto;
+}
+/* line 427, apps.scss */
+#appsPage .apps-list .list-header,
+#appPage .apps-list .list-header,
+#modalWindow .apps-list .list-header,
+#modalWindowLocal .apps-list .list-header {
+  position: absolute;
+  top: 58px;
+  width: 100%;
+  left: 0;
+  padding: 0 35px 50px 35px;
+  background: #ee534f;
+  max-width: none !important;
+}
+/* line 436, apps.scss */
+#appsPage .apps-list .list-header .block-input input,
+#appPage .apps-list .list-header .block-input input,
+#modalWindow .apps-list .list-header .block-input input,
+#modalWindowLocal .apps-list .list-header .block-input input {
+  box-shadow: none;
+  border: none;
+}
+/* line 441, apps.scss */
+#appsPage .apps-list .list-header .inputs-block,
+#appPage .apps-list .list-header .inputs-block,
+#modalWindow .apps-list .list-header .inputs-block,
+#modalWindowLocal .apps-list .list-header .inputs-block {
+  max-width: 1225px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+/* line 446, apps.scss */
+#appsPage .apps-list .list-header .inputs-block .above-input,
+#appPage .apps-list .list-header .inputs-block .above-input,
+#modalWindow .apps-list .list-header .inputs-block .above-input,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input {
+  line-height: 60px;
+  font-size: 24px;
+  color: #ffffff;
+}
+/* line 447, apps.scss */
+#appsPage .apps-list .list-header .inputs-block .above-input .h3-title,
+#appPage .apps-list .list-header .inputs-block .above-input .h3-title,
+#modalWindow .apps-list .list-header .inputs-block .above-input .h3-title,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input .h3-title {
+  float: left;
+}
+/* line 453, apps.scss */
+#appsPage .apps-list .list-header .inputs-block .above-input h3,
+#appPage .apps-list .list-header .inputs-block .above-input h3,
+#modalWindow .apps-list .list-header .inputs-block .above-input h3,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input h3 {
+  line-height: 60px;
+  color: #ffffff;
+  font-size: 26px;
+}
+/* line 459, apps.scss */
+#appsPage .apps-list .list-header .inputs-block .above-input-filters,
+#appPage .apps-list .list-header .inputs-block .above-input-filters,
+#modalWindow .apps-list .list-header .inputs-block .above-input-filters,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input-filters {
+  float: right;
+  padding-top: 24px;
+}
+/* line 462, apps.scss */
+#appsPage .apps-list .list-header .inputs-block .above-input-filters button,
+#appPage .apps-list .list-header .inputs-block .above-input-filters button,
+#modalWindow .apps-list .list-header .inputs-block .above-input-filters button,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input-filters button {
+  position: absolute;
+  right: 0;
+  padding: 0 40px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  float: right;
+  font-size: 14px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+/* line 463, apps.scss */
+#appsPage .apps-list .list-header .inputs-block .above-input-filters button i,
+#appPage .apps-list .list-header .inputs-block .above-input-filters button i,
+#modalWindow .apps-list .list-header .inputs-block .above-input-filters button i,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input-filters button i {
+  padding-right: 8px;
+}
+/* line 480, apps.scss */
+#appsPage .apps-list .list-group,
+#appPage .apps-list .list-group,
+#modalWindow .apps-list .list-group,
+#modalWindowLocal .apps-list .list-group {
+  position: absolute;
+  background: #f3f3f3;
+  right: -90px;
+  top: 30px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+}
+/* line 488, apps.scss */
+#appsPage .apps-list .list-group input.wrapper-search-input,
+#appPage .apps-list .list-group input.wrapper-search-input,
+#modalWindow .apps-list .list-group input.wrapper-search-input,
+#modalWindowLocal .apps-list .list-group input.wrapper-search-input {
+  box-shadow: none;
+  border-radius: 32px;
+}
+/* line 494, apps.scss */
+#appsPage .view-app,
+#appPage .view-app,
+#modalWindow .view-app,
+#modalWindowLocal .view-app {
+  /*.wrapper-cubes {
+      .platform {
+          width: 80px;
+          height: 80px;
+      }
+  }*/
+}
+/* line 496, apps.scss */
+#appsPage .view-app .cube.add-stack h3,
+#appPage .view-app .cube.add-stack h3,
+#modalWindow .view-app .cube.add-stack h3,
+#modalWindowLocal .view-app .cube.add-stack h3 {
+  color: black;
+}
+/* line 499, apps.scss */
+#appsPage .view-app .cube.add-stack .platform,
+#appPage .view-app .cube.add-stack .platform,
+#modalWindow .view-app .cube.add-stack .platform,
+#modalWindowLocal .view-app .cube.add-stack .platform {
+  margin: 5px;
+}
+/* line 502, apps.scss */
+#appsPage .view-app .cube.add-stack .disable,
+#appPage .view-app .cube.add-stack .disable,
+#modalWindow .view-app .cube.add-stack .disable,
+#modalWindowLocal .view-app .cube.add-stack .disable {
+  border: none;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 515, apps.scss */
+#appsPage form,
+#appPage form,
+#modalWindow form,
+#modalWindowLocal form {
+  float: none;
+}
+/* line 517, apps.scss */
+#appsPage form h4,
+#appPage form h4,
+#modalWindow form h4,
+#modalWindowLocal form h4 {
+  margin-top: 30px;
+}
+/* line 520, apps.scss */
+#appsPage form .form-control[disabled],
+#appsPage form .form-control[readonly],
+#appsPage form fieldset[disabled] .form-control,
+#appPage form .form-control[disabled],
+#appPage form .form-control[readonly],
+#appPage form fieldset[disabled] .form-control,
+#modalWindow form .form-control[disabled],
+#modalWindow form .form-control[readonly],
+#modalWindow form fieldset[disabled] .form-control,
+#modalWindowLocal form .form-control[disabled],
+#modalWindowLocal form .form-control[readonly],
+#modalWindowLocal form fieldset[disabled] .form-control {
+  cursor: text;
+  background-color: initial;
+}
+/* line 526, apps.scss */
+#appsPage form input,
+#appPage form input,
+#modalWindow form input,
+#modalWindowLocal form input {
+  border-radius: 0;
+  border: solid 1px #e4e4e4;
+  height: 50px;
+  font-size: 1.3em;
+  width: 100%;
+}
+/* line 533, apps.scss */
+#appsPage form .form-group.actions,
+#appPage form .form-group.actions,
+#modalWindow form .form-group.actions,
+#modalWindowLocal form .form-group.actions {
+  text-align: center;
+}
+/* line 535, apps.scss */
+#appsPage form .form-group.actions button,
+#appPage form .form-group.actions button,
+#modalWindow form .form-group.actions button,
+#modalWindowLocal form .form-group.actions button {
+  background: #EE534F;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 13px 45px;
+  margin-right: 20px;
+}
+/* line 543, apps.scss */
+#appsPage form .form-group.actions a,
+#appPage form .form-group.actions a,
+#modalWindow form .form-group.actions a,
+#modalWindowLocal form .form-group.actions a {
+  color: #808080;
+  font-size: 0.83em;
+}
+/* line 550, apps.scss */
+#appsPage .side-bar label,
+#appPage .side-bar label,
+#modalWindow .side-bar label,
+#modalWindowLocal .side-bar label {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+/* line 555, apps.scss */
+#appsPage .side-bar label:after,
+#appPage .side-bar label:after,
+#modalWindow .side-bar label:after,
+#modalWindowLocal .side-bar label:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 11px;
+  color: #fff;
+  right: 14px;
+  top: 23px;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 565, apps.scss */
+#appsPage .side-bar select,
+#appPage .side-bar select,
+#modalWindow .side-bar select,
+#modalWindowLocal .side-bar select {
+  width: 100%;
+  height: 60px;
+  background: #323741;
+  border: none;
+  border-bottom: solid 1px #5D6067;
+  padding: 0 20px;
+  font-size: 1.2em;
+  font-weight: normal;
+  -webkit-appearance: none;
+  /*webkit browsers */
+  -moz-appearance: none;
+  /*Firefox */
+  appearance: none;
+  /* modern browsers */
+  -webkit-border-radius: 0;
+  /*webkit browsers */
+  -moz-border-radius: 0;
+  /*Firefox */
+  border-radius: 0;
+  /* modern browsers */
+  cursor: pointer;
+}
+/* line 591, apps.scss */
+#appsPage#appsPage .wrapper-search-input,
+#appPage#appsPage .wrapper-search-input,
+#modalWindow#appsPage .wrapper-search-input,
+#modalWindowLocal#appsPage .wrapper-search-input {
+  max-width: 1225px;
+}
+/* line 594, apps.scss */
+#appsPage#appsPage .wrapper-cubes,
+#appPage#appsPage .wrapper-cubes,
+#modalWindow#appsPage .wrapper-cubes,
+#modalWindowLocal#appsPage .wrapper-cubes {
+  margin-top: 172px;
+  max-width: 1225px;
+}
+/* line 598, apps.scss */
+#appsPage#appsPage .cube,
+#appPage#appsPage .cube,
+#modalWindow#appsPage .cube,
+#modalWindowLocal#appsPage .cube {
+  width: 380px;
+  text-align: left;
+  padding: 9px;
+  margin: 0px 28px 28px 0px;
+  padding-bottom: 13px;
+  height: 280px;
+}
+/* line 605, apps.scss */
+#appsPage#appsPage .cube .right-circle,
+#appPage#appsPage .cube .right-circle,
+#modalWindow#appsPage .cube .right-circle,
+#modalWindowLocal#appsPage .cube .right-circle {
+  position: absolute;
+  right: -39px;
+  top: -44px;
+  background: white;
+  height: 73px;
+  width: 73px;
+  /*like width&height: -border-radius with*/
+  line-height: 69px;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: solid 4px #f3f3f3;
+  text-align: center;
+  font-size: 2em;
+  color: #EE534F;
+  display: none;
+}
+/* line 622, apps.scss */
+#appsPage#appsPage .cube h6,
+#appPage#appsPage .cube h6,
+#modalWindow#appsPage .cube h6,
+#modalWindowLocal#appsPage .cube h6 {
+  text-align: left;
+}
+/* line 625, apps.scss */
+#appsPage#appsPage .cube .people,
+#appPage#appsPage .cube .people,
+#modalWindow#appsPage .cube .people,
+#modalWindowLocal#appsPage .cube .people {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 630, apps.scss */
+#appsPage#appsPage .cube .people:before,
+#appPage#appsPage .cube .people:before,
+#modalWindow#appsPage .cube .people:before,
+#modalWindowLocal#appsPage .cube .people:before {
+  content: 'PEOPLE';
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+/* line 638, apps.scss */
+#appsPage#appsPage .header-list,
+#appPage#appsPage .header-list,
+#modalWindow#appsPage .header-list,
+#modalWindowLocal#appsPage .header-list {
+  line-height: 48px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  color: #7f7f7f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid #eaeaea;
+}
+/* line 647, apps.scss */
+#appsPage#appsPage .cube.list,
+#appPage#appsPage .cube.list,
+#modalWindow#appsPage .cube.list,
+#modalWindowLocal#appsPage .cube.list {
+  width: 100%;
+  height: 82px;
+  padding: 9px;
+  margin: 0 0 4px 0;
+  border-bottom: 2px solid #eaeaea;
+}
+/* line 653, apps.scss */
+#appsPage#appsPage .cube.list .cell-container,
+#appPage#appsPage .cube.list .cell-container,
+#modalWindow#appsPage .cube.list .cell-container,
+#modalWindowLocal#appsPage .cube.list .cell-container {
+  min-height: 46px;
+}
+/* line 655, apps.scss */
+#appsPage#appsPage .cube.list .cell-container .red,
+#appPage#appsPage .cube.list .cell-container .red,
+#modalWindow#appsPage .cube.list .cell-container .red,
+#modalWindowLocal#appsPage .cube.list .cell-container .red {
+  color: #EE534F;
+  display: flex;
+  margin-top: 2px;
+}
+/* line 660, apps.scss */
+#appsPage#appsPage .cube.list .cell-container h4,
+#appPage#appsPage .cube.list .cell-container h4,
+#modalWindow#appsPage .cube.list .cell-container h4,
+#modalWindowLocal#appsPage .cube.list .cell-container h4 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 6px 0 0 0;
+  text-transform: capitalize;
+}
+/* line 667, apps.scss */
+#appsPage#appsPage .cube.list .cell-container small span,
+#appPage#appsPage .cube.list .cell-container small span,
+#modalWindow#appsPage .cube.list .cell-container small span,
+#modalWindowLocal#appsPage .cube.list .cell-container small span {
+  color: #b7b4b4 !important;
+}
+/* line 671, apps.scss */
+#appsPage#appsPage .cube.list .cell-container .count-stacks,
+#appPage#appsPage .cube.list .cell-container .count-stacks,
+#modalWindow#appsPage .cube.list .cell-container .count-stacks,
+#modalWindowLocal#appsPage .cube.list .cell-container .count-stacks {
+  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 46px;
+}
+/* line 678, apps.scss */
+#appsPage#appsPage .cube.list .much-collaborator,
+#appPage#appsPage .cube.list .much-collaborator,
+#modalWindow#appsPage .cube.list .much-collaborator,
+#modalWindowLocal#appsPage .cube.list .much-collaborator {
+  margin-top: -16px;
+}
+/* line 681, apps.scss */
+#appsPage#appsPage .cube.list .pd-t-8,
+#appPage#appsPage .cube.list .pd-t-8,
+#modalWindow#appsPage .cube.list .pd-t-8,
+#modalWindowLocal#appsPage .cube.list .pd-t-8 {
+  padding-top: 8px;
+}
+/* line 684, apps.scss */
+#appsPage#appsPage .cube.list .pd-t-10,
+#appPage#appsPage .cube.list .pd-t-10,
+#modalWindow#appsPage .cube.list .pd-t-10,
+#modalWindowLocal#appsPage .cube.list .pd-t-10 {
+  padding-top: 10px;
+}
+/* line 687, apps.scss */
+#appsPage#appsPage .cube.list .pd-t-4,
+#appPage#appsPage .cube.list .pd-t-4,
+#modalWindow#appsPage .cube.list .pd-t-4,
+#modalWindowLocal#appsPage .cube.list .pd-t-4 {
+  padding-top: 4px;
+}
+/* line 691, apps.scss */
+#appsPage#appsPage .cube.list .bordered .border,
+#appPage#appsPage .cube.list .bordered .border,
+#modalWindow#appsPage .cube.list .bordered .border,
+#modalWindowLocal#appsPage .cube.list .bordered .border {
+  border-right: 1px solid #d1d1d1;
+}
+/* line 696, apps.scss */
+#appsPage#appsPage .add-group-circle-button-block,
+#appPage#appsPage .add-group-circle-button-block,
+#modalWindow#appsPage .add-group-circle-button-block,
+#modalWindowLocal#appsPage .add-group-circle-button-block {
+  margin: 14px auto 0px auto;
+  cursor: pointer;
+}
+/* line 699, apps.scss */
+#appsPage#appsPage .add-group-circle-button-block .add-group-circle-button,
+#appPage#appsPage .add-group-circle-button-block .add-group-circle-button,
+#modalWindow#appsPage .add-group-circle-button-block .add-group-circle-button,
+#modalWindowLocal#appsPage .add-group-circle-button-block .add-group-circle-button {
+  background-color: #e3e3e3;
+  height: 60px;
+  border-radius: 30px;
+  display: block;
+  width: 60px;
+  text-align: center;
+  padding-top: 16px;
+  font-size: 24px;
+  color: #fff;
+}
+/* line 711, apps.scss */
+#appsPage#appsPage .form-add-stacks-list,
+#appPage#appsPage .form-add-stacks-list,
+#modalWindow#appsPage .form-add-stacks-list,
+#modalWindowLocal#appsPage .form-add-stacks-list {
+  margin: 0 auto 4px auto;
+  background: #fff;
+  width: 100%;
+}
+/* line 716, apps.scss */
+#appsPage#appsPage .insights,
+#appPage#appsPage .insights,
+#modalWindow#appsPage .insights,
+#modalWindowLocal#appsPage .insights {
+  display: table;
+  background: #FBFBFB;
+  padding: 20px;
+  width: 100%;
+}
+/* line 721, apps.scss */
+#appsPage#appsPage .insights > div,
+#appPage#appsPage .insights > div,
+#modalWindow#appsPage .insights > div,
+#modalWindowLocal#appsPage .insights > div {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+/* line 725, apps.scss */
+#appsPage#appsPage .insights > div.icon,
+#appPage#appsPage .insights > div.icon,
+#modalWindow#appsPage .insights > div.icon,
+#modalWindowLocal#appsPage .insights > div.icon {
+  text-align: left;
+  width: 52px;
+}
+/* line 728, apps.scss */
+#appsPage#appsPage .insights > div.icon i,
+#appPage#appsPage .insights > div.icon i,
+#modalWindow#appsPage .insights > div.icon i,
+#modalWindowLocal#appsPage .insights > div.icon i {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  line-height: 35px;
+  border-radius: 50%;
+}
+/* line 735, apps.scss */
+#appsPage#appsPage .insights > div.icon i.updated,
+#appPage#appsPage .insights > div.icon i.updated,
+#modalWindow#appsPage .insights > div.icon i.updated,
+#modalWindowLocal#appsPage .insights > div.icon i.updated {
+  background: #80C06A;
+}
+/* line 737, apps.scss */
+#appsPage#appsPage .insights > div.icon i.updated:before,
+#appPage#appsPage .insights > div.icon i.updated:before,
+#modalWindow#appsPage .insights > div.icon i.updated:before,
+#modalWindowLocal#appsPage .insights > div.icon i.updated:before {
+  content: "\f00c";
+}
+/* line 741, apps.scss */
+#appsPage#appsPage .insights > div.icon i.critical,
+#appPage#appsPage .insights > div.icon i.critical,
+#modalWindow#appsPage .insights > div.icon i.critical,
+#modalWindowLocal#appsPage .insights > div.icon i.critical {
+  background: #EE534F;
+}
+/* line 743, apps.scss */
+#appsPage#appsPage .insights > div.icon i.critical:before,
+#appPage#appsPage .insights > div.icon i.critical:before,
+#modalWindow#appsPage .insights > div.icon i.critical:before,
+#modalWindowLocal#appsPage .insights > div.icon i.critical:before {
+  content: "\f12a";
+}
+/* line 747, apps.scss */
+#appsPage#appsPage .insights > div.icon i.available,
+#appPage#appsPage .insights > div.icon i.available,
+#modalWindow#appsPage .insights > div.icon i.available,
+#modalWindowLocal#appsPage .insights > div.icon i.available {
+  background: #7b52a0;
+}
+/* line 749, apps.scss */
+#appsPage#appsPage .insights > div.icon i.available:before,
+#appPage#appsPage .insights > div.icon i.available:before,
+#modalWindow#appsPage .insights > div.icon i.available:before,
+#modalWindowLocal#appsPage .insights > div.icon i.available:before {
+  content: "\f12a";
+}
+/* line 753, apps.scss */
+#appsPage#appsPage .insights > div.icon i.no-stacks,
+#appPage#appsPage .insights > div.icon i.no-stacks,
+#modalWindow#appsPage .insights > div.icon i.no-stacks,
+#modalWindowLocal#appsPage .insights > div.icon i.no-stacks {
+  color: #19617a;
+}
+/* line 755, apps.scss */
+#appsPage#appsPage .insights > div.icon i.no-stacks:before,
+#appPage#appsPage .insights > div.icon i.no-stacks:before,
+#modalWindow#appsPage .insights > div.icon i.no-stacks:before,
+#modalWindowLocal#appsPage .insights > div.icon i.no-stacks:before {
+  content: "\f067";
+}
+/* line 763, apps.scss */
+#appsPage#appsPage .insights.insights-list,
+#appPage#appsPage .insights.insights-list,
+#modalWindow#appsPage .insights.insights-list,
+#modalWindowLocal#appsPage .insights.insights-list {
+  padding: 0;
+  font-size: 10px;
+}
+/* line 768, apps.scss */
+#appsPage .flex-box,
+#appPage .flex-box,
+#modalWindow .flex-box,
+#modalWindowLocal .flex-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 775, apps.scss */
+#appsPage .flex-middle,
+#appPage .flex-middle,
+#modalWindow .flex-middle,
+#modalWindowLocal .flex-middle {
+  align-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 780, apps.scss */
+#appsPage .flex-fix,
+#appPage .flex-fix,
+#modalWindow .flex-fix,
+#modalWindowLocal .flex-fix {
+  -webkit-box-flex: 0 0 auto;
+  -moz-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+/* line 787, apps.scss */
+#appsPage .flex-stretch,
+#appPage .flex-stretch,
+#modalWindow .flex-stretch,
+#modalWindowLocal .flex-stretch {
+  -webkit-box-flex: 1 1 100%;
+  -moz-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+/* line 794, apps.scss */
+#appsPage .flex-row,
+#appPage .flex-row,
+#modalWindow .flex-row,
+#modalWindowLocal .flex-row {
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  align-content: stretch;
+}
+/* line 799, apps.scss */
+#appsPage .flex-col,
+#appPage .flex-col,
+#modalWindow .flex-col,
+#modalWindowLocal .flex-col {
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  align-content: stretch;
+}
+/* line 820, apps.scss */
+#appsPage .spmenu,
+#appPage .spmenu,
+#modalWindow .spmenu,
+#modalWindowLocal .spmenu {
+  margin-top: 58px;
+  background: #ffffff;
+  position: fixed;
+}
+/* line 824, apps.scss */
+#appsPage .spmenu .head-popup,
+#appPage .spmenu .head-popup,
+#modalWindow .spmenu .head-popup,
+#modalWindowLocal .spmenu .head-popup {
+  position: absolute;
+  top: 40px;
+}
+/* line 827, apps.scss */
+#appsPage .spmenu .head-popup .search-input,
+#appPage .spmenu .head-popup .search-input,
+#modalWindow .spmenu .head-popup .search-input,
+#modalWindowLocal .spmenu .head-popup .search-input {
+  line-height: 32px;
+  width: 100%;
+  padding-left: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #E4E4E4;
+}
+/* line 835, apps.scss */
+#appsPage .spmenu .head-popup .ico-search,
+#appPage .spmenu .head-popup .ico-search,
+#modalWindow .spmenu .head-popup .ico-search,
+#modalWindowLocal .spmenu .head-popup .ico-search {
+  color: #DEDEDE;
+  font-size: 18px;
+  position: absolute;
+  top: 44px;
+  left: 22px;
+}
+/* line 842, apps.scss */
+#appsPage .spmenu .head-popup .filter-types,
+#appPage .spmenu .head-popup .filter-types,
+#modalWindow .spmenu .head-popup .filter-types,
+#modalWindowLocal .spmenu .head-popup .filter-types {
+  margin-top: 1px;
+}
+/* line 845, apps.scss */
+#appsPage .spmenu .head-popup button,
+#appPage .spmenu .head-popup button,
+#modalWindow .spmenu .head-popup button,
+#modalWindowLocal .spmenu .head-popup button {
+  font-weight: 300;
+}
+/* line 847, apps.scss */
+#appsPage .spmenu .head-popup button.is_active,
+#appPage .spmenu .head-popup button.is_active,
+#modalWindow .spmenu .head-popup button.is_active,
+#modalWindowLocal .spmenu .head-popup button.is_active {
+  text-decoration: underline;
+  font-weight: 900;
+}
+/* line 853, apps.scss */
+#appsPage .spmenu.spmenu-open,
+#appPage .spmenu.spmenu-open,
+#modalWindow .spmenu.spmenu-open,
+#modalWindowLocal .spmenu.spmenu-open {
+  -moz-box-shadow: 10px 0px 30px #000;
+  -webkit-box-shadow: 10px 0px 30px #000;
+  box-shadow: 10px 0px 30px #000;
+}
+/* line 858, apps.scss */
+#appsPage .spmenu .content-components,
+#appPage .spmenu .content-components,
+#modalWindow .spmenu .content-components,
+#modalWindowLocal .spmenu .content-components {
+  margin-top: 120px;
+  /*TODO: fix slider height*/
+  height: calc(100% - 221px);
+  overflow: auto;
+}
+/* line 864, apps.scss */
+#appsPage .spmenu h3,
+#appPage .spmenu h3,
+#modalWindow .spmenu h3,
+#modalWindowLocal .spmenu h3 {
+  font-size: 20px;
+  padding: 0px 10px 10px 10px;
+  margin-top: -6px;
+}
+/* line 869, apps.scss */
+#appsPage .spmenu h4,
+#appPage .spmenu h4,
+#modalWindow .spmenu h4,
+#modalWindowLocal .spmenu h4 {
+  color: #000;
+}
+/* line 872, apps.scss */
+#appsPage .spmenu a,
+#appPage .spmenu a,
+#modalWindow .spmenu a,
+#modalWindowLocal .spmenu a {
+  display: block;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+/* line 877, apps.scss */
+#appsPage .spmenu a:hover,
+#appPage .spmenu a:hover,
+#modalWindow .spmenu a:hover,
+#modalWindowLocal .spmenu a:hover {
+  background: #65CFF0;
+}
+/* line 880, apps.scss */
+#appsPage .spmenu a:active,
+#appPage .spmenu a:active,
+#modalWindow .spmenu a:active,
+#modalWindowLocal .spmenu a:active {
+  background: #65CFF0;
+  color: #000;
+}
+/* line 884, apps.scss */
+#appsPage .spmenu a span,
+#appPage .spmenu a span,
+#modalWindow .spmenu a span,
+#modalWindowLocal .spmenu a span {
+  color: #000;
+}
+/* line 887, apps.scss */
+#appsPage .spmenu a input,
+#appPage .spmenu a input,
+#modalWindow .spmenu a input,
+#modalWindowLocal .spmenu a input {
+  margin: 5px 10px 0 0 !important;
+}
+/* line 892, apps.scss */
+#appsPage .spmenu-vertical,
+#appPage .spmenu-vertical,
+#modalWindow .spmenu-vertical,
+#modalWindowLocal .spmenu-vertical {
+  width: 450px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+/* line 897, apps.scss */
+#appsPage .spmenu-vertical a,
+#appsPage .spmenu-vertical label,
+#appPage .spmenu-vertical a,
+#appPage .spmenu-vertical label,
+#modalWindow .spmenu-vertical a,
+#modalWindow .spmenu-vertical label,
+#modalWindowLocal .spmenu-vertical a,
+#modalWindowLocal .spmenu-vertical label {
+  padding: 0;
+}
+/* line 901, apps.scss */
+#appsPage .spmenu-vertical hr,
+#appPage .spmenu-vertical hr,
+#modalWindow .spmenu-vertical hr,
+#modalWindowLocal .spmenu-vertical hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #FFF;
+}
+/* line 906, apps.scss */
+#appsPage .spmenu-vertical .menu-item-actions,
+#appsPage .spmenu-vertical .menu-item-edit-actions,
+#appPage .spmenu-vertical .menu-item-actions,
+#appPage .spmenu-vertical .menu-item-edit-actions,
+#modalWindow .spmenu-vertical .menu-item-actions,
+#modalWindow .spmenu-vertical .menu-item-edit-actions,
+#modalWindowLocal .spmenu-vertical .menu-item-actions,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions {
+  margin-top: 10px;
+}
+/* line 909, apps.scss */
+#appsPage .spmenu-vertical .menu-item-actions a,
+#appsPage .spmenu-vertical .menu-item-edit-actions a,
+#appPage .spmenu-vertical .menu-item-actions a,
+#appPage .spmenu-vertical .menu-item-edit-actions a,
+#modalWindow .spmenu-vertical .menu-item-actions a,
+#modalWindow .spmenu-vertical .menu-item-edit-actions a,
+#modalWindowLocal .spmenu-vertical .menu-item-actions a,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions a {
+  display: inline;
+}
+/* line 912, apps.scss */
+#appsPage .spmenu-vertical .menu-item-actions i,
+#appsPage .spmenu-vertical .menu-item-edit-actions i,
+#appPage .spmenu-vertical .menu-item-actions i,
+#appPage .spmenu-vertical .menu-item-edit-actions i,
+#modalWindow .spmenu-vertical .menu-item-actions i,
+#modalWindow .spmenu-vertical .menu-item-edit-actions i,
+#modalWindowLocal .spmenu-vertical .menu-item-actions i,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions i {
+  color: #FFF;
+}
+/* line 915, apps.scss */
+#appsPage .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#appsPage .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator,
+#appPage .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#appPage .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator,
+#modalWindow .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#modalWindow .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator,
+#modalWindowLocal .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  margin: 0 5px;
+}
+/* line 924, apps.scss */
+#appsPage .spmenu-right,
+#appPage .spmenu-right,
+#modalWindow .spmenu-right,
+#modalWindowLocal .spmenu-right {
+  right: -450px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 927, apps.scss */
+#appsPage .spmenu-right a.spmenu-button,
+#appPage .spmenu-right a.spmenu-button,
+#modalWindow .spmenu-right a.spmenu-button,
+#modalWindowLocal .spmenu-right a.spmenu-button {
+  right: 450px;
+  top: 10px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* line 938, apps.scss */
+#appsPage .spmenu,
+#appsPage .spmenu-push,
+#appPage .spmenu,
+#appPage .spmenu-push,
+#modalWindow .spmenu,
+#modalWindow .spmenu-push,
+#modalWindowLocal .spmenu,
+#modalWindowLocal .spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 947, apps.scss */
+#updatesNotifications .notification {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: center;
+}
+/* line 957, apps.scss */
+#updatesNotifications .notification.critical {
+  background: #EE534F;
+}
+/* line 960, apps.scss */
+#updatesNotifications .notification.available {
+  background: #FFD503;
+}
+
+/* line 967, apps.scss */
+#dashboardChartTab .header {
+  margin-left: 24px;
+  overflow: hidden;
+}
+/* line 971, apps.scss */
+#dashboardChartTab .left {
+  float: left;
+}
+/* line 974, apps.scss */
+#dashboardChartTab .right {
+  float: right;
+  width: 180px;
+  height: 80px;
+  background-color: #80C06A;
+  color: #fff;
+  text-align: center;
+}
+/* line 981, apps.scss */
+#dashboardChartTab .right .score {
+  display: block;
+  font-size: 38px;
+  font-weight: lighter;
+}
+
+/* line 989, apps.scss */
+#inventoryTab {
+  background-color: #FAF9F9;
+}
+/* line 991, apps.scss */
+#inventoryTab label {
+  margin-bottom: 15px;
+}
+/* line 994, apps.scss */
+#inventoryTab .view-type {
+  float: right;
+}
+
+/* line 1001, apps.scss */
+#stacksTab .top-header .title {
+  margin-bottom: 35px;
+}
+
+/* line 1011, apps.scss */
+#inventoryTab #inv-no-data hr,
+#inventoryTab #inv-no-data span,
+#inventoryTab #ev-no-data hr,
+#inventoryTab #ev-no-data span,
+#eventsTab #inv-no-data hr,
+#eventsTab #inv-no-data span,
+#eventsTab #ev-no-data hr,
+#eventsTab #ev-no-data span {
+  color: #878787;
+}
+/* line 1015, apps.scss */
+#inventoryTab #inv-no-data .no-found-text,
+#inventoryTab #ev-no-data .no-found-text,
+#eventsTab #inv-no-data .no-found-text,
+#eventsTab #ev-no-data .no-found-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: lighter;
+  font-style: italic;
+}
+/* line 1021, apps.scss */
+#inventoryTab #inv-no-data .clear.no-found-text,
+#inventoryTab #ev-no-data .clear.no-found-text,
+#eventsTab #inv-no-data .clear.no-found-text,
+#eventsTab #ev-no-data .clear.no-found-text {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+/* line 1025, apps.scss */
+#inventoryTab #inv-no-data .btn,
+#inventoryTab #ev-no-data .btn,
+#eventsTab #inv-no-data .btn,
+#eventsTab #ev-no-data .btn {
+  clear: both;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+  margin-top: 12px;
+  padding: 14px 40px;
+}
+/* line 1033, apps.scss */
+#inventoryTab #inv-no-data .pd,
+#inventoryTab #ev-no-data .pd,
+#eventsTab #inv-no-data .pd,
+#eventsTab #ev-no-data .pd {
+  padding: 24px 0;
+}
+
+/* line 1040, apps.scss */
+.addStackModalClass .modal-dialog {
+  width: 376px;
+}
+/* line 1042, apps.scss */
+.addStackModalClass .modal-dialog i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #beb7b7;
+  cursor: pointer;
+}
+/* line 1049, apps.scss */
+.addStackModalClass .modal-dialog .modal-content {
+  border: none;
+}
+/* line 1054, apps.scss */
+.addStackModalClass .modal-dialog #modalWindow h3,
+.addStackModalClass .modal-dialog #modalWindowLocal h3 {
+  font-size: 20px;
+  color: #292929;
+}
+/* line 1058, apps.scss */
+.addStackModalClass .modal-dialog #modalWindow .middle-content,
+.addStackModalClass .modal-dialog #modalWindowLocal .middle-content {
+  height: 320px;
+  overflow: hidden;
+}
+/* line 1062, apps.scss */
+.addStackModalClass .modal-dialog #modalWindow .wrapper-cubes,
+.addStackModalClass .modal-dialog #modalWindowLocal .wrapper-cubes {
+  display: block;
+  padding: 0;
+}
+/* line 1063, apps.scss */
+.addStackModalClass .modal-dialog #modalWindow .wrapper-cubes .cube.add-stack,
+.addStackModalClass .modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack {
+  width: 300px;
+}
+/* line 1068, apps.scss */
+.addStackModalClass .modal-dialog #modalWindow .wrapper-cubes .cube.add-stack,
+.addStackModalClass .modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack {
+  padding: 16px 0 0 0;
+}
+/* line 1075, apps.scss */
+.addStackModalClass .modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack {
+  padding: 40px 0 0 0;
+}
+/* line 1079, apps.scss */
+.addStackModalClass .modal-dialog #modalWindowLocal .platform {
+  margin: 5px;
+}

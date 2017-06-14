@@ -1,0 +1,318 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 3, billing.scss */
+#plansPage .wrapper-plans {
+  margin-top: 35px;
+  overflow: auto;
+  display: flex;
+  margin-right: 57px;
+}
+/* line 9, billing.scss */
+#plansPage .title {
+  font-size: 2.5em;
+  line-height: 57px;
+}
+/* line 13, billing.scss */
+#plansPage .sub-title {
+  font-size: 1.3em;
+  color: #8D8D8D;
+}
+
+/* line 18, billing.scss */
+.opacity {
+  opacity: 0.4;
+}
+
+/* line 21, billing.scss */
+.no_popular {
+  margin-top: 26px !important;
+}
+
+/* line 24, billing.scss */
+.is_popular {
+  margin-top: 0 !important;
+}
+
+/* line 27, billing.scss */
+.plan {
+  text-align: center;
+  width: 248px;
+  border: solid 1px #e4e4e4;
+  display: inline-block;
+  margin: 5px;
+  padding-bottom: 23px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  max-width: 250px;
+}
+/* line 39, billing.scss */
+.plan .top {
+  position: relative;
+  border-bottom: solid 1px #e4e4e4;
+}
+/* line 41, billing.scss */
+.plan .top .applied {
+  text-transform: uppercase;
+  background: #91C747;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  position: absolute;
+  padding: 2px 12px;
+  left: 64px;
+  top: 56px;
+}
+/* line 53, billing.scss */
+.plan .top .name {
+  color: #EE534F;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 68px;
+  text-transform: capitalize;
+}
+/* line 61, billing.scss */
+.plan .top .popular {
+  background-color: #80C06A;
+  color: white;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+/* line 70, billing.scss */
+.plan .pBody {
+  padding: 0px 25px;
+}
+/* line 72, billing.scss */
+.plan .pBody .with-button {
+  padding-bottom: 50px;
+}
+/* line 75, billing.scss */
+.plan .pBody .price {
+  padding: 12px 0;
+  height: 90px;
+}
+/* line 76, billing.scss */
+.plan .pBody .price sup {
+  font-weight: 600;
+  font-size: 26px;
+}
+/* line 82, billing.scss */
+.plan .pBody .price span:first-child {
+  font-size: 3.2em;
+  font-weight: 500;
+}
+/* line 86, billing.scss */
+.plan .pBody .price.contact-us {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+/* line 91, billing.scss */
+.plan .pBody .price.enterprise span {
+  font-size: 1.8em;
+  line-height: 57px;
+}
+/* line 97, billing.scss */
+.plan .pBody .rnd-btn.red {
+  background: #EE534F;
+  height: 48px;
+  display: block;
+  margin: 22px auto  0 auto;
+  border-radius: 24px !important;
+  font-size: 12px;
+  line-height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 109, billing.scss */
+.plan .pBody .desc {
+  text-align: left;
+  font-size: 0.9em;
+}
+/* line 113, billing.scss */
+.plan .pBody hr {
+  width: 50%;
+  border-top: solid 1px #e4e4e4;
+}
+/* line 117, billing.scss */
+.plan .pBody button {
+  width: 100%;
+}
+/* line 120, billing.scss */
+.plan .pBody .to-bottom {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  width: 100%;
+  padding: 0 22px;
+}
+/* line 128, billing.scss */
+.plan ul {
+  padding-left: 10px;
+  text-align: left;
+  list-style: initial;
+  text-transform: capitalize;
+  color: #EE534F;
+}
+/* line 135, billing.scss */
+.plan ul li span {
+  color: initial;
+  font-size: 0.9em;
+}
+
+/* line 143, billing.scss */
+#upgradePlanPage h2 {
+  font-weight: 300;
+}
+/* line 146, billing.scss */
+#upgradePlanPage .left-side {
+  max-width: 400px;
+  float: left;
+  margin-right: 80px;
+}
+/* line 152, billing.scss */
+#upgradePlanPage .right-side {
+  float: left;
+  position: relative;
+  display: flex;
+}
+/* line 157, billing.scss */
+#upgradePlanPage .from {
+  opacity: 0.4;
+}
+/* line 160, billing.scss */
+#upgradePlanPage .to {
+  margin-left: 22px;
+  z-index: 1000;
+}
+/* line 164, billing.scss */
+#upgradePlanPage span.arrow {
+  background: url("/billing/assets/img/arrow.png");
+  width: 58px;
+  height: 58px;
+  display: block;
+  /* float: left; */
+  position: absolute;
+  left: 44%;
+  top: 50%;
+  z-index: 1001;
+}
+/* line 177, billing.scss */
+#upgradePlanPage select {
+  border-radius: 0px;
+  background: url("/billing/assets/img/select_arrow.png") no-repeat right;
+  height: 55px;
+  -webkit-appearance: none;
+  padding-top: 25px;
+}
+/* line 184, billing.scss */
+#upgradePlanPage span.under-title {
+  font-weight: 300;
+  display: block;
+}
+/* line 188, billing.scss */
+#upgradePlanPage a.cancel-button {
+  color: #aaaaaa;
+  text-decoration: underline;
+  margin-left: 28px;
+}
+/* line 193, billing.scss */
+#upgradePlanPage button.rnd-btn {
+  width: 196px;
+  height: 54px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+/* line 199, billing.scss */
+#upgradePlanPage .form-item-group {
+  margin-bottom: 0px;
+  overflow: auto;
+}
+/* line 202, billing.scss */
+#upgradePlanPage .form-item-group .form-item-1 {
+  padding: 0;
+  margin: 0;
+}
+/* line 206, billing.scss */
+#upgradePlanPage .form-item-group .left {
+  content: "\f293";
+  width: 148px;
+  float: left;
+  margin-right: 12px;
+}
+/* line 212, billing.scss */
+#upgradePlanPage .form-item-group .right {
+  width: 240px;
+  float: left;
+}
+/* line 218, billing.scss */
+#upgradePlanPage .promotion span {
+  font-weight: bold;
+}
+/* line 221, billing.scss */
+#upgradePlanPage .promotion .form-item-1 {
+  margin-top: 4px;
+}
+/* line 224, billing.scss */
+#upgradePlanPage .promotion input {
+  width: 100%;
+  padding: 0 96px 0 10px;
+  border: solid 1px #e4e4e4;
+}
+/* line 229, billing.scss */
+#upgradePlanPage .promotion button {
+  position: absolute;
+  width: 82px;
+  height: 36px;
+  top: 10px;
+  right: 10px;
+}
+/* line 236, billing.scss */
+#upgradePlanPage .promotion .result {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+/* line 240, billing.scss */
+#upgradePlanPage .promotion .result.ok {
+  color: #8dc63f;
+  border-bottom: 1px solid #8dc63f;
+  background: url("/billing/assets/img/check.png") no-repeat right;
+}
+/* line 246, billing.scss */
+#upgradePlanPage .promotion .result.error {
+  color: #ee534f;
+  border-bottom: 1px solid #ee534f;
+  background: url("/billing/assets/img/cross.png") no-repeat right;
+}

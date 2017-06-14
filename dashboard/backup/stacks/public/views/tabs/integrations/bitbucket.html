@@ -1,0 +1,23 @@
+<!-- <div class="top-head">
+    <div class="search-banner">
+        <div class="title">Bitbucket</div>
+    </div>
+</div> -->
+<div class="item">
+    <div class="table">
+    <div class="loader red" ng-show="vmibb.showLoader">Loading...</div>
+        <div ng-repeat="item in vmibb.docs" class="service-item-event">
+            <div class="row">
+                <div class="col-xs-10 title">
+                    <span><i class="ico right-ico"></i></span>
+                    <span class="text">
+                        <a href="">{{item.actor}}</a> {{item.action}} <a href="{{item.link}}" target="_blank">{{item.name}}</a> {{item.object}} {{item.cont}}
+                    </span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="date">{{item.created | date: 'short'}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

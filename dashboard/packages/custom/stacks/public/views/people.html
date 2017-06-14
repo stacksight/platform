@@ -1,0 +1,201 @@
+<div id="stacks-people" class="full-height">
+    <!--<div>{{vmc}}</div>-->
+    <companies-drop-down></companies-drop-down>
+    <div class="top-header list-header">
+        <div class="title">
+            <companies-drop-down selected-stacks="vm.selected_stacks_count" id="hint-drop-down-companies-show"></companies-drop-down>
+            <h3>People <strong><!--(1 person selected)--></strong></h3>
+        </div>
+        <div class="actions" ng-if="vmc.selected_users.length > 0">
+            <button ng-click="vmc.peopleAction()">Update</button>
+            <button uib-popover-template="'actionOptions'" class="btn-group dropdown" popover-placement="bottom"><i class="fa fa-caret-down"></i></button>
+        </div>
+        <div class="add-stack">
+            <button class="btn btn-default button-add-stack blue" ng-click="vm.openInvite()"><i class="fa fa-plus"></i> Invite user</button>
+        </div>
+        <div class="search-banner">
+            <input type="text" ng-model="vm.search.name" placeholder="Search Stacks" auto-focus/>
+            <button class="advanced-search"><span class="ico-filter"></span> Advanced search</button>
+        </div>
+    </div>
+    <div class="middle-content">
+        <div class="team-block">
+            <div class="content-block">
+                <div class="content-container">
+                    <div class="users_group">
+                        <div class="title">
+                            <h4>{{company.name}}</h4>
+                        </div>
+                        <div class="users">
+                            <ul>
+                                <li ng-repeat="collaborator in vmc.company.collaborators | isntGuest:filterByGuest:'permissions'"
+                                    ng-class="(vmc._.indexOf(vmc.selected_users, collaborator._id) == -1) ? '' : 'active'">
+                                    <span class="selected-ico fa fa-dot-circle-o "></span>
+                                    <div ng-if="collaborator.permissions">
+                                        <div class="label" ng-repeat="status in collaborator.permissions"><span class="green">{{status}}</span></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="photo">
+                                            <a href="javascript:void(0)" ng-click="vmc.selectUser(collaborator)">
+                                                <img ng-src="{{collaborator.profile.pictures.profile}}" alt="{{collaborator.name}} photo" ng-if="collaborator.profile.pictures.profile"/>
+                                                <img gravatar-src="collaborator.email" alt="{{collaborator.name}} photo" ng-if="!collaborator.profile.pictures.profile"/>
+                                            </a>
+                                        </div>
+                                        <div class="user-name" ng-click="vmc.selectUser(collaborator)">{{collaborator.name}}</div>
+                                        <div class="user-email" ng-click="vmc.selectUser(collaborator)">{{collaborator.email}}</div>
+                                        <div class="additional-info">
+                                            <div class="hover">
+                                                <a href="javascript:void(0)" ng-click="vmc.cancelInvite('company', collaborator.email)">cancel invite</a>
+                                                <a href="javascript:void(0)" ng-click="vmc.sendReminder('company', {name:collaborator.name, email: collaborator.email})">send reminder</a>
+                                            </div>
+                                            <div class="whover">
+                                                <!--29 stacks-->
+                                                <span class="action">
+                                                <!--<a href="#"><img src="/stack/assets/img/ico_trash.png" alt="trash"></a>-->
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="users_group">
+                        <div class="title">
+                            <h4>Guests</h4>
+                        </div>
+                        <div class="users">
+                            <ul>
+                                <li ng-repeat="collaborator in vmc.company.collaborators | isGuest:filterByGuest:'permissions'"
+                                    ng-class="(vmc._.indexOf(vmc.selected_users, collaborator._id) != -1) ? 'active' : ''" >
+                                    <span class="selected-ico fa fa-dot-circle-o"></span>
+                                    <div ng-if="collaborator.permissions">
+                                        <div class="label" ng-repeat="status in collaborator.permissions"><span class="green">{{status}}</span></div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="photo">
+                                            <a href="javascript:void(0)" ng-click="vmc.selectUser(collaborator)">
+                                                <img ng-src="{{collaborator.profile.pictures.profile}}" alt="{{collaborator.name}} photo" ng-if="collaborator.profile.pictures.profile"/>
+                                                <img gravatar-src="collaborator.email" alt="{{collaborator.name}} photo" ng-if="!collaborator.profile.pictures.profile"/>
+                                            </a>
+                                        </div>
+                                        <div class="user-name" ng-click="vmc.selectUser(collaborator)">{{collaborator.name}}</div>
+                                        <div class="user-email" ng-click="vmc.selectUser(collaborator)">{{collaborator.email}}</div>
+                                        <div class="additional-info">
+                                            <div class="hover">
+                                                <a href="javascript:void(0)" ng-click="vmc.cancelInvite('company', collaborator.email)">cancel invite</a>
+                                                <a href="javascript:void(0)" ng-click="vmc.sendReminder('company', {name:collaborator.name, email: collaborator.email})">send reminder</a>
+                                            </div>
+                                            <div class="whover">
+                                                <!--29 stacks-->
+                                                <span class="action">
+                                                <!--<a href="#"><img src="/stack/assets/img/ico_trash.png" alt="trash"></a>-->
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-slide-menu id="slide-menu" position="right" class="spmenu spmenu-vertical spmenu-right">
+            <div ng-include src="'people-list'" class="full-height"></div>
+        </ng-slide-menu>
+    </div>
+</div>
+
+<div id="collaboratorsTab!" ng-show="vm.app" class="full-height">
+    <div class="middle">
+        <div class="search" ng-if="vm.owner || vm.adminCollaborator">
+            <div class="title">Email</div>
+            <form name="collaboratorEmail" ng-submit="vmc.add(collaboratorEmail.$valid);">
+                <div class="form-item input-include-element">
+                    <input name="email" type="email" class="input-text" ng-model="vmc.collaborator.email" id="email" placeholder="Email" required>
+                    <!--  <select name="permissions" id="permissions" ng-options="permission for permission in vmc.permissions" ng-model="vmc.collaborator.permissions[0]"></select> -->
+                    <button class="btn red pull-right" ng-disabled="vmc.disableInvitation"> + Add Collaborator</button>
+                </div>
+            </form>
+        </div>
+        <div class="collaborators">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Permission</th>
+                    <th ng-if="vm.app.author === vmc.global.user._id">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="collaborator in vm.app.collaborators">
+                    <td>{{collaborator.email}}</td>
+                    <td>{{collaborator.status}}</td>
+                    <td>
+                        <div ng-if="collaborator.status !== 'owner'">
+                            <select ng-if="vm.owner" name="permissions" id="permissions" ng-options="permission for permission in vmc.permissions" ng-model="collaborator.permissions[0]" ng-change="vmc.update(collaborator)"></select>
+                            <span ng-if="!vm.owner">{{collaborator.permissions[0]}}</span>
+                        </div>
+                    </td>
+                    <td ng-if="vm.app.author === vmc.global.user._id"><span class="link" ng-if="collaborator.status !== 'owner'"><a href="" ng-click="vmc.remove(collaborator);">Remove</a></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="people-list">
+    <div class="component-wrapper full-height">
+        <div class="header">
+            <div class="user_image">
+                <div class="photo">
+                    <img ng-src="{{vmc.userInSlider.profile.pictures.profile}}" alt="{{collaborator.name}} photo" ng-if="vmc.userInSlider.profile.pictures.profile"/>
+                    <img gravatar-src="vmc.userInSlider.email" alt="{{vmc.userInSlider.name}} photo" ng-if="!vmc.userInSlider.profile.pictures.profile"/>
+                </div>
+            </div>
+            <div class="user_info">
+                <div class="user_name">{{vmc.userInSlider.name}}</div>
+                <div class="user_mail">{{vmc.userInSlider.email}}</div>
+                <div class="add_button">
+                    <button><i class="fa fa-plus"></i> Add to stack</button>
+                </div>
+                <span class="button-close" ng-click="vmc.triggerSlideMenuPopover(vmc.userInSlider, true);"></span>
+            </div>
+        </div>
+        <div class="popup-content content-components">
+            <div id="stacks-side-list">
+                <ul class="cube list" ng-if="vmc.userInSlider.stacks && vmc.userInSlider.stacks.length >0">
+                    <li class="stack_item" ng-repeat="stack in vmc.userInSlider.stacks">
+                        <div class="cell-container col-sm-6 border stack-container">
+                            <div class="title">
+                                <span class="platform" ng-class="stack.platform"></span>
+                                <span class="stack-name">{{stack.name}}</span>
+                            </div>
+                            <div class="tags">
+                                <ul ng-if="stack.tags">
+                                    <li ng-repeat="tag in stack.tags">{{tag.value}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cell-container col-sm-6 border stack-button">
+                            <button>Remove from stack</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="actionOptions">
+    <ul class="popover-options stacks-action">
+        <li><a href="javascript:void(0);" ng-click="vmc.userAction('invite_to')">Invite to {{vmc.total_company.name}}</a></li>
+        <li><a href="javascript:void(0);" ng-click="vmc.userAction('invite_to')">Remove from {{vmc.total_company.name}}</a></li>
+        <li><a href="javascript:void(0);" ng-click="vmc.userAction('invite_to')">Make admin</a></li>
+        <li><a href="javascript:void(0);" ng-click="vmc.userAction('invite_to')">Remove admin</a></li>
+        <li><a href="javascript:void(0);" ng-click="vmc.userAction('invite_to')">Delete user</a></li>
+    </ul>
+</script>

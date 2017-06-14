@@ -1,0 +1,65 @@
+@import "mean-compass/sass/base";
+#dashboardChartTab {
+    background-color: #ffffff;
+    .middle-content {
+        padding: 6px;
+        position: relative;
+        padding-top: 13px;
+        .date-picker {
+            position: absolute;
+            right: 6px;
+            width: 166px;
+            border-radius: 0;
+            top: 11px;
+            z-index: 20;
+        }
+        .tabs {
+            .mark {
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 0 5px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                line-height: 23px;
+            }
+        }
+    }
+    .title {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    .sub-title {}
+    .stacks-bwlow-threshold {
+        max-width: 540px;
+        margin-left: 30px;
+        .sites-list {
+            li {
+                height: 70px;
+                padding: 8px 0;
+                .platform {
+                    /* width: 48px;
+                height: 48px;
+                margin-top: 4px;
+                background-size: contain;*/
+                }
+                .info {
+                    line-height: 1;
+                    h4 {
+                        font-size: 1.4em;
+                        color: $purple1;
+                    }
+                    span {
+                        &.domain {
+                            font-size: 0.8em;
+                            text-transform: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

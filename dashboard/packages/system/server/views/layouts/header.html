@@ -1,0 +1,54 @@
+<div class="navbar navbar-inverse navbar-fixed-top" data-role="navigation">
+    <div class="page-header">
+        <div class="inner">
+            <div class="logo pull-left">
+                <a class="brand" ui-sref="home" mean-token="'site-title'" href="#!/"><strong>MEAN</strong>etwork</a>
+            </div>
+
+           <!--  <div class="main-menu pull-left">
+                <ul class="navbar-nav nav">
+                    {% for item in  menus%}
+                    <li ui-route="/{{item.link}}" class="item" ng-class="{active:$state.includes(item.link.substring(0, item.link.length-1))}">
+                        <a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div> -->
+            <div class="account">
+                <div class="text-edit">
+                    {% if user.roles %}
+                    <div class="pull-right" mean-token-editable></div>
+                    <div class="pull-right" mean-translate></div>
+                    {% endif %}
+                </div>
+                {% if !user.roles %}
+                <ul class="navbar-nav nav auth-link">
+                    <li><a ui-sref='auth.register'>Join</a>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li><a ui-sref='auth.login'>Log In</a>
+                    </li>
+                </ul>
+                {% endif %}
+                {% if user.roles %}
+                <ul class="navbar-nav nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span>{{user.name}}</span> <b class="caret"></b>
+                            <img class="profile-pic" ng-src="{{user.profile.pictures.profile}}v1/fill/w_31,h_31,al_c,q_76,usm_2.7_0.0_0.2/file.png"/>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a ui-sref="profile.general">Account</a></li>
+                            <li><a ui-sref="packages.all">Packages</a></li>
+                            <li><a href="/logout">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

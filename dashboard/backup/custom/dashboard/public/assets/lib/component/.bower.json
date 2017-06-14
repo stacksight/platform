@@ -1,0 +1,15 @@
+{
+  "name": "component",
+  "homepage": "https://github.com/guardian/component",
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "991b252c09ab41b8ebbffc2b67d3bfe744fd7c55"
+  },
+  "_source": "git://github.com/guardian/component.git",
+  "_target": "~0.0.1",
+  "_originalSource": "component",
+  "_direct": true
+}

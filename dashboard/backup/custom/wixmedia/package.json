@@ -1,0 +1,22 @@
+{
+    "name": "wixmedia",
+    "version": "0.0.1",
+    "description": "Wixmedia is a easy way to store, edit and transcode your images, videos and audio in the cloud.",
+    "author": {
+        "name": "Lior Kesos"
+    },
+    "mean": "0.4.1",
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    },
+    "scripts": {
+        "postinstall": "bower install"
+    },
+    "dependencies": {
+        "connect-multiparty": "^1.2.5",
+        "request": "^2.51.0",
+        "wixmedia": "1.12.0"
+    },
+    "license": "MIT"
+}

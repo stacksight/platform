@@ -1,0 +1,36 @@
+<div class="top-head">
+    <div class="search-banner">
+        <div class="title">Github</div>
+    </div>
+</div>
+<div class="item">
+    <div class="table">
+        <div ng-repeat="item in vmigh.docs" class="service-item-event">
+            <div class="row">
+                <div class="col-xs-6 title">
+                    <span ng-switch on="item.type">
+                        <i class="ico top-ico" ng-switch-when="branch"></i>
+                        <i class="ico right-ico" ng-switch-default></i>
+                    </span>
+                    <span class="text">{{item.title}}</span>
+                </div>
+                <div class="col-xs-4">
+                    <span class="status">
+                        <span class="is-true" ng-if="item.result == 'success'"><i class="fa fa-check-circle" aria-hidden="true"></i> Success</span>
+                    <span class="is-false" ng-if="!item.result == 'success'"><i class="fa fa-minus-circle" aria-hidden="true"></i> Fail</span>
+                    </span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="date">{{item.created | date: 'short'}}</span>
+                </div>
+            </div>
+            <!-- <p>{{item.data.log}}</p> -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="info_id">xxx</span>
+                    <span class="info_text">xxx</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

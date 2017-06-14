@@ -1,0 +1,111 @@
+.page-header {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+
+}
+.page-header .navbar-nav {
+    float: right;
+}
+.page-header > div > div, .page-header > div > ul {
+    display: inline-block;
+}
+.text-edit {
+    padding: 13px 0 0 0;
+}
+.account {
+    text-align:right;
+}
+.account > div, .account > ul {
+    text-align: left;
+}
+.navbar .nav > li > a.brand {
+    padding-left: 20px;
+    margin-left: 0
+}
+.navbar .nav.auth-link > li {
+    padding: 14px 4px;
+}
+body, .content, .container {
+    /*height: 100%;*/
+}
+.content {
+    width: 100%;
+}
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 30px;
+	width: 100%;
+	background: #ddd;
+	-webkit-box-shadow: 0 8px 6px 6px black;
+	-moz-box-shadow: 0 8px 6px 6px black;
+	box-shadow: 0 8px 6px 6px black
+}
+footer p {
+	padding: 5px 0 12px 10px
+}
+
+.featuredpic img{
+  width:510px;
+}
+/*.ng-invalid.ng-dirty{*/
+    /*border-color:#FA787E;*/
+/*}*/
+/*.ng-valid.ng-dirty{*/
+    /*border-color:#78FA89;*/
+/*}*/
+#intropage {
+font-size:1.3em;
+margin:10px 20px;
+}
+
+.firstPage .container {
+	background-color:#fff !important;
+}
+
+.mean-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    background: mediumvioletred;
+
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-box-reflect: below -2px -webkit-gradient(radial, right top, 84, right top, 329, from(transparent), color-stop(78%, #FFFD4A), to(transparent));
+    background-size: 100% 100%;
+    display: block;
+    margin: auto;
+    border-radius: 35%;
+    color: white;
+    padding-top: 3.8em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 0;
+}
+
+.zindexMax{
+    z-index: 99999999 !important;
+}
+
+.header-feedback{
+    width: 200px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+}
+.header-feedback i{
+    padding-right: 6px;
+}
+.header-feedback a:hover{
+    text-decoration: none;
+}
+.header-feedback a{
+    text-transform: uppercase;
+}

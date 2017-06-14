@@ -1,0 +1,54 @@
+<section id="settingsTab" class="full-height">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title">stack settings</div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle-content">
+            <form name="stackSettings" ng-if="stack" class="left-col">
+                <div class="form-item-1">
+                    <label class="label">Stack Id</label>
+                    <input name="id" type="text" class="input-text" ng-model="stack._id" readonly ng-required="true">
+                </div>
+                <div class="form-item-1" ng-class="{empty: !stack.name}">
+                    <label class="label">Name</label>
+                    <input name="name" type="text" class="input-text" ng-model="stack.name" placeholder="NAME" ng-required="true">
+                </div>
+                <div class="form-item-1" ng-class="{empty: !stack.host}">
+                    <label class="label">Domain</label>
+                    <input name="domain" type="text" class="input-text" ng-model="stack.host" placeholder="DOMAIN" http-prefix>
+                </div>
+                <!--<div class="form-item-1" ng-init="vms.initSetting()">
+                    <label class="label">Group</label>
+                  
+                    <ui-select ng-model="group.selected" theme="select2" ng-disabled="disabled" class="input-text" on-select="vms.relocationStack(stack, group.selected._id)">
+                        <ui-select-match placeholder="Select a group">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="group in groups | propsFilter: {name: $select.search}">
+                            <div ng-bind-html="group.name | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>-->
+                <div class="form-item-1">
+                    <button class="btn rnd-btn red" ng-click="vms.update(stackSettings.$valid, stack ,'settingsTab')">Update Stack Settings</button>
+                </div>
+                <!--  <pre>{{group.selected | json:2}}</pre>
+                <pre>{{stack | json:2}}</pre> -->
+            </form>
+            <div class="right-col" id="PlatformPage">
+                <div ng-if="stack.platform !== 'web'">
+                    <h2>Stack embed code</h2>
+                    <embed-code ng-if="stack.platform" platform="{{stack.platform}}" stack="stack" src="settings"></embed-code>
+                </div>
+                <div ng-if="stack.platform === 'web'"><br>
+                    <h2>Complete your integration</h2>
+                    <span>select your platform: </span>
+                    <a ui-sref="app.addStack({platform: 'wordpress', appId: stack.app._id})">wordpress</a> | 
+                    <a ui-sref="app.addStack({platform: 'drupal', appId: stack.app._id})">drupal</a> .
+                    <br>
+                     In order to complete integrating your stack, check out our <a href="http://stacksight.io/docs">docs</a> page for plugin download instructions or <a href="mailto:support@stacksight.io?Subject=Tech%20support" target="_top">contact us </a>for support.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

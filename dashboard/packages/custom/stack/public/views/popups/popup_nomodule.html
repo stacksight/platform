@@ -1,0 +1,19 @@
+<div class="no-exist-module">
+    <form name="stackSettings">
+        <div class="no-exist-block">
+            <div ng-show="!stack.host">
+                <h2>No data available</h2>
+                <span>{{health_object.noexist[stack.platform].description}}</span>
+            </div>
+            <div ng-show="stack.host">
+                <h2>No data available</h2>
+                <span>Please, check your <strong>{{stack.host}}</strong> domain.</span>
+                <span>If domain is correct you can update data manually.</span>
+            </div>
+            <div id="stack-form-add">
+                    <input name="domain" type="text" class="input-text" ng-model="stack.host" placeholder="http://" http-prefix>
+                    <button class="btn-red" ng-if="stack.host" ng-click="vms.update(stackSettings.$valid, stack ,'stack-form-up')">Run {{health_object.category}} check</button>
+            </div>
+        </div>
+    </form>
+</div>

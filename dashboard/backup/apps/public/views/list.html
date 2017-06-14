@@ -1,0 +1,54 @@
+<section id="dashboarStacksTab" ng-controller="AppsController as vm" class="full-height" ng-init="vmd.init()">
+    <side-bar data="vm.sideBarData"></side-bar>
+    <div class="tab-content full-height">
+        <div ui-view class="full-height with-sidebar-content">
+
+        </div>
+    </div>
+
+
+</section>
+
+<script type="text/ng-template" id='platforms-cube'>
+    <div class="cube add-stack plus">
+        <h3>Add new stack to <b>{{vm.app.name}}</b></h3>
+        <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && value.enable" class="platform cursor-pointer" ui-sref="app.addStack({appId:vm.app._id, platform: key})" ng-class="key" ng-click="vmodal.closeModal()">
+        </div>
+        <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && !value.enable" class="platform disable" ng-class="key">
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id="addStackModal">
+    <div id="appPage">
+        <div class="modal-body view-app" id="modalWindow">
+            <i class="fa fa-times" ng-click="vmodal.closeModal()"></i>
+            <div class="middle-content">
+                <div class="wrapper-cubes">
+                    <div ng-include="vmodal.template" class="add-cube-class"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/ng-template" id='add-stack-cube'>
+    <div class="cube add-stack">
+        <h3><strong>Add a stack</strong></h3>
+        <form name="addStack" role="form" ng-submit="vm.addStack();" novalidate class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input name="host" type="text" class="form-control" ng-model="vm.stack.host" id="host" required placeholder="http://" http-prefix>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input name="name" type="text" class="form-control" ng-model="vm.stack.name" id="name" placeholder="stack name">
+                </div>
+            </div>
+            <div class="form-group actions">
+                <a href="" class="active" ng-click="vm.viewCube.platforms=true; vm.viewCube.add = false; vm.viewCube.add = false;">WEB</a>
+                <a href="" ng-click="vm.viewCube.platforms=true; vm.viewCube.add = false; vm.viewCube.add = false; vmodal.openLocalModal();">LOCAL</a>
+            </div>
+            <button ng-click="vmodal.closeModal();">Add</button>
+        </form>
+    </div>
+</script>

@@ -1,0 +1,96 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 6, updates.scss */
+#updatesTab .updates .type-title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.4em;
+  margin: 10px 0px;
+  margin-top: 25px;
+}
+/* line 12, updates.scss */
+#updatesTab .updates .type-title.critical {
+  color: #EE534F;
+}
+/* line 16, updates.scss */
+#updatesTab .updates .update {
+  width: 90%;
+  max-width: 870px;
+  border-left: solid 5px;
+  padding: 15px 20px;
+  margin: 7px 0;
+  /*opacity: 0.1;*/
+}
+/* line 23, updates.scss */
+#updatesTab .updates .update .title {
+  font-weight: bold;
+  font-size: 1.23em;
+}
+/* line 27, updates.scss */
+#updatesTab .updates .update ._row {
+  text-transform: capitalize;
+  margin: 10px 0px;
+}
+/* line 30, updates.scss */
+#updatesTab .updates .update ._row div {
+  display: inline-block;
+  margin: 0 2px;
+}
+/* line 33, updates.scss */
+#updatesTab .updates .update ._row div:first-child {
+  width: 160px;
+}
+/* line 36, updates.scss */
+#updatesTab .updates .update ._row div.version {
+  color: #EE534F;
+  font-weight: bold;
+}
+/* line 40, updates.scss */
+#updatesTab .updates .update ._row div a {
+  color: #EE534F;
+  font-size: 0.9em;
+  font-style: italic;
+  text-transform: lowercase;
+  margin-left: 7px;
+}
+/* line 49, updates.scss */
+#updatesTab .updates .update.critical {
+  background: #FEF6F6;
+  /*background: $critical;*/
+  border-color: #EE534F;
+}
+/* line 54, updates.scss */
+#updatesTab .updates .update.available {
+  background: #FFFDF2;
+  /*background: $available;*/
+  border-color: #FFD503;
+}

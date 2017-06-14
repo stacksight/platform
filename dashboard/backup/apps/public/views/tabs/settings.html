@@ -1,0 +1,21 @@
+<section id="settingsTab" class="full-height">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title">App settings</div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle-content">
+            <form name="appSettings">
+                <div class="form-item-1" ng-class="{empty: !vm.app.name}">
+                    <label class="label">Name</label>
+                    <input name="name" type="text" class="input-text" ng-model="vm.app.name" placeholder="NAME" ng-required="true">
+                </div>
+                <div class="form-item-1">
+                    <button class="btn rnd-btn red" ng-click="vm.update(appSettings.$valid, vm.app)">Update</button>&nbsp;
+                    <span class="link"><a href="" ng-click="vm.delete(vm.app)">DELETE</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

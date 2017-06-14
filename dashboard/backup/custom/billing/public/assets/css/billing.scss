@@ -1,0 +1,252 @@
+@import "mean-compass/sass/base";
+#plansPage {
+    .wrapper-plans {
+        margin-top: 35px;
+        overflow: auto;
+        display: flex;
+        margin-right: 57px;
+    }
+    .title {
+        font-size: 2.5em;
+        line-height: 57px;
+    }
+    .sub-title {
+        font-size: 1.3em;
+        color: $text19;
+    }
+}
+.opacity{
+    opacity: 0.4;
+}
+.no_popular{
+    margin-top: 26px !important;
+}
+.is_popular{
+    margin-top: 0 !important;
+}
+.plan {
+    text-align: center;
+    width: 248px;
+    border: $border;
+    display: inline-block;
+    margin: 5px;
+    padding-bottom: 23px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    max-width: 250px;
+    .top {
+        position: relative;
+        .applied{
+            text-transform: uppercase;
+            background: #91C747;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            position: absolute;
+            padding: 2px 12px;
+            left: 64px;
+            top: 56px;
+        }
+        border-bottom: $border;
+        .name {
+            color: $red;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 68px;
+            text-transform: capitalize;
+
+        }
+        .popular {
+            background-color: $green;
+            color: white;
+            padding: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    }
+    .pBody {
+        padding: 0px 25px;
+        .with-button{
+            padding-bottom:50px;
+        }
+        .price {
+            sup{
+                font-weight: 600;
+                font-size: 26px;
+            }
+            padding: 12px 0;
+            height: 90px;
+            span:first-child {
+                font-size: 3.2em;
+                font-weight: 500;
+            }
+            &.contact-us {
+                font-size: 2.5em;
+                font-weight: 500;
+            }
+            &.enterprise {
+                span {
+                    font-size: 1.8em;
+                    line-height: 57px;
+                }
+            }
+        }
+        .rnd-btn.red{
+            background: #EE534F;
+            height: 48px;
+            display: block;
+            margin: 22px auto  0 auto;
+            border-radius: 24px !important;
+            font-size: 12px;
+            line-height: 30px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .desc {
+            text-align: left;
+            font-size: 0.9em;
+        }
+        hr {
+            width: 50%;
+            border-top: $border;
+        }
+        button {
+            width: 100%;
+        }
+        .to-bottom{
+            position: absolute;
+            bottom: 22px;
+            left: 0;
+            width: 100%;
+            padding: 0 22px;
+        }
+    }
+    ul {
+        padding-left: 10px;
+        text-align: left;
+        list-style: initial;
+        text-transform: capitalize;
+        color: $red;
+        li {
+            span {
+                color: initial;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+#upgradePlanPage{
+    h2{
+        font-weight: 300;
+    }
+    .left-side{
+        max-width: 400px;
+        float: left;
+        margin-right: 80px;
+
+    }
+    .right-side{
+        float: left;
+        position: relative;
+        display: flex;
+    }
+    .from{
+        opacity: 0.4;
+    }
+    .to{
+        margin-left: 22px;
+        z-index: 1000;
+    }
+    span.arrow{
+        background: url('/billing/assets/img/arrow.png');
+        width: 58px;
+        height: 58px;
+        display: block;
+        /* float: left; */
+        position: absolute;
+        left: 44%;
+        top: 50%;
+        z-index: 1001;
+    }
+    .form-item-1{
+    }
+    select{
+        border-radius: 0px;
+        background: url('/billing/assets/img/select_arrow.png') no-repeat right;
+        height: 55px;
+        -webkit-appearance: none;
+        padding-top: 25px;
+    }
+    span.under-title{
+        font-weight: 300;
+        display: block;
+    }
+    a.cancel-button{
+        color: #aaaaaa;
+        text-decoration: underline;
+        margin-left: 28px;
+    }
+    button.rnd-btn{
+        width: 196px;
+        height: 54px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .form-item-group{
+        margin-bottom: 0px;
+        overflow: auto;
+        .form-item-1{
+            padding: 0;
+            margin: 0;
+        }
+        .left{
+            content: "\f293";
+            width: 148px;
+            float: left;
+            margin-right: 12px;
+        }
+        .right{
+            width: 240px;
+            float: left;
+        }
+    }
+    .promotion{
+        span{
+            font-weight: bold;
+        }
+        .form-item-1{
+            margin-top: 4px;
+        }
+        input{
+            width: 100%;
+            padding: 0 96px 0 10px;
+            border: solid 1px #e4e4e4;
+        }
+        button{
+            position: absolute;
+            width: 82px;
+            height: 36px;
+            top: 10px;
+            right: 10px;
+        }
+        .result{
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .result.ok{
+            color: #8dc63f;
+            border-bottom: 1px solid #8dc63f;
+            background: url("/billing/assets/img/check.png") no-repeat right;
+
+        }
+        .result.error{
+            color: #ee534f;
+            border-bottom: 1px solid #ee534f;
+            background: url("/billing/assets/img/cross.png") no-repeat right;
+        }
+    }
+}

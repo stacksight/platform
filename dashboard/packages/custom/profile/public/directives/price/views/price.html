@@ -1,0 +1,114 @@
+<div class="plans_block">
+    <div class="for_inputs">
+        <ul id="plan_cards" class="main" ng-if="price">
+            <li class="simple" ng-repeat="plan in price | orderBy: 'weight'" ng-class="plan.popular == true ?'most-popular' : ''" id="plan_{{plan._id}}"
+                ng-if="plan.id != 'free' || (plan.id == 'free' && vmb.currentPlan._id == plan._id)">
+                <div class="head">{{plan.name}}</div>
+                <div class="popular" ng-if="plan.popular == true">Most popular</div>
+                <div class="body">
+                    <div class="price" ng-if="!plan.contactUs">
+                        <sup ng-if="plan.stripe.currency == 'usd'">$</sup>
+                        <span class="value">{{plan.stripe.amount/100}}</span>
+                        <span>/{{plan.stripe.interval}}</span>
+                    </div>
+                    <div class="price" ng-if="plan.contactUs">Contact</div>
+                    <div class="desc">
+                        {{plan.description}}
+                    </div>
+                    <hr>
+                    <div class="info">
+                        <ul ng-if="plan.flattenFeatures">
+                            <li ng-repeat="value in plan.features" ng-if="value.active == true && value.locatedIn && value.locatedIn.indexOf('card') > -1">
+                                <span ng-if="value.value == 'true' || value.value == 'false'" ng-class="value.value == 'false' ? 'false' : ''">{{value.description}}</span>
+                                <span ng-if="!value.value">{{value.description}}</span>
+                                <span ng-if="value.value && (value.value != 'true' && value.value != 'false')">{{value.description}}</span>
+                            </li>
+                        </ul>
+                        <button class="current" ng-if="vmb.currentPlan._id == plan._id">Current plan</button>
+                        <button ng-if="!plan.contactUs && vmb.currentPlan._id != plan._id" ng-click="subscribe(plan)">Upgrade</button>
+                        <a ng-if="plan.contactUs" href="mailto:{{global.stsEmail}}" class="contact_us">contact us</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="upgrade_form_block" style="display: none">
+            <div class="form">
+                <form name="billingDetails">
+                    <div class="form-item-1">
+                        <label class="label">Email adress</label>
+                        <span class="required">Required</span>
+                        <input name="email" type="text" class="input-text" ng-model="vmb.global.user.email" placeholder="Email adress" readonly required>
+                    </div>
+                    <div class="form-item-1">
+                        <label class="label">Full name</label>
+                        <span class="required">Required</span>
+                        <input name="name" type="text" class="input-text" placeholder="Full name" ng-model="vmb.global.user.name" required>
+                    </div>
+                    <div class="form-item-1">
+                        <label class="label">Phone</label>
+                        <span class="required">Required</span>
+                        <input name="phone" type="text" class="input-text" placeholder="Your phone" ng-model="vmb.global.user.phone" required>
+                    </div>
+                    <div class="form-item-1">
+                        <label class="label">Company</label>
+                        <input name="company" type="text" class="input-text" placeholder="Company" ng-model="vmb.company" required>
+                        <!--<select name="country" class="input-text" placeholder="Company" ng-model="vmb.global.user.company" readonly>
+                            <option value="{{company.id}}" ng-repeat="company in vmb.global.user.companies">{{company.name}}</option>
+                        </select>-->
+                    </div>
+                    <div class="form-item-1">
+                        <label class="label">Country</label>
+                        <input name="country" type="text" class="input-text" placeholder="Country" ng-model="vmb.global.user.location.country">
+                        <!--<select name="country" class="input-text" placeholder="Country" ng-model="vmb.global.user.location.country">
+                            <option value="USA">USA</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Israel">Israel</option>
+                        </select>-->
+                    </div>
+                    <div class="form-item-group">
+                        <div class="form-item-1 left">
+                            <label class="label">State</label>
+                            <input name="state" type="text" class="input-text" placeholder="State" ng-model="vmb.global.user.location.state">
+                            <!--  <select name="country" class="input-text" placeholder="State" ng-model="vmb.global.user.location.state">
+                                 <option value="USA">USA</option>
+                                 <option value="Germany">Germany</option>
+                                 <option value="Israel">Israel</option>
+                             </select> -->
+                        </div>
+                        <div class="form-item-1 right">
+                            <label class="label">City</label>
+                            <input name="name" type="text" class="input-text" placeholder="City" ng-model="vmb.global.user.location.city">
+                        </div>
+                    </div>
+                    <div class="clear clearfix"></div>
+                    <div class="form-item-1">
+                        <label class="label">Street</label>
+                        <input name="name" type="text" class="input-text" placeholder="Street" ng-model="vmb.global.user.location.street">
+                    </div>
+                    <div class="form-item-1">
+                        <label class="label">Zip code</label>
+                        <input name="name" type="text" class="input-text" placeholder="Zip code" ng-model="vmb.global.user.location.zipcode">
+                    </div>
+                </form>
+            </div>
+            <div class="promotion">
+                <span>Promotion code:</span>
+                <div class="form-item-1">
+                    <input type="text" ng-model="token" placeholder="ENTER COUPON CODE" />
+                    <button ng-click="vmb.applyCoupon(token);" class="btn rnd-btn red apply-btn">Apply</button>
+                </div>
+                <div class="result ok" ng-show="vmb.successApplyCoupon">
+                    <span>{{vmb.couponAppliedText}}</span>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <button class="btn rnd-btn red lg" ng-class="{disabled: vmb.payClicked}"
+                        ng-if="!vmb.global.user.phone || !vmb.global.user.name || !vmb.global.user.email"
+                        disabled>Continue to payment</button>
+                <button class="btn rnd-btn red lg" ng-click="vmb.subscribe(selected_plan);" ng-class="{disabled: vmb.payClicked}"
+                        ng-if="vmb.global.user.phone && vmb.global.user.name && vmb.global.user.email">Continue to payment</button>
+                <a href="javascript:void(0);" class="cancel-button" ng-click="cancel(selected_plan)">Cancel</a>
+                </div>
+        </div>
+    </div>
+</div>

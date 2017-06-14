@@ -1,0 +1,8 @@
+#http://doc.gitlab.com/ci/yaml/README.html
+
+job_selenium:
+    script: 
+        - sudo -u root bash -c 'chmod +x ./.ci.sh; ./.ci.sh'
+    tags:
+        - selenium
+    allow_failure: true

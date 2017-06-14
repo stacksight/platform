@@ -1,0 +1,1195 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, modal.scss */
+#modalWindow,
+#modalWindowLocal {
+  /*LIST APPS*/
+}
+/* line 7, modal.scss */
+#modalWindow .top-header .search-banner,
+#modalWindowLocal .top-header .search-banner {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 8px;
+  position: relative;
+}
+/* line 12, modal.scss */
+#modalWindow .top-header .search-banner:before,
+#modalWindowLocal .top-header .search-banner:before {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 11px;
+  background: url("/system/assets/img/ico/search-ico.png");
+  content: '';
+  left: 16px;
+}
+/* line 22, modal.scss */
+#modalWindow .top-header .search-banner button.advanced-search,
+#modalWindowLocal .top-header .search-banner button.advanced-search {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 18px;
+  height: 38px;
+  text-transform: uppercase;
+  color: #448aff;
+  font-weight: bold;
+}
+/* line 32, modal.scss */
+#modalWindow .top-header .search-banner button.advanced-search .ico-filter,
+#modalWindowLocal .top-header .search-banner button.advanced-search .ico-filter {
+  width: 13px;
+  height: 13px;
+  background: url("/apps/assets/img/ico/blue_filter.png");
+  display: block;
+  position: absolute;
+  right: 132px;
+  top: 12px;
+}
+/* line 43, modal.scss */
+#modalWindow .top-header .search-banner input,
+#modalWindowLocal .top-header .search-banner input {
+  width: 100%;
+  height: 38px;
+  padding-left: 38px;
+  border: none;
+  font-style: italic;
+}
+/* line 51, modal.scss */
+#modalWindow .top-header .view-type,
+#modalWindowLocal .top-header .view-type {
+  width: 6%;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 59, modal.scss */
+#modalWindow .middle-content .top-header,
+#modalWindowLocal .middle-content .top-header {
+  width: 100%;
+}
+/* line 61, modal.scss */
+#modalWindow .middle-content .top-header .title,
+#modalWindowLocal .middle-content .top-header .title {
+  float: left;
+}
+/* line 63, modal.scss */
+#modalWindow .middle-content .top-header .title h3,
+#modalWindowLocal .middle-content .top-header .title h3 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/* line 69, modal.scss */
+#modalWindow .middle-content .top-header .add-stack,
+#modalWindowLocal .middle-content .top-header .add-stack {
+  float: right;
+}
+/* line 71, modal.scss */
+#modalWindow .middle-content .top-header .add-stack .btn,
+#modalWindowLocal .middle-content .top-header .add-stack .btn {
+  padding: 10px 50px;
+}
+/* line 76, modal.scss */
+#modalWindow .middle-content .table,
+#modalWindowLocal .middle-content .table {
+  margin: 0;
+}
+/* line 80, modal.scss */
+#modalWindow .middle-content.list .add-plus-class,
+#modalWindowLocal .middle-content.list .add-plus-class {
+  margin-top: -54px;
+}
+/* line 83, modal.scss */
+#modalWindow .middle-content.list .add-cube-class,
+#modalWindow .middle-content.list .add-platform-cube-class,
+#modalWindowLocal .middle-content.list .add-cube-class,
+#modalWindowLocal .middle-content.list .add-platform-cube-class {
+  width: 100%;
+}
+/* line 87, modal.scss */
+#modalWindow .middle-content.list .cube,
+#modalWindowLocal .middle-content.list .cube {
+  width: initial;
+  min-height: initial;
+  margin: 0 0 0 20px;
+  height: initial;
+  padding: 0;
+  max-height: initial;
+}
+/* line 94, modal.scss */
+#modalWindow .middle-content.list .cube.add-stack,
+#modalWindowLocal .middle-content.list .cube.add-stack {
+  padding: 36px;
+}
+/* line 98, modal.scss */
+#modalWindow .middle-content.list .cube.trans > div,
+#modalWindowLocal .middle-content.list .cube.trans > div {
+  margin: 0px;
+  position: relative;
+}
+/* line 102, modal.scss */
+#modalWindow .middle-content.list .cube.trans .plus,
+#modalWindowLocal .middle-content.list .cube.trans .plus {
+  padding: 0px 16px;
+  font-size: 2.5em;
+}
+/* line 109, modal.scss */
+#modalWindow .middle-content .st-sort-ascent:after,
+#modalWindowLocal .middle-content .st-sort-ascent:after {
+  content: "\f0d8";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-left: 18px;
+}
+/* line 117, modal.scss */
+#modalWindow .middle-content .st-sort-descent:after,
+#modalWindowLocal .middle-content .st-sort-descent:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-left: 18px;
+}
+/* line 127, modal.scss */
+#modalWindow .wrapper-search-input,
+#modalWindowLocal .wrapper-search-input {
+  max-width: 1182px;
+  margin: auto;
+  padding: 0px;
+}
+/* line 134, modal.scss */
+#modalWindow .wrapper-cubes,
+#modalWindowLocal .wrapper-cubes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1182px;
+  margin: auto;
+  padding: 20px 0;
+}
+/* line 140, modal.scss */
+#modalWindow .wrapper-cubes .add-stack,
+#modalWindowLocal .wrapper-cubes .add-stack {
+  margin-top: 25px;
+}
+/* line 143, modal.scss */
+#modalWindow .wrapper-cubes .add-stack .button-add-stack,
+#modalWindowLocal .wrapper-cubes .add-stack .button-add-stack {
+  float: right;
+  line-height: 40px;
+  padding: 0 46px;
+}
+/* line 148, modal.scss */
+#modalWindow .wrapper-cubes .add-stack .button-add-stack.red,
+#modalWindowLocal .wrapper-cubes .add-stack .button-add-stack.red {
+  background: #ee534f;
+  color: #ffffff;
+}
+/* line 154, modal.scss */
+#modalWindow .wrapper-cubes .list-header,
+#modalWindowLocal .wrapper-cubes .list-header {
+  width: 100%;
+}
+/* line 173, modal.scss */
+#modalWindow .wrapper-cubes .owner-ico,
+#modalWindowLocal .wrapper-cubes .owner-ico {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  margin-right: 10px;
+  float: left;
+}
+/* line 181, modal.scss */
+#modalWindow .wrapper-cubes .owner-ico img,
+#modalWindowLocal .wrapper-cubes .owner-ico img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* line 187, modal.scss */
+#modalWindow .wrapper-cubes .right-count-circle,
+#modalWindowLocal .wrapper-cubes .right-count-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px;
+  background: #ee534f;
+  line-height: 0;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* line 199, modal.scss */
+#modalWindow .wrapper-cubes .cube,
+#modalWindowLocal .wrapper-cubes .cube {
+  position: relative;
+  width: 360px;
+  min-height: 280px;
+  margin: 17px;
+  background: white;
+  text-align: center;
+  padding: 10px 40px 40px 40px;
+  height: 410px;
+  max-height: 480px;
+}
+/* line 201, modal.scss */
+#modalWindow .wrapper-cubes .cube.clicked .bottom-buttons,
+#modalWindowLocal .wrapper-cubes .cube.clicked .bottom-buttons {
+  display: none;
+}
+/* line 214, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack,
+#modalWindowLocal .wrapper-cubes .cube.add-stack {
+  padding: 20px;
+}
+/* line 217, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack form input,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form input {
+  font-weight: 100;
+  height: 54px;
+}
+/* line 221, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack form .actions,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions {
+  border: 1px solid #e9e9e9;
+  height: 40px;
+  padding-top: 8px;
+  margin: 0 0px;
+}
+/* line 226, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack form .actions a,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a {
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 32px;
+  background: #FFFFFF;
+  padding: 9px 30px;
+  color: #000000;
+  width: 82px;
+}
+/* line 228, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack form .actions a:hover,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a:hover {
+  text-decoration: none;
+}
+/* line 232, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack form .actions a.active,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a.active {
+  background: #EE534F;
+  color: #ffffff;
+}
+/* line 243, modal.scss */
+#modalWindow .wrapper-cubes .cube.add-stack form button,
+#modalWindowLocal .wrapper-cubes .cube.add-stack form button {
+  height: 45px;
+  background: #EE534F;
+  border: none;
+  color: #ffffff;
+  width: 143px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+/* line 254, modal.scss */
+#modalWindow .wrapper-cubes .cube .form-side,
+#modalWindowLocal .wrapper-cubes .cube .form-side {
+  float: left;
+  width: 306px;
+  padding-right: 32px;
+  border-right: 1px solid #e8e8e8;
+}
+/* line 259, modal.scss */
+#modalWindow .wrapper-cubes .cube .form-side .label,
+#modalWindowLocal .wrapper-cubes .cube .form-side .label {
+  position: absolute;
+  top: 10px;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 0.87em;
+  left: 10px;
+  font-weight: 600;
+  color: #000000;
+}
+/* line 269, modal.scss */
+#modalWindow .wrapper-cubes .cube .form-side span.desc,
+#modalWindowLocal .wrapper-cubes .cube .form-side span.desc {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  padding-top: 4px;
+  line-height: 14px;
+}
+/* line 276, modal.scss */
+#modalWindow .wrapper-cubes .cube .form-side input,
+#modalWindowLocal .wrapper-cubes .cube .form-side input {
+  height: 55px !important;
+  padding-top: 25px;
+  box-shadow: none;
+  border: none;
+  line-height: 22px;
+  font-size: 18px;
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: 16px;
+}
+/* line 277, modal.scss */
+#modalWindow .wrapper-cubes .cube .form-side input:focus,
+#modalWindowLocal .wrapper-cubes .cube .form-side input:focus {
+  border-bottom: 2px solid #eb4753;
+  box-shadow: none;
+}
+/* line 291, modal.scss */
+#modalWindow .wrapper-cubes .cube .form-side select,
+#modalWindowLocal .wrapper-cubes .cube .form-side select {
+  border: none;
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: 30px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  font-size: 18px;
+  font-weight: 100;
+}
+/* line 306, modal.scss */
+#modalWindow .wrapper-cubes .cube .stacks-type-side,
+#modalWindowLocal .wrapper-cubes .cube .stacks-type-side {
+  float: left;
+  padding: 0 32px;
+  width: 490px;
+  text-align: left;
+}
+/* line 312, modal.scss */
+#modalWindow .wrapper-cubes .cube .bottom-buttons,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+/* line 318, modal.scss */
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul {
+  margin: 0;
+  padding: 0;
+  height: 53px;
+  background: #ee534f;
+  -webkit-box-shadow: inset 0px 16px 24px -15px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 16px 24px -15px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 16px 24px -15px rgba(0, 0, 0, 0.4);
+}
+/* line 326, modal.scss */
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li {
+  margin: 0;
+  padding: 0;
+  width: 33.33333%;
+  float: left;
+  line-height: 53px;
+  border-right: 1px solid #e53531;
+}
+/* line 327, modal.scss */
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li:nth-last-child,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li:nth-last-child {
+  border-right: none;
+}
+/* line 336, modal.scss */
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li a,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li a {
+  color: #FFFFFF;
+}
+/* line 337, modal.scss */
+#modalWindow .wrapper-cubes .cube .bottom-buttons ul li a:hover,
+#modalWindowLocal .wrapper-cubes .cube .bottom-buttons ul li a:hover {
+  text-decoration: none;
+}
+/* line 345, modal.scss */
+#modalWindow .wrapper-cubes .cube .settings,
+#modalWindowLocal .wrapper-cubes .cube .settings {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 2em;
+  color: #f3f3f3;
+}
+/* line 352, modal.scss */
+#modalWindow .wrapper-cubes .cube h3,
+#modalWindowLocal .wrapper-cubes .cube h3 {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 29px;
+  margin-bottom: 32px;
+}
+/* line 359, modal.scss */
+#modalWindow .wrapper-cubes .cube h3 a,
+#modalWindowLocal .wrapper-cubes .cube h3 a {
+  text-align: center;
+  margin-top: 0;
+  color: #EE534F;
+  margin-bottom: 5px;
+}
+/* line 366, modal.scss */
+#modalWindow .wrapper-cubes .cube h6,
+#modalWindowLocal .wrapper-cubes .cube h6 {
+  text-align: center;
+  font-size: 0.9em;
+}
+/* line 369, modal.scss */
+#modalWindow .wrapper-cubes .cube h6.updates,
+#modalWindowLocal .wrapper-cubes .cube h6.updates {
+  text-transform: capitalize;
+}
+/* line 371, modal.scss */
+#modalWindow .wrapper-cubes .cube h6.updates .critical,
+#modalWindowLocal .wrapper-cubes .cube h6.updates .critical {
+  color: #EE534F;
+}
+/* line 376, modal.scss */
+#modalWindow .wrapper-cubes .cube hr,
+#modalWindowLocal .wrapper-cubes .cube hr {
+  margin: 9px 0;
+}
+/* line 379, modal.scss */
+#modalWindow .wrapper-cubes .cube .collaborator,
+#modalWindowLocal .wrapper-cubes .cube .collaborator {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  border: solid 1px #e4e4e4;
+  border-radius: 50%;
+  margin: 0 1px;
+}
+/* line 386, modal.scss */
+#modalWindow .wrapper-cubes .cube .collaborator img,
+#modalWindowLocal .wrapper-cubes .cube .collaborator img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* line 391, modal.scss */
+#modalWindow .wrapper-cubes .cube .collaborator:first-child,
+#modalWindowLocal .wrapper-cubes .cube .collaborator:first-child {
+  color: grey;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 27px;
+}
+/* line 398, modal.scss */
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes {
+  text-align: center;
+  /*background: $appGrey;*/
+}
+/* line 401, modal.scss */
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube {
+  position: relative;
+  display: inline-block;
+  width: 83px;
+  height: 83px;
+  margin: 30px 3px;
+  vertical-align: middle;
+}
+/* line 408, modal.scss */
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name {
+  font-weight: bold;
+}
+/* line 410, modal.scss */
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name a,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .sm-cube .name a {
+  color: #333;
+}
+/* line 415, modal.scss */
+#modalWindow .wrapper-cubes .cube .wrapper-sm-cubes .notification,
+#modalWindowLocal .wrapper-cubes .cube .wrapper-sm-cubes .notification {
+  top: -3px;
+  right: -9px;
+}
+/* line 420, modal.scss */
+#modalWindow .wrapper-cubes .cube .back,
+#modalWindow .wrapper-cubes .cube .front,
+#modalWindowLocal .wrapper-cubes .cube .back,
+#modalWindowLocal .wrapper-cubes .cube .front {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background: white;
+}
+/* line 428, modal.scss */
+#modalWindow .wrapper-cubes .cube .back.front,
+#modalWindow .wrapper-cubes .cube .front.front,
+#modalWindowLocal .wrapper-cubes .cube .back.front,
+#modalWindowLocal .wrapper-cubes .cube .front.front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  padding-top: 12px;
+}
+/* line 440, modal.scss */
+#modalWindow .wrapper-cubes .cube .back.back,
+#modalWindow .wrapper-cubes .cube .front.back,
+#modalWindowLocal .wrapper-cubes .cube .back.back,
+#modalWindowLocal .wrapper-cubes .cube .front.back {
+  position: absolute;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  top: 53px;
+  z-index: -1;
+}
+/* line 452, modal.scss */
+#modalWindow .wrapper-cubes .cube.clicked .front,
+#modalWindowLocal .wrapper-cubes .cube.clicked .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+/* line 460, modal.scss */
+#modalWindow .wrapper-cubes .cube.clicked .back,
+#modalWindowLocal .wrapper-cubes .cube.clicked .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  z-index: 200;
+  z-index: 0;
+}
+/* line 470, modal.scss */
+#modalWindow .wrapper-cubes .cube.trans,
+#modalWindowLocal .wrapper-cubes .cube.trans {
+  background: transparent;
+}
+/* line 472, modal.scss */
+#modalWindow .wrapper-cubes .cube.trans div,
+#modalWindowLocal .wrapper-cubes .cube.trans div {
+  top: 50%;
+  position: relative;
+  margin-top: -45px;
+}
+/* line 476, modal.scss */
+#modalWindow .wrapper-cubes .cube.trans div span.plus,
+#modalWindowLocal .wrapper-cubes .cube.trans div span.plus {
+  background: white;
+  padding: 0px 36px;
+  font-size: 4.5em;
+  color: #8D8D8D;
+}
+/* line 485, modal.scss */
+#modalWindow .wrapper-cubes .cube.list,
+#modalWindowLocal .wrapper-cubes .cube.list {
+  min-height: auto;
+}
+/* line 490, modal.scss */
+#modalWindow .apps-list .list-header,
+#modalWindowLocal .apps-list .list-header {
+  position: absolute;
+  top: 58px;
+  width: 100%;
+  left: 0;
+  padding: 0 35px 50px 35px;
+  background: #ee534f;
+  max-width: none !important;
+}
+/* line 499, modal.scss */
+#modalWindow .apps-list .list-header .block-input input,
+#modalWindowLocal .apps-list .list-header .block-input input {
+  box-shadow: none;
+  border: none;
+}
+/* line 504, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block,
+#modalWindowLocal .apps-list .list-header .inputs-block {
+  max-width: 1225px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+/* line 509, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block .above-input,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input {
+  line-height: 60px;
+  font-size: 24px;
+  color: #ffffff;
+}
+/* line 510, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block .above-input .h3-title,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input .h3-title {
+  float: left;
+}
+/* line 516, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block .above-input h3,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input h3 {
+  line-height: 60px;
+  color: #ffffff;
+  font-size: 26px;
+}
+/* line 522, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block .above-input-filters,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input-filters {
+  float: right;
+  padding-top: 24px;
+}
+/* line 525, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block .above-input-filters button,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input-filters button {
+  position: absolute;
+  right: 0;
+  padding: 0 40px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  float: right;
+  font-size: 14px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+/* line 526, modal.scss */
+#modalWindow .apps-list .list-header .inputs-block .above-input-filters button i,
+#modalWindowLocal .apps-list .list-header .inputs-block .above-input-filters button i {
+  padding-right: 8px;
+}
+/* line 543, modal.scss */
+#modalWindow .apps-list .list-group,
+#modalWindowLocal .apps-list .list-group {
+  position: absolute;
+  background: #f3f3f3;
+  right: -90px;
+  top: 30px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+}
+/* line 551, modal.scss */
+#modalWindow .apps-list .list-group input.wrapper-search-input,
+#modalWindowLocal .apps-list .list-group input.wrapper-search-input {
+  box-shadow: none;
+  border-radius: 32px;
+}
+/* line 557, modal.scss */
+#modalWindow .view-app,
+#modalWindowLocal .view-app {
+  /*.wrapper-cubes {
+      .platform {
+          width: 80px;
+          height: 80px;
+      }
+  }*/
+}
+/* line 559, modal.scss */
+#modalWindow .view-app .cube.add-stack h3,
+#modalWindowLocal .view-app .cube.add-stack h3 {
+  color: black;
+}
+/* line 562, modal.scss */
+#modalWindow .view-app .cube.add-stack .platform,
+#modalWindowLocal .view-app .cube.add-stack .platform {
+  margin: 5px;
+}
+/* line 565, modal.scss */
+#modalWindow .view-app .cube.add-stack .disable,
+#modalWindowLocal .view-app .cube.add-stack .disable {
+  border: none;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 578, modal.scss */
+#modalWindow form,
+#modalWindowLocal form {
+  float: none;
+  overflow: hidden;
+  height: initial;
+}
+/* line 582, modal.scss */
+#modalWindow form h4,
+#modalWindowLocal form h4 {
+  margin-top: 30px;
+}
+/* line 585, modal.scss */
+#modalWindow form .form-control[disabled],
+#modalWindow form .form-control[readonly],
+#modalWindow form fieldset[disabled] .form-control,
+#modalWindowLocal form .form-control[disabled],
+#modalWindowLocal form .form-control[readonly],
+#modalWindowLocal form fieldset[disabled] .form-control {
+  cursor: text;
+  background-color: initial;
+}
+/* line 591, modal.scss */
+#modalWindow form input,
+#modalWindowLocal form input {
+  border-radius: 0;
+  border: solid 1px #e4e4e4;
+  height: 50px;
+  font-size: 1.3em;
+  width: 100%;
+}
+/* line 598, modal.scss */
+#modalWindow form .form-group.actions,
+#modalWindowLocal form .form-group.actions {
+  text-align: center;
+}
+/* line 600, modal.scss */
+#modalWindow form .form-group.actions button,
+#modalWindowLocal form .form-group.actions button {
+  background: #EE534F;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 13px 45px;
+  margin-right: 20px;
+}
+/* line 608, modal.scss */
+#modalWindow form .form-group.actions a,
+#modalWindowLocal form .form-group.actions a {
+  color: #808080;
+  font-size: 0.83em;
+}
+/* line 617, modal.scss */
+#modalWindow .side-bar label,
+#modalWindowLocal .side-bar label {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+/* line 622, modal.scss */
+#modalWindow .side-bar label:after,
+#modalWindowLocal .side-bar label:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 11px;
+  color: #fff;
+  right: 14px;
+  top: 23px;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 632, modal.scss */
+#modalWindow .side-bar select,
+#modalWindowLocal .side-bar select {
+  width: 100%;
+  height: 60px;
+  background: #2c3036;
+  border: none;
+  border-bottom: solid 1px #5D6067;
+  padding: 0 20px;
+  font-size: 1.2em;
+  font-weight: normal;
+  -webkit-appearance: none;
+  /*webkit browsers */
+  -moz-appearance: none;
+  /*Firefox */
+  appearance: none;
+  /* modern browsers */
+  -webkit-border-radius: 0;
+  /*webkit browsers */
+  -moz-border-radius: 0;
+  /*Firefox */
+  border-radius: 0;
+  /* modern browsers */
+  cursor: pointer;
+}
+/* line 657, modal.scss */
+#modalWindow .flex-box,
+#modalWindowLocal .flex-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 664, modal.scss */
+#modalWindow .flex-middle,
+#modalWindowLocal .flex-middle {
+  align-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 669, modal.scss */
+#modalWindow .flex-fix,
+#modalWindowLocal .flex-fix {
+  -webkit-box-flex: 0 0 auto;
+  -moz-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+/* line 676, modal.scss */
+#modalWindow .flex-stretch,
+#modalWindowLocal .flex-stretch {
+  -webkit-box-flex: 1 1 100%;
+  -moz-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+/* line 683, modal.scss */
+#modalWindow .flex-row,
+#modalWindowLocal .flex-row {
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  align-content: stretch;
+}
+/* line 688, modal.scss */
+#modalWindow .flex-col,
+#modalWindowLocal .flex-col {
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  align-content: stretch;
+}
+/* line 709, modal.scss */
+#modalWindow .spmenu,
+#modalWindowLocal .spmenu {
+  margin-top: 58px;
+  background: #ffffff;
+  position: fixed;
+}
+/* line 713, modal.scss */
+#modalWindow .spmenu .head-popup,
+#modalWindowLocal .spmenu .head-popup {
+  position: absolute;
+  top: 40px;
+}
+/* line 716, modal.scss */
+#modalWindow .spmenu .head-popup .search-input,
+#modalWindowLocal .spmenu .head-popup .search-input {
+  line-height: 32px;
+  width: 100%;
+  padding-left: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #E4E4E4;
+}
+/* line 724, modal.scss */
+#modalWindow .spmenu .head-popup .ico-search,
+#modalWindowLocal .spmenu .head-popup .ico-search {
+  color: #DEDEDE;
+  font-size: 18px;
+  position: absolute;
+  top: 44px;
+  left: 22px;
+}
+/* line 731, modal.scss */
+#modalWindow .spmenu .head-popup .filter-types,
+#modalWindowLocal .spmenu .head-popup .filter-types {
+  margin-top: 1px;
+}
+/* line 734, modal.scss */
+#modalWindow .spmenu .head-popup button,
+#modalWindowLocal .spmenu .head-popup button {
+  font-weight: 300;
+}
+/* line 736, modal.scss */
+#modalWindow .spmenu .head-popup button.is_active,
+#modalWindowLocal .spmenu .head-popup button.is_active {
+  text-decoration: underline;
+  font-weight: 900;
+}
+/* line 742, modal.scss */
+#modalWindow .spmenu.spmenu-open,
+#modalWindowLocal .spmenu.spmenu-open {
+  -moz-box-shadow: 10px 0px 30px #000;
+  -webkit-box-shadow: 10px 0px 30px #000;
+  box-shadow: 10px 0px 30px #000;
+}
+/* line 747, modal.scss */
+#modalWindow .spmenu .content-components,
+#modalWindowLocal .spmenu .content-components {
+  margin-top: 120px;
+  /*TODO: fix slider height*/
+  height: calc(100% - 221px);
+  overflow: auto;
+}
+/* line 753, modal.scss */
+#modalWindow .spmenu h3,
+#modalWindowLocal .spmenu h3 {
+  font-size: 20px;
+  padding: 0px 10px 10px 10px;
+  margin-top: -6px;
+}
+/* line 758, modal.scss */
+#modalWindow .spmenu h4,
+#modalWindowLocal .spmenu h4 {
+  color: #000;
+}
+/* line 761, modal.scss */
+#modalWindow .spmenu a,
+#modalWindowLocal .spmenu a {
+  display: block;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+/* line 766, modal.scss */
+#modalWindow .spmenu a:hover,
+#modalWindowLocal .spmenu a:hover {
+  background: #65CFF0;
+}
+/* line 769, modal.scss */
+#modalWindow .spmenu a:active,
+#modalWindowLocal .spmenu a:active {
+  background: #65CFF0;
+  color: #000;
+}
+/* line 773, modal.scss */
+#modalWindow .spmenu a span,
+#modalWindowLocal .spmenu a span {
+  color: #000;
+}
+/* line 776, modal.scss */
+#modalWindow .spmenu a input,
+#modalWindowLocal .spmenu a input {
+  margin: 5px 10px 0 0 !important;
+}
+/* line 781, modal.scss */
+#modalWindow .spmenu-vertical,
+#modalWindowLocal .spmenu-vertical {
+  width: 450px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+/* line 786, modal.scss */
+#modalWindow .spmenu-vertical a,
+#modalWindow .spmenu-vertical label,
+#modalWindowLocal .spmenu-vertical a,
+#modalWindowLocal .spmenu-vertical label {
+  padding: 0;
+}
+/* line 790, modal.scss */
+#modalWindow .spmenu-vertical hr,
+#modalWindowLocal .spmenu-vertical hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #FFF;
+}
+/* line 795, modal.scss */
+#modalWindow .spmenu-vertical .menu-item-actions,
+#modalWindow .spmenu-vertical .menu-item-edit-actions,
+#modalWindowLocal .spmenu-vertical .menu-item-actions,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions {
+  margin-top: 10px;
+}
+/* line 798, modal.scss */
+#modalWindow .spmenu-vertical .menu-item-actions a,
+#modalWindow .spmenu-vertical .menu-item-edit-actions a,
+#modalWindowLocal .spmenu-vertical .menu-item-actions a,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions a {
+  display: inline;
+}
+/* line 801, modal.scss */
+#modalWindow .spmenu-vertical .menu-item-actions i,
+#modalWindow .spmenu-vertical .menu-item-edit-actions i,
+#modalWindowLocal .spmenu-vertical .menu-item-actions i,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions i {
+  color: #FFF;
+}
+/* line 804, modal.scss */
+#modalWindow .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#modalWindow .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator,
+#modalWindowLocal .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#modalWindowLocal .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  margin: 0 5px;
+}
+/* line 813, modal.scss */
+#modalWindow .spmenu-right,
+#modalWindowLocal .spmenu-right {
+  right: -450px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 816, modal.scss */
+#modalWindow .spmenu-right a.spmenu-button,
+#modalWindowLocal .spmenu-right a.spmenu-button {
+  right: 450px;
+  top: 10px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* line 827, modal.scss */
+#modalWindow .spmenu,
+#modalWindow .spmenu-push,
+#modalWindowLocal .spmenu,
+#modalWindowLocal .spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 835, modal.scss */
+.modal-dialog {
+  width: 864px;
+}
+/* line 837, modal.scss */
+.modal-dialog i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #beb7b7;
+  cursor: pointer;
+}
+/* line 844, modal.scss */
+.modal-dialog .modal-content {
+  border-radius: 0;
+  border: none;
+}
+/* line 848, modal.scss */
+.modal-dialog .modal-footer {
+  padding: 12px 32px;
+  background: #f8f8f8;
+}
+/* line 851, modal.scss */
+.modal-dialog .modal-footer .left {
+  text-align: left;
+}
+/* line 854, modal.scss */
+.modal-dialog .modal-footer .right {
+  text-align: right;
+}
+/* line 857, modal.scss */
+.modal-dialog .modal-footer button {
+  line-height: 42px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+}
+/* line 863, modal.scss */
+.modal-dialog .modal-footer button i {
+  position: inherit;
+  color: #ffffff;
+  padding-right: 6px;
+}
+/* line 869, modal.scss */
+.modal-dialog .modal-footer .add-button {
+  color: #ffffff;
+  background: #448aff;
+}
+/* line 873, modal.scss */
+.modal-dialog .modal-footer .close-button-footer {
+  background: none;
+  color: #bdbdbd;
+}
+/* line 878, modal.scss */
+.modal-dialog .close-button {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: url("/general/assets/img/cross.png");
+  cursor: pointer;
+}
+/* line 890, modal.scss */
+.modal-dialog #modalWindow .modal-body,
+.modal-dialog #modalWindowLocal .modal-body {
+  padding: 32px 36px;
+}
+/* line 893, modal.scss */
+.modal-dialog #modalWindow h3,
+.modal-dialog #modalWindowLocal h3 {
+  font-size: 20px;
+  color: #292929;
+  text-align: left;
+}
+/* line 898, modal.scss */
+.modal-dialog #modalWindow .middle-content,
+.modal-dialog #modalWindowLocal .middle-content {
+  height: 410px;
+  overflow: hidden;
+}
+/* line 902, modal.scss */
+.modal-dialog #modalWindow .wrapper-cubes,
+.modal-dialog #modalWindowLocal .wrapper-cubes {
+  display: block;
+  padding: 0;
+}
+/* line 903, modal.scss */
+.modal-dialog #modalWindow .wrapper-cubes .cube.add-stack,
+.modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack {
+  width: 100%;
+}
+/* line 908, modal.scss */
+.modal-dialog #modalWindow .wrapper-cubes .cube.add-stack form .actions a.active,
+.modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack form .actions a.active {
+  background: #448aff;
+}
+/* line 913, modal.scss */
+.modal-dialog #modalWindow .wrapper-cubes .cube.add-stack form button,
+.modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack form button {
+  background: #448aff;
+}
+/* line 920, modal.scss */
+.modal-dialog #modalWindow .wrapper-cubes .cube.add-stack,
+.modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack {
+  padding: 0;
+}
+/* line 927, modal.scss */
+.modal-dialog #modalWindowLocal .wrapper-cubes .cube.add-stack {
+  padding: 40px 0 0 0;
+}
+/* line 931, modal.scss */
+.modal-dialog #modalWindowLocal .platform {
+  margin: 5px;
+}

@@ -1,0 +1,19 @@
+<section class="full-height" ng-controller="InventoryStacksController as vminv" ng-init="vminv.find();">
+    <div class="top">
+        <div class="search-banner">
+            <input type="text" ng-model="search.nameNversion" placeholder="Search..." />
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle-content">
+            <div class="last-update" ng-show="vminv.lastUpdated">Last update: {{vminv.lastUpdated | date:'dd MMM yyyy, HH:mm'}}</div>
+            <ul class="list-group">
+                <li ng-repeat="data in vminv.inventory | filter:search:strict" class="list-group-item">
+                    <h5>
+                    <span class="btn  btn-circle btn-sm" ng-class="{'btn-success': data.active, 'btn-danger': !data.active}"></span>&nbsp;&nbsp;&nbsp;<b>{{data.nameNversion}}</b>
+                       </h5>
+                    <h6>{{data.description}}</h6>
+                </li>
+            </ul>
+        </div>
+</section>

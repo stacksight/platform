@@ -1,0 +1,74 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 3, collaborators.scss */
+#collaboratorsTab .search,
+#collaboratorsTab .collaborators {
+  background: white;
+  margin: 18px;
+  padding: 20px;
+}
+/* line 6, collaborators.scss */
+#collaboratorsTab .search.search *,
+#collaboratorsTab .collaborators.search * {
+  background-image: none;
+}
+/* line 9, collaborators.scss */
+#collaboratorsTab .search.search .title,
+#collaboratorsTab .collaborators.search .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+/* line 14, collaborators.scss */
+#collaboratorsTab .search.search .ui-select-container,
+#collaboratorsTab .collaborators.search .ui-select-container {
+  width: 50%;
+  font-style: italic;
+}
+/* line 17, collaborators.scss */
+#collaboratorsTab .search.search .ui-select-container .select2-default,
+#collaboratorsTab .collaborators.search .ui-select-container .select2-default {
+  height: 50px;
+  line-height: 50px;
+  border: solid 1px #e4e4e4;
+  border-radius: 0;
+}
+/* line 22, collaborators.scss */
+#collaboratorsTab .search.search .ui-select-container .select2-default .ui-select-toggle,
+#collaboratorsTab .collaborators.search .ui-select-container .select2-default .ui-select-toggle {
+  display: none;
+}
+/* line 27, collaborators.scss */
+#collaboratorsTab .search.search input,
+#collaboratorsTab .collaborators.search input {
+  font-size: 1em;
+}

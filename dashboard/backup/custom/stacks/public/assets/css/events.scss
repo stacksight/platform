@@ -1,0 +1,165 @@
+@import "mean-compass/sass/base";
+#eventsTab {
+    $iconWidth: 45px;
+    $iconMargin: 10px;
+    .top {
+        .colorful-border {
+            .stick {
+                height: 4px;
+            }
+        }
+        .search-banner {
+            .tag-btn {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                margin-top: -18px;
+                width: 37px;
+                height: 37px;
+                border: solid 1px $borderColor;
+                border-radius: 50%;
+                font-size: 1.4em;
+                cursor: pointer;
+                .fa {
+                    line-height: 37px;
+                    display: block;
+                    text-align: center;
+                    color: $red;
+                }
+            }
+            .packages-filter {
+                position: absolute;
+                right: 0;
+                border: solid 1px $borderColor;
+                text-transform: capitalize;
+                font-weight: bold;
+                background: white;
+                overflow-y: auto;
+                overflow-x: hidden;
+                max-height: 500px;
+                .pkg {
+                    padding: 8px 15px;
+                    border-bottom: solid 1px $borderColor;
+                    width: 285px;
+                    .icon {
+                        font-size: 1.3em;
+                        color: white;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 32px;
+                    }
+                    .wrapper-checkbox {
+                        float: right;
+                        margin-right: 37px;
+                    }
+                }
+                .names {
+                    padding-left: 50px;
+                    .name {
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .middle {
+        .events {
+            .event {
+                position: relative;
+                min-height: 40px;
+                margin: 35px 0;
+                margin-left: 10px;
+                display: block;
+                .wrapper-icon {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: $iconMargin;
+                    .icon {
+                        font-size: 1.8em;
+                        width: $iconWidth;
+                        height: $iconWidth;
+                        border-radius: 50%;
+                        color: white;
+                        text-align: center;
+                        line-height: $iconWidth;
+                        &.platform.web {
+                            background-color: white !important;
+                        }
+                    }
+                }
+                .e-content {
+                    display: inline-block;
+                    width: 92%;
+                    .type {
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        font-size: 1.429em;
+                        margin-right: 4px;
+                    }
+                    .e-template {
+                        font-size: 1.214em;
+                    }
+                    .username {
+                        color: #8864AC;
+                        font-weight: bold;
+                    }
+                    .name {
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                    .pkg-name {
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+                    .e-time {
+                        color: #a5a5a5;
+                        font-size: 1.05em;
+                        width: 36px;
+                    }
+                }
+                .component {
+                    margin: 18px 0;
+                    img {
+                        max-width: 500px;
+                    }
+                }
+                .file {
+                    img {
+                        max-width: 500px;
+                        margin: 20px 0;
+                    }
+                }
+                .user {
+                    .component {
+                        width: 275px;
+                        max-width: 290px;
+                        max-height: 155px;
+                        height: 140px;
+                        border: $border;
+                        img {
+                            float: left;
+                            border-radius: 50%;
+                            /*max-width: 40%;*/
+                            /*max-height: 80%;*/
+                            width: 100px;
+                            height: 100px;
+                            position: relative;
+                            /*top: 50%;
+                            margin-top: -50px;*/
+                            background-color: #eee;
+                            margin-left: 20px;
+                            margin-top: 20px;
+                            & + div {
+                                font-weight: bold;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/* line 3, inventory.scss */
+#inventoryTab .search input {
+  width: 100% !important;
+}
+/* line 8, inventory.scss */
+#inventoryTab table {
+  width: 100%;
+  color: #454a54;
+}
+/* line 12, inventory.scss */
+#inventoryTab th {
+  text-transform: uppercase !important;
+  color: #aaaaaa;
+}
+/* line 16, inventory.scss */
+#inventoryTab tr {
+  border-bottom: 1px solid #ffffff;
+}
+/* line 18, inventory.scss */
+#inventoryTab tr.success {
+  background-color: #ddffdd !important;
+  color: #454a54;
+}
+/* line 21, inventory.scss */
+#inventoryTab tr.success i {
+  color: #57b653;
+}
+/* line 25, inventory.scss */
+#inventoryTab tr.danger {
+  background-color: #ee534f !important;
+  color: #ffffff;
+}
+/* line 28, inventory.scss */
+#inventoryTab tr.danger i {
+  color: #ffffff;
+}
+/* line 32, inventory.scss */
+#inventoryTab tr.warning {
+  background-color: #ffffdd !important;
+}
+/* line 36, inventory.scss */
+#inventoryTab tr, #inventoryTab td, #inventoryTab th {
+  height: 25px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: capitalize;
+}
+/* line 42, inventory.scss */
+#inventoryTab td, #inventoryTab th {
+  padding-left: 12px !important;
+}
+/* line 45, inventory.scss */
+#inventoryTab .center {
+  text-align: center;
+}

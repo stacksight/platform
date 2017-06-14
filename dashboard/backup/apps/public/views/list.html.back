@@ -1,0 +1,224 @@
+<div id="stacksPage" ng-controller="AppsController as vm" ng-init="vm.find()">
+    <div class="apps-list">
+
+
+        <div ng-show="vm.apps" class="wrapper-search-input list-header clear clearfix">
+            <div class="inputs-block">
+                <div class="title">
+                    <div class="above-input">
+                        <div class="h3-title"><h3>My Groups ({{(vm.apps.length) ? vm.apps.length : 0}})</h3></div>
+                        <div class="above-input-filters">
+                            <button ng-click="vm.showAddStackForm()"><i class="fa fa-plus"></i> Add group</button>
+                        </div>
+                    </div>
+                    <div class="group-banner block">
+                        <div class="block-input">
+                            <input type="text" class="input-text" ng-model="search.name" placeholder="Search Groups" auto-focus/>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-type">
+                    <div class="filter-block">
+                        <div class="filter-icon" ng-click="vm.change_view_filter('grid')">
+                            <span class="grid">
+                                <i class="fa fa-th" ng-class="(vm.filer_view == 'grid') ? 'active' : ''"></i>
+                            </span>
+                        </div>
+                        <div class="filter-icon" ng-click="vm.change_view_filter('list')">
+                            <span class="list">
+                                <i class="fa fa-bars" ng-class="(vm.filer_view == 'list') ? 'active' : ''"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper-cubes full-width-content clear clearfix row">
+            <form ng-if="vm.filer_view == 'list' && vm.show_add_stack_form_list == true" ng-show="vm.apps" name="appForm" class="form-horizontal col-md-12 form-add-stacks-list" role="form" data-ng-submit="vm.create(appForm.$valid)" novalidate>
+                <h4 class="text-center">Create a new group</h4>
+                <div class="form-group" ng-class="{ 'has-error' : submitted && appForm.name.$invalid }">
+                    <div class="col-md-12">
+                        <input name="name" type="text" class="form-control" data-ng-model="vm.newapp.name" id="name" placeholder="What's it called?" required>
+                        <div ng-show="submitted && appForm.name.$invalid" class="help-block">
+                            <p ng-show="appForm.name.$error.required">Name is required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group actions">
+                    <button>CREATE</button>
+                    <a href="" ng-click="vm.showAddStackForm()">CANCEL</a>
+                </div>
+            </form>
+
+            <form ng-if="vm.filer_view == 'grid' && vm.show_add_stack_form_list == true" ng-show="vm.apps" name="appForm" class="form-horizontal col-md-6 cube" role="form" data-ng-submit="vm.create(appForm.$valid)" novalidate>
+                <h4 class="text-center">Create a new group</h4>
+                <div class="form-group" ng-class="{ 'has-error' : submitted && appForm.name.$invalid }">
+                    <div class="col-md-12">
+                        <input name="name" type="text" class="form-control" data-ng-model="vm.newapp.name" id="name" placeholder="What's it called?" required>
+                        <div ng-show="submitted && appForm.name.$invalid" class="help-block">
+                            <p ng-show="appForm.name.$error.required">Name is required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group actions">
+                    <button>CREATE</button>
+                    <a href="" ng-click="vm.showAddStackForm()">CANCEL</a>
+                </div>
+            </form>
+            <div ng-repeat="app in vm.apps | filter:search:strict" class="cube cursor-pointer" ng-init="app.edit=false; app.origName=app.name" ng-class="{clicked: app.edit}" ng-if="vm.filer_view == 'grid'">
+                <div ng-include="'cube-template-grid'" class="full-height"></div>
+            </div>
+
+            <div class="front col-xs-12 bordered header-list" ng-if="vm.filer_view == 'list' && vm.apps">
+                <div class="cell-container col-sm-3 border">
+                    <span class="title">Group Name</span>
+                </div>
+                <div class="cell-container col-sm-1 border pd-t-10">
+                    <span class="title">Owner</span>
+                </div>
+                <div class="cell-container col-sm-2 border">
+                    <span class="title">Stacks</span>
+                </div>
+                <div class="cell-container col-sm-3 border pd-t-10">
+                    <span class="title">Users</span>
+                </div>
+                <div class="cell-container col-sm-3 pd-t-4">
+                    <span class="title">Status</span>
+                </div>
+            </div>
+
+            <div ng-repeat="app in vm.apps | filter:search:strict" class="cube list cursor-pointer" ng-init="app.edit=false; app.origName=app.name" ng-class="{clicked: app.edit}" ng-if="vm.filer_view == 'list'">
+                <div ng-include="'cube-template-list'" class="full-height"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ########################################################################################### -->
+<!-- ============================================ CUBE LIST ==================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='cube-template-list'>
+    <div class="front col-xs-12 bordered" ng-click="vm.moveToAppPage(app, 'dashboard');">
+        <div class="cell-container col-sm-3 border">
+            <h4 class="red">{{app.name}}</h4>
+            <small>
+                <span am-time-ago="app.created"></span>
+            </small>
+        </div>
+        <div class="cell-container col-sm-1 border pd-t-8">
+            <div>
+                <div ng-repeat="collaborator in app.collaborators" class="collaborator row" ng-if="collaborator.status == 'owner'">
+                    <img ng-src="{{collaborator.id.profile.pictures.profile}}" title="{{collaborator.id.name}}" />
+                </div>
+            </div>
+        </div>
+        <div class="cell-container col-sm-2 border">
+            <div class="red">
+                <img src="/apps/assets/img/icon-stacks.svg" alt="groups" class="svg"/>
+                <strong class="count-stacks">{{app.stacks.length}}</strong>
+            </div>
+        </div>
+        <div class="cell-container col-sm-3 border pd-t-10">
+            <div ng-class="(app.collaborators.length > 5) ? 'much-collaborator' : ''">
+                <a class="collaborator" ui-sref="app.collaborators({appId: app._id})"><i class="fa fa-plus"></i></a>
+                <div ng-repeat="collaborator in app.collaborators" class="collaborator row" ng-if="collaborator.id">
+                    <!--<div class="col-xs-2">-->
+                        <img ng-src="{{collaborator.id.profile.pictures.profile}}" title="{{collaborator.id.name}}" />
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="cell-container col-sm-3 pd-t-4">
+            <div ng-include="'insights-template-list'"></div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ============================================ CUBE GRID ==================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='cube-template-grid'>
+    <div class="front" ng-click="vm.moveToAppPage(app, 'dashboard');">
+        <span ng-repeat="collaborator in app.collaborators" ng-if="collaborator.status == 'owner'" class="owner-ico">
+            <img ng-src="{{collaborator.id.profile.pictures.profile}}" title="{{collaborator.id.name}}" />
+        </span>
+        <h3><a>{{app.name}}</a></h3>
+        <span class="right-count-circle">{{app.stacks.length}}</span>
+        <span class="right-circle">{{app.stacks.length}}</span>
+        <div class="clearfix"></div>
+        <h6>
+            <span>created</span>
+            <span am-time-ago="app.created"></span>
+        </h6>
+        <div ng-include="'insights-template-grid'"></div>
+        <div class="people">
+            <hr/>
+            <div>
+                <a class="collaborator" ui-sref="app.collaborators({appId: app._id})"><i class="fa fa-plus"></i></a>
+                <div ng-repeat="collaborator in app.collaborators" class="collaborator" ng-if="collaborator.id"><img ng-src="{{collaborator.id.profile.pictures.profile}}" title="{{collaborator.id.name}}" /></div>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ============================================ INSIGHTS GRID ================================ -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='insights-template-grid'>
+    <div class="insights">
+        <div class="icon" ng-show="!vm.showLoader">
+            <i class="fa fa-exclamation" ng-class="app.insightClass"></i>
+        </div>
+        <div>
+            <div ng-show="!vm.showLoader">
+                <div>
+                    <ng-pluralize ng-show="vm.appUpdates[app._id].critical" count="vm.appUpdates[app._id].critical" when="{
+                      '1': '1 update required',
+                     'other': '{} updates required'}">
+                    </ng-pluralize>
+                </div>
+                <div>
+                    <ng-pluralize ng-show="vm.appUpdates[app._id].available" count="vm.appUpdates[app._id].available" when="{ 
+                     '1': '1 update available',
+                     'other': '{} updates available'}">
+                    </ng-pluralize>
+                </div>
+                <div ng-show="app.insightClass === 'updated'">No errors! Good job!</div>
+                <div ng-if="!app.stacks.length">
+                    <span href="">Add stack!</span>
+                </div>
+            </div>
+            <div ng-show="vm.showLoader">
+                <div class="loader red">Loading...</div>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ============================================ INSIGHTS LIST ================================ -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='insights-template-list'>
+    <div class="insights insights-list">
+        <div class="icon" ng-show="!vm.showLoader">
+            <i class="fa fa-exclamation" ng-class="app.insightClass"></i>
+        </div>
+        <div>
+            <div ng-show="!vm.showLoader">
+                <div>
+                    <ng-pluralize ng-show="vm.appUpdates[app._id].critical" count="vm.appUpdates[app._id].critical" when="{
+                      '1': '1 update required',
+                     'other': '{} updates required'}">
+                    </ng-pluralize>
+                </div>
+                <div>
+                    <ng-pluralize ng-show="vm.appUpdates[app._id].available" count="vm.appUpdates[app._id].available" when="{
+                     '1': '1 update available',
+                     'other': '{} updates available'}">
+                    </ng-pluralize>
+                </div>
+                <div ng-show="app.insightClass === 'updated'">No errors! Good job!</div>
+            </div>
+            <div ng-show="vm.showLoader">
+                <div class="loader red">Loading...</div>
+            </div>
+        </div>
+    </div>
+</script>

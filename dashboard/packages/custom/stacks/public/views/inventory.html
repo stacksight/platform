@@ -1,0 +1,147 @@
+<section id="inventoryTab" class="full-height" ng-controller="InventoryController as vmin" ng-init="vmin.init()">
+    <div id="stacks-list">
+        <div class="top-header list-header">
+            <div class="title">
+                <companies-drop-down selected-stacks="vmin.selected_stacks_count"></companies-drop-down>
+            </div>
+            <div class="actions">
+                <button ng-click="">
+                    <span>Update Stacks</span>
+                </button>
+                <button uib-popover-template="'stacksAction'" class="btn-group dropdown" popover-placement="bottom"><i class="fa fa-caret-down"></i></button>
+            </div>
+            <div class="search-banner-components">
+                <auto-search options="vmin.autoSearchOpts" exec="vmin.search(item, model, label);" no-text="vmin.noText();" no-result-changed="vmin.noResultChanged(noResults, value)"></auto-search>
+            </div>
+            <!--<div class="search-banner">-->
+                <!--<div class="input">-->
+                    <!--<div class="tags-block">-->
+                        <!--<ul>-->
+                            <!--<li ng-repeat="(key, val) in vmin.filter_tags">{{val}} <i class="fa fa-times" ng-click="vm.filterByTag({tag: key, value: val}, stack.company)"></i></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div angucomplete-alt auto-focus-->
+                         <!--id="search-with-tag-input"-->
+                         <!--ng-model="subSearch"-->
+                         <!--pause="300"-->
+                         <!--selected-object="searchAction"-->
+                         <!--local-data="search_tags"-->
+                         <!--default-en-action="searchWithText"-->
+                         <!--local-search-async="localSearch"-->
+                         <!--title-field="value"-->
+                         <!--image-field="pic"-->
+                         <!--description-field="desc"-->
+                         <!--minlength="1"-->
+                         <!--input-class="tag-input"-->
+                         <!--match-class="highlight"-->
+                         <!--placeholder="Search Stacks"-->
+                    <!--&gt;</div>-->
+                    <!--&lt;!&ndash;<input type="text" ng-model="vm.search.name" placeholder="Search Stacks" auto-focus/>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="clear"></div>-->
+                <!--&lt;!&ndash;<button class="advanced-search"><span class="ico-filter"></span> Advanced search</button>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+        <div class="middle-content">
+            <div class="header-m">
+                <div class="col-xs-12 bordered header-list " ng-if="vm.stacks.length ">
+                    <div class="cell-container col-sm-1 border stack-check" ng-if="vm.stacks.length > 0">
+                        <label class="wrapper-checkbox red sm">
+                            <input type="checkbox" name="cb-select-all-stacks" id="cb-select-all-stacks" ng-click="vmin.selectAllStacks()"/>
+                            <label for="cb-select-all-stacks"></label>
+                        </label>
+                    </div>
+                    <div class="cell-container col-sm-3 border">
+                    </div>
+                    <div class="cell-container col-sm-2 border">
+                        <span class="title ">CMS</span>
+                    </div>
+                    <div class="cell-container col-sm-1 border">
+                        <span class="title ">Installed Plugins</span>
+                    </div>
+                    <div class="cell-container col-sm-1 border">
+                        <span class="title ">Enabled Plugins</span>
+                    </div>
+                    <div class="cell-container col-sm-2 border">
+                        <span class="title ">Active Theme</span>
+                    </div>
+                    <div class="cell-container col-sm-2 border">
+                        <span class="title ">Last Login</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-body">
+                <div class="cube list cursor-pointer" ng-repeat="stack in vm.stacks | filter:vm.search:strict"
+                     ng-init="stack.edit=false; stack.origName=stack.name; vm.stacks = vm.stacks "
+                     ng-class="{selected: vmin.selected_stacks[stack._id]}"
+                 >
+                    <div class="archived-layer" ng-if="stack.archived"></div>
+                    <div
+                            ng-click="vm.selectStack(stack)"
+                            ng-dblclick="vmin.moveToStack(stack)"
+                            ng-class="stack.archived ? 'archived' : ''"
+                    >
+                        <div class="cell-container col-sm-1 border stack-check">
+                            <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="cb-{{stack._id}}" ng-model="vmin.selected_stacks[stack._id]" id="cb-{{stack._id}}" ng-true-value="true" ng-click="vmin.checkStack(stack)"/>
+                                <label for="cb-{{stack._id}}"></label>
+                            </label>
+                        </div>
+                        <div class="cell-container col-sm-3 border stack-container">
+                            <div class="title">
+                                <span class="platform {{stack.platform}} "></span>
+                                <span class="stack-name" ng-click="vm.moveToStack(stack)">{{stack.name}}</span>
+                            </div>
+                            <div class="tags" ng-if="stack.tags && stack.tags.length > 0">
+                                <ul>
+                                    <li ng-repeat="tag in stack.tags" popover-append-to-body="true"
+                                        uib-popover-template="vmin.tagsPopover.templateUrl"
+                                        ng-click="vmin.setPopoverTags(stack.tags)">
+                                        {{tag.value}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cell-container col-sm-2 border capitalize">
+                            <span ng-if="stack.platform">{{stack.platform}}</span>
+                            <span ng-if="!stack.platform">-</span>
+
+                        </div>
+                        <div class="cell-container col-sm-1 border">
+                            <span>{{vmin.info[stack._id].count_all || '-'}}</span>
+                        </div>
+                        <div class="cell-container col-sm-1 border">
+                            <span>{{vmin.info[stack._id].count_active || '-'}}</span>
+                        </div>
+                        <div class="cell-container col-sm-2 border">
+                            <span>{{vmin.info[stack._id].active_themes || '-'}}</span>
+                        </div>
+                        <div class="cell-container col-sm-2 border">
+                            <div ng-show="stack.data.lastLogin">
+                                <div ng-if="stack.data.lastLogin.user_link">
+                                    <a ng-href="{{stack.data.lastLogin.user_link}}" target="_blank">{{ stack.data.lastLogin.user_name || stack.data.lastLogin.user_login || stack.data.lastLogin.user_mail }}</a> - {{stack.data.lastLogin.time * 1000 | date: 'MMM d yyyy, HH:mm'}}
+                                </div>
+                                <div ng-if="!stack.data.lastLogin.user_link">
+                                    {{ stack.data.lastLogin.user_name || stack.data.lastLogin.user_login || stack.data.lastLogin.user_mail }} - {{stack.data.lastLogin.time * 1000 | date: 'MMM d yyyy, HH:mm'}}
+                                </div>
+                            </div>
+                            <span ng-show="!stack.data.lastLogin">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <inventory-bar ng-ids="vmin.selected_stacks"  ng-transfer-ids="transfer_stacks_array" ng-inventory="inventory"></inventory-bar>
+</section>
+<script type="text/ng-template" id='stack-popover-tags'>
+    <div class="tags" ng-if="vmin.tagsPopover.content.length > 0">
+        <ul>
+            <li ng-repeat="tag in vmin.tagsPopover.content" ng-click="vmin.filterByTag(tag, stack.company)">
+                {{tag.value}}
+            </li>
+        </ul>
+    </div>
+</script>
+
+<!--ng-class="(vm.selectState == stack._id || vmin._.indexOf(selected_stacks_array, stack._id) != -1) ? 'selected' : '' "-->

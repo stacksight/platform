@@ -1,0 +1,423 @@
+@import "mean-compass/sass/base";
+
+#appsPage {
+    .add-app {
+        position: absolute;
+        top: $headerHeight;
+        z-index: 9999;
+        margin-top: -50px;
+        right: 215px;
+        button {
+            padding: 12px 66px;
+            background-color: #ff9000;
+            text-shadow: 0px 2px 1px #FF7000;
+            color: white;
+            font-size: 0.9em;
+            font-weight: bold;
+            border: none;
+            border-radius: 23px;
+
+        }
+    }
+    .app-context {
+      width: $appContextWidth;
+      background: #F6F7FC;
+      height: 100%;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+
+	.pcolor0 {
+		background-color:#005e80;
+	}
+	.pcolor1 {
+		background-color:#ef5350;
+	}
+	.pcolor2 {
+		background-color:#536dfe;
+	}
+	.pcolor3 {
+		background-color:#00897b;
+	}
+	.pcolor4 {
+		background-color:#fbc02d;
+	}
+	.services {
+		padding: 20px 70px;
+	}
+
+  
+    .app-fixed-header {
+        position: fixed;
+        top: $headerHeight;
+        width: calc(100% - $sideBarWidth);
+        height: $appHeaderHeight;
+        background-color: $appGrey;
+        z-index: 2;
+        /*.select {
+            height: $appHeaderHeight;
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-left: 20px;
+        }*/
+        .ui-select-container {
+            display: inline-block;
+            margin-left: 20px;
+            max-width: 30%;
+            
+            .ui-select-match {
+                height: 100%;
+                line-height: $appHeaderHeight;
+                background: transparent;
+                border: none;
+                font-size: 2em;
+                text-transform: capitalize;
+                font-weight: bold;
+                &:focus {
+                    outline: none
+                }
+                .ui-select-toggle {
+                    background: transparent;
+                    border: none;
+                }
+
+            }
+            .ui-select-dropdown {
+                border: $border;
+                min-width: 500px;
+                .select2-search {
+                    background-color: $appGrey;
+                    padding: 11px 13px;
+                    input {
+                        border: $border;
+                        height: 47px !important;
+                        padding: 0 15px;
+                    }
+                }
+                .select2-result-label {
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    .fa {
+                        font-size: 2em;
+                        margin: 0 20px;
+                        font-weight: normal;
+                    }
+                    /*.env {
+                        border: $border;
+                        margin-left: 20px;
+                        font-weight: normal;
+                    }*/
+                    .env {
+                        font-size: 0.8em;
+                        color: #B7B7B7;
+                        text-align: right;
+                        font-weight: bold;
+                        margin-left: 20px;
+                        &.local {
+
+                        }
+                        &.dev {
+
+                        }
+                        &.prod {
+
+                        }
+                        span {
+                            border: $border;
+                            padding: 1px 10px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper-apps {
+            text-transform: capitalize;
+            margin-left: 20px;
+            display: inline-block;
+            .selected {
+                font-size: 2em;
+                line-height: $appHeaderHeight;
+                font-weight: bold;
+            }
+            ul {
+                display: block;
+            }
+        }
+        .envs {
+            display: inline-block;
+            float: right;
+            .env {
+                display: inline-block;
+                line-height: $appHeaderHeight;
+                margin: 0 13px;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: 0.8em;
+                font-weight: bold;
+                color: $disableColor;
+                span {
+                    padding: 8px 20px;
+                    border-radius: 40px;
+                }
+                &.active {
+                    color: white;
+                    pointer-events: auto;
+                    span {
+                        background-color: rgb(70, 74, 85);
+                    }
+                }
+                &.disable {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+	.apps{
+        padding-top:10px;
+        background: $appGrey;
+		ul {
+            margin:0 auto;
+			padding: 0;
+		}
+		li {
+			position:relative;
+			display: inline-block;
+			background-color: white;
+            width: 23.5%;
+            height: 330px;
+            margin:11px 10px 0 10px;
+			vertical-align: top;
+            float: left;
+            box-shadow: 0px 3px 3px 0px rgba(0, 1, 1, 0.25);
+            border: $border;
+			&:hover {
+				.app {
+					height:23%;
+					.top {
+						height: 0;
+						padding: 0;
+
+					}
+				}
+			}
+			.app {
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				background: white;
+				margin: auto;
+				position: absolute;
+				overflow: hidden;
+				-webkit-transition: height 200ms;
+				.top {
+					height: 77%;
+					-webkit-transition: height 200ms;
+					padding-top: 10px;
+
+					.pic, .app-bg {
+						width: 95%;
+						height: 100%;
+						margin: auto;
+                        &.pic {  
+                            /*background-image: url('https://api.url2png.com/v6/P4DE5D1C99D8EF/4578a31bd2e38db8fcbfa8764f121325/png/?url=dropmark.in&thumbnail_max_width=300&viewport=1024x1024');*/
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                        &.app-bg {
+                            &.mean {
+                                background-image: url(/apps/assets/img/platforms/mean-bg.png);
+                                background-repeat: no-repeat;
+                                /*background-size: contain;*/
+                                background-color: $blue;
+                                background-position: 50%;
+                            }
+                            &.wordpress {
+                                background-image: url(/apps/assets/img/platforms/wordpress-bg.png);
+                                background-repeat: no-repeat;
+                                /*background-color: rgb(0, 114, 140);*/
+                                background-color: rgb(228, 228, 228);
+                                background-size: 100px;
+                                background-position: 50%;
+                            }
+                            &.meteor {
+                                background-image: url(/apps/assets/img/platforms/meteor.png);
+                                background-repeat: no-repeat;
+                                background-color: white;
+                                background-size: contain;
+                                /*background-position: 50%;*/
+                            }
+                        }
+					
+					}
+				}
+				.bottom {
+					/*height: 20%;*/
+					padding: 12px;
+					.b-content {
+						width: 100%;
+						height: 100%;
+						position: relative;
+                        display: table;
+                        .platform , .env {
+                            display: table-cell;
+                            &.platform {
+                                vertical-align: middle;
+                                position: relative;
+                                width: 35px;
+                                height: 50px;
+                                span {
+                                    background-repeat: no-repeat;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    position: absolute;
+                                    top: 50%;
+                                    margin-top: -13px;
+                                    &.mean {
+                                        background-image: url(/apps/assets/img/platforms/mean.png);
+                                    }
+                                    &.wordpress {
+                                        background-image: url(/apps/assets/img/platforms/wordpress.jpg);
+                                    }
+                                    &.meteor {
+                                        background-image: url(/apps/assets/img/platforms/meteor.jpg);
+                                    }
+                                }
+                            }
+                            &.env {
+                                vertical-align: bottom;
+                                font-size: 0.8em;
+                                color: #B7B7B7;
+                                text-align: right;
+                                font-weight: bold;
+                                &.local {
+
+                                }
+                                &.dev {
+
+                                }
+                                &.prod {
+
+                                }
+                                span {
+                                    border: $border;
+                                    padding: 1px 10px;
+                                    border-radius: 4px;
+                                }
+                            }
+                        }
+						.name {
+                            div {
+                                &:first-child {
+				                    font-size: 1.4em; 
+                                }
+                                &:last-child {
+                                    font-size: 0.8em;
+                                    font-weight: bold;
+                                    a {
+                                        &:after {
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+						}
+					/*	.cloud {
+							width: 40px;
+							height: 40px;
+							background: orange;
+							margin-top: 10px;
+							float: left;
+						}
+						.hide-app {
+							position: absolute;
+							right: 0;
+							top: 0;
+						}*/
+					}
+
+				}
+			}
+			.app-services {
+				background-color: $appGrey;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				padding: 30px;
+				padding-top: 20%;
+				._label {
+					font-size: 1.2em;
+					margin: 10px 0;
+				}
+				.wrapper-input {
+					input {
+						width: 100%;
+						height: 40px;
+						background: transparent;
+						border: solid 1px #E5E5E5;
+						padding: 10px;
+					}
+				}
+				.link {
+					border-bottom: solid 1px #E5E5E5;
+					a {
+						&:after {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+    body #appsPage .app-fixed-header {
+        width: 100% - $sideBar1024Width;
+        .ui-select-container .ui-select-match {
+            font-size: 1.3em;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body #appsPage .app-fixed-header .envs .env {
+        margin: 0;
+    }
+    body #appsPage .app-fixed-header .envs .env span {
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body #appsPage .app-fixed-header {
+        width: 100%;
+        .envs {
+            .env {
+                font-size: 0.6em;
+                span {
+                    padding: 4px 6px;
+                    margin: 3px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<section id="preferencesTab" ng-controller="PreferencesController as vm" ng-init="vm.findPkgs() ; vm.findApps()">
+    <div class="products">
+        <div class="title">Shown packages</div>
+        <div class="content">
+            <div ng-repeat="package in vm.packages" class="product">
+                <switch id="enabled" name="enabled" ng-model="package.show"  ng-change="vm.displayPkg(package.name)"></switch>
+                <div class="name">{{package.name}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="title">Shown apps</div>
+        <div class="content">
+            <div ng-repeat="app in vm.apps" class="product">
+                <switch id="enabled" name="enabled" ng-model="app.show"  ng-change="vm.displayApp(app.name)"></switch>
+                <div class="name">{{app.name}}</div>
+            </div>
+        </div>
+    </div>
+</section>

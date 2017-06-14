@@ -1,0 +1,26 @@
+<div class="" data-ng-controller="WixmediaController">
+  <h1>WixMedia Examples</h1>
+  <ol>
+    <li>
+      <a href="wixmedia/upload">WixMedia upload</a>
+    </li>
+The mean upload package adds to objects to it's scope - <strong>images</strong> and <strong>files</strong>.
+<p>Upload another one now:</p>
+<mean-upload file-dest="'/photos/'" upload-callback="wixmediauUloadFinished(files)" upload-file-callback="uploadFileCallback(file)"></mean-upload>
+<p>The example above generates the following json which can be used by your
+own package:</p>
+<div data-ng-repeat="file in files">
+  {{syntaxHightlight(file)}}
+</div>
+</div>
+
+  </ol>
+  <h3><img src="/wixmedia/assets/img/logo.png" /></h3>
+  </br>
+  <p class="alert alert-info">You can find your package in /packages/wixmedia</p>
+  </br>
+  <p class="alert alert-warning">MEAN versions prior to 0.3.2 will be in /node_modules/wixmedia</p>
+  </br>
+  <h3><a href="http://www.mean.io/#!/docs">Documentation</a></h3>
+  </br>
+</div>

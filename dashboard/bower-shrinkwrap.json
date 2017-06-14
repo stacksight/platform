@@ -1,0 +1,6 @@
+{
+    "name": "mean",
+    "dependencies": {
+        "angular-ui-router": "0.2.18",
+    }
+}

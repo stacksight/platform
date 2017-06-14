@@ -1,0 +1,61 @@
+<div class="top-head">
+    <div class="search-banner">
+        <div class="title">Platform.sh <span ng-if="vmip.project">- {{vmip.project}}</span></div>
+        <!-- <div class="tag-btn" uib-popover-template="'filter'" popover-placement="bottom" uib-popover-trigger="open" popover-is-open="isOpen" popover-toggle></div> -->
+    </div>
+</div>
+<div class="item">
+    <div class="table">
+        <div class="loader red" ng-show="vmip.showLoader">Loading...</div>
+        <div ng-repeat="item in vmip.docs" class="service-item-event">
+            <div class="row">
+                <div class="col-xs-6 title">
+                    <span ng-switch on="item.type">
+                        <i class="ico top-ico" ng-switch-when="branch"></i>
+                        <i class="ico right-ico" ng-switch-default></i>
+                    </span>
+                    <span class="text">{{item.title}}</span>
+                </div>
+                <div class="col-xs-4">
+                    <span class="status">
+                        <span class="is-true" ng-if="item.result == 'success'"><i class="fa fa-check-circle" aria-hidden="true"></i> Success</span>
+                        <span class="is-false" ng-if="item.result !== 'success'"><i class="fa fa-minus-circle" aria-hidden="true"></i> Fail</span>
+                    </span>
+                </div>
+                <div class="col-xs-2">
+                    <span class="date">{{item.created | date: 'short'}}</span>
+                </div>
+            </div>
+            <!-- <p>{{item.data.log}}</p> -->
+            <div class="row" ng-show="item.type === 'push'">
+                <div class="col-xs-12">
+                    <span class="info_id">{{item.data.payload.commits[0].sha}}</span>
+                    <span class="info_text">{{item.data.payload.commits[0].message}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body"></div>
+</div>
+<script type="text/ng-template" id='filter'>
+    <div class="popup-content popup-content-visible-columns">
+        <table class="filter-types">
+            <tbody>
+                <tr ng-repeat="(key,col) in vmip.types">
+                    <td class="no-padding">
+                        <span class="ico" style="background-color: {{col.color}}">
+                        <img ng-src="{{col.ico_img}}" alt="{{col.title}}" width="32" height="32"/>
+                    </span>
+                        <span class="filter-title">{{col.title}}</span>
+                    </td>
+                    <td>
+                        <div class="wrapper-checkbox red">
+                            <input name="cb-platform-{{key}}" id="cb-platform-{{key}}" type="checkbox" ng-model="col.enabled" ng-checked="col.enabled" />
+                            <label for="cb-platform-{{key}}"></label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>

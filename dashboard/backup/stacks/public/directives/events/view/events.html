@@ -1,0 +1,42 @@
+<div id="eventsTab">
+    <div class="middle" scroll s-down="vm.loadMore()" s-all="vm.fixedHeader()" ng-class="{anchor: vm.anchor, 'with-timeline': vm.histogram.length > 1}">
+        <div ng-include="'subscribe'"></div>
+        <div class="events middle-content">
+            <div ng-if="vm.docs.length > 0 || vm.exists_any_events == true" id="events-header" class="text-center">
+                <div class="title">
+                    Events
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search" ng-model="vm.searchEvent"/>
+                    <select name="event_type" id="search_event_type_options" ng-model="vm.searchEventType">
+                        <option value="">All events</option>
+                        <option value="type1">Type#1</option>
+                        <option value="type2">Type#2</option>
+                    </select>
+                </div>
+            </div>
+            <div ng-if="vm.docs.length == 0 && !vm.busy" id="ev-no-data" class="text-center">
+                <img ng-src="/stacks/assets/img/empty-stacks.jpg" alt="not-found" />
+                <span class="clear clearfix no-found-text">No events logged</span>
+            </div>
+            <div ng-repeat="event in vm.docs">
+                <div class="group-title date" ng-class="{show: event._created !== vm.docs[$index -1]._created}">
+                    <hr/>
+                    <div class="group-title-label">{{::event._source.created | date: 'MMM d, yyyy'}}</div>
+                </div>
+                <div class="group-title session" id="{{sessionKey}}" ng-class="{show: event._source.session !== vm.docs[$index -1]._source.session}">
+                    <hr/>
+                    <div class="group-title-label">{{::event._source.session}}</div>
+                </div>
+                <div class="event" id="{{$index}}">
+                    <div class="wrapper-icon" ng-include="'icon-template'"></div>
+                    <div class="e-content">
+                        <div ng-include="'e-title'"></div>
+                        <div ng-include="::event.template" ng-class="::event._source.subtype || event._source.type" class="e-template"></div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="vm.busy" class="loader red">Loading...</div>
+        </div>
+    </div>
+</div>

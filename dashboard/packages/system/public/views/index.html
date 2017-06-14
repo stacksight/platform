@@ -1,0 +1,36 @@
+<div id="intropage" class="hfeed site">
+		<h1 class="entry-title">Welcome to the mean network</h1>
+		<div class="entry-content">
+<p> Crossposted also here - <a href="http://mean.io/blog/2015/04/welcome-to-the-mean-network">http://mean.io/blog/2015/04/welcome-to-the-mean-network</a>
+<p>When we created the mean packages support (a year ago!) we wanted to create a rich package ecosystem with people reusing packages and contributing like many other open source frameworks (rails, Drupal, Symfony etc..) Looking back &#8211; that didn&#8217;t really work out&#8230;</p>
+<p>When looking at what actually happened community members like the guys from <a href="http://qed42.com">qed42</a> or <a href="https://github.com/almogbaku">Almog Baku</a> tried to use the system but we quickly understood we need the ability to manage the packages, to understand their usage statistics, to see issues and PRS.</p>
+<p>An important thing to understand is that any package published gets pushed to our git repository in <a href="http://git.mean.io">http://git.mean.io</a> This is an instance of <a href="https://about.gitlab.com/">gitlab</a> a great open-source project which lets you do whatever you can do with github.</p>
+<h2>Package Lifecycle</h2>
+<p>Lets overview a package&#8217;s lifecycle so we can understand how this works&#8230;<br />
+When you build a mean app you think about the features you want to introduce and create or reuse packages that deliver that functionality.<br />
+Lets overview the system&#8230;</p>
+<h3>Package creation</h3>
+<p>To create your own package run</p>
+<pre><code>$ mean package myPackage
+</code></pre>
+<p>This will scaffold a custom package under <strong>packages/custom/myPackage</strong></p>
+<h3>Package publication</h3>
+<p>Once you are happy with the package and might want to share it with other people you can publish it using the next series of commands &#8211; First register/login in to the system</p>
+<pre><code>$ mean register 
+</code></pre>
+<p>This will create a user in the <strong>mean network</strong> (we&#8217;ll refer to it in myUserName) To publish the package run -</p>
+<pre><code>$ cd packages/custom/myPackage
+$ mean publish
+</code></pre>
+<p>The result will be uploaded to <strong>http://git.mean.io/myUserName/myPackage</strong> You should be able to login in to the gitlab using the credentials you registered with within the gitlab you can open issues , accept merge requests add collaborators&#8230;</p>
+<h3>Package maintenance</h3>
+<p>Once we created a package you can see and manage packages by logging in to http://network.mean.io (early alpha) you&#8217;ll be able to look at your package see graphs of packages and have quick access to different aspects of you packages.</p>
+<p><a href="http://mean.io/blog/wp-content/uploads/2015/04/Screen-Shot-2015-04-21-at-5.46.48-PM.png"><img src="http://mean.io/blog/wp-content/uploads/2015/04/Screen-Shot-2015-04-21-at-5.46.48-PM-300x98.png" alt="Screen Shot 2015-04-21 at 5.46.48 PM" width="300" height="98" class="alignnone size-medium wp-image-389" /></a></p>
+<p>Clicking on each package you can see all of the data in the package page&#8230;</p>
+<p><a href="http://mean.io/blog/wp-content/uploads/2015/04/Screen-Shot-2015-04-21-at-5.59.47-PM.png"><img src="http://mean.io/blog/wp-content/uploads/2015/04/Screen-Shot-2015-04-21-at-5.59.47-PM-300x180.png" alt="Screen Shot 2015-04-21 at 5.59.47 PM" width="300" height="180" class="alignnone size-medium wp-image-395" /></a></p>
+<p>I invite you all to join the mean network and to manage your contributions there Meet you in <a href="http://network.mean.io">http://network.mean.io</a> !</p>
+	</div><!-- .entry-content -->
+
+
+	</div><!-- #page -->
+

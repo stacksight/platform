@@ -1,0 +1,107 @@
+@import "mean-compass/sass/base";
+#ProfilePage {
+    .tab-content {
+        margin-top: 40px;
+    }
+    form {
+        width: 500px;
+        max-width: 100%;
+    }
+    .btn {
+        margin: 10px 0;
+    }
+    .section-space {
+        margin-bottom: 20px;
+    }
+}
+
+#generalTab {
+    .profile-pic-section {
+        margin-bottom: 55px;
+        .b-wixmedia-image-directive__toolbar {
+            background: transparent;
+            visibility: visible;
+            left: 120px;
+            top: 50%;
+            margin-top: -18px;
+        }
+        wixmedia-image {
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+#billingTab {
+    .plan {
+        border: none;
+        margin-top: 0;
+        padding: 0;
+        .name {
+            text-align: left;
+            font-size: 1.45em;
+            font-weight: bold;
+            color: $red;
+        }
+        ul {
+            li {
+                span {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+#slackTab {
+    width: 500px;
+}
+
+#platformTab {
+    width: 500px;
+}
+
+#profileIntegrationsTab {
+    width: 500px;
+    ul.ivh-treeview ul.ivh-treeview {
+        padding-left: 40px;
+    }
+/*    .wrapper-profile-integration {
+        margin-bottom: 15px;
+    }*/
+}
+
+#notificationsTab {
+    width: 500px;
+    .wrapper-notification-settings {
+        .cb-space {
+            margin-left: 30px;
+        }
+        /* .flex-grow-1 {
+            margin-left: 30px;
+        }*/
+        label {
+            font-weight: 600;
+        }
+        form {
+            margin-left: 30px;
+            display: table;
+            .column {
+                float: left;
+                margin-right: 70px;
+                div:first-child {
+                    color: #949494;
+                    margin-top: 1px;
+                    margin-bottom: 15px;
+                }
+                .frequency-opt {
+                    margin: 8px 0;
+                }
+            }
+        }
+        .subtype {
+            margin-left: 50px;
+        }
+    }
+}

@@ -1,0 +1,248 @@
+<div class="integrations">
+    <div class="inside-content">
+        <div class="list-header ng-hide" ng-if="!_.isEmpty(vmi.services)" ng-show="!_.isEmpty(vmi.services)">
+            <div class="title">
+                <span>
+                    <span class="filter-title">{{vmi.title}}</span>
+                <span class="filter-list" uib-popover-template="'filters-list'" popover-placement="bottom" uib-popover-trigger="open" popover-is-open="isOpen" popover-toggle><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                </span>
+            </div>
+        </div>
+        <div ng-repeat="key in vmi.notSorted(vmi.services)"
+             ng-init="value = vmi.services[key]"
+             class="integration-block"
+             ng-show="(vmi.showIntegrations.all == true || vmi.showIntegrations[key] == true)"
+        >
+            <div class="title">{{value.title}}</div>
+            <div class="row">
+                <div ng-repeat="service in value.subServices"
+                     ng-init="service.index = vmi.findIntegrationIndex(service.name);"
+                     class="col-sm-6 service-item-container"
+                     ng-if="service.platforms.indexOf('all') > -1 || service.platforms.indexOf(stack.platform) > -1"
+                     ng-click="vmi.triggerSlideMenuPopover(service, 'menu-stack');"
+                >
+                    <div class="service-item" ng-class="{'cursor-pointer': service.settings}">
+                        <!--ng-click="vmi.triggerSlideMenuPopover(service, 'menu-stack');"-->
+
+                        <!--ng-click="vmi.goTo(service.settings, 'stack.integrations.service.settings', {service: service.name})"-->
+                        <span class="icon icon-service-{{service.name}}"><i class="{{service.icon}}"></i></span>
+                        <div class="info">
+                            <span class="title">{{service.title}}</span>
+                            <div class="description">
+                                <span>{{service.description}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <ng-slide-menu id="slide-menu-integration" position="right" class="spmenu spmenu-vertical spmenu-right">
+        <button class="close-button" ng-click="vmi.triggerSlideMenuPopover(vmi.$stateParams.service, 'menu-stack');">
+            <i class="fa fa-times"></i>
+        </button>
+        <div class="settings inside-content" ng-init="vmi.findGlobalIntegration();">
+            <div class="integration-block">
+                <div class="service-item">
+                    <div ng-include="vmi.$stateParams.service"></div>
+                </div>
+            </div>
+        </div>
+    </ng-slide-menu>
+
+    <script type="text/ng-template" id='filters-list'>
+        <div class="popup-content popup-content-filters-list">
+            <table class="filter-list-table" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr ng-class="(vmi.showIntegrations.all == true) ? 'active' : ''">
+                        <td class="no-padding" ng-click="vmi.setFilter('all')">
+                            <span class="text-popup">All integrations</span>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="(key, col) in vmi.services" ng-class="(vmi.showIntegrations[key] == true) ? 'active' : ''">
+                        <td class="no-padding" ng-click="vmi.setFilter(col.name)">
+                            <span class="text-popup">{{col.title}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+</div>
+
+
+<!-- ########################################################################################### -->
+<!-- ==================================== PLATFORM ============================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='platform'>
+    <div class="col-xs-12" ng-controller="IntegrationsPlatformController as vmip">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Platform settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>Your platform cmd is:</div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmip.cmd"><i class="fa fa-clone"></i>copy</button>
+            </div>
+            <pre>{{vmip.cmd}}</pre>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITHUB ============================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='github'>
+    <div class="col-xs-12" ng-controller="IntegrationsGihubController as vmigh">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Github settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>
+                <span>Go to <your-project> -> settings -> webhooks & services</span>
+                <span>click on Add Webhooka and add your webhook URL</span>
+            </div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmigh.cmd"><i class="fa fa-clone"></i>copy</button>
+            </div>
+            <pre>{{vmigh.cmd}}</pre>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITLAB ============================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='gitlab'>
+    <div class="col-xs-12">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Gitlab settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>
+                <span>Go to <your-project> -> settings -> webhooks</span>
+                <span>and add your webhook URL</span>
+            </div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmi.gitlabCmd"><i class="fa fa-clone"></i>copy</button>
+            </div>
+            <pre>{{vmi.gitlabCmd}}</pre>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BITBUCKET =========================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='bitbucket'>
+    <div class="col-xs-12" ng-controller="IntegrationsBitbucketController as vmibb">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Bitbucket settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>
+                <span>Go to <your-project> -> settings -> webhooks & services</span>
+                <span>click on Add Webhooka and add your webhook URL</span>
+            </div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmibb.cmd"><i class="fa fa-clone"></i>copy</button>
+                <br>
+            </div>
+            <pre>{{vmibb.cmd}}</pre>
+            <!-- <pre>https://api.stacksight.io/v0.1/integrations/bitbucket?token={{global.user.profile.token}}&stackId={{stack._id}}</pre> -->
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BACKUPS ============================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='backups'>
+    <div class="col-xs-12">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Custom Backup settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Your backups URL is: https://api.stacksight.io/v0.1/integrations/backups?token={{global.user.profile.token}}&stackId={{stack._id}}
+                </li>
+                <li>Send the data you would like Stackbot to say using HTTP POST.</li>
+            </ul>
+            <h3>Example</h3>
+            <div>Put your data in a file, say body.json and then use </div>
+            <pre>curl -H "Content-Type: application/json" --data @body.json  $'https://api.stacksight.io/v0.1/integrations/backups?token={{global.user.profile.token}}&stackId={{stack._id}}'
+                        </pre>
+            <div>
+                <pre>{{ vmi.bodyJson | json:4 }}</pre>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BACKUP AND MIGRATE =================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='backup_migrate'>
+    <div class="col-xs-12">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Backup and Migrate settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>
+
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== UPDRAFTPLUS =================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='updraftplus'>
+    <div class="col-xs-12">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Updraftplus settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>
+
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== ACCESSIBILITY =================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='accessibility_pa11y'>
+    <div class="col-xs-12">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">accessibility settings</span>
+            <div ng-include="'enable-button'"></div>
+        </div>
+        <div class="description">
+            <div>
+
+            </div>
+        </div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== ENABLE BUTTON ======================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='enable-button'>
+    <button ng-click="vmi.currentIntegration.enable = !vmi.currentIntegration.enable; vmi.update();" class="btn btn-rounded" ng-class="(vmi.currentIntegration.enable) ? 'red' : 'green'">
+        <span ng-show="!vmi.currentIntegration.enable">enable</span>
+        <span ng-show="vmi.currentIntegration.enable">disable</span>
+    </button>
+</script>

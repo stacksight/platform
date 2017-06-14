@@ -1,0 +1,299 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, people.scss */
+.stack-people .content-side {
+  overflow: hidden;
+}
+/* line 6, people.scss */
+.stack-people .content-side .cell-container {
+  width: 100%;
+  padding: 0;
+  float: left;
+}
+/* line 10, people.scss */
+.stack-people .content-side .cell-container .header {
+  height: 54px;
+  clear: both;
+  margin: 0 0 14px 0;
+  width: 100%;
+  padding-left: 55px;
+  position: relative;
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 64px;
+}
+/* line 19, people.scss */
+.stack-people .content-side .cell-container .header .stack-logo {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 30, people.scss */
+.stack-people .content-side .cell-container .header .info-head {
+  width: calc(100% - 290px);
+}
+/* line 32, people.scss */
+.stack-people .content-side .cell-container .header .info-head .left {
+  float: left;
+  padding-top: 3px;
+  width: 50%;
+}
+/* line 36, people.scss */
+.stack-people .content-side .cell-container .header .info-head .left h3 {
+  font-weight: bold;
+  color: #454a54;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 48, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle {
+  float: left;
+  margin-top: 4px;
+  padding-right: 24px;
+  border-right: 1px solid #d3d3d3;
+  width: 50%;
+  height: 44px;
+  padding-top: 12px;
+}
+/* line 56, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags {
+  float: right;
+}
+/* line 58, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags .add-tag {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: #448aff;
+  color: #FFFFFF;
+  float: right;
+  line-height: 16px;
+  margin: 3px 0 0 3px;
+  padding: 0;
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+}
+/* line 72, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input {
+  float: right;
+}
+/* line 74, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input input {
+  border: 1px solid #eeeeee;
+  margin-top: -5px;
+  margin-left: 3px;
+  z-index: 1000;
+  display: block;
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 11px;
+}
+/* line 84, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-holder {
+  position: relative;
+}
+/* line 88, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown {
+  border-color: #ececec;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  width: 250px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 9999;
+  position: absolute;
+  /*top: 32px;
+  left: 0px;
+  */
+  margin-top: -6px;
+  background-color: #ffffff;
+}
+/* line 105, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-searching {
+  color: #acacac;
+  font-size: 14px;
+}
+/* line 110, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-description {
+  font-size: 14px;
+}
+/* line 114, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-row {
+  padding: 5px;
+  color: #000000;
+  margin-bottom: 4px;
+  clear: both;
+}
+/* line 121, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-selected-row {
+  background-color: lightblue;
+  color: #ffffff;
+}
+/* line 126, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image-holder {
+  padding-top: 2px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+/* line 133, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border-color: #ececec;
+  border-style: solid;
+  border-width: 1px;
+}
+/* line 142, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image-default {
+  /* Add your own default image here
+   background-image: url('/assets/default.png');
+  */
+  background-position: center;
+  background-size: contain;
+  height: 34px;
+  width: 34px;
+}
+/* line 151, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown {
+  margin: -1px 0 0 3px;
+  width: 124px;
+  border-radius: 0px;
+  border: 1px solid #e2e2e2;
+  position: inherit;
+  padding: 0;
+}
+/* line 158, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching {
+  color: #010101;
+  font-size: 11px;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 8px;
+  line-height: 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* line 159, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row {
+  background: #F3F3F3;
+  color: #010101;
+}
+/* line 171, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title {
+  order: 2;
+}
+/* line 174, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description {
+  order: 1;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #71c06d;
+  line-height: 6px;
+  display: block;
+  padding-top: 6px;
+}
+/* line 184, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child {
+  border-bottom: none;
+}
+/* line 190, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+/* line 195, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li {
+  cursor: default;
+  float: left;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-right: 3px;
+  padding: 4px 8px;
+  font-size: 9px;
+  color: #454a54;
+}
+/* line 196, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li:hover {
+  border: 1px solid #878787;
+}
+/* line 197, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li:hover i {
+  display: block;
+}
+/* line 202, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li i {
+  float: right;
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 3px;
+  display: none;
+  float: right;
+}
+/* line 210, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li:last-child {
+  margin-right: 0px;
+}
+/* line 227, people.scss */
+.stack-people .content-side .cell-container .header .right {
+  float: right;
+  padding-left: 24px;
+  width: 290px;
+}
+/* line 232, people.scss */
+.stack-people .content-side .cell-container .header .url {
+  font-size: 13px;
+  color: #454a54;
+  font-weight: lighter;
+}
+/* line 238, people.scss */
+.stack-people .content-side .cell-container .content-block {
+  width: 100%;
+  padding: 0px 24px 24px 24px;
+}

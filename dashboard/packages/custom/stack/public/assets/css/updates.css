@@ -1,0 +1,746 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, updates.scss */
+#updatesTab .content-side {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+/* line 10, updates.scss */
+#updatesTab .content-side .cell-container {
+  width: 100%;
+  padding: 0;
+  float: left;
+}
+/* line 14, updates.scss */
+#updatesTab .content-side .cell-container .header {
+  height: 54px;
+  clear: both;
+  margin: 0 0 14px 0;
+  width: 100%;
+  padding-left: 55px;
+  position: relative;
+}
+/* line 21, updates.scss */
+#updatesTab .content-side .cell-container .header .stack-logo {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 32, updates.scss */
+#updatesTab .content-side .cell-container .header .top {
+  padding-top: 3px;
+}
+/* line 34, updates.scss */
+#updatesTab .content-side .cell-container .header .top h3 {
+  font-weight: bold;
+  color: #454a54;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 46, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom {
+  margin-top: 4px;
+}
+/* line 48, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags {
+  float: right;
+}
+/* line 50, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags .add-tag {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: #448aff;
+  color: #FFFFFF;
+  float: right;
+  line-height: 16px;
+  margin: 3px 0 0 3px;
+  padding: 0;
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+}
+/* line 64, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input {
+  float: right;
+}
+/* line 66, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input input {
+  border: 1px solid #eeeeee;
+  margin-top: -5px;
+  margin-left: 3px;
+  z-index: 1000;
+  display: block;
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 11px;
+}
+/* line 76, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-holder {
+  position: relative;
+}
+/* line 80, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown {
+  border-color: #ececec;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  width: 250px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 9999;
+  position: absolute;
+  /*top: 32px;
+  left: 0px;
+  */
+  margin-top: -6px;
+  background-color: #ffffff;
+}
+/* line 97, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-searching {
+  color: #acacac;
+  font-size: 14px;
+}
+/* line 102, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-description {
+  font-size: 14px;
+}
+/* line 106, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-row {
+  padding: 5px;
+  color: #000000;
+  margin-bottom: 4px;
+  clear: both;
+}
+/* line 113, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-selected-row {
+  background-color: lightblue;
+  color: #ffffff;
+}
+/* line 118, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-image-holder {
+  padding-top: 2px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+/* line 125, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-image {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border-color: #ececec;
+  border-style: solid;
+  border-width: 1px;
+}
+/* line 134, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-image-default {
+  /* Add your own default image here
+   background-image: url('/assets/default.png');
+  */
+  background-position: center;
+  background-size: contain;
+  height: 34px;
+  width: 34px;
+}
+/* line 143, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown {
+  margin: -1px 0 0 3px;
+  width: 124px;
+  border-radius: 0px;
+  border: 1px solid #e2e2e2;
+  position: inherit;
+  padding: 0;
+}
+/* line 150, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-row, #updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-searching {
+  color: #010101;
+  font-size: 11px;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 8px;
+  line-height: 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* line 151, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row, #updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row {
+  background: #F3F3F3;
+  color: #010101;
+}
+/* line 163, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title, #updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title {
+  order: 2;
+}
+/* line 166, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description, #updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description {
+  order: 1;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #71c06d;
+  line-height: 6px;
+  display: block;
+  padding-top: 6px;
+}
+/* line 176, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child, #updatesTab .content-side .cell-container .header .bottom .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child {
+  border-bottom: none;
+}
+/* line 182, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+/* line 187, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags ul li {
+  cursor: default;
+  float: left;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-right: 3px;
+  padding: 4px 8px;
+  font-size: 9px;
+  color: #454a54;
+}
+/* line 188, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags ul li:hover {
+  border: 1px solid #878787;
+}
+/* line 189, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags ul li:hover i {
+  display: block;
+}
+/* line 194, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags ul li i {
+  float: right;
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 3px;
+  display: none;
+  float: right;
+}
+/* line 202, updates.scss */
+#updatesTab .content-side .cell-container .header .bottom .tags ul li:last-child {
+  margin-right: 0px;
+}
+/* line 218, updates.scss */
+#updatesTab .content-side .cell-container .header .url {
+  font-size: 13px;
+  color: #454a54;
+  font-weight: lighter;
+}
+/* line 224, updates.scss */
+#updatesTab .content-side .cell-container .content-block {
+  background: #FFFFFF;
+  width: 100%;
+}
+/* line 227, updates.scss */
+#updatesTab .content-side .cell-container .content-block .chart-container {
+  height: 280px !important;
+}
+/* line 230, updates.scss */
+#updatesTab .content-side .cell-container .content-block .chart {
+  padding-top: 24px;
+  position: relative;
+}
+/* line 235, updates.scss */
+#updatesTab .content-side .cell-container .content-block .middle .chart-legend {
+  margin-top: 24px;
+}
+/* line 239, updates.scss */
+#updatesTab .content-side .cell-container .content-block .middle .date-picker {
+  position: absolute;
+  right: 26px;
+  width: 166px;
+  border-radius: 0;
+  top: 12px;
+  z-index: 20;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+}
+/* line 253, updates.scss */
+#updatesTab .right-side {
+  width: 478px;
+  float: right;
+}
+/* line 256, updates.scss */
+#updatesTab .right-side .cell-container {
+  background: #FFFFFF;
+  height: 54px;
+  line-height: 54px;
+  width: 468px;
+  clear: both;
+  margin: 0 0 14px 0;
+  padding: 0;
+  float: right;
+}
+/* line 265, updates.scss */
+#updatesTab .right-side .cell-container.ico-block {
+  font-size: 18px;
+}
+/* line 267, updates.scss */
+#updatesTab .right-side .cell-container.ico-block:last-child {
+  border-right: none;
+}
+/* line 270, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .green {
+  color: #80C06A;
+}
+/* line 273, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .red {
+  color: #EE534F;
+}
+/* line 276, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .ico-sub-block {
+  border-right: 1px solid #eaeaea;
+  text-align: center;
+}
+/* line 280, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .ico {
+  width: 18px;
+  height: 18px;
+  padding-right: 22px;
+}
+/* line 284, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .ico.ico-lock {
+  width: 13px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-lock.png") no-repeat 0px 3px;
+}
+/* line 289, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .ico.ico-timer {
+  width: 15px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-timer.png") no-repeat 0px 3px;
+}
+/* line 294, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .ico.ico-pulse {
+  width: 17px;
+  height: 14px;
+  background: url("/stacks/assets/img/ico/health-icon-pulse.png") no-repeat 0px 5px;
+  margin-top: 3px;
+}
+/* line 300, updates.scss */
+#updatesTab .right-side .cell-container.ico-block .ico.ico-warning {
+  width: 17px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-warning.png") no-repeat 0px 3px;
+}
+/* line 308, updates.scss */
+#updatesTab .right-side .updates-info {
+  background: #FFFFFF;
+  float: right;
+  width: 468px;
+  box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 18px 26px;
+}
+/* line 315, updates.scss */
+#updatesTab .right-side .updates-info .header h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+/* line 321, updates.scss */
+#updatesTab .right-side .updates-info .middle, #updatesTab .right-side .updates-info .middle-content {
+  padding: 0;
+  margin: 0;
+}
+/* line 324, updates.scss */
+#updatesTab .right-side .updates-info .middle a, #updatesTab .right-side .updates-info .middle-content a {
+  color: #448aff;
+}
+/* line 328, updates.scss */
+#updatesTab .right-side .updates-info .middle .head h3, #updatesTab .right-side .updates-info .middle-content .head h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 334, updates.scss */
+#updatesTab .right-side .updates-info .middle .top, #updatesTab .right-side .updates-info .middle-content .top {
+  padding: 0 12px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 339, updates.scss */
+#updatesTab .right-side .updates-info .middle .top .body ul, #updatesTab .right-side .updates-info .middle-content .top .body ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0 0px 0 26px;
+}
+/* line 345, updates.scss */
+#updatesTab .right-side .updates-info .middle .top .footer, #updatesTab .right-side .updates-info .middle-content .top .footer {
+  text-align: center;
+  margin-top: -24px;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 54%, white 99%, white 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 54%, white 99%, white 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 54%, #ffffff 99%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  z-index: 100;
+  position: relative;
+}
+/* line 354, updates.scss */
+#updatesTab .right-side .updates-info .middle .top .footer button, #updatesTab .right-side .updates-info .middle-content .top .footer button {
+  background: #ffffff;
+  line-height: 36px;
+  color: #448aff;
+  border: 1px solid #448aff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 36px;
+}
+/* line 366, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions, #updatesTab .right-side .updates-info .middle-content .second .versions {
+  margin-top: 22px;
+}
+/* line 368, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .header, #updatesTab .right-side .updates-info .middle-content .second .versions .header {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  overflow: hidden;
+}
+/* line 374, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group, #updatesTab .right-side .updates-info .middle-content .second .versions .group {
+  margin-top: 6px;
+}
+/* line 376, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block {
+  padding: 0 7px;
+  line-height: 30px;
+  overflow: hidden;
+}
+/* line 380, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block .ico, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block .ico {
+  padding-left: 0px;
+}
+/* line 382, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block .ico i, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block .ico i {
+  padding-right: 6px;
+}
+/* line 386, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block.green, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block.green {
+  background: #e8ffe7;
+  border-left: 5px solid #58b754;
+}
+/* line 389, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block.green i, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block.green i {
+  color: #58b754;
+}
+/* line 393, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block.yellow, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block.yellow {
+  background: #fffae7;
+  border-left: 5px solid #fdd424;
+}
+/* line 396, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block.yellow i, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block.yellow i {
+  color: #fdd424;
+}
+/* line 400, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block.red, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block.red {
+  background: #ffefef;
+  border-left: 5px solid #ee534f;
+}
+/* line 403, updates.scss */
+#updatesTab .right-side .updates-info .middle .second .versions .group .update-block.red i, #updatesTab .right-side .updates-info .middle-content .second .versions .group .update-block.red i {
+  color: #ee534f;
+}
+/* line 416, updates.scss */
+#updatesTab .updates.middle-content {
+  padding-top: 54px;
+}
+/* line 419, updates.scss */
+#updatesTab .updates .insights {
+  padding: 0 21px;
+  position: relative;
+}
+/* line 423, updates.scss */
+#updatesTab .updates .last-update {
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: 100;
+}
+/* line 428, updates.scss */
+#updatesTab .updates .type-title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.4em;
+  margin: 10px 0px;
+  margin-top: 25px;
+}
+/* line 434, updates.scss */
+#updatesTab .updates .type-title.critical {
+  color: #EE534F;
+}
+/* line 438, updates.scss */
+#updatesTab .updates .selected {
+  background: #f4fcf4;
+  border: 1px solid #68bc64 !important;
+  margin-top: -2px;
+}
+/* line 442, updates.scss */
+#updatesTab .updates .selected hr {
+  display: none;
+}
+/* line 445, updates.scss */
+#updatesTab .updates .selected .cell {
+  padding-bottom: 13px;
+}
+/* line 450, updates.scss */
+#updatesTab .updates .insights-header h3 {
+  line-height: 34px;
+}
+/* line 453, updates.scss */
+#updatesTab .updates .insights-header select {
+  min-width: 140px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+  line-height: 34px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 0px;
+  background: #ffffff;
+  -webkit-appearance: none;
+}
+/* line 468, updates.scss */
+#updatesTab .updates ul.updates-list {
+  margin: 0;
+  padding: 0;
+}
+/* line 473, updates.scss */
+#updatesTab .updates ul.updates-list.not-critical li:last-child {
+  padding: 14px 20px;
+}
+/* line 475, updates.scss */
+#updatesTab .updates ul.updates-list.not-critical li:last-child.selected {
+  padding: 14px 20px 0px 20px;
+}
+/* line 478, updates.scss */
+#updatesTab .updates ul.updates-list.not-critical li:last-child hr {
+  display: none;
+}
+/* line 484, updates.scss */
+#updatesTab .updates ul.updates-list li {
+  padding: 14px 20px 0px 20px;
+  clear: both;
+  overflow: hidden;
+}
+/* line 489, updates.scss */
+#updatesTab .updates ul.updates-list li hr {
+  margin-top: 13px;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+/* line 497, updates.scss */
+#updatesTab .updates ul.updates-list li .critical .text .version {
+  color: #EE534F;
+}
+/* line 502, updates.scss */
+#updatesTab .updates ul.updates-list li .cell {
+  overflow: hidden;
+}
+/* line 505, updates.scss */
+#updatesTab .updates ul.updates-list li .title {
+  font-weight: 600;
+  font-size: 16px;
+}
+/* line 509, updates.scss */
+#updatesTab .updates ul.updates-list li .text {
+  width: calc(100% - 224px);
+  float: left;
+}
+/* line 512, updates.scss */
+#updatesTab .updates ul.updates-list li .text .fa {
+  padding: 0 10px;
+}
+/* line 515, updates.scss */
+#updatesTab .updates ul.updates-list li .text .version {
+  font-weight: bold;
+}
+/* line 518, updates.scss */
+#updatesTab .updates ul.updates-list li .text .security-label {
+  color: #EE534F;
+  padding-left: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 525, updates.scss */
+#updatesTab .updates ul.updates-list li .button-v-container {
+  float: right;
+  width: 144px;
+  text-align: center;
+  margin-top: 10px;
+}
+/* line 530, updates.scss */
+#updatesTab .updates ul.updates-list li .button-v-container a {
+  line-height: 24px;
+  padding: 8px 25px;
+  color: #FFFFFF;
+  background: #448aff;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: none;
+}
+/* line 531, updates.scss */
+#updatesTab .updates ul.updates-list li .button-v-container a:hover {
+  text-decoration: none;
+}
+/* line 541, updates.scss */
+#updatesTab .updates ul.updates-list li .button-v-container a a {
+  color: #FFFFFF;
+}
+/* line 546, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container {
+  float: right;
+  width: 80px;
+  margin-top: 0px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+/* line 553, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico-value {
+  display: block;
+  margin: 6px 0px 0 0;
+  color: #58b754;
+}
+/* line 557, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico-value .value {
+  font-size: 22px;
+  padding-right: 6px;
+  font-weight: 600;
+}
+/* line 563, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico {
+  width: 18px;
+  height: 18px;
+  padding-right: 22px;
+  float: right;
+  margin-right: 4px;
+}
+/* line 570, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico.ico-lock {
+  width: 16px;
+  height: 21px;
+  background: url("/stack/assets/img/ico/health-icon-lock.png") no-repeat 0px 0px;
+  margin-top: 10px;
+}
+/* line 576, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico.ico-timer {
+  width: 19px;
+  height: 21px;
+  background: url("/stack/assets/img/ico/health-icon-timer.png") no-repeat 0px 0px;
+  margin-top: 10px;
+}
+/* line 582, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico.ico-pulse {
+  width: 19px;
+  height: 15px;
+  background: url("/stack/assets/img/ico/health-icon-pulse.png") no-repeat 0px 0px;
+  margin-top: 13px;
+}
+/* line 588, updates.scss */
+#updatesTab .updates ul.updates-list li .ico-v-container .ico.ico-warning {
+  width: 20px;
+  height: 20px;
+  background: url("/stack/assets/img/ico/health-icon-warning.png") no-repeat 0px 0px;
+  margin-top: 10px;
+}
+/* line 598, updates.scss */
+#updatesTab .updates .update {
+  width: 100%;
+  padding: 20px 30px;
+  margin: 7px 0;
+  /*opacity: 0.1;*/
+}
+/* line 603, updates.scss */
+#updatesTab .updates .update .title {
+  font-weight: bold;
+  font-size: 1.23em;
+}
+/* line 607, updates.scss */
+#updatesTab .updates .update ._row {
+  text-transform: capitalize;
+  margin: 10px 0px;
+}
+/* line 610, updates.scss */
+#updatesTab .updates .update ._row div {
+  display: inline-block;
+  margin: 0 2px;
+}
+/* line 613, updates.scss */
+#updatesTab .updates .update ._row div:first-child {
+  width: 160px;
+}
+/* line 616, updates.scss */
+#updatesTab .updates .update ._row div.version {
+  color: #EE534F;
+  font-weight: bold;
+}
+/* line 620, updates.scss */
+#updatesTab .updates .update ._row div a {
+  color: #EE534F;
+  font-size: 0.9em;
+  font-style: italic;
+  text-transform: lowercase;
+  margin-left: 7px;
+}
+/* line 629, updates.scss */
+#updatesTab .updates .update.critical {
+  /*background: $critical;*/
+}
+/* line 634, updates.scss */
+#updatesTab .updates .update.available {
+  /*background: $available;*/
+}

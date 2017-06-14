@@ -1,0 +1,19 @@
+<section id="healthTab" ng-controller="HealthController as vmh" class="full-height" ng-init="vmh.find()">
+    <div class="middle">
+        <div class="health middle-content">
+            <ul class="tabs">
+                <li ng-repeat="health_object in health_objects | filter: {display:true}" class="tab-title link" ui-sref="stack.health.type({type: health_object.category})" ui-sref-active="red">
+                    <a>{{health_object.tabTitle}}</a>
+                </li>
+            </ul>
+            <hr class="tabs-line" />
+            <div id="health-tabs">
+                <div class="middle m-n">
+                    <div class="health middle-content clear" style="background-color: #fff">
+                        <div ui-view ng-if="vmh.health_objects"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

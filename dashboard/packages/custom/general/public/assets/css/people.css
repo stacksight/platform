@@ -1,0 +1,927 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 11, people.scss */
+.company-main-people #upgradePlanModal,
+.stacks-people #upgradePlanModal,
+.stack-people #upgradePlanModal,
+.stack-peoplewithparam #upgradePlanModal,
+.company-main-dashboard #upgradePlanModal,
+.company-main-inventory #upgradePlanModal,
+.company-main-people #upgradePlanModal {
+  min-height: 545px;
+}
+/* line 13, people.scss */
+.company-main-people #upgradePlanModal .modal-body,
+.stacks-people #upgradePlanModal .modal-body,
+.stack-people #upgradePlanModal .modal-body,
+.stack-peoplewithparam #upgradePlanModal .modal-body,
+.company-main-dashboard #upgradePlanModal .modal-body,
+.company-main-inventory #upgradePlanModal .modal-body,
+.company-main-people #upgradePlanModal .modal-body {
+  max-height: 500px;
+}
+/* line 15, people.scss */
+.company-main-people #upgradePlanModal .modal-body .go-elements,
+.stacks-people #upgradePlanModal .modal-body .go-elements,
+.stack-people #upgradePlanModal .modal-body .go-elements,
+.stack-peoplewithparam #upgradePlanModal .modal-body .go-elements,
+.company-main-dashboard #upgradePlanModal .modal-body .go-elements,
+.company-main-inventory #upgradePlanModal .modal-body .go-elements,
+.company-main-people #upgradePlanModal .modal-body .go-elements {
+  margin-top: 98px;
+}
+/* line 22, people.scss */
+.company-main-people.modal-open .modal .modal-dialog,
+.stacks-people.modal-open .modal .modal-dialog,
+.stack-people.modal-open .modal .modal-dialog,
+.stack-peoplewithparam.modal-open .modal .modal-dialog,
+.company-main-dashboard.modal-open .modal .modal-dialog,
+.company-main-inventory.modal-open .modal .modal-dialog,
+.company-main-people.modal-open .modal .modal-dialog {
+  max-height: 602px;
+  overflow: hidden;
+  width: 546px;
+  color: #d6d6d6;
+}
+/* line 27, people.scss */
+.company-main-people.modal-open .modal .modal-dialog ::-webkit-input-placeholder,
+.stacks-people.modal-open .modal .modal-dialog ::-webkit-input-placeholder,
+.stack-people.modal-open .modal .modal-dialog ::-webkit-input-placeholder,
+.stack-peoplewithparam.modal-open .modal .modal-dialog ::-webkit-input-placeholder,
+.company-main-dashboard.modal-open .modal .modal-dialog ::-webkit-input-placeholder,
+.company-main-inventory.modal-open .modal .modal-dialog ::-webkit-input-placeholder,
+.company-main-people.modal-open .modal .modal-dialog ::-webkit-input-placeholder {
+  color: #d6d6d6;
+  font-style: italic;
+}
+/* line 31, people.scss */
+.company-main-people.modal-open .modal .modal-dialog ::-moz-placeholder,
+.stacks-people.modal-open .modal .modal-dialog ::-moz-placeholder,
+.stack-people.modal-open .modal .modal-dialog ::-moz-placeholder,
+.stack-peoplewithparam.modal-open .modal .modal-dialog ::-moz-placeholder,
+.company-main-dashboard.modal-open .modal .modal-dialog ::-moz-placeholder,
+.company-main-inventory.modal-open .modal .modal-dialog ::-moz-placeholder,
+.company-main-people.modal-open .modal .modal-dialog ::-moz-placeholder {
+  color: #d6d6d6;
+  font-style: italic;
+}
+/* line 35, people.scss */
+.company-main-people.modal-open .modal .modal-dialog :-moz-placeholder,
+.stacks-people.modal-open .modal .modal-dialog :-moz-placeholder,
+.stack-people.modal-open .modal .modal-dialog :-moz-placeholder,
+.stack-peoplewithparam.modal-open .modal .modal-dialog :-moz-placeholder,
+.company-main-dashboard.modal-open .modal .modal-dialog :-moz-placeholder,
+.company-main-inventory.modal-open .modal .modal-dialog :-moz-placeholder,
+.company-main-people.modal-open .modal .modal-dialog :-moz-placeholder {
+  color: #d6d6d6;
+  font-style: italic;
+}
+/* line 39, people.scss */
+.company-main-people.modal-open .modal .modal-dialog :-ms-input-placeholder,
+.stacks-people.modal-open .modal .modal-dialog :-ms-input-placeholder,
+.stack-people.modal-open .modal .modal-dialog :-ms-input-placeholder,
+.stack-peoplewithparam.modal-open .modal .modal-dialog :-ms-input-placeholder,
+.company-main-dashboard.modal-open .modal .modal-dialog :-ms-input-placeholder,
+.company-main-inventory.modal-open .modal .modal-dialog :-ms-input-placeholder,
+.company-main-people.modal-open .modal .modal-dialog :-ms-input-placeholder {
+  color: #d6d6d6;
+  font-style: italic;
+}
+/* line 43, people.scss */
+.company-main-people.modal-open .modal .modal-dialog i,
+.stacks-people.modal-open .modal .modal-dialog i,
+.stack-people.modal-open .modal .modal-dialog i,
+.stack-peoplewithparam.modal-open .modal .modal-dialog i,
+.company-main-dashboard.modal-open .modal .modal-dialog i,
+.company-main-inventory.modal-open .modal .modal-dialog i,
+.company-main-people.modal-open .modal .modal-dialog i {
+  color: #FFFFFF;
+  position: inherit;
+  padding-right: 12px;
+}
+/* line 48, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-header,
+.stacks-people.modal-open .modal .modal-dialog .modal-header,
+.stack-people.modal-open .modal .modal-dialog .modal-header,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-header,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-header,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-header,
+.company-main-people.modal-open .modal .modal-dialog .modal-header {
+  border: none;
+  padding: 37px 20px 20px 20px;
+  margin-top: 0;
+  text-align: center;
+  color: #282828;
+}
+/* line 53, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-header h3,
+.stacks-people.modal-open .modal .modal-dialog .modal-header h3,
+.stack-people.modal-open .modal .modal-dialog .modal-header h3,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-header h3,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-header h3,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-header h3,
+.company-main-people.modal-open .modal .modal-dialog .modal-header h3 {
+  font-weight: 300;
+  font-size: 29px;
+}
+/* line 59, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-header .close-button,
+.stacks-people.modal-open .modal .modal-dialog .modal-header .close-button,
+.stack-people.modal-open .modal .modal-dialog .modal-header .close-button,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-header .close-button,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-header .close-button,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-header .close-button,
+.company-main-people.modal-open .modal .modal-dialog .modal-header .close-button {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: url("/general/assets/img/cross.png");
+  cursor: pointer;
+}
+/* line 70, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body,
+.stacks-people.modal-open .modal .modal-dialog .modal-body,
+.stack-people.modal-open .modal .modal-dialog .modal-body,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body,
+.company-main-people.modal-open .modal .modal-dialog .modal-body {
+  max-height: 450px;
+  padding: 0 32px;
+  overflow: hidden;
+}
+/* line 74, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body .find-people,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .find-people,
+.stack-people.modal-open .modal .modal-dialog .modal-body .find-people,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body .find-people,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .find-people,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .find-people,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .find-people {
+  width: 100%;
+  line-height: 36px;
+  border: 1px solid #d4d4d4;
+  padding: 0 38px;
+  margin-bottom: 10px;
+  background: url("/stacks/assets/img/ico_search.png") no-repeat 12px;
+}
+/* line 82, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper {
+  padding: 0;
+  margin: 0;
+  max-height: 282px;
+  min-height: 110px;
+  overflow: auto;
+}
+/* line 89, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li {
+  z-index: 1;
+  position: relative;
+  margin-top: -1px;
+  background: url("/general/assets/img/check_uncheck.png") no-repeat 14px;
+  border: 1px solid #d4d4d4;
+  height: 74px;
+  padding: 12px 14px 14px 56px;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* line 90, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li:first-child,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li:first-child {
+  margin-top: 0;
+}
+/* line 94, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li.selected {
+  background: url("/general/assets/img/check_checked.png") no-repeat 14px;
+  border: 1px solid #448aff;
+  z-index: 999;
+}
+/* line 107, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_image,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_image {
+  height: 46px;
+  width: 46px;
+  border-radius: 23px;
+  overflow: hidden;
+  float: left;
+}
+/* line 114, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info {
+  float: left;
+  padding-left: 10px;
+  color: #282828;
+}
+/* line 119, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.stack-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li .user_info .user-name,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.stacks-list-wrapper li .user_info .user-name {
+  font-size: 16px;
+}
+/* line 128, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body .vshadow,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .vshadow,
+.stack-people.modal-open .modal .modal-dialog .modal-body .vshadow,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body .vshadow,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .vshadow,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .vshadow,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .vshadow {
+  z-index: 9999;
+  left: 12px;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 10px;
+  bottom: 84px;
+  position: absolute;
+  height: 52px;
+  background: #01f010;
+  width: 522px;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 56%, white 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 56%, white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 56%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+/* line 143, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-body .invite-people-by-email,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .invite-people-by-email,
+.stack-people.modal-open .modal .modal-dialog .modal-body .invite-people-by-email,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-body .invite-people-by-email,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .invite-people-by-email,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .invite-people-by-email,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .invite-people-by-email {
+  line-height: 50px;
+  margin: 10px 0px 32px 0px;
+  width: 100%;
+  padding: 0 22px;
+  border: 1px solid #d4d4d4;
+}
+/* line 152, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-footer,
+.stacks-people.modal-open .modal .modal-dialog .modal-footer,
+.stack-people.modal-open .modal .modal-dialog .modal-footer,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-footer,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-footer,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-footer,
+.company-main-people.modal-open .modal .modal-dialog .modal-footer {
+  padding: 12px 32px;
+  margin: 0;
+  margin-top: 15px;
+  background: #f8f8f8;
+  line-height: 50px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+/* line 160, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-footer button,
+.stacks-people.modal-open .modal .modal-dialog .modal-footer button,
+.stack-people.modal-open .modal .modal-dialog .modal-footer button,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-footer button,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-footer button,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-footer button,
+.company-main-people.modal-open .modal .modal-dialog .modal-footer button {
+  line-height: 44px;
+  padding: 0 18px;
+  text-transform: uppercase;
+  border: none;
+}
+/* line 166, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-footer button.btn-add,
+.stacks-people.modal-open .modal .modal-dialog .modal-footer button.btn-add,
+.stack-people.modal-open .modal .modal-dialog .modal-footer button.btn-add,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-footer button.btn-add,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-footer button.btn-add,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-footer button.btn-add,
+.company-main-people.modal-open .modal .modal-dialog .modal-footer button.btn-add {
+  background: #448aff;
+  color: #ffffff;
+  float: left;
+  padding: 0 50px;
+}
+/* line 172, people.scss */
+.company-main-people.modal-open .modal .modal-dialog .modal-footer button.btn-cancel,
+.stacks-people.modal-open .modal .modal-dialog .modal-footer button.btn-cancel,
+.stack-people.modal-open .modal .modal-dialog .modal-footer button.btn-cancel,
+.stack-peoplewithparam.modal-open .modal .modal-dialog .modal-footer button.btn-cancel,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-footer button.btn-cancel,
+.company-main-inventory.modal-open .modal .modal-dialog .modal-footer button.btn-cancel,
+.company-main-people.modal-open .modal .modal-dialog .modal-footer button.btn-cancel {
+  color: #bdbdbd;
+  background: transparent;
+}
+
+/* line 189, people.scss */
+.company-main-inventory.modal-open .modal .modal-title,
+.company-main-dashboard.modal-open .modal .modal-title,
+.company-main-people.modal-open .modal .modal-title,
+.stacks-people.modal-open .modal .modal-title {
+  text-align: left;
+}
+/* line 192, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog,
+.company-main-dashboard.modal-open .modal .modal-dialog,
+.company-main-people.modal-open .modal .modal-dialog,
+.stacks-people.modal-open .modal .modal-dialog {
+  width: 866px;
+}
+/* line 194, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body,
+.company-main-people.modal-open .modal .modal-dialog .modal-body,
+.stacks-people.modal-open .modal .modal-dialog .modal-body {
+  padding: 20px;
+}
+/* line 196, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .head,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .head,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .head,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .head {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 7px;
+}
+/* line 202, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .invite-inputs,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .invite-inputs,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .invite-inputs,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .invite-inputs {
+  width: 308px;
+  float: left;
+  padding-right: 16px;
+}
+/* line 207, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list {
+  float: left;
+  width: 508px;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 10px;
+}
+/* line 213, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list {
+  padding: 0;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  padding: 9px;
+  margin: 0;
+  border-bottom: 1px solid #eaeaea;
+  background: #FFFFFF;
+}
+/* line 222, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected {
+  background-color: #f4fcf4;
+}
+/* line 225, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-1, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-2, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-3, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-4, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-5, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-6, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-7, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-8, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-9, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-10, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-11, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-12,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-1,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-2,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-3,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-4,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-5,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-6,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-7,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-8,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-9,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-10,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-11,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-12,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-1,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-2,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-3,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-4,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-5,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-6,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-7,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-8,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-9,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-10,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-11,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-12,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-1,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-2,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-3,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-4,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-5,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-6,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-7,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-8,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-9,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-10,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-11,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .col-sm-12 {
+  height: 71px;
+  padding: 9px;
+}
+/* line 229, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-check,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-check,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-check,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-check {
+  padding-left: 11px;
+  max-width: 42px;
+}
+/* line 233, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-container,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-container,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-container,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-container {
+  margin: 0px;
+}
+/* line 236, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights {
+  padding-top: 26px !important;
+}
+/* line 238, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .red,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .red,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .red,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .red {
+  font-weight: bold;
+}
+/* line 241, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .additional-button,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .additional-button,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .additional-button,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-insights .additional-button {
+  float: right;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  background-color: #448aff;
+  line-height: 23px;
+  width: 88px;
+  text-align: center;
+  border: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: -1px;
+}
+/* line 257, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .no-padding,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .no-padding,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .no-padding,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .no-padding {
+  padding: 0;
+  height: initial;
+}
+/* line 261, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block {
+  margin-top: 11px;
+}
+/* line 263, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .red,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .red,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .red,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .red {
+  color: #ee534f;
+}
+/* line 266, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .green,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .green,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .green,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block .green {
+  color: #58b754;
+}
+/* line 269, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block img,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block img,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block img,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-block img {
+  margin: 4px 0 0 0px;
+  padding: 0;
+  display: block;
+}
+/* line 275, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico {
+  display: block;
+  float: left;
+  margin-right: 6px;
+  margin-top: 2px;
+}
+/* line 281, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .lock-ico,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .lock-ico,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .lock-ico,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .lock-ico {
+  width: 13px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-lock.png");
+}
+/* line 287, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .timer-ico,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .timer-ico,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .timer-ico,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .timer-ico {
+  width: 15px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-timer.png");
+}
+/* line 292, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .pulse-ico,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .pulse-ico,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .pulse-ico,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .pulse-ico {
+  width: 17px;
+  height: 14px;
+  background: url("/stacks/assets/img/ico/health-icon-pulse.png");
+  margin-top: 3px;
+}
+/* line 298, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-value,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-value,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-value,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-health .ico-value {
+  font-size: 16px;
+}
+/* line 303, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-name, .company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .updates,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-name,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .updates,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-name,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .updates,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .stack-name,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .updates {
+  padding-top: 16px;
+  color: #51565f;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* line 310, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title {
+  clear: both;
+  overflow: hidden;
+}
+/* line 313, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .platform,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .platform,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .platform,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .platform {
+  width: 18px;
+  height: 18px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: block;
+  float: left;
+  margin: 2px 5px 0 0;
+}
+/* line 323, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .stack-name,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .stack-name,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .stack-name,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .title .stack-name {
+  padding: 0;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 334, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected .tags ul:after,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected .tags ul:after,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected .tags ul:after,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list.selected .tags ul:after {
+  z-index: 999;
+  background: -moz-linear-gradient(left, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f4fcf4',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 344, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags {
+  clear: both;
+  position: relative;
+}
+/* line 347, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul {
+  position: relative;
+  margin: 4px 0 0 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+/* line 348, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul:after,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul:after,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul:after,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul:after {
+  z-index: 999;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 23px;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 53%, white 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 53%, white 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 53%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 371, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul li,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul li,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul li,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .stacks-list .cube.list .tags ul li {
+  height: inherit;
+  line-height: 16px;
+  padding: 0 7px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  font-weight: bold;
+  color: #51565f;
+  font-size: 10px;
+  margin-right: 2px;
+  border-radius: 2px;
+  display: inline-block;
+}
+/* line 390, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .input-block,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .input-block,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .input-block,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .input-block {
+  color: #000000;
+  margin-bottom: 46px;
+}
+/* line 393, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .input-block input,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .input-block input,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .input-block input,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .input-block input {
+  line-height: 46px;
+  border: none;
+  border-bottom: 1px solid #d2d2d2;
+  font-size: 18px;
+  width: 100%;
+}
+/* line 394, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .input-block input:focus,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .input-block input:focus,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .input-block input:focus,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .input-block input:focus {
+  border-bottom: 2px solid #eb4753;
+}
+/* line 403, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .input-block .label,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .input-block .label,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .input-block .label,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .input-block .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #797979;
+  display: block;
+  font-weight: 400;
+}
+/* line 410, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox {
+  line-height: 20px;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 18px;
+  width: 100%;
+}
+/* line 415, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox .for-label,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox .for-label,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox .for-label,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .input-block .wrapper-checkbox .for-label {
+  color: #797979;
+  font-weight: 300;
+  padding-left: 40px;
+  font-size: 18px;
+}
+/* line 423, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .stacks-list,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .stacks-list,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .stacks-list,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .stacks-list {
+  float: right;
+  width: 482px;
+  border-right: none;
+  padding-right: 0px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 430, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .stacks-list .cube.list,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .stacks-list .cube.list,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .stacks-list .cube.list,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .stacks-list .cube.list {
+  padding-left: 18px;
+  padding-top: 0;
+}
+/* line 436, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body.invite .vshadow,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body.invite .vshadow,
+.company-main-people.modal-open .modal .modal-dialog .modal-body.invite .vshadow,
+.stacks-people.modal-open .modal .modal-dialog .modal-body.invite .vshadow {
+  right: 0px;
+  left: initial;
+}
+/* line 441, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper {
+  min-height: 330px;
+  margin-bottom: 10px;
+}
+/* line 443, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li {
+  padding: 14px 14px;
+  margin-left: 24px;
+  border: none;
+  border-bottom: 1px solid #e8e8e8;
+  background: none;
+}
+/* line 446, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.company-main-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected,
+.stacks-people.modal-open .modal .modal-dialog .modal-body ul.people-list-wrapper li.selected {
+  background: none;
+  z-index: 99999;
+}
+/* line 456, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .vshadow,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .vshadow,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .vshadow,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .vshadow {
+  bottom: -12px;
+}
+/* line 459, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .users-list,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .users-list,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .users-list,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .users-list {
+  float: left;
+}
+/* line 461, people.scss */
+.company-main-inventory.modal-open .modal .modal-dialog .modal-body .users-list .vshadow,
+.company-main-dashboard.modal-open .modal .modal-dialog .modal-body .users-list .vshadow,
+.company-main-people.modal-open .modal .modal-dialog .modal-body .users-list .vshadow,
+.stacks-people.modal-open .modal .modal-dialog .modal-body .users-list .vshadow {
+  left: inherit;
+  width: 330px;
+  right: 0;
+}

@@ -1,0 +1,30 @@
+<div class="" data-ng-controller="StripeController as Stripe" ng-init="Stripe.getCards()">
+  <h1>Manage Cards</h1>
+  <button id="customButton" class="btn btn-primary">Add Another Card</button>
+
+  <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">My Credit Cards</div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Last 4</th>
+            <th>Expiration</th>
+            <th>Brand</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="item in stripe.cards">            
+            <th scope="row">{{$index+1}}</th>
+            <td>{{item.last4}}</td>
+            <td>{{item.exp_month}}/{{item.exp_year}}</td>
+            <td>{{item.brand}}</td>
+          </tr>                
+        </tbody>
+      </table>
+    </div>
+  
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <div class="side-bar {{data.dir}}">
+        <div class="wrapper-tabs" ng-class="{'down': !data.isCollapse && data.src === 'stack'}">
+            <div ng-repeat="tab in data.tabs" ng-show="tab.platforms.indexOf('all') > -1 || tab.platforms.indexOf(data.stack.platform) > -1"
+                 ng-class="{disable: tab.disable, active:($state.includes(tab.link) || tab.childrenLinks.indexOf($state.current.name ) > -1)}"
+                 class="side-bar-link red">
+                <span class="ico-sidebar {{tab.title.replace(' ', '_')}}" ng-click="go(tab.link, tab.params)"></span>
+                <div class="template" ng-init="compileTemplate(tab.template, $index)" ng-class="{{tab.title.replace(' ', '_')}}"></div>
+                <div class="tabtext" ng-click="go(tab.link, tab.params); parentClicked=!parentClicked">{{tab.title}}</div>
+                <div ng-repeat="subtab in tab.subTabs" class="subtabs" ng-show="parentClicked || $state.includes(subtab.link)">
+                    <div ui-sref="{{subtab.link}}(subtab.params)"  class="side-bar-link red tabtext" ui-sref-active="active" ng-show="subtab.platforms.indexOf('all') > -1 || subtab.platforms.indexOf(data.stack.platform) > -1"><span></span>{{subtab.title}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

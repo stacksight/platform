@@ -1,0 +1,23 @@
+<div class="no-exist-module">
+    <div class="left">
+        <h2>No data available</h2>
+        <strong>{{health_object.noexist[stack.platform].description}}</strong>
+        <div class="row m-lg">
+            <div class="col-xs-6 text-center">
+                <h4>Waiting for data...</h4>
+            </div>
+            <div class="col-xs-6 text-left">
+                <div class="loader red"></div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="right">
+        <div class="logo">
+            <img ng-src="{{health_object.noexist[stack.platform].img}}" ng-show="health_object.noexist[stack.platform].img" alt="logo"/>
+        </div>
+        {{health_object.noexist[stack.platform].module_description}}
+        <a href="{{health_object.noexist[stack.platform].downloadURL}}" class="btn-red" ng-show="health_object.noexist[stack.platform].downloadURL">Download</a>
+    </div>
+</div>

@@ -1,0 +1,503 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 3, events.scss */
+#stack-event-list, #stack-inventory-list {
+  position: fixed;
+  top: calc(50px + 6px);
+  right: 10px;
+  overflow: auto;
+}
+/* line 8, events.scss */
+#stack-event-list #eventsTab, #stack-event-list #inventoryTab, #stack-inventory-list #eventsTab, #stack-inventory-list #inventoryTab {
+  position: relative;
+  padding: 12px;
+  overflow: auto;
+}
+/* line 14, events.scss */
+#stack-event-list #eventsTab #inventory-header, #stack-event-list #inventoryTab #inventory-header, #stack-inventory-list #eventsTab #inventory-header, #stack-inventory-list #inventoryTab #inventory-header {
+  position: fixed;
+  background: #ffffff;
+  width: 444px;
+  height: 96px;
+  padding-top: 12px;
+}
+/* line 21, events.scss */
+#stack-event-list #eventsTab .components-list, #stack-event-list #inventoryTab .components-list, #stack-inventory-list #eventsTab .components-list, #stack-inventory-list #inventoryTab .components-list {
+  padding-top: 90px;
+}
+/* line 26, events.scss */
+#stack-event-list #eventsTab .top .colorful-border .stick, #stack-event-list #inventoryTab .top .colorful-border .stick, #stack-inventory-list #eventsTab .top .colorful-border .stick, #stack-inventory-list #inventoryTab .top .colorful-border .stick {
+  height: 4px;
+}
+/* line 31, events.scss */
+#stack-event-list #eventsTab .top .search-banner .tag-btn, #stack-event-list #inventoryTab .top .search-banner .tag-btn, #stack-inventory-list #eventsTab .top .search-banner .tag-btn, #stack-inventory-list #inventoryTab .top .search-banner .tag-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -18px;
+  width: 37px;
+  height: 37px;
+  border: solid 1px #e0e0e0;
+  border-radius: 50%;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+/* line 42, events.scss */
+#stack-event-list #eventsTab .top .search-banner .tag-btn .fa, #stack-event-list #inventoryTab .top .search-banner .tag-btn .fa, #stack-inventory-list #eventsTab .top .search-banner .tag-btn .fa, #stack-inventory-list #inventoryTab .top .search-banner .tag-btn .fa {
+  line-height: 37px;
+  display: block;
+  text-align: center;
+  color: #EE534F;
+}
+/* line 49, events.scss */
+#stack-event-list #eventsTab .top .search-banner .packages-filter, #stack-event-list #inventoryTab .top .search-banner .packages-filter, #stack-inventory-list #eventsTab .top .search-banner .packages-filter, #stack-inventory-list #inventoryTab .top .search-banner .packages-filter {
+  position: absolute;
+  right: 0;
+  border: solid 1px #e0e0e0;
+  text-transform: capitalize;
+  font-weight: bold;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+}
+/* line 59, events.scss */
+#stack-event-list #eventsTab .top .search-banner .packages-filter .pkg, #stack-event-list #inventoryTab .top .search-banner .packages-filter .pkg, #stack-inventory-list #eventsTab .top .search-banner .packages-filter .pkg, #stack-inventory-list #inventoryTab .top .search-banner .packages-filter .pkg {
+  padding: 8px 15px;
+  border-bottom: solid 1px #e0e0e0;
+  width: 285px;
+}
+/* line 63, events.scss */
+#stack-event-list #eventsTab .top .search-banner .packages-filter .pkg .icon, #stack-event-list #inventoryTab .top .search-banner .packages-filter .pkg .icon, #stack-inventory-list #eventsTab .top .search-banner .packages-filter .pkg .icon, #stack-inventory-list #inventoryTab .top .search-banner .packages-filter .pkg .icon {
+  font-size: 1.3em;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+}
+/* line 72, events.scss */
+#stack-event-list #eventsTab .top .search-banner .packages-filter .pkg .wrapper-checkbox, #stack-event-list #inventoryTab .top .search-banner .packages-filter .pkg .wrapper-checkbox, #stack-inventory-list #eventsTab .top .search-banner .packages-filter .pkg .wrapper-checkbox, #stack-inventory-list #inventoryTab .top .search-banner .packages-filter .pkg .wrapper-checkbox {
+  float: right;
+  margin-right: 37px;
+}
+/* line 77, events.scss */
+#stack-event-list #eventsTab .top .search-banner .packages-filter .names, #stack-event-list #inventoryTab .top .search-banner .packages-filter .names, #stack-inventory-list #eventsTab .top .search-banner .packages-filter .names, #stack-inventory-list #inventoryTab .top .search-banner .packages-filter .names {
+  padding-left: 50px;
+}
+/* line 79, events.scss */
+#stack-event-list #eventsTab .top .search-banner .packages-filter .names .name, #stack-event-list #inventoryTab .top .search-banner .packages-filter .names .name, #stack-inventory-list #eventsTab .top .search-banner .packages-filter .names .name, #stack-inventory-list #inventoryTab .top .search-banner .packages-filter .names .name {
+  padding: 5px;
+}
+/* line 88, events.scss */
+#stack-event-list #eventsTab .middle .middle-content #events-header, #stack-event-list #inventoryTab .middle .middle-content #events-header, #stack-inventory-list #eventsTab .middle .middle-content #events-header, #stack-inventory-list #inventoryTab .middle .middle-content #events-header {
+  position: fixed;
+  top: 56px;
+  z-index: 999;
+  background: #fff;
+  width: 453px;
+  padding: 12px 12px 0 12px;
+}
+/* line 98, events.scss */
+#stack-event-list #eventsTab .middle .group-title, #stack-event-list #inventoryTab .middle .group-title, #stack-inventory-list #eventsTab .middle .group-title, #stack-inventory-list #inventoryTab .middle .group-title {
+  background: #fff;
+  margin: 1rem 0;
+  padding: .5rem 0;
+  line-height: 1.2rem;
+  font-size: 1.2em;
+  font-family: Lato, appleLogo, sans-serif;
+  color: #555459;
+  font-weight: 900;
+  text-align: center;
+  cursor: default;
+  clear: both;
+  position: relative;
+}
+/* line 99, events.scss */
+#stack-event-list #eventsTab .middle .group-title.date, #stack-event-list #eventsTab .middle .group-title.session, #stack-event-list #inventoryTab .middle .group-title.date, #stack-event-list #inventoryTab .middle .group-title.session, #stack-inventory-list #eventsTab .middle .group-title.date, #stack-inventory-list #eventsTab .middle .group-title.session, #stack-inventory-list #inventoryTab .middle .group-title.date, #stack-inventory-list #inventoryTab .middle .group-title.session {
+  display: none;
+}
+/* line 103, events.scss */
+#stack-event-list #eventsTab .middle .group-title.show, #stack-event-list #inventoryTab .middle .group-title.show, #stack-inventory-list #eventsTab .middle .group-title.show, #stack-inventory-list #inventoryTab .middle .group-title.show {
+  display: block;
+}
+/* line 120, events.scss */
+#stack-event-list #eventsTab .middle .group-title hr, #stack-event-list #inventoryTab .middle .group-title hr, #stack-inventory-list #eventsTab .middle .group-title hr, #stack-inventory-list #inventoryTab .middle .group-title hr {
+  position: absolute;
+  border-top: 1px solid #DDD;
+  width: 100%;
+  top: 1.1rem;
+  margin: 0;
+}
+/* line 127, events.scss */
+#stack-event-list #eventsTab .middle .group-title .group-title-label, #stack-event-list #inventoryTab .middle .group-title .group-title-label, #stack-inventory-list #eventsTab .middle .group-title .group-title-label, #stack-inventory-list #inventoryTab .middle .group-title .group-title-label {
+  background: #fff;
+  padding: 0 1rem;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 136, events.scss */
+#stack-event-list #eventsTab .middle .events .top-filter, #stack-event-list #inventoryTab .middle .events .top-filter, #stack-inventory-list #eventsTab .middle .events .top-filter, #stack-inventory-list #inventoryTab .middle .events .top-filter {
+  position: fixed;
+  top: 68px;
+  z-index: 999;
+  background: #fff;
+  width: 428px;
+}
+/* line 143, events.scss */
+#stack-event-list #eventsTab .middle .events .event, #stack-event-list #inventoryTab .middle .events .event, #stack-inventory-list #eventsTab .middle .events .event, #stack-inventory-list #inventoryTab .middle .events .event {
+  position: relative;
+  min-height: 40px;
+  margin: 0;
+  padding-left: 10px;
+  display: block;
+  border-top: 1px solid #ededed;
+  padding: 18px 12px 18px 12px;
+}
+/* line 152, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+/* line 157, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform {
+  border: solid 1px #e4e4e4;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 164, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.disable, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.disable, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.disable, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.disable {
+  border: none;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 169, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform:hover, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform:hover, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform:hover, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform:hover {
+  border-width: 3px;
+}
+/* line 172, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm {
+  width: 32px !important;
+  height: 32px !important;
+}
+/* line 175, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.wordpress, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.wordpress, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.wordpress, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.wordpress {
+  background-position: -725px -75px !important;
+}
+/* line 178, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm:hover, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm:hover, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm:hover, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm:hover {
+  border-width: 1px;
+}
+/* line 183, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform {
+  overflow: hidden;
+}
+/* line 186, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.drupal, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.drupal, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.drupal, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.drupal {
+  background-image: url("/platforms/assets/img/drupal.png");
+}
+/* line 189, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.mean, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.mean, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.mean, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.mean {
+  background-image: url("/platforms/assets/img/mean.png");
+}
+/* line 192, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.wordpress, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.wordpress, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.wordpress, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.wordpress {
+  background-image: url("/platforms/assets/img/wordpress.png");
+}
+/* line 195, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.wix, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.wix, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.wix, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.wix {
+  background-image: url("/platforms/assets/img/wix.png");
+}
+/* line 198, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.nodejs, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.nodejs, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.nodejs, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.nodejs {
+  background-image: url("/platforms/assets/img/nodejs.png");
+}
+/* line 201, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.php, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.php, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.php, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.php {
+  background-image: url("/platforms/assets/img/php.png");
+}
+/* line 204, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.meteor, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.meteor, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.meteor, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.meteor {
+  background-image: url("/platforms/assets/img/meteor.png");
+}
+/* line 207, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform[class*="magento"], #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform[class*="magento"], #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform[class*="magento"], #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform[class*="magento"] {
+  background-image: url("/platforms/assets/img/magento.png");
+}
+/* line 210, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform[class*="symfony"], #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform[class*="symfony"], #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform[class*="symfony"], #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform[class*="symfony"] {
+  background-image: url("/platforms/assets/img/php.png");
+}
+/* line 213, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.web, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.web, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.web, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.web {
+  background-image: url("/platforms/assets/img/web.png");
+}
+/* line 218, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm {
+  width: 32px;
+  height: 32px;
+  background-image: url("/platforms/assets/img/logos.png");
+}
+/* line 222, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.drupal, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.drupal, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.drupal, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.drupal {
+  background-position: -23px -75px !important;
+}
+/* line 225, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.wordpress, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.wordpress, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.wordpress, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.wordpress {
+  background-position: -94px -75px !important;
+}
+/* line 228, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.mean, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.mean, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.mean, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.mean {
+  background-position: -159px -75px !important;
+}
+/* line 231, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.meteor, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.meteor, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.meteor, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.meteor {
+  background-position: -228px -75px !important;
+}
+/* line 234, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.joomla, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.joomla, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.joomla, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.joomla {
+  background-position: -396px -75px !important;
+}
+/* line 237, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.moodle, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.moodle, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.moodle, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.moodle {
+  background-position: -365px -75px !important;
+}
+/* line 240, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm[class*="magento"], #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm[class*="magento"], #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm[class*="magento"], #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm[class*="magento"] {
+  background-position: -432px -75px !important;
+}
+/* line 243, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.php, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.php, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.php, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.php {
+  background-position: -642px -75px !important;
+}
+/* line 246, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.nodejs, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.nodejs, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.nodejs, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.nodejs {
+  background-position: -568px -75px !important;
+}
+/* line 249, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.web, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.web, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm.web, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm.web {
+  background-position: -817px -78px !important;
+}
+/* line 252, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.sm[class*="symfony"], #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm[class*="symfony"], #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.sm[class*="symfony"], #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.sm[class*="symfony"] {
+  background-position: -646px -75px !important;
+}
+/* line 256, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .platform.md, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .platform.md, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .platform.md, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .platform.md {
+  transform: scale(0.6);
+}
+/* line 260, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .icon, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .icon, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .icon, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .icon {
+  font-size: 1.8em;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 32px;
+}
+/* line 268, events.scss */
+#stack-event-list #eventsTab .middle .events .event .wrapper-icon .icon.platform.web, #stack-event-list #inventoryTab .middle .events .event .wrapper-icon .icon.platform.web, #stack-inventory-list #eventsTab .middle .events .event .wrapper-icon .icon.platform.web, #stack-inventory-list #inventoryTab .middle .events .event .wrapper-icon .icon.platform.web {
+  background-color: white !important;
+}
+/* line 273, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content, #stack-event-list #inventoryTab .middle .events .event .e-content, #stack-inventory-list #eventsTab .middle .events .event .e-content, #stack-inventory-list #inventoryTab .middle .events .event .e-content {
+  display: inline-block;
+  width: 92%;
+}
+/* line 276, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content .type, #stack-event-list #inventoryTab .middle .events .event .e-content .type, #stack-inventory-list #eventsTab .middle .events .event .e-content .type, #stack-inventory-list #inventoryTab .middle .events .event .e-content .type {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 4px;
+}
+/* line 282, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content .e-template, #stack-event-list #inventoryTab .middle .events .event .e-content .e-template, #stack-inventory-list #eventsTab .middle .events .event .e-content .e-template, #stack-inventory-list #inventoryTab .middle .events .event .e-content .e-template {
+  font-size: 14px;
+}
+/* line 285, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content .username, #stack-event-list #inventoryTab .middle .events .event .e-content .username, #stack-inventory-list #eventsTab .middle .events .event .e-content .username, #stack-inventory-list #inventoryTab .middle .events .event .e-content .username {
+  color: #8864AC;
+  font-weight: bold;
+}
+/* line 289, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content .name, #stack-event-list #inventoryTab .middle .events .event .e-content .name, #stack-inventory-list #eventsTab .middle .events .event .e-content .name, #stack-inventory-list #inventoryTab .middle .events .event .e-content .name {
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 293, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content .pkg-name, #stack-event-list #inventoryTab .middle .events .event .e-content .pkg-name, #stack-inventory-list #eventsTab .middle .events .event .e-content .pkg-name, #stack-inventory-list #inventoryTab .middle .events .event .e-content .pkg-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+/* line 298, events.scss */
+#stack-event-list #eventsTab .middle .events .event .e-content .e-time, #stack-event-list #inventoryTab .middle .events .event .e-content .e-time, #stack-inventory-list #eventsTab .middle .events .event .e-content .e-time, #stack-inventory-list #inventoryTab .middle .events .event .e-content .e-time {
+  color: #a5a5a5;
+  font-size: 1px;
+  width: 36px;
+}
+/* line 304, events.scss */
+#stack-event-list #eventsTab .middle .events .event .component, #stack-event-list #inventoryTab .middle .events .event .component, #stack-inventory-list #eventsTab .middle .events .event .component, #stack-inventory-list #inventoryTab .middle .events .event .component {
+  margin: 18px 0;
+}
+/* line 306, events.scss */
+#stack-event-list #eventsTab .middle .events .event .component img, #stack-event-list #inventoryTab .middle .events .event .component img, #stack-inventory-list #eventsTab .middle .events .event .component img, #stack-inventory-list #inventoryTab .middle .events .event .component img {
+  max-width: 500px;
+}
+/* line 311, events.scss */
+#stack-event-list #eventsTab .middle .events .event .file img, #stack-event-list #inventoryTab .middle .events .event .file img, #stack-inventory-list #eventsTab .middle .events .event .file img, #stack-inventory-list #inventoryTab .middle .events .event .file img {
+  max-width: 500px;
+  margin: 20px 0;
+}
+/* line 317, events.scss */
+#stack-event-list #eventsTab .middle .events .event .user .component, #stack-event-list #inventoryTab .middle .events .event .user .component, #stack-inventory-list #eventsTab .middle .events .event .user .component, #stack-inventory-list #inventoryTab .middle .events .event .user .component {
+  width: 275px;
+  max-width: 290px;
+  max-height: 155px;
+  height: 140px;
+  border: solid 1px #e4e4e4;
+}
+/* line 323, events.scss */
+#stack-event-list #eventsTab .middle .events .event .user .component img, #stack-event-list #inventoryTab .middle .events .event .user .component img, #stack-inventory-list #eventsTab .middle .events .event .user .component img, #stack-inventory-list #inventoryTab .middle .events .event .user .component img {
+  float: left;
+  border-radius: 50%;
+  /*max-width: 40%;*/
+  /*max-height: 80%;*/
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /*top: 50%;
+  margin-top: -50px;*/
+  background-color: #eee;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/* line 336, events.scss */
+#stack-event-list #eventsTab .middle .events .event .user .component img + div, #stack-event-list #inventoryTab .middle .events .event .user .component img + div, #stack-inventory-list #eventsTab .middle .events .event .user .component img + div, #stack-inventory-list #inventoryTab .middle .events .event .user .component img + div {
+  font-weight: bold;
+  margin-top: 20px;
+}
+/* line 346, events.scss */
+#stack-event-list #eventsTab .events-body, #stack-event-list #inventoryTab .events-body, #stack-inventory-list #eventsTab .events-body, #stack-inventory-list #inventoryTab .events-body {
+  margin-top: 90px;
+}
+/* line 351, events.scss */
+#stack-event-list #eventsTab #inv-no-data hr,
+#stack-event-list #eventsTab #inv-no-data span,
+#stack-event-list #eventsTab #ev-no-data hr,
+#stack-event-list #eventsTab #ev-no-data span, #stack-event-list #inventoryTab #inv-no-data hr,
+#stack-event-list #inventoryTab #inv-no-data span,
+#stack-event-list #inventoryTab #ev-no-data hr,
+#stack-event-list #inventoryTab #ev-no-data span, #stack-inventory-list #eventsTab #inv-no-data hr,
+#stack-inventory-list #eventsTab #inv-no-data span,
+#stack-inventory-list #eventsTab #ev-no-data hr,
+#stack-inventory-list #eventsTab #ev-no-data span, #stack-inventory-list #inventoryTab #inv-no-data hr,
+#stack-inventory-list #inventoryTab #inv-no-data span,
+#stack-inventory-list #inventoryTab #ev-no-data hr,
+#stack-inventory-list #inventoryTab #ev-no-data span {
+  color: #878787;
+}
+/* line 355, events.scss */
+#stack-event-list #eventsTab #inv-no-data .no-found-text,
+#stack-event-list #eventsTab #ev-no-data .no-found-text, #stack-event-list #inventoryTab #inv-no-data .no-found-text,
+#stack-event-list #inventoryTab #ev-no-data .no-found-text, #stack-inventory-list #eventsTab #inv-no-data .no-found-text,
+#stack-inventory-list #eventsTab #ev-no-data .no-found-text, #stack-inventory-list #inventoryTab #inv-no-data .no-found-text,
+#stack-inventory-list #inventoryTab #ev-no-data .no-found-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: lighter;
+  font-style: italic;
+}
+/* line 361, events.scss */
+#stack-event-list #eventsTab #inv-no-data .clear.no-found-text,
+#stack-event-list #eventsTab #ev-no-data .clear.no-found-text, #stack-event-list #inventoryTab #inv-no-data .clear.no-found-text,
+#stack-event-list #inventoryTab #ev-no-data .clear.no-found-text, #stack-inventory-list #eventsTab #inv-no-data .clear.no-found-text,
+#stack-inventory-list #eventsTab #ev-no-data .clear.no-found-text, #stack-inventory-list #inventoryTab #inv-no-data .clear.no-found-text,
+#stack-inventory-list #inventoryTab #ev-no-data .clear.no-found-text {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+/* line 365, events.scss */
+#stack-event-list #eventsTab #inv-no-data .btn,
+#stack-event-list #eventsTab #ev-no-data .btn, #stack-event-list #inventoryTab #inv-no-data .btn,
+#stack-event-list #inventoryTab #ev-no-data .btn, #stack-inventory-list #eventsTab #inv-no-data .btn,
+#stack-inventory-list #eventsTab #ev-no-data .btn, #stack-inventory-list #inventoryTab #inv-no-data .btn,
+#stack-inventory-list #inventoryTab #ev-no-data .btn {
+  clear: both;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+  margin-top: 12px;
+  padding: 14px 40px;
+}
+/* line 373, events.scss */
+#stack-event-list #eventsTab #inv-no-data .pd,
+#stack-event-list #eventsTab #ev-no-data .pd, #stack-event-list #inventoryTab #inv-no-data .pd,
+#stack-event-list #inventoryTab #ev-no-data .pd, #stack-inventory-list #eventsTab #inv-no-data .pd,
+#stack-inventory-list #eventsTab #ev-no-data .pd, #stack-inventory-list #inventoryTab #inv-no-data .pd,
+#stack-inventory-list #inventoryTab #ev-no-data .pd {
+  padding: 24px 0;
+}
+/* line 379, events.scss */
+#stack-event-list #eventsTab .events .event .wrapper-icon, #stack-event-list #inventoryTab .events .event .wrapper-icon, #stack-inventory-list #eventsTab .events .event .wrapper-icon, #stack-inventory-list #inventoryTab .events .event .wrapper-icon {
+  margin-right: 12px;
+  float: left;
+}
+/* line 383, events.scss */
+#stack-event-list #eventsTab .events .event .e-content, #stack-event-list #inventoryTab .events .event .e-content, #stack-inventory-list #eventsTab .events .event .e-content, #stack-inventory-list #inventoryTab .events .event .e-content {
+  width: 85%;
+}
+/* line 385, events.scss */
+#stack-event-list #eventsTab .events .event .e-content .e-time, #stack-event-list #inventoryTab .events .event .e-content .e-time, #stack-inventory-list #eventsTab .events .event .e-content .e-time, #stack-inventory-list #inventoryTab .events .event .e-content .e-time {
+  width: 60px;
+  float: right;
+  font-size: 13px;
+}
+/* line 394, events.scss */
+#stack-event-list #inventoryTab, #stack-inventory-list #inventoryTab {
+  padding: 0px 12px 12px 12px;
+}
+/* line 397, events.scss */
+#stack-event-list .loader, #stack-inventory-list .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

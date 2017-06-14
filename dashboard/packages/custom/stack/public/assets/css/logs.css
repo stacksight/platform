@@ -1,0 +1,181 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, logs.scss */
+#logsTab {
+  background: #ffffff;
+  overflow: hidden;
+}
+/* line 7, logs.scss */
+#logsTab .middle {
+  margin-top: calc(46px + 28px);
+}
+/* line 9, logs.scss */
+#logsTab .middle .left-side {
+  width: 70%;
+  float: left;
+  height: 100%;
+  padding-left: 15px;
+  margin-bottom: 67px;
+}
+/* line 15, logs.scss */
+#logsTab .middle .left-side.wide {
+  width: 100%;
+}
+/* line 19, logs.scss */
+#logsTab .middle .left-side .logs .log {
+  position: relative;
+  border-left: solid 3px transparent;
+  padding-left: 5px;
+}
+/* line 23, logs.scss */
+#logsTab .middle .left-side .logs .log .l-content {
+  max-width: 85%;
+}
+/* line 26, logs.scss */
+#logsTab .middle .left-side .logs .log.error {
+  background: #f1e5e5;
+  border-left: solid 3px #770101;
+}
+/* line 30, logs.scss */
+#logsTab .middle .left-side .logs .log:hover {
+  background: #E7EFF2;
+  border-left: solid 3px #106584;
+}
+/* line 34, logs.scss */
+#logsTab .middle .left-side .logs .log .l-right-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 15%;
+}
+/* line 39, logs.scss */
+#logsTab .middle .left-side .logs .log .l-right-content .ip {
+  color: #737171;
+}
+/* line 43, logs.scss */
+#logsTab .middle .left-side .logs .log .l-session {
+  position: absolute;
+  top: 0;
+  right: 110px;
+}
+/* line 49, logs.scss */
+#logsTab .middle .left-side .logs .add-comment {
+  position: absolute;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background: #F05417;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -5px;
+  cursor: pointer;
+}
+/* line 60, logs.scss */
+#logsTab .middle .left-side .logs .comment {
+  text-align: center;
+  color: #8DC540;
+  font-weight: bold;
+  width: 100%;
+}
+/* line 68, logs.scss */
+#logsTab .middle .right-side {
+  float: right;
+  height: 100%;
+  width: 30%;
+}
+/* line 72, logs.scss */
+#logsTab .middle .right-side .stable-data {
+  border: solid 1px #e5e5e5;
+  padding: 10px 3px;
+  margin-top: -1px;
+}
+/* line 76, logs.scss */
+#logsTab .middle .right-side .stable-data .item {
+  display: inline-block;
+  margin: 5px 10px;
+}
+/* line 79, logs.scss */
+#logsTab .middle .right-side .stable-data .item .title {
+  color: #BCBCBC;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+/* line 84, logs.scss */
+#logsTab .middle .right-side .stable-data .item .d-content {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 90, logs.scss */
+#logsTab .middle .right-side .dynamic-data {
+  text-align: center;
+}
+/* line 92, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu,
+#logsTab .middle .right-side .dynamic-data .memory {
+  display: inline-block;
+  margin-top: 20px;
+}
+/* line 96, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu svg,
+#logsTab .middle .right-side .dynamic-data .memory svg {
+  width: auto;
+  height: auto;
+}
+/* line 100, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu .outer-bar,
+#logsTab .middle .right-side .dynamic-data .memory .outer-bar {
+  stroke-width: 10px;
+}
+/* line 104, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.cpu .widget-container .progress-bar,
+#logsTab .middle .right-side .dynamic-data .memory.cpu .widget-container .progress-bar {
+  stroke: #8DC540;
+}
+/* line 107, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.cpu .widget-container .normal,
+#logsTab .middle .right-side .dynamic-data .memory.cpu .widget-container .normal {
+  stroke: #c4c4c4;
+}
+/* line 112, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.memory .widget-container .progress-bar,
+#logsTab .middle .right-side .dynamic-data .memory.memory .widget-container .progress-bar {
+  stroke: #F05417;
+}
+/* line 115, logs.scss */
+#logsTab .middle .right-side .dynamic-data .cpu.memory .widget-container .normal,
+#logsTab .middle .right-side .dynamic-data .memory.memory .widget-container .normal {
+  stroke: #c4c4c4;
+}
+/* line 123, logs.scss */
+#logsTab .timeline {
+  background: #FFFFFF;
+}

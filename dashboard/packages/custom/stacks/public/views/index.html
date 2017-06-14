@@ -1,0 +1,128 @@
+<section id="dashboarStacksTab" ng-controller="StacksController as vm" ng-init="vm.init()" class="full-height">
+  <side-bar data="vm.sideBarData"></side-bar>
+  <div class="tab-content full-height">
+    <div ui-view class="full-height with-sidebar-content">
+
+    </div>
+  </div>
+</section>
+<script type="text/ng-template" id="stacksAction">
+  <ul class="stacks-action">
+    <li ng-repeat="action in vm.action_for_stacks">
+      <a href="javascript:void(0);" ng-click="action.action()">{{::action.title}}</a>
+    </li>
+  </ul>
+</script>
+
+<script type="text/ng-template" id="peopleModalContent">
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add people to stacks</h3>
+    <button class="close-button" ng-click="vmc.cancel()"></button>
+  </div>
+  <div class="modal-body" id="modal-body">
+    <div class="stacks-list">
+      <div class="cube list">
+        <input type="text" class="find-people" placeholder="Search stacks" ng-model="vmc.search.name"/>
+        <div>{{vm.stacks}}</div>
+        <ul class="stacks-list-wrapper">
+          <li ng-repeat="stack in vm.stacks | filter:vm.search" ng-click="$event.preventDefault(); vm.selectStacks(stack)" ng-class="(vm.selected_stacks[stack._id]) ? 'selected' : ''">
+            <div class="stack_block">
+              <div class="checked left"></div>
+              <div class="cell-container col-sm-12 border stack-container">
+                <div class="title">
+                  <span class="platform {{stack.platform}} "></span>
+                  <span class="stack-name">{{stack.name}}</span>
+                </div>
+                <div class="tags" ng-if="stack.tags && stack.tags.length > 0">
+                  <ul>
+                    <li ng-repeat="tag in stack.tags">{{tag.value}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="vshadow"></div>
+    </div>
+    <div class="users-list">
+      <ul class="people-list-wrapper">
+        <li ng-repeat="item in vm.people" ng-click="$event.preventDefault(); vm.selectItem(item)" ng-class="(vm.selected_people[item._id]) ? 'selected' : ''">
+          <div class="user_block">
+            <div class="user_image left"><img ng-src="{{item.img}}" alt="{{item.id}}"></div>
+            <div class="user_info left">
+              <div class="user-name">{{item.user_name}}</div>
+              <div class="user-email">{{item.user_email}}</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="vshadow"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-add" type="button" ng-click="vm.ok()" ng-if="vm.selected_people_count > 0 && vm.selected_stacks_count > 0">
+      <i class="fa fa-plus"></i> Add
+    </button>
+    <button class="btn btn-cancel" type="button" ng-click="vm.cancel()">Cancel</button>
+  </div>
+</script>
+<script type="text/ng-template" id="invitePeopleModalContent">
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Invite user to team</h3>
+    <button class="close-button" ng-click="vm.cancel()"></button>
+  </div>
+  <div class="modal-body invite" id="modal-body">
+    <div class="invite-inputs">
+      <div class="head">1. Who would you like to invite?</div>
+      <div class="input-block">
+        <span class="label">Name</span>
+        <input type="text" ng-model="vm.collaborator.name"/>
+      </div>
+      <div class="input-block">
+        <span class="label">Email</span>
+        <input type="email" ng-model="vm.collaborator.email" />
+      </div>
+      <div class="input-block">
+        <label class="wrapper-checkbox red sm">
+          <input type="checkbox" name="cb-isadmin" id="cb-isadmin" class="" ng-model="vm.collaborator.isAdmin">
+          <label for="cb-isadmin"></label>
+          <span class="for-label">Admin</span>
+        </label>
+      </div>
+    </div>
+    <div class="stacks-list">
+      <div class="cube list">
+        <div class="head">2. Add user to stacks</div>
+        <input type="text" class="find-people" placeholder="Search stacks" ng-model="vm.search.name"/>
+        <ul class="stacks-list-wrapper">
+          <li ng-repeat="stack in stacks | filter:vm.search" ng-click="$event.preventDefault(); vm.selectStacks(stack)" ng-class="(vm.selected_stacks[stack._id] || set_selected == true) ? 'selected' : ''">
+            <div class="stack_block">
+              <div class="checked left"></div>
+              <div class="cell-container col-sm-12 border stack-container">
+                <div class="title">
+                  <span class="platform {{stack.platform}} "></span>
+                  <span class="stack-name">{{stack.name}}</span>
+                </div>
+                <div class="tags" ng-if="stack.tags && stack.tags.length > 0">
+                  <ul>
+                    <li ng-repeat="tag in stack.tags">{{tag.value}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="vshadow"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-add" type="button" ng-click="vm.ok()" ng-if="(vm.collaborator.email && vm.selected_stacks_count > 0 || vm.collaborator.email && vm.collaborator.isAdmin)">
+      <i class="fa fa-plus"></i> Invite
+    </button>
+    <button class="btn btn-cancel" type="button" ng-click="vm.cancel()">Cancel</button>
+  </div>
+</script>

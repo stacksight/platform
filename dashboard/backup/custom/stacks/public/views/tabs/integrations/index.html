@@ -1,0 +1,19 @@
+<section id="integrationsTab" class="full-height" ng-controller="IntegrationsController as vmi" ng-if="stack">
+    <div class="middle">
+        <div class="middle-content">
+            <!-- TODO: move it to be different states -->
+            <div ng-if="vmi.viewTabs">
+                <ul class="tabs">
+                    <li ng-repeat="integration in vmi.services.ci.subServices | filter:vmi.buildsIntegrationsFilter:integration" class="tab-title link" ui-sref-active="red" ui-sref="stack.builds.service({service: integration.name})">
+                        <a>{{integration.title}}</a>
+                    </li>
+                </ul>
+                <hr class="tabs-line" />
+                <div ui-view class="tab-content"></div>
+            </div>
+            <div ng-if="!vmi.viewTabs">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+</section>

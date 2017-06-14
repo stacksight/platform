@@ -1,0 +1,19 @@
+{
+  "name": "stacks",
+  "version": "0.0.1",
+  "dependencies": {
+    "angularjs-slider": "~2.5.0",
+    "Chart.js": "~1.0.2",
+    "angular-local-storage": "~0.2.5",
+    "angular-smart-table": "~2.1.8",
+    "underscore": "~1.8.3",
+    "d3": "3.5.6",
+    "angular-filter": "~0.5.11",
+    "isteven-angular-multiselect": "~4.0.0",
+    "angular-ui-select": "~0.19.4",
+    "angular-ui-select3": "ui-select#*",
+    "d3pie":  "~0.1.8",
+    "ngInfiniteScroll": "~1.2.1",
+    "Chart.js": "~1.0.2"
+  }
+}

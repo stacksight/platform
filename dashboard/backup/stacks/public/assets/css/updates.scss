@@ -1,0 +1,61 @@
+@import "mean-compass/sass/base";
+$critical:#EE534F;
+$available:#FFD503;
+#updatesTab {
+    .updates {
+        .type-title {
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 1.4em;
+            margin: 10px 0px;
+            margin-top: 25px;
+            &.critical {
+                color: $critical
+            }
+        }
+        .update {
+            width: 90%;
+            max-width: 870px;
+            border-left: solid 5px;
+            padding: 15px 20px;
+            margin: 7px 0;
+            /*opacity: 0.1;*/
+            .title {
+                font-weight: bold;
+                font-size: 1.23em;
+            }
+            ._row {
+                text-transform: capitalize;
+                margin: 10px 0px;
+                div {
+                    display: inline-block;
+                    margin: 0 2px;
+                    &:first-child {
+                        width: 160px;
+                    }
+                    &.version {
+                        color: $critical;
+                        font-weight: bold;
+                    }
+                    a {
+                        color: $critical;
+                        font-size: 0.9em;
+                        font-style: italic;
+                        text-transform: lowercase;
+                        margin-left: 7px;
+                    }
+                }
+            }
+            &.critical {
+                background: #FEF6F6;
+                /*background: $critical;*/
+                border-color: $critical;
+            }
+            &.available {
+                background: #FFFDF2;
+                /*background: $available;*/
+                border-color: $available;
+            }
+        }
+    }
+}

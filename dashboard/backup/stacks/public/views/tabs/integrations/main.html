@@ -1,0 +1,47 @@
+<div class="integrations">
+    <div class="inside-content">
+        <div class="list-header ng-hide" ng-if="!_.isEmpty(vmi.services)" ng-show="!_.isEmpty(vmi.services)">
+            <div class="title">
+                <span>
+                    <span class="filter-title">{{vmi.title}}</span>
+                <span class="filter-list" uib-popover-template="'filters-list'" popover-placement="bottom" uib-popover-trigger="open" popover-is-open="isOpen" popover-toggle><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                </span>
+            </div>
+        </div>
+        <div ng-repeat="key in vmi.notSorted(vmi.services)" ng-init="value = vmi.services[key]" class="integration-block" ng-show="(vmi.showIntegrations.all == true || vmi.showIntegrations[key] == true)">
+            <div class="title">{{value.title}}</div>
+            <div class="row">
+                <div ng-repeat="service in value.subServices" ng-init="service.index = vmi.findIntegrationIndex(service.name);" class="col-sm-6 service-item-container" ng-if="service.platforms.indexOf('all') > -1 || service.platforms.indexOf(stack.platform) > -1">
+                    <div class="service-item" ng-class="{'cursor-pointer': service.settings}" ng-click="vmi.goTo(service.settings, 'stack.integrations.service.settings', {service: service.name})" ng-class="(stack.integrations[service.index].enable) ? 'enabled' : '' ">
+                        <span class="icon icon-service-{{service.name}}"><i class="{{service.icon}}"></i></span>
+                        <div class="info">
+                            <span class="title">{{service.title}}</span>
+                            <div class="description">
+                                <span>{{service.description}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script type="text/ng-template" id='filters-list'>
+        <div class="popup-content popup-content-filters-list">
+            <table class="filter-list-table" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr ng-class="(vmi.showIntegrations.all == true) ? 'active' : ''">
+                        <td class="no-padding" ng-click="vmi.setFilter('all')">
+                            <span class="text-popup">All integrations</span>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="(key, col) in vmi.services" ng-class="(vmi.showIntegrations[key] == true) ? 'active' : ''">
+                        <td class="no-padding" ng-click="vmi.setFilter(col.name)">
+                            <span class="text-popup">{{col.title}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+</div>

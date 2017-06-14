@@ -1,0 +1,68 @@
+<section id="integrationsTab" class="full-height" ng-controller="IntegrationsController as vmi">
+    <div class="middle">
+        <div class="middle-content">
+            <uib-tabset justified="false">
+                <uib-tab heading="All services">
+                    <ul class="list-group">
+                        <li ng-repeat="service in vmi.services" class="list-group-item">
+                            <label ng-click="isCollapsed = !isCollapsed" ng-init="isCollapsed=true;" class="cursor-pointer">{{service.title}}</label>&nbsp;&nbsp;
+                            <a href="" ng-click="service.enable = true; vmi.enableService(service);">enable</a>
+                            <div uib-collapse="isCollapsed">
+                                <div class="well well-lg" ng-include="service.template">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </uib-tab>
+                <uib-tab heading="Configured Integrations">
+                    <ul class="list-group">
+                        <li ng-repeat="service in stack.integrations" class="list-group-item" ng-if="service.enable">
+                            <label>{{service.name}}</label>&nbsp;&nbsp;
+                            <a href="" ng-click="service.enable = false; vmi.update();">disable</a>
+                        </li>
+                    </ul>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+</section>
+<!-- ########################################################################################### -->
+<!-- ==================================== BACKUPS ============================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='backup-integration-template'>
+    <ul>
+        <li>Your stackbot URL is: https://api.stacksight.io/v0.1/integrations/backups?token={{global.user.profile.token}}&stackId={{stack._id}}
+        </li>
+        <li>Send the data you would like Stackbot to say using HTTP POST.</li>
+    </ul>
+    <h3>Example</h3>
+    <div>Put your data in a file, say body.json and then use (data structure was taken from here:
+        <a target="_blank" href="https://github.com/stacksight/stacksight/wiki/Health">https://github.com/stacksight/stacksight/wiki/Health</a>)</div>
+    <pre>curl -H "Content-Type: application/json" --data @body.json  $'https://api.stacksight.io/v0.1/integrations/backups?token={{global.user.profile.token}}&stackId={{stack._id}}'
+            </pre>
+    <div>
+        <pre>
+                   {{ vmi.bodyJson | json:4 }}
+                </pre>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITHUB =============================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='github-integration-template'>
+    <ul>
+        <li>Go to Github and add web hook url: https://api.stacksight.io/v0.1/integrations/github?token={{global.user.profile.token}}&stackId={{stack._id}} </li>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITLAB =============================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='gitlab-integration-template'>
+    <ul>
+        <li>Go to Gitlab and add web hook url: https://api.stacksight.io/v0.1/integrations/gitlab?token={{global.user.profile.token}}&stackId={{stack._id}} </li>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BITBUCKET ============================================ -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='bitbucket-integration-template'>
+    <ul>
+        <li>Go to bitbucket and add web hook url: https://api.stacksight.io/v0.1/integrations/bitbucket?token={{global.user.profile.token}}&stackId={{stack._id}} </li>
+</script>

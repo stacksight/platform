@@ -1,0 +1,2596 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+@media screen and (max-width: 3000px) {
+  /* line 5, general.scss */
+  #inventoryTab .table > thead > tr > td.active, #inventoryTab .table > tbody > tr > td.active, #inventoryTab .table > tfoot > tr > td.active, #inventoryTab .table > thead > tr > th.active, #inventoryTab .table > tbody > tr > th.active, #inventoryTab .table > tfoot > tr > th.active, #inventoryTab .table > thead > tr.active > td, #inventoryTab .table > tbody > tr.active > td, #inventoryTab .table > tfoot > tr.active > td, #inventoryTab .table > thead > tr.active > th, #inventoryTab .table > tbody > tr.active > th, #inventoryTab .table > tfoot > tr.active > th, #appPage .table > thead > tr > td.active, #appPage .table > tbody > tr > td.active, #appPage .table > tfoot > tr > td.active, #appPage .table > thead > tr > th.active, #appPage .table > tbody > tr > th.active, #appPage .table > tfoot > tr > th.active, #appPage .table > thead > tr.active > td, #appPage .table > tbody > tr.active > td, #appPage .table > tfoot > tr.active > td, #appPage .table > thead > tr.active > th, #appPage .table > tbody > tr.active > th, #appPage .table > tfoot > tr.active > th {
+    background-color: #D6CDE0 !important;
+  }
+  /* line 8, general.scss */
+  #inventoryTab h2, #appPage h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 6px !important;
+  }
+  /* line 18, general.scss */
+  #inventoryTab .popover, #appPage .popover {
+    width: initial;
+    height: initial;
+    z-index: 9999;
+  }
+  /* line 22, general.scss */
+  #inventoryTab .popover .popover-title, #appPage .popover .popover-title {
+    font-size: 20px;
+  }
+  /* line 25, general.scss */
+  #inventoryTab .popover .popover-inner, #appPage .popover .popover-inner {
+    position: relative;
+    height: calc(100% - 158px);
+    overflow: hidden;
+  }
+  /* line 29, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup, #appPage .popover .popover-inner .head-popup {
+    position: absolute;
+    top: 40px;
+  }
+  /* line 32, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .search-input, #appPage .popover .popover-inner .head-popup .search-input {
+    line-height: 32px;
+    width: 100%;
+    padding-left: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #E4E4E4;
+  }
+  /* line 40, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .ico-search, #appPage .popover .popover-inner .head-popup .ico-search {
+    color: #DEDEDE;
+    font-size: 18px;
+    position: absolute;
+    top: 44px;
+    left: 22px;
+  }
+  /* line 47, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .filter-types, #appPage .popover .popover-inner .head-popup .filter-types {
+    margin-top: 1px;
+  }
+  /* line 50, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup button, #appPage .popover .popover-inner .head-popup button {
+    font-weight: 300;
+  }
+  /* line 52, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup button.is_active, #appPage .popover .popover-inner .head-popup button.is_active {
+    text-decoration: underline;
+    font-weight: 900;
+  }
+  /* line 58, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup-enabled, #appPage .popover .popover-inner .head-popup-enabled {
+    top: 40px;
+  }
+  /* line 64, general.scss */
+  #inventoryTab .top-head, #appPage .top-head {
+    position: fixed;
+    width: calc(100% - $topWidth);
+    height: 66px;
+    top: 50px;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+  /* line 71, general.scss */
+  #inventoryTab .top-head .block, #appPage .top-head .block {
+    float: left;
+    padding: 0 24px;
+    height: 66px;
+  }
+  /* line 76, general.scss */
+  #inventoryTab .top-head .ico-search, #appPage .top-head .ico-search {
+    color: #DEDEDE;
+    font-size: 24px;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+  }
+  /* line 83, general.scss */
+  #inventoryTab .top-head input[type="text"], #appPage .top-head input[type="text"] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    border: none;
+    padding: 8px 12px 6px 62px;
+    color: #979797;
+  }
+  /* line 94, general.scss */
+  #inventoryTab .top-head input[aria-expanded="true"], #appPage .top-head input[aria-expanded="true"] {
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+  }
+  /* line 98, general.scss */
+  #inventoryTab .top-head .search-info, #appPage .top-head .search-info {
+    text-align: center;
+    font-size: 10px;
+  }
+  /* line 102, general.scss */
+  #inventoryTab .top-head .filter-button, #appPage .top-head .filter-button {
+    height: 42px;
+    line-height: 22px;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+  }
+  /* line 109, general.scss */
+  #inventoryTab .top-head .ico-filter, #appPage .top-head .ico-filter {
+    background: url("/apps/assets/img/ico_filter_white.png") no-repeat;
+    width: 21px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+  }
+  /* line 117, general.scss */
+  #inventoryTab .top-head .dropdown-menu, #appPage .top-head .dropdown-menu {
+    top: 30px;
+    left: 0px;
+    border: 1px solid #c6c6c6;
+    border-top: none;
+    border-radius: 0;
+    border-radius: 0 0 17px 17px;
+    overflow: hidden;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-top: -6px;
+    right: 24px;
+  }
+  /* line 130, general.scss */
+  #inventoryTab .top-head .dropdown-menu > .active > a,
+  #inventoryTab .top-head .dropdown-menu > .active > a:hover,
+  #inventoryTab .top-head .dropdown-menu > .active > a:focus, #appPage .top-head .dropdown-menu > .active > a,
+  #appPage .top-head .dropdown-menu > .active > a:hover,
+  #appPage .top-head .dropdown-menu > .active > a:focus {
+    background-color: #c6c6c6;
+  }
+  /* line 135, general.scss */
+  #inventoryTab .top-head .form-control, #appPage .top-head .form-control {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 140, general.scss */
+  #inventoryTab .top-head .form-control:focus, #appPage .top-head .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 144, general.scss */
+  #inventoryTab .top-head .glyphicon-refresh, #appPage .top-head .glyphicon-refresh {
+    position: absolute;
+    right: 34px;
+    top: 27px;
+  }
+  /* line 149, general.scss */
+  #inventoryTab .top-head .search-banner, #appPage .top-head .search-banner {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  /* line 155, general.scss */
+  #inventoryTab .top-head .search-banner span.glyphicon, #appPage .top-head .search-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 161, general.scss */
+  #inventoryTab .top-head .search-banner .title, #appPage .top-head .search-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 167, general.scss */
+  #inventoryTab .top-head .search-banner .block-input, #appPage .top-head .search-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 170, general.scss */
+  #inventoryTab .top-head .search-banner .ips, #appPage .top-head .search-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 176, general.scss */
+  #inventoryTab .top-head .search-banner .ips span, #appPage .top-head .search-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 181, general.scss */
+  #inventoryTab .top-head .filter-banner, #appPage .top-head .filter-banner {
+    background-color: #fff;
+    width: 33.333%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+    border-right: solid 1px #e4e4e4;
+    background: url("/apps/assets/img/ico_filter.png") no-repeat 24px 24px;
+  }
+  /* line 189, general.scss */
+  #inventoryTab .top-head .filter-banner input[type="text"], #appPage .top-head .filter-banner input[type="text"] {
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    border-radius: 17px;
+    border-bottom: none;
+    border: 1px solid #c6c6c6;
+    margin-top: 16px;
+  }
+  /* line 198, general.scss */
+  #inventoryTab .top-head .filter-banner input[aria-expanded="true"], #appPage .top-head .filter-banner input[aria-expanded="true"] {
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+  }
+  /* line 202, general.scss */
+  #inventoryTab .top-head .filter-banner span.glyphicon, #appPage .top-head .filter-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 208, general.scss */
+  #inventoryTab .top-head .filter-banner .title, #appPage .top-head .filter-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 214, general.scss */
+  #inventoryTab .top-head .filter-banner .block-input, #appPage .top-head .filter-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 217, general.scss */
+  #inventoryTab .top-head .filter-banner .ips, #appPage .top-head .filter-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 223, general.scss */
+  #inventoryTab .top-head .filter-banner .ips span, #appPage .top-head .filter-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 228, general.scss */
+  #inventoryTab .top-head .group-banner, #appPage .top-head .group-banner {
+    background-color: #fff;
+    width: 33.333%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+    background: url("/apps/assets/img/ico_group.png") no-repeat 24px 24px;
+  }
+  /* line 235, general.scss */
+  #inventoryTab .top-head .group-banner span.glyphicon, #appPage .top-head .group-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 241, general.scss */
+  #inventoryTab .top-head .group-banner .title, #appPage .top-head .group-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 247, general.scss */
+  #inventoryTab .top-head .group-banner .block-input, #appPage .top-head .group-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 250, general.scss */
+  #inventoryTab .top-head .group-banner .ips, #appPage .top-head .group-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 256, general.scss */
+  #inventoryTab .top-head .group-banner .ips span, #appPage .top-head .group-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 263, general.scss */
+  #inventoryTab .no-border, #appPage .no-border {
+    border: none;
+  }
+  /* line 266, general.scss */
+  #inventoryTab .table-menu, #appPage .table-menu {
+    color: #ee534f;
+    font-size: 22px;
+  }
+  /* line 270, general.scss */
+  #inventoryTab .table, #appPage .table {
+    margin-top: 36px;
+    overflow-x: auto;
+  }
+  /* line 274, general.scss */
+  #inventoryTab table, #appPage table {
+    background: none;
+  }
+  /* line 277, general.scss */
+  #inventoryTab table.table-inventory .platform, #appPage table.table-inventory .platform {
+    border: none !important;
+    margin-top: 8px;
+  }
+  /* line 282, general.scss */
+  #inventoryTab table.table-inventory thead tr, #appPage table.table-inventory thead tr {
+    text-transform: uppercase;
+    background: none;
+  }
+  /* line 288, general.scss */
+  #inventoryTab table.table-inventory tbody tr, #appPage table.table-inventory tbody tr {
+    /*text-transform: capitalize;*/
+    background-color: #FFFFFF;
+    height: 54px;
+  }
+  /* line 292, general.scss */
+  #inventoryTab table.table-inventory tbody tr td, #appPage table.table-inventory tbody tr td {
+    vertical-align: middle;
+    padding: 8px;
+    margin: 0;
+  }
+  /* line 293, general.scss */
+  #inventoryTab table.table-inventory tbody tr td.no-padding, #appPage table.table-inventory tbody tr td.no-padding {
+    padding: 0 !important;
+  }
+  /* line 299, general.scss */
+  #inventoryTab table.table-inventory tbody tr td img, #appPage table.table-inventory tbody tr td img {
+    height: 32px;
+  }
+  /* line 302, general.scss */
+  #inventoryTab table.table-inventory tbody tr td a, #appPage table.table-inventory tbody tr td a {
+    color: #613d8f;
+    font-weight: bold;
+  }
+  /* line 306, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span, #appPage table.table-inventory tbody tr td span {
+    font-size: 18px;
+  }
+  /* line 308, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.public-true, #appPage table.table-inventory tbody tr td span.public-true {
+    color: #53a33d;
+  }
+  /* line 311, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.public-false, #appPage table.table-inventory tbody tr td span.public-false {
+    color: #bababa;
+  }
+  /* line 314, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.plugins, #appPage table.table-inventory tbody tr td span.plugins {
+    color: #e4383d;
+    font-size: 14px;
+    padding-left: 8px;
+    cursor: pointer;
+  }
+
+  /* line 328, general.scss */
+  #appPage .list-header {
+    width: 100%;
+    margin-top: 0px;
+  }
+  /* line 332, general.scss */
+  #appPage .list-header .actions {
+    float: right;
+    margin-top: -52px;
+    height: 45px;
+    margin-right: 184px;
+    line-height: 45px;
+  }
+  /* line 338, general.scss */
+  #appPage .list-header .actions button {
+    border: none;
+    background: transparent;
+    color: #448aff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  /* line 344, general.scss */
+  #appPage .list-header .actions button:active {
+    box-shadow: none;
+  }
+  /* line 349, general.scss */
+  #appPage .list-header .add-stack {
+    float: right;
+    margin-top: -52px;
+    height: 45px;
+  }
+  /* line 353, general.scss */
+  #appPage .list-header .add-stack .btn {
+    width: 140px;
+    height: 44px;
+  }
+  /* line 356, general.scss */
+  #appPage .list-header .add-stack .btn.blue {
+    background-color: #448aff;
+    border: 1px solid #ffffff;
+  }
+  /* line 362, general.scss */
+  #appPage .list-header .title {
+    width: 100%;
+    margin-bottom: 7px;
+    height: 45px;
+  }
+  /* line 367, general.scss */
+  #appPage .list-header .title h3,
+  #appPage .list-header .title h2 {
+    line-height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 372, general.scss */
+  #appPage .list-header .title h3 strong,
+  #appPage .list-header .title h2 strong {
+    font-size: 16px;
+  }
+  /* line 406, general.scss */
+  #appPage .list-header .view-type .filter-block {
+    width: 86px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+  }
+  /* line 413, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon {
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+  /* line 418, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon i {
+    padding: 8px 10px 8px 10px;
+    margin-top: 4px;
+    border-radius: 0px;
+    color: #EE534F;
+  }
+  /* line 424, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon i.active {
+    background-color: #EE534F;
+    color: #ffffff;
+  }
+  /* line 432, general.scss */
+  #appPage .header-list {
+    line-height: 48px;
+    margin-bottom: 2px;
+    background: #ffffff;
+    color: #7f7f7f;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  /* line 440, general.scss */
+  #appPage .cube.list {
+    width: 100%;
+    height: 71px;
+    padding: 9px;
+    margin: 0;
+    border-bottom: 1px solid #eaeaea;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  /* line 448, general.scss */
+  #appPage .cube.list.selected {
+    background-color: #f4fcf4;
+  }
+  /* line 451, general.scss */
+  #appPage .cube.list .platform {
+    border: none;
+    margin-top: -8px;
+  }
+  /* line 455, general.scss */
+  #appPage .cube.list .stack-name {
+    padding-top: 22px;
+    font-size: 15px;
+    color: #ee534f;
+    font-weight: 600;
+  }
+  /* line 461, general.scss */
+  #appPage .cube.list .created {
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  /* line 466, general.scss */
+  #appPage .cube.list .updates {
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  /* line 470, general.scss */
+  #appPage .cube.list .updates .red {
+    color: #ee534f;
+  }
+  /* line 473, general.scss */
+  #appPage .cube.list .updates .green {
+    color: #58b855;
+  }
+  /* line 476, general.scss */
+  #appPage .cube.list .updates .yellow {
+    color: #dcb90c;
+  }
+  /* line 481, general.scss */
+  #appPage .cube.list .links ul {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    margin-top: 12px;
+  }
+  /* line 486, general.scss */
+  #appPage .cube.list .links ul li {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #e7e7e7;
+    line-height: 40px;
+  }
+  /* line 494, general.scss */
+  #appPage .cube.list .links ul li:nth-last-child {
+    border: none;
+  }
+  /* line 497, general.scss */
+  #appPage .cube.list .links ul li a {
+    color: #7951a1;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* line 510, general.scss */
+  #appsPage .block-input input {
+    height: 40px;
+  }
+  /* line 514, general.scss */
+  #appsPage .group-banner {
+    margin-right: 108px;
+  }
+  /* line 517, general.scss */
+  #appsPage .above-input {
+    margin-right: 14px;
+  }
+  /* line 520, general.scss */
+  #appsPage .view-type {
+    width: 90px;
+    float: left;
+    margin-left: -94px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  /* line 527, general.scss */
+  #appsPage .view-type .filter-block {
+    float: right;
+    width: 86px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+  }
+  /* line 534, general.scss */
+  #appsPage .view-type .filter-block .filter-icon {
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+  }
+  /* line 539, general.scss */
+  #appsPage .view-type .filter-block .filter-icon i {
+    padding: 8px 10px 8px 10px;
+    margin-top: 4px;
+    color: #ffffff;
+    opacity: 0.4;
+  }
+  /* line 547, general.scss */
+  #appsPage .view-type .filter-block .filter-icon i.active {
+    background-color: #ba413e;
+    opacity: 1;
+  }
+
+  /* line 555, general.scss */
+  .with-sidebar-content {
+    /* .height-date-top {
+        height: $dateTopHeight + $appsSearchPannel;
+    }*/
+  }
+  /* line 556, general.scss */
+  .with-sidebar-content .top {
+    position: fixed;
+    width: calc(100% - 106px);
+    height: 46px;
+    top: 50px;
+    z-index: 1;
+  }
+  /* line 562, general.scss */
+  .with-sidebar-content .top .search-banner {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+  }
+  /* line 569, general.scss */
+  .with-sidebar-content .top .search-banner input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px 45px;
+    font-style: italic;
+    border: none;
+  }
+  /* line 576, general.scss */
+  .with-sidebar-content .top .search-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 582, general.scss */
+  .with-sidebar-content .top .search-banner .title {
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 588, general.scss */
+  .with-sidebar-content .top .search-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 46px;
+  }
+  /* line 594, general.scss */
+  .with-sidebar-content .top .search-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 599, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons {
+    width: 25%;
+    display: inline-block;
+    float: right;
+  }
+  /* line 603, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button {
+    width: 33.3%;
+    height: 96px;
+    font-weight: bold;
+    border: none;
+    border-left: solid 1px #B1D7D8;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    float: left;
+  }
+  /* line 613, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+  /* line 624, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.server {
+    color: #6fc480;
+  }
+  /* line 626, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.server:before {
+    background-color: #6fc480;
+  }
+  /* line 630, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.client {
+    color: #8864ac;
+  }
+  /* line 632, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.client:before {
+    background-color: #8864ac;
+  }
+  /* line 636, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.db {
+    color: #61a7db;
+  }
+  /* line 638, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.db:before {
+    background-color: #61a7db;
+  }
+  /* line 642, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.active {
+    color: white;
+  }
+  /* line 644, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.active:before {
+    opacity: 1;
+  }
+  /* line 650, general.scss */
+  .with-sidebar-content .top.db {
+    border-bottom: solid 5px #61a7db;
+  }
+  /* line 653, general.scss */
+  .with-sidebar-content .top.client {
+    border-bottom: solid 5px #8864ac;
+  }
+  /* line 656, general.scss */
+  .with-sidebar-content .top.server {
+    border-bottom: solid 5px #6fc480;
+  }
+  /* line 659, general.scss */
+  .with-sidebar-content .top + .middle {
+    height: calc(100% - 46px - 50px);
+    margin-top: 96px;
+    padding: 0;
+  }
+  /* line 665, general.scss */
+  .with-sidebar-content .date-top {
+    position: fixed;
+    top: 96px;
+    position: fixed;
+    width: 100%;
+    height: 33px;
+    /*z-index: 1;*/
+    background: white;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+    width: calc(100% - $topWidth);
+    border-bottom: solid 1px #e4e4e4;
+    -webkit-box-shadow: 0px 0px 2px 1px #e4e4e4;
+    -moz-box-shadow: 0px 0px 2px 1px #e4e4e4;
+    box-shadow: 0px 0px 2px 1px #e4e4e4;
+    color: #515151;
+  }
+  /* line 684, general.scss */
+  .with-sidebar-content .date-top + .middle {
+    height: calc(100% - 46px - 50px - 33px);
+    margin-top: 129px;
+    padding: 0;
+  }
+  /* line 692, general.scss */
+  .with-sidebar-content .middle {
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    padding: 0;
+  }
+  /* line 699, general.scss */
+  .with-sidebar-content .middle.anchor {
+    margin-top: 192px;
+  }
+  /* line 702, general.scss */
+  .with-sidebar-content .middle.with-timeline {
+    height: calc(100% - 200px);
+  }
+  /* line 705, general.scss */
+  .with-sidebar-content .middle .middle-content {
+    padding: 20px;
+  }
+  /* line 707, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title {
+    background: #fff;
+    margin: 1rem 0;
+    padding: .5rem 0;
+    line-height: 1.2rem;
+    font-size: 1.2em;
+    font-family: Lato, appleLogo, sans-serif;
+    color: #555459;
+    font-weight: 900;
+    text-align: center;
+    cursor: default;
+    clear: both;
+    position: relative;
+  }
+  /* line 708, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title.date, .with-sidebar-content .middle .middle-content .group-title.session {
+    display: none;
+  }
+  /* line 712, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title.show {
+    display: block;
+  }
+  /* line 729, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title hr {
+    position: absolute;
+    border-top: 1px solid #DDD;
+    width: 100%;
+    top: 1.1rem;
+    margin: 0;
+  }
+  /* line 736, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title .group-title-label {
+    background: #fff;
+    padding: 0 1rem;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* line 746, general.scss */
+  .with-sidebar-content .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 84%;
+  }
+  /* line 750, general.scss */
+  .with-sidebar-content .bottom svg {
+    height: 90px;
+    font: 10px sans-serif;
+  }
+  /* line 754, general.scss */
+  .with-sidebar-content .bottom .area {
+    fill: steelblue;
+    clip-path: url(#clip);
+  }
+  /* line 758, general.scss */
+  .with-sidebar-content .bottom .axis path,
+  .with-sidebar-content .bottom .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  /* line 764, general.scss */
+  .with-sidebar-content .bottom .brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+  }
+
+  /* line 771, general.scss */
+  .last-update {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 5, general.scss */
+  #inventoryTab .table > thead > tr > td.active, #inventoryTab .table > tbody > tr > td.active, #inventoryTab .table > tfoot > tr > td.active, #inventoryTab .table > thead > tr > th.active, #inventoryTab .table > tbody > tr > th.active, #inventoryTab .table > tfoot > tr > th.active, #inventoryTab .table > thead > tr.active > td, #inventoryTab .table > tbody > tr.active > td, #inventoryTab .table > tfoot > tr.active > td, #inventoryTab .table > thead > tr.active > th, #inventoryTab .table > tbody > tr.active > th, #inventoryTab .table > tfoot > tr.active > th, #appPage .table > thead > tr > td.active, #appPage .table > tbody > tr > td.active, #appPage .table > tfoot > tr > td.active, #appPage .table > thead > tr > th.active, #appPage .table > tbody > tr > th.active, #appPage .table > tfoot > tr > th.active, #appPage .table > thead > tr.active > td, #appPage .table > tbody > tr.active > td, #appPage .table > tfoot > tr.active > td, #appPage .table > thead > tr.active > th, #appPage .table > tbody > tr.active > th, #appPage .table > tfoot > tr.active > th {
+    background-color: #D6CDE0 !important;
+  }
+  /* line 8, general.scss */
+  #inventoryTab h2, #appPage h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 6px !important;
+  }
+  /* line 18, general.scss */
+  #inventoryTab .popover, #appPage .popover {
+    width: initial;
+    height: initial;
+    z-index: 9999;
+  }
+  /* line 22, general.scss */
+  #inventoryTab .popover .popover-title, #appPage .popover .popover-title {
+    font-size: 20px;
+  }
+  /* line 25, general.scss */
+  #inventoryTab .popover .popover-inner, #appPage .popover .popover-inner {
+    position: relative;
+    height: calc(100% - 158px);
+    overflow: hidden;
+  }
+  /* line 29, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup, #appPage .popover .popover-inner .head-popup {
+    position: absolute;
+    top: 40px;
+  }
+  /* line 32, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .search-input, #appPage .popover .popover-inner .head-popup .search-input {
+    line-height: 32px;
+    width: 100%;
+    padding-left: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #E4E4E4;
+  }
+  /* line 40, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .ico-search, #appPage .popover .popover-inner .head-popup .ico-search {
+    color: #DEDEDE;
+    font-size: 18px;
+    position: absolute;
+    top: 44px;
+    left: 22px;
+  }
+  /* line 47, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .filter-types, #appPage .popover .popover-inner .head-popup .filter-types {
+    margin-top: 1px;
+  }
+  /* line 50, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup button, #appPage .popover .popover-inner .head-popup button {
+    font-weight: 300;
+  }
+  /* line 52, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup button.is_active, #appPage .popover .popover-inner .head-popup button.is_active {
+    text-decoration: underline;
+    font-weight: 900;
+  }
+  /* line 58, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup-enabled, #appPage .popover .popover-inner .head-popup-enabled {
+    top: 40px;
+  }
+  /* line 64, general.scss */
+  #inventoryTab .top-head, #appPage .top-head {
+    position: fixed;
+    width: calc(100% - $topWidth);
+    height: 66px;
+    top: 50px;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+  /* line 71, general.scss */
+  #inventoryTab .top-head .block, #appPage .top-head .block {
+    float: left;
+    padding: 0 24px;
+    height: 66px;
+  }
+  /* line 76, general.scss */
+  #inventoryTab .top-head .ico-search, #appPage .top-head .ico-search {
+    color: #DEDEDE;
+    font-size: 24px;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+  }
+  /* line 83, general.scss */
+  #inventoryTab .top-head input[type="text"], #appPage .top-head input[type="text"] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    border: none;
+    padding: 8px 12px 6px 62px;
+    color: #979797;
+  }
+  /* line 94, general.scss */
+  #inventoryTab .top-head input[aria-expanded="true"], #appPage .top-head input[aria-expanded="true"] {
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+  }
+  /* line 98, general.scss */
+  #inventoryTab .top-head .search-info, #appPage .top-head .search-info {
+    text-align: center;
+    font-size: 10px;
+  }
+  /* line 102, general.scss */
+  #inventoryTab .top-head .filter-button, #appPage .top-head .filter-button {
+    height: 42px;
+    line-height: 22px;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+  }
+  /* line 109, general.scss */
+  #inventoryTab .top-head .ico-filter, #appPage .top-head .ico-filter {
+    background: url("/apps/assets/img/ico_filter_white.png") no-repeat;
+    width: 21px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+  }
+  /* line 117, general.scss */
+  #inventoryTab .top-head .dropdown-menu, #appPage .top-head .dropdown-menu {
+    top: 30px;
+    left: 0px;
+    border: 1px solid #c6c6c6;
+    border-top: none;
+    border-radius: 0;
+    border-radius: 0 0 17px 17px;
+    overflow: hidden;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-top: -6px;
+    right: 24px;
+  }
+  /* line 130, general.scss */
+  #inventoryTab .top-head .dropdown-menu > .active > a,
+  #inventoryTab .top-head .dropdown-menu > .active > a:hover,
+  #inventoryTab .top-head .dropdown-menu > .active > a:focus, #appPage .top-head .dropdown-menu > .active > a,
+  #appPage .top-head .dropdown-menu > .active > a:hover,
+  #appPage .top-head .dropdown-menu > .active > a:focus {
+    background-color: #c6c6c6;
+  }
+  /* line 135, general.scss */
+  #inventoryTab .top-head .form-control, #appPage .top-head .form-control {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 140, general.scss */
+  #inventoryTab .top-head .form-control:focus, #appPage .top-head .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 144, general.scss */
+  #inventoryTab .top-head .glyphicon-refresh, #appPage .top-head .glyphicon-refresh {
+    position: absolute;
+    right: 34px;
+    top: 27px;
+  }
+  /* line 149, general.scss */
+  #inventoryTab .top-head .search-banner, #appPage .top-head .search-banner {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  /* line 155, general.scss */
+  #inventoryTab .top-head .search-banner span.glyphicon, #appPage .top-head .search-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 161, general.scss */
+  #inventoryTab .top-head .search-banner .title, #appPage .top-head .search-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 167, general.scss */
+  #inventoryTab .top-head .search-banner .block-input, #appPage .top-head .search-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 170, general.scss */
+  #inventoryTab .top-head .search-banner .ips, #appPage .top-head .search-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 176, general.scss */
+  #inventoryTab .top-head .search-banner .ips span, #appPage .top-head .search-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 181, general.scss */
+  #inventoryTab .top-head .filter-banner, #appPage .top-head .filter-banner {
+    background-color: #fff;
+    width: 33.333%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+    border-right: solid 1px #e4e4e4;
+    background: url("/apps/assets/img/ico_filter.png") no-repeat 24px 24px;
+  }
+  /* line 189, general.scss */
+  #inventoryTab .top-head .filter-banner input[type="text"], #appPage .top-head .filter-banner input[type="text"] {
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    border-radius: 17px;
+    border-bottom: none;
+    border: 1px solid #c6c6c6;
+    margin-top: 16px;
+  }
+  /* line 198, general.scss */
+  #inventoryTab .top-head .filter-banner input[aria-expanded="true"], #appPage .top-head .filter-banner input[aria-expanded="true"] {
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+  }
+  /* line 202, general.scss */
+  #inventoryTab .top-head .filter-banner span.glyphicon, #appPage .top-head .filter-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 208, general.scss */
+  #inventoryTab .top-head .filter-banner .title, #appPage .top-head .filter-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 214, general.scss */
+  #inventoryTab .top-head .filter-banner .block-input, #appPage .top-head .filter-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 217, general.scss */
+  #inventoryTab .top-head .filter-banner .ips, #appPage .top-head .filter-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 223, general.scss */
+  #inventoryTab .top-head .filter-banner .ips span, #appPage .top-head .filter-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 228, general.scss */
+  #inventoryTab .top-head .group-banner, #appPage .top-head .group-banner {
+    background-color: #fff;
+    width: 33.333%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+    background: url("/apps/assets/img/ico_group.png") no-repeat 24px 24px;
+  }
+  /* line 235, general.scss */
+  #inventoryTab .top-head .group-banner span.glyphicon, #appPage .top-head .group-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 241, general.scss */
+  #inventoryTab .top-head .group-banner .title, #appPage .top-head .group-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 247, general.scss */
+  #inventoryTab .top-head .group-banner .block-input, #appPage .top-head .group-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 250, general.scss */
+  #inventoryTab .top-head .group-banner .ips, #appPage .top-head .group-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 256, general.scss */
+  #inventoryTab .top-head .group-banner .ips span, #appPage .top-head .group-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 263, general.scss */
+  #inventoryTab .no-border, #appPage .no-border {
+    border: none;
+  }
+  /* line 266, general.scss */
+  #inventoryTab .table-menu, #appPage .table-menu {
+    color: #ee534f;
+    font-size: 22px;
+  }
+  /* line 270, general.scss */
+  #inventoryTab .table, #appPage .table {
+    margin-top: 36px;
+    overflow-x: auto;
+  }
+  /* line 274, general.scss */
+  #inventoryTab table, #appPage table {
+    background: none;
+  }
+  /* line 277, general.scss */
+  #inventoryTab table.table-inventory .platform, #appPage table.table-inventory .platform {
+    border: none !important;
+    margin-top: 8px;
+  }
+  /* line 282, general.scss */
+  #inventoryTab table.table-inventory thead tr, #appPage table.table-inventory thead tr {
+    text-transform: uppercase;
+    background: none;
+  }
+  /* line 288, general.scss */
+  #inventoryTab table.table-inventory tbody tr, #appPage table.table-inventory tbody tr {
+    /*text-transform: capitalize;*/
+    background-color: #FFFFFF;
+    height: 54px;
+  }
+  /* line 292, general.scss */
+  #inventoryTab table.table-inventory tbody tr td, #appPage table.table-inventory tbody tr td {
+    vertical-align: middle;
+    padding: 8px;
+    margin: 0;
+  }
+  /* line 293, general.scss */
+  #inventoryTab table.table-inventory tbody tr td.no-padding, #appPage table.table-inventory tbody tr td.no-padding {
+    padding: 0 !important;
+  }
+  /* line 299, general.scss */
+  #inventoryTab table.table-inventory tbody tr td img, #appPage table.table-inventory tbody tr td img {
+    height: 32px;
+  }
+  /* line 302, general.scss */
+  #inventoryTab table.table-inventory tbody tr td a, #appPage table.table-inventory tbody tr td a {
+    color: #613d8f;
+    font-weight: bold;
+  }
+  /* line 306, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span, #appPage table.table-inventory tbody tr td span {
+    font-size: 18px;
+  }
+  /* line 308, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.public-true, #appPage table.table-inventory tbody tr td span.public-true {
+    color: #53a33d;
+  }
+  /* line 311, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.public-false, #appPage table.table-inventory tbody tr td span.public-false {
+    color: #bababa;
+  }
+  /* line 314, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.plugins, #appPage table.table-inventory tbody tr td span.plugins {
+    color: #e4383d;
+    font-size: 14px;
+    padding-left: 8px;
+    cursor: pointer;
+  }
+
+  /* line 328, general.scss */
+  #appPage .list-header {
+    width: 100%;
+    margin-top: 0px;
+  }
+  /* line 332, general.scss */
+  #appPage .list-header .actions {
+    float: right;
+    margin-top: -52px;
+    height: 45px;
+    margin-right: 184px;
+    line-height: 45px;
+  }
+  /* line 338, general.scss */
+  #appPage .list-header .actions button {
+    border: none;
+    background: transparent;
+    color: #448aff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  /* line 344, general.scss */
+  #appPage .list-header .actions button:active {
+    box-shadow: none;
+  }
+  /* line 349, general.scss */
+  #appPage .list-header .add-stack {
+    float: right;
+    margin-top: -52px;
+    height: 45px;
+  }
+  /* line 353, general.scss */
+  #appPage .list-header .add-stack .btn {
+    width: 140px;
+    height: 44px;
+  }
+  /* line 356, general.scss */
+  #appPage .list-header .add-stack .btn.blue {
+    background-color: #448aff;
+    border: 1px solid #ffffff;
+  }
+  /* line 362, general.scss */
+  #appPage .list-header .title {
+    width: 100%;
+    margin-bottom: 7px;
+    height: 45px;
+  }
+  /* line 367, general.scss */
+  #appPage .list-header .title h3,
+  #appPage .list-header .title h2 {
+    line-height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 372, general.scss */
+  #appPage .list-header .title h3 strong,
+  #appPage .list-header .title h2 strong {
+    font-size: 16px;
+  }
+  /* line 406, general.scss */
+  #appPage .list-header .view-type .filter-block {
+    width: 86px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+  }
+  /* line 413, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon {
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+  /* line 418, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon i {
+    padding: 8px 10px 8px 10px;
+    margin-top: 4px;
+    border-radius: 0px;
+    color: #EE534F;
+  }
+  /* line 424, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon i.active {
+    background-color: #EE534F;
+    color: #ffffff;
+  }
+  /* line 432, general.scss */
+  #appPage .header-list {
+    line-height: 48px;
+    margin-bottom: 2px;
+    background: #ffffff;
+    color: #7f7f7f;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  /* line 440, general.scss */
+  #appPage .cube.list {
+    width: 100%;
+    height: 71px;
+    padding: 9px;
+    margin: 0;
+    border-bottom: 1px solid #eaeaea;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  /* line 448, general.scss */
+  #appPage .cube.list.selected {
+    background-color: #f4fcf4;
+  }
+  /* line 451, general.scss */
+  #appPage .cube.list .platform {
+    border: none;
+    margin-top: -8px;
+  }
+  /* line 455, general.scss */
+  #appPage .cube.list .stack-name {
+    padding-top: 22px;
+    font-size: 15px;
+    color: #ee534f;
+    font-weight: 600;
+  }
+  /* line 461, general.scss */
+  #appPage .cube.list .created {
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  /* line 466, general.scss */
+  #appPage .cube.list .updates {
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  /* line 470, general.scss */
+  #appPage .cube.list .updates .red {
+    color: #ee534f;
+  }
+  /* line 473, general.scss */
+  #appPage .cube.list .updates .green {
+    color: #58b855;
+  }
+  /* line 476, general.scss */
+  #appPage .cube.list .updates .yellow {
+    color: #dcb90c;
+  }
+  /* line 481, general.scss */
+  #appPage .cube.list .links ul {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    margin-top: 12px;
+  }
+  /* line 486, general.scss */
+  #appPage .cube.list .links ul li {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #e7e7e7;
+    line-height: 40px;
+  }
+  /* line 494, general.scss */
+  #appPage .cube.list .links ul li:nth-last-child {
+    border: none;
+  }
+  /* line 497, general.scss */
+  #appPage .cube.list .links ul li a {
+    color: #7951a1;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* line 510, general.scss */
+  #appsPage .block-input input {
+    height: 40px;
+  }
+  /* line 514, general.scss */
+  #appsPage .group-banner {
+    margin-right: 108px;
+  }
+  /* line 517, general.scss */
+  #appsPage .above-input {
+    margin-right: 14px;
+  }
+  /* line 520, general.scss */
+  #appsPage .view-type {
+    width: 90px;
+    float: left;
+    margin-left: -94px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  /* line 527, general.scss */
+  #appsPage .view-type .filter-block {
+    float: right;
+    width: 86px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+  }
+  /* line 534, general.scss */
+  #appsPage .view-type .filter-block .filter-icon {
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+  }
+  /* line 539, general.scss */
+  #appsPage .view-type .filter-block .filter-icon i {
+    padding: 8px 10px 8px 10px;
+    margin-top: 4px;
+    color: #ffffff;
+    opacity: 0.4;
+  }
+  /* line 547, general.scss */
+  #appsPage .view-type .filter-block .filter-icon i.active {
+    background-color: #ba413e;
+    opacity: 1;
+  }
+
+  /* line 555, general.scss */
+  .with-sidebar-content {
+    /* .height-date-top {
+        height: $dateTopHeight + $appsSearchPannel;
+    }*/
+  }
+  /* line 556, general.scss */
+  .with-sidebar-content .top {
+    position: fixed;
+    width: calc(100% - 24%);
+    height: 46px;
+    top: 50px;
+    z-index: 1;
+  }
+  /* line 562, general.scss */
+  .with-sidebar-content .top .search-banner {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+  }
+  /* line 569, general.scss */
+  .with-sidebar-content .top .search-banner input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px 45px;
+    font-style: italic;
+    border: none;
+  }
+  /* line 576, general.scss */
+  .with-sidebar-content .top .search-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 582, general.scss */
+  .with-sidebar-content .top .search-banner .title {
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 588, general.scss */
+  .with-sidebar-content .top .search-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 46px;
+  }
+  /* line 594, general.scss */
+  .with-sidebar-content .top .search-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 599, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons {
+    width: 25%;
+    display: inline-block;
+    float: right;
+  }
+  /* line 603, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button {
+    width: 33.3%;
+    height: 96px;
+    font-weight: bold;
+    border: none;
+    border-left: solid 1px #B1D7D8;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    float: left;
+  }
+  /* line 613, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+  /* line 624, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.server {
+    color: #6fc480;
+  }
+  /* line 626, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.server:before {
+    background-color: #6fc480;
+  }
+  /* line 630, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.client {
+    color: #8864ac;
+  }
+  /* line 632, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.client:before {
+    background-color: #8864ac;
+  }
+  /* line 636, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.db {
+    color: #61a7db;
+  }
+  /* line 638, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.db:before {
+    background-color: #61a7db;
+  }
+  /* line 642, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.active {
+    color: white;
+  }
+  /* line 644, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.active:before {
+    opacity: 1;
+  }
+  /* line 650, general.scss */
+  .with-sidebar-content .top.db {
+    border-bottom: solid 5px #61a7db;
+  }
+  /* line 653, general.scss */
+  .with-sidebar-content .top.client {
+    border-bottom: solid 5px #8864ac;
+  }
+  /* line 656, general.scss */
+  .with-sidebar-content .top.server {
+    border-bottom: solid 5px #6fc480;
+  }
+  /* line 659, general.scss */
+  .with-sidebar-content .top + .middle {
+    height: calc(100% - 46px - 50px);
+    margin-top: 96px;
+    padding: 0;
+  }
+  /* line 665, general.scss */
+  .with-sidebar-content .date-top {
+    position: fixed;
+    top: 96px;
+    position: fixed;
+    width: 100%;
+    height: 33px;
+    /*z-index: 1;*/
+    background: white;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+    width: calc(100% - $topWidth);
+    border-bottom: solid 1px #e4e4e4;
+    -webkit-box-shadow: 0px 0px 2px 1px #e4e4e4;
+    -moz-box-shadow: 0px 0px 2px 1px #e4e4e4;
+    box-shadow: 0px 0px 2px 1px #e4e4e4;
+    color: #515151;
+  }
+  /* line 684, general.scss */
+  .with-sidebar-content .date-top + .middle {
+    height: calc(100% - 46px - 50px - 33px);
+    margin-top: 129px;
+    padding: 0;
+  }
+  /* line 692, general.scss */
+  .with-sidebar-content .middle {
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    padding: 0;
+  }
+  /* line 699, general.scss */
+  .with-sidebar-content .middle.anchor {
+    margin-top: 192px;
+  }
+  /* line 702, general.scss */
+  .with-sidebar-content .middle.with-timeline {
+    height: calc(100% - 200px);
+  }
+  /* line 705, general.scss */
+  .with-sidebar-content .middle .middle-content {
+    padding: 20px;
+  }
+  /* line 707, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title {
+    background: #fff;
+    margin: 1rem 0;
+    padding: .5rem 0;
+    line-height: 1.2rem;
+    font-size: 1.2em;
+    font-family: Lato, appleLogo, sans-serif;
+    color: #555459;
+    font-weight: 900;
+    text-align: center;
+    cursor: default;
+    clear: both;
+    position: relative;
+  }
+  /* line 708, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title.date, .with-sidebar-content .middle .middle-content .group-title.session {
+    display: none;
+  }
+  /* line 712, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title.show {
+    display: block;
+  }
+  /* line 729, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title hr {
+    position: absolute;
+    border-top: 1px solid #DDD;
+    width: 100%;
+    top: 1.1rem;
+    margin: 0;
+  }
+  /* line 736, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title .group-title-label {
+    background: #fff;
+    padding: 0 1rem;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* line 746, general.scss */
+  .with-sidebar-content .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 84%;
+  }
+  /* line 750, general.scss */
+  .with-sidebar-content .bottom svg {
+    height: 90px;
+    font: 10px sans-serif;
+  }
+  /* line 754, general.scss */
+  .with-sidebar-content .bottom .area {
+    fill: steelblue;
+    clip-path: url(#clip);
+  }
+  /* line 758, general.scss */
+  .with-sidebar-content .bottom .axis path,
+  .with-sidebar-content .bottom .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  /* line 764, general.scss */
+  .with-sidebar-content .bottom .brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+  }
+
+  /* line 771, general.scss */
+  .last-update {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 5, general.scss */
+  #inventoryTab .table > thead > tr > td.active, #inventoryTab .table > tbody > tr > td.active, #inventoryTab .table > tfoot > tr > td.active, #inventoryTab .table > thead > tr > th.active, #inventoryTab .table > tbody > tr > th.active, #inventoryTab .table > tfoot > tr > th.active, #inventoryTab .table > thead > tr.active > td, #inventoryTab .table > tbody > tr.active > td, #inventoryTab .table > tfoot > tr.active > td, #inventoryTab .table > thead > tr.active > th, #inventoryTab .table > tbody > tr.active > th, #inventoryTab .table > tfoot > tr.active > th, #appPage .table > thead > tr > td.active, #appPage .table > tbody > tr > td.active, #appPage .table > tfoot > tr > td.active, #appPage .table > thead > tr > th.active, #appPage .table > tbody > tr > th.active, #appPage .table > tfoot > tr > th.active, #appPage .table > thead > tr.active > td, #appPage .table > tbody > tr.active > td, #appPage .table > tfoot > tr.active > td, #appPage .table > thead > tr.active > th, #appPage .table > tbody > tr.active > th, #appPage .table > tfoot > tr.active > th {
+    background-color: #D6CDE0 !important;
+  }
+  /* line 8, general.scss */
+  #inventoryTab h2, #appPage h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 6px !important;
+  }
+  /* line 18, general.scss */
+  #inventoryTab .popover, #appPage .popover {
+    width: initial;
+    height: initial;
+    z-index: 9999;
+  }
+  /* line 22, general.scss */
+  #inventoryTab .popover .popover-title, #appPage .popover .popover-title {
+    font-size: 20px;
+  }
+  /* line 25, general.scss */
+  #inventoryTab .popover .popover-inner, #appPage .popover .popover-inner {
+    position: relative;
+    height: calc(100% - 158px);
+    overflow: hidden;
+  }
+  /* line 29, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup, #appPage .popover .popover-inner .head-popup {
+    position: absolute;
+    top: 40px;
+  }
+  /* line 32, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .search-input, #appPage .popover .popover-inner .head-popup .search-input {
+    line-height: 32px;
+    width: 100%;
+    padding-left: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #E4E4E4;
+  }
+  /* line 40, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .ico-search, #appPage .popover .popover-inner .head-popup .ico-search {
+    color: #DEDEDE;
+    font-size: 18px;
+    position: absolute;
+    top: 44px;
+    left: 22px;
+  }
+  /* line 47, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup .filter-types, #appPage .popover .popover-inner .head-popup .filter-types {
+    margin-top: 1px;
+  }
+  /* line 50, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup button, #appPage .popover .popover-inner .head-popup button {
+    font-weight: 300;
+  }
+  /* line 52, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup button.is_active, #appPage .popover .popover-inner .head-popup button.is_active {
+    text-decoration: underline;
+    font-weight: 900;
+  }
+  /* line 58, general.scss */
+  #inventoryTab .popover .popover-inner .head-popup-enabled, #appPage .popover .popover-inner .head-popup-enabled {
+    top: 40px;
+  }
+  /* line 64, general.scss */
+  #inventoryTab .top-head, #appPage .top-head {
+    position: fixed;
+    width: calc(100% - $topWidth);
+    height: 66px;
+    top: 50px;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+  /* line 71, general.scss */
+  #inventoryTab .top-head .block, #appPage .top-head .block {
+    float: left;
+    padding: 0 24px;
+    height: 66px;
+  }
+  /* line 76, general.scss */
+  #inventoryTab .top-head .ico-search, #appPage .top-head .ico-search {
+    color: #DEDEDE;
+    font-size: 24px;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+  }
+  /* line 83, general.scss */
+  #inventoryTab .top-head input[type="text"], #appPage .top-head input[type="text"] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    border: none;
+    padding: 8px 12px 6px 62px;
+    color: #979797;
+  }
+  /* line 94, general.scss */
+  #inventoryTab .top-head input[aria-expanded="true"], #appPage .top-head input[aria-expanded="true"] {
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+  }
+  /* line 98, general.scss */
+  #inventoryTab .top-head .search-info, #appPage .top-head .search-info {
+    text-align: center;
+    font-size: 10px;
+  }
+  /* line 102, general.scss */
+  #inventoryTab .top-head .filter-button, #appPage .top-head .filter-button {
+    height: 42px;
+    line-height: 22px;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+  }
+  /* line 109, general.scss */
+  #inventoryTab .top-head .ico-filter, #appPage .top-head .ico-filter {
+    background: url("/apps/assets/img/ico_filter_white.png") no-repeat;
+    width: 21px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+  }
+  /* line 117, general.scss */
+  #inventoryTab .top-head .dropdown-menu, #appPage .top-head .dropdown-menu {
+    top: 30px;
+    left: 0px;
+    border: 1px solid #c6c6c6;
+    border-top: none;
+    border-radius: 0;
+    border-radius: 0 0 17px 17px;
+    overflow: hidden;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-top: -6px;
+    right: 24px;
+  }
+  /* line 130, general.scss */
+  #inventoryTab .top-head .dropdown-menu > .active > a,
+  #inventoryTab .top-head .dropdown-menu > .active > a:hover,
+  #inventoryTab .top-head .dropdown-menu > .active > a:focus, #appPage .top-head .dropdown-menu > .active > a,
+  #appPage .top-head .dropdown-menu > .active > a:hover,
+  #appPage .top-head .dropdown-menu > .active > a:focus {
+    background-color: #c6c6c6;
+  }
+  /* line 135, general.scss */
+  #inventoryTab .top-head .form-control, #appPage .top-head .form-control {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 140, general.scss */
+  #inventoryTab .top-head .form-control:focus, #appPage .top-head .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 144, general.scss */
+  #inventoryTab .top-head .glyphicon-refresh, #appPage .top-head .glyphicon-refresh {
+    position: absolute;
+    right: 34px;
+    top: 27px;
+  }
+  /* line 149, general.scss */
+  #inventoryTab .top-head .search-banner, #appPage .top-head .search-banner {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  /* line 155, general.scss */
+  #inventoryTab .top-head .search-banner span.glyphicon, #appPage .top-head .search-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 161, general.scss */
+  #inventoryTab .top-head .search-banner .title, #appPage .top-head .search-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 167, general.scss */
+  #inventoryTab .top-head .search-banner .block-input, #appPage .top-head .search-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 170, general.scss */
+  #inventoryTab .top-head .search-banner .ips, #appPage .top-head .search-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 176, general.scss */
+  #inventoryTab .top-head .search-banner .ips span, #appPage .top-head .search-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 181, general.scss */
+  #inventoryTab .top-head .filter-banner, #appPage .top-head .filter-banner {
+    background-color: #fff;
+    width: 33.333%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+    border-right: solid 1px #e4e4e4;
+    background: url("/apps/assets/img/ico_filter.png") no-repeat 24px 24px;
+  }
+  /* line 189, general.scss */
+  #inventoryTab .top-head .filter-banner input[type="text"], #appPage .top-head .filter-banner input[type="text"] {
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    border-radius: 17px;
+    border-bottom: none;
+    border: 1px solid #c6c6c6;
+    margin-top: 16px;
+  }
+  /* line 198, general.scss */
+  #inventoryTab .top-head .filter-banner input[aria-expanded="true"], #appPage .top-head .filter-banner input[aria-expanded="true"] {
+    border-bottom: none;
+    border-radius: 17px 17px 0 0;
+  }
+  /* line 202, general.scss */
+  #inventoryTab .top-head .filter-banner span.glyphicon, #appPage .top-head .filter-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 208, general.scss */
+  #inventoryTab .top-head .filter-banner .title, #appPage .top-head .filter-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 214, general.scss */
+  #inventoryTab .top-head .filter-banner .block-input, #appPage .top-head .filter-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 217, general.scss */
+  #inventoryTab .top-head .filter-banner .ips, #appPage .top-head .filter-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 223, general.scss */
+  #inventoryTab .top-head .filter-banner .ips span, #appPage .top-head .filter-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 228, general.scss */
+  #inventoryTab .top-head .group-banner, #appPage .top-head .group-banner {
+    background-color: #fff;
+    width: 33.333%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+    background: url("/apps/assets/img/ico_group.png") no-repeat 24px 24px;
+  }
+  /* line 235, general.scss */
+  #inventoryTab .top-head .group-banner span.glyphicon, #appPage .top-head .group-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 241, general.scss */
+  #inventoryTab .top-head .group-banner .title, #appPage .top-head .group-banner .title {
+    line-height: 66px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 247, general.scss */
+  #inventoryTab .top-head .group-banner .block-input, #appPage .top-head .group-banner .block-input {
+    margin-left: 32px;
+  }
+  /* line 250, general.scss */
+  #inventoryTab .top-head .group-banner .ips, #appPage .top-head .group-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 66px;
+  }
+  /* line 256, general.scss */
+  #inventoryTab .top-head .group-banner .ips span, #appPage .top-head .group-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 263, general.scss */
+  #inventoryTab .no-border, #appPage .no-border {
+    border: none;
+  }
+  /* line 266, general.scss */
+  #inventoryTab .table-menu, #appPage .table-menu {
+    color: #ee534f;
+    font-size: 22px;
+  }
+  /* line 270, general.scss */
+  #inventoryTab .table, #appPage .table {
+    margin-top: 36px;
+    overflow-x: auto;
+  }
+  /* line 274, general.scss */
+  #inventoryTab table, #appPage table {
+    background: none;
+  }
+  /* line 277, general.scss */
+  #inventoryTab table.table-inventory .platform, #appPage table.table-inventory .platform {
+    border: none !important;
+    margin-top: 8px;
+  }
+  /* line 282, general.scss */
+  #inventoryTab table.table-inventory thead tr, #appPage table.table-inventory thead tr {
+    text-transform: uppercase;
+    background: none;
+  }
+  /* line 288, general.scss */
+  #inventoryTab table.table-inventory tbody tr, #appPage table.table-inventory tbody tr {
+    /*text-transform: capitalize;*/
+    background-color: #FFFFFF;
+    height: 54px;
+  }
+  /* line 292, general.scss */
+  #inventoryTab table.table-inventory tbody tr td, #appPage table.table-inventory tbody tr td {
+    vertical-align: middle;
+    padding: 8px;
+    margin: 0;
+  }
+  /* line 293, general.scss */
+  #inventoryTab table.table-inventory tbody tr td.no-padding, #appPage table.table-inventory tbody tr td.no-padding {
+    padding: 0 !important;
+  }
+  /* line 299, general.scss */
+  #inventoryTab table.table-inventory tbody tr td img, #appPage table.table-inventory tbody tr td img {
+    height: 32px;
+  }
+  /* line 302, general.scss */
+  #inventoryTab table.table-inventory tbody tr td a, #appPage table.table-inventory tbody tr td a {
+    color: #613d8f;
+    font-weight: bold;
+  }
+  /* line 306, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span, #appPage table.table-inventory tbody tr td span {
+    font-size: 18px;
+  }
+  /* line 308, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.public-true, #appPage table.table-inventory tbody tr td span.public-true {
+    color: #53a33d;
+  }
+  /* line 311, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.public-false, #appPage table.table-inventory tbody tr td span.public-false {
+    color: #bababa;
+  }
+  /* line 314, general.scss */
+  #inventoryTab table.table-inventory tbody tr td span.plugins, #appPage table.table-inventory tbody tr td span.plugins {
+    color: #e4383d;
+    font-size: 14px;
+    padding-left: 8px;
+    cursor: pointer;
+  }
+
+  /* line 328, general.scss */
+  #appPage .list-header {
+    width: 100%;
+    margin-top: 0px;
+  }
+  /* line 332, general.scss */
+  #appPage .list-header .actions {
+    float: right;
+    margin-top: -52px;
+    height: 45px;
+    margin-right: 184px;
+    line-height: 45px;
+  }
+  /* line 338, general.scss */
+  #appPage .list-header .actions button {
+    border: none;
+    background: transparent;
+    color: #448aff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  /* line 344, general.scss */
+  #appPage .list-header .actions button:active {
+    box-shadow: none;
+  }
+  /* line 349, general.scss */
+  #appPage .list-header .add-stack {
+    float: right;
+    margin-top: -52px;
+    height: 45px;
+  }
+  /* line 353, general.scss */
+  #appPage .list-header .add-stack .btn {
+    width: 140px;
+    height: 44px;
+  }
+  /* line 356, general.scss */
+  #appPage .list-header .add-stack .btn.blue {
+    background-color: #448aff;
+    border: 1px solid #ffffff;
+  }
+  /* line 362, general.scss */
+  #appPage .list-header .title {
+    width: 100%;
+    margin-bottom: 7px;
+    height: 45px;
+  }
+  /* line 367, general.scss */
+  #appPage .list-header .title h3,
+  #appPage .list-header .title h2 {
+    line-height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 372, general.scss */
+  #appPage .list-header .title h3 strong,
+  #appPage .list-header .title h2 strong {
+    font-size: 16px;
+  }
+  /* line 406, general.scss */
+  #appPage .list-header .view-type .filter-block {
+    width: 86px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+  }
+  /* line 413, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon {
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+  /* line 418, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon i {
+    padding: 8px 10px 8px 10px;
+    margin-top: 4px;
+    border-radius: 0px;
+    color: #EE534F;
+  }
+  /* line 424, general.scss */
+  #appPage .list-header .view-type .filter-block .filter-icon i.active {
+    background-color: #EE534F;
+    color: #ffffff;
+  }
+  /* line 432, general.scss */
+  #appPage .header-list {
+    line-height: 48px;
+    margin-bottom: 2px;
+    background: #ffffff;
+    color: #7f7f7f;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  /* line 440, general.scss */
+  #appPage .cube.list {
+    width: 100%;
+    height: 71px;
+    padding: 9px;
+    margin: 0;
+    border-bottom: 1px solid #eaeaea;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  /* line 448, general.scss */
+  #appPage .cube.list.selected {
+    background-color: #f4fcf4;
+  }
+  /* line 451, general.scss */
+  #appPage .cube.list .platform {
+    border: none;
+    margin-top: -8px;
+  }
+  /* line 455, general.scss */
+  #appPage .cube.list .stack-name {
+    padding-top: 22px;
+    font-size: 15px;
+    color: #ee534f;
+    font-weight: 600;
+  }
+  /* line 461, general.scss */
+  #appPage .cube.list .created {
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  /* line 466, general.scss */
+  #appPage .cube.list .updates {
+    padding-top: 22px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  /* line 470, general.scss */
+  #appPage .cube.list .updates .red {
+    color: #ee534f;
+  }
+  /* line 473, general.scss */
+  #appPage .cube.list .updates .green {
+    color: #58b855;
+  }
+  /* line 476, general.scss */
+  #appPage .cube.list .updates .yellow {
+    color: #dcb90c;
+  }
+  /* line 481, general.scss */
+  #appPage .cube.list .links ul {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    margin-top: 12px;
+  }
+  /* line 486, general.scss */
+  #appPage .cube.list .links ul li {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #e7e7e7;
+    line-height: 40px;
+  }
+  /* line 494, general.scss */
+  #appPage .cube.list .links ul li:nth-last-child {
+    border: none;
+  }
+  /* line 497, general.scss */
+  #appPage .cube.list .links ul li a {
+    color: #7951a1;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* line 510, general.scss */
+  #appsPage .block-input input {
+    height: 40px;
+  }
+  /* line 514, general.scss */
+  #appsPage .group-banner {
+    margin-right: 108px;
+  }
+  /* line 517, general.scss */
+  #appsPage .above-input {
+    margin-right: 14px;
+  }
+  /* line 520, general.scss */
+  #appsPage .view-type {
+    width: 90px;
+    float: left;
+    margin-left: -94px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  /* line 527, general.scss */
+  #appsPage .view-type .filter-block {
+    float: right;
+    width: 86px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+  }
+  /* line 534, general.scss */
+  #appsPage .view-type .filter-block .filter-icon {
+    width: 50%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+  }
+  /* line 539, general.scss */
+  #appsPage .view-type .filter-block .filter-icon i {
+    padding: 8px 10px 8px 10px;
+    margin-top: 4px;
+    color: #ffffff;
+    opacity: 0.4;
+  }
+  /* line 547, general.scss */
+  #appsPage .view-type .filter-block .filter-icon i.active {
+    background-color: #ba413e;
+    opacity: 1;
+  }
+
+  /* line 555, general.scss */
+  .with-sidebar-content {
+    /* .height-date-top {
+        height: $dateTopHeight + $appsSearchPannel;
+    }*/
+  }
+  /* line 556, general.scss */
+  .with-sidebar-content .top {
+    position: fixed;
+    width: calc(100% - 0);
+    height: 46px;
+    top: 50px;
+    z-index: 1;
+  }
+  /* line 562, general.scss */
+  .with-sidebar-content .top .search-banner {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    border-bottom: solid 1px #e4e4e4;
+  }
+  /* line 569, general.scss */
+  .with-sidebar-content .top .search-banner input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px 45px;
+    font-style: italic;
+    border: none;
+  }
+  /* line 576, general.scss */
+  .with-sidebar-content .top .search-banner span.glyphicon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: silver;
+  }
+  /* line 582, general.scss */
+  .with-sidebar-content .top .search-banner .title {
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0 30px;
+  }
+  /* line 588, general.scss */
+  .with-sidebar-content .top .search-banner .ips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    line-height: 46px;
+  }
+  /* line 594, general.scss */
+  .with-sidebar-content .top .search-banner .ips span {
+    margin: 0 20px;
+  }
+  /* line 599, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons {
+    width: 25%;
+    display: inline-block;
+    float: right;
+  }
+  /* line 603, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button {
+    width: 33.3%;
+    height: 96px;
+    font-weight: bold;
+    border: none;
+    border-left: solid 1px #B1D7D8;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    float: left;
+  }
+  /* line 613, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+  /* line 624, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.server {
+    color: #6fc480;
+  }
+  /* line 626, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.server:before {
+    background-color: #6fc480;
+  }
+  /* line 630, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.client {
+    color: #8864ac;
+  }
+  /* line 632, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.client:before {
+    background-color: #8864ac;
+  }
+  /* line 636, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.db {
+    color: #61a7db;
+  }
+  /* line 638, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.db:before {
+    background-color: #61a7db;
+  }
+  /* line 642, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.active {
+    color: white;
+  }
+  /* line 644, general.scss */
+  .with-sidebar-content .top .wrapper-search-buttons button.active:before {
+    opacity: 1;
+  }
+  /* line 650, general.scss */
+  .with-sidebar-content .top.db {
+    border-bottom: solid 5px #61a7db;
+  }
+  /* line 653, general.scss */
+  .with-sidebar-content .top.client {
+    border-bottom: solid 5px #8864ac;
+  }
+  /* line 656, general.scss */
+  .with-sidebar-content .top.server {
+    border-bottom: solid 5px #6fc480;
+  }
+  /* line 659, general.scss */
+  .with-sidebar-content .top + .middle {
+    height: calc(100% - 46px - 50px);
+    margin-top: 96px;
+    padding: 0;
+  }
+  /* line 665, general.scss */
+  .with-sidebar-content .date-top {
+    position: fixed;
+    top: 96px;
+    position: fixed;
+    width: 100%;
+    height: 33px;
+    /*z-index: 1;*/
+    background: white;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+    width: calc(100% - $topWidth);
+    border-bottom: solid 1px #e4e4e4;
+    -webkit-box-shadow: 0px 0px 2px 1px #e4e4e4;
+    -moz-box-shadow: 0px 0px 2px 1px #e4e4e4;
+    box-shadow: 0px 0px 2px 1px #e4e4e4;
+    color: #515151;
+  }
+  /* line 684, general.scss */
+  .with-sidebar-content .date-top + .middle {
+    height: calc(100% - 46px - 50px - 33px);
+    margin-top: 129px;
+    padding: 0;
+  }
+  /* line 692, general.scss */
+  .with-sidebar-content .middle {
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    padding: 0;
+  }
+  /* line 699, general.scss */
+  .with-sidebar-content .middle.anchor {
+    margin-top: 192px;
+  }
+  /* line 702, general.scss */
+  .with-sidebar-content .middle.with-timeline {
+    height: calc(100% - 200px);
+  }
+  /* line 705, general.scss */
+  .with-sidebar-content .middle .middle-content {
+    padding: 20px;
+  }
+  /* line 707, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title {
+    background: #fff;
+    margin: 1rem 0;
+    padding: .5rem 0;
+    line-height: 1.2rem;
+    font-size: 1.2em;
+    font-family: Lato, appleLogo, sans-serif;
+    color: #555459;
+    font-weight: 900;
+    text-align: center;
+    cursor: default;
+    clear: both;
+    position: relative;
+  }
+  /* line 708, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title.date, .with-sidebar-content .middle .middle-content .group-title.session {
+    display: none;
+  }
+  /* line 712, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title.show {
+    display: block;
+  }
+  /* line 729, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title hr {
+    position: absolute;
+    border-top: 1px solid #DDD;
+    width: 100%;
+    top: 1.1rem;
+    margin: 0;
+  }
+  /* line 736, general.scss */
+  .with-sidebar-content .middle .middle-content .group-title .group-title-label {
+    background: #fff;
+    padding: 0 1rem;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+  }
+  /* line 746, general.scss */
+  .with-sidebar-content .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 84%;
+  }
+  /* line 750, general.scss */
+  .with-sidebar-content .bottom svg {
+    height: 90px;
+    font: 10px sans-serif;
+  }
+  /* line 754, general.scss */
+  .with-sidebar-content .bottom .area {
+    fill: steelblue;
+    clip-path: url(#clip);
+  }
+  /* line 758, general.scss */
+  .with-sidebar-content .bottom .axis path,
+  .with-sidebar-content .bottom .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  /* line 764, general.scss */
+  .with-sidebar-content .bottom .brush .extent {
+    stroke: #fff;
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+  }
+
+  /* line 771, general.scss */
+  .last-update {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-bottom: 5px;
+  }
+}

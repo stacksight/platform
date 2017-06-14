@@ -1,0 +1,10 @@
+{
+    "name": "apps",
+    "version": "0.0.1",
+    "dependencies": {
+        "angularjs-slider": "~2.5.0",
+        "Chart.js": "~1.0.2",
+        "angular-local-storage": "~0.2.5",
+        "angular-smart-table": "latest"
+    }
+}

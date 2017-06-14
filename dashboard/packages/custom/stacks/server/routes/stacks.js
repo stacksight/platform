@@ -1,0 +1,29 @@
+(function () {
+  'use strict';
+
+  /* jshint -W098 */
+  // The Package is past automatically as first parameter
+  module.exports = function (Stacks, app, auth, database) {
+
+    app.get('/api/stacks/example/anyone', function (req, res, next) {
+      res.send('Anyone can access this');
+    });
+
+    app.get('/api/stacks/example/auth', auth.requiresLogin, function (req, res, next) {
+      res.send('Only authenticated users can access this');
+    });
+
+    app.get('/api/stacks/example/admin', auth.requiresAdmin, function (req, res, next) {
+      res.send('Only users with Admin role can access this');
+    });
+
+    app.get('/api/stacks/example/render', function (req, res, next) {
+      Stacks.render('index', {
+        package: 'stacks'
+      }, function (err, html) {
+        //Rendering a view from the Package server/views
+        res.send(html);
+      });
+    });
+  };
+})();

@@ -1,0 +1,36 @@
+@import "mean-compass/sass/base";
+
+#collaboratorsTab {
+    .search,
+    .collaborators {
+        &.search {
+            & * {
+                background-image: none;
+            }
+            .title {
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 5px 0;
+            }
+            .ui-select-container {
+                width: 50%;
+                font-style: italic;
+                .select2-default {
+                    height: 50px;
+                    line-height: 50px;
+                    border: $border;
+                    border-radius: 0;
+                    .ui-select-toggle {
+                        display: none;
+                    }
+                }
+            }
+            input {
+                font-size: 1em;
+            }
+        }
+        background: white;
+        margin: 18px;
+        padding: 20px;
+    }
+}

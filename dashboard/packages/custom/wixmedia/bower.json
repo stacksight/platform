@@ -1,0 +1,9 @@
+{
+  "name": "wixmedia",
+  "version": "0.0.1",
+  "dependencies": {
+    "fontawesome": "~4.2.0",
+    "angular-file-upload": "~1.1.5",
+    "wixmedia": "~1.0.4"
+  }
+}

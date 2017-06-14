@@ -1,0 +1,38 @@
+<section id="notificationsTab" ng-controller="NotificationsController as vmn" ng-init="vmn.init()">
+    <div ng-repeat="type in vm.notificationsTypes">
+        <div ng-if="!type.subTypes">
+            <notification-settings data="type"></notification-settings>
+        </div>
+        <div ng-if="type.subTypes">
+            <div>
+                <div class="wrapper-notification-settings">
+                    <div class="disflex">
+                        <label class="wrapper-checkbox red sm">
+                            <input type="checkbox" name="cb-{{type.name}}" ng-model="global.user.profile.notifications[type.name].active" id="cb-{{type.name}}" ng-true-value="'true'" />
+                            <label for="cb-{{type.name}}"></label>
+                        </label>
+                        <label class="flex-grow-1 cb-space">{{type.label}}</label>
+                        <label>{{type.description}}</label>
+                        <label ng-click="type.edit=!type.edit" class="link grey">
+                            <a href="" ng-show="!type.edit">Edit</a>
+                            <a href="" ng-show="type.edit">Close</a>
+                        </label>
+                    </div>
+                    <div class="line"></div>
+                    <div ng-repeat="subtype in type.subTypes" ng-show="type.edit" class="subtype">
+                        <notification-settings data="subtype"></notification-settings>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-item-1">
+        <button class="btn" ng-click="vm.update(true)">Update Profile</button>
+    </div>
+    <div>
+        <h3>Notifications List</h3>
+        <ul>
+            <li ng-repeat="notification in vmn.notifications"><pre>{{notification | json}}</pre></li>
+        </ul>
+    </div>
+</section>

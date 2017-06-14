@@ -1,0 +1,10 @@
+<div id="appPage" ng-controller="AppsController as vm" ng-init="vm.findOne(); vm.find();" class="full-height">
+    <side-bar data="vm.sideBarData">
+        <label>
+            <select ng-options="app as app.name for app in vm.apps track by app._id" ng-model="vm.app1" ng-change="vm.moveToAppPage(vm.app1, 'dashboard.general');"></select>
+        </label>
+    </side-bar>
+    <div class="tab-content full-height">
+        <div ui-view class="full-height with-sidebar-content"></div>
+    </div>
+</div>

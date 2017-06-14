@@ -1,0 +1,96 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 6, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar {
+  height: 58px;
+  margin-bottom: 12px;
+  background: #FFFFFF;
+}
+/* line 10, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* line 14, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li {
+  float: left;
+  width: 25%;
+  border-right: 1px solid #eaeaea;
+  text-align: center;
+  line-height: 58px;
+  color: #80C06A;
+  font-size: 18px;
+}
+/* line 22, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li sup {
+  font-size: 12px;
+}
+/* line 25, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li.red {
+  color: #EE534F;
+}
+/* line 29, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li span.ico {
+  width: 18px;
+  height: 18px;
+  padding-right: 22px;
+}
+/* line 33, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li span.ico.ico-lock {
+  width: 13px;
+  height: 17px;
+  background: url("/apps/assets/img/ico/health-icon-lock.png") no-repeat 0px 3px;
+}
+/* line 38, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li span.ico.ico-timer {
+  width: 15px;
+  height: 17px;
+  background: url("/apps/assets/img/ico/health-icon-timer.png") no-repeat 0px 3px;
+}
+/* line 43, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li span.ico.ico-pulse {
+  width: 17px;
+  height: 14px;
+  background: url("/apps/assets/img/ico/health-icon-pulse.png") no-repeat 0px 5px;
+  margin-top: 3px;
+}
+/* line 49, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li span.ico.ico-warning {
+  width: 17px;
+  height: 17px;
+  background: url("/apps/assets/img/ico/health-icon-warning.png") no-repeat 0px 3px;
+}
+/* line 56, dashboard.scss */
+#dashboarStacksTab #stack-event-list .counter-bar ul li:last-child {
+  border-right: none;
+}

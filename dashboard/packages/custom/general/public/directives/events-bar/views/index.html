@@ -1,0 +1,50 @@
+<!-- ########################################################################################### -->
+<!-- ==================================== USER ================================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='user-template'>
+    <a href="{{::event._source.user.url}}" class="username">{{::event._source.name || event._source.user.name}}</a> has {{::event._source.action}}
+    <div ng-if="::event._source.action === 'created'" class="component">
+        <img ng-src="{{::event._source.user.image}}">
+        <div>{{::event._source.user.name}}</div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== FILE ================================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='file-template'>
+    <div ng-if="::event._source.user.name"><a href="{{::event._source.user.url}}" class="username">{{::event._source.user.name}}</a> {{::event._source.action}} the <a class="name" ng-style="{'color': event._source.icon_col || design[event._source.subtype].icon_col || design[event._source.type].icon_col}" ng-href="{{::event._source.url}}"> &#8220;{{::event._source.name}}&#8220;</a><span> {{::event._source.subtype || event._source.type}}</span></div>
+    <div ng-if="::!event._source.user.name"><span class="text-capitalize"> {{::event._source.subtype || event._source.type}}</span><a class="name" ng-style="{'color': event._source.icon_col || design[event._source.subtype].icon_col || design[event._source.type].icon_col}" ng-href="{{::event._source.url}}"> &#8220;{{::event._source.name}}&#8220;</a> was {{::event._source.action}}</div>
+    <div class="component" ng-show="::event._source.subtype === 'image'"><img ng-src="{{::event._source.data.url}}"></div>
+    <div><span>{{::event._source.data.size | bytes}}</span> {{::event._source.data.type}}</div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== ICON TEMPLATE ========================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='icon-template'>
+    <i class="icon fa {{::event._source.icon || design[event._source.subtype].icon || design[event._source.type].icon}}" ng-style="{'background-color': event._source.icon_col || design[event._source.subtype].icon_col || design[event._source.type].icon_col}"></i>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== TITLE ========================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='e-title'>
+    <span class="type">{{::event._source.subtype || event._source.type}}</span>
+    <span class="e-time">{{::event._source.created | date: 'HH:mm a'}}</span>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== DESC TEMPLATE ========================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='desc-template'>
+    <div ng-bind-html="::event._source.desc"></div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== WITH USER TEMPLATE ====================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='with-user-template'>
+    <a href="{{::event._source.user.url}}" class="username">{{::event._source.user.name}}</a> {{::event._source.action}} the <a class="name" ng-style="{'color': event._source.icon_col || design[event._source.subtype].icon_col || design[event._source.type].icon_col}" ng-href="{{::event._source.url}}"> &#8220;{{::event._source.name}}&#8220;</a><span> {{::event._source.subtype || event._source.type}}</span>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== WITHOUT USER TEMPLATE ================================-->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='without-user-template'>
+    <span class="text-capitalize"> {{::event._source.subtype || event._source.type}}</span><a class="name" ng-style="{'color': event._source.icon_col || design[event._source.subtype].icon_col || design[event._source.type].icon_col}" ng-href="{{::event._source.url}}"> &#8220;{{::event._source.name}}&#8220;</a> was {{::event._source.action}}
+</script>

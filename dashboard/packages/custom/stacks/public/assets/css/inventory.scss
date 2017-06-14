@@ -1,0 +1,41 @@
+@import "mean-compass/sass/base";
+
+#inventoryTab{
+  #stacks-list{
+    .actions{
+      margin-right: 0px;
+      button{
+        line-height: 0;
+      }
+    }
+    .header-list{
+      padding: 9px;
+      line-height: 22px !important;
+      .cell-container{
+        display: table;
+        height: 44px;
+        padding: 9px;
+        .title{
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      .stack-check{
+        padding-left: 11px;
+        max-width: 42px;
+      }
+    }
+  }
+  .capitalize{
+    text-transform: capitalize;
+  }
+  .search-banner{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 8px;
+    position: relative;
+    input{
+      border-radius: 0;
+    }
+  }
+}

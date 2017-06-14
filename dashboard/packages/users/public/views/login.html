@@ -1,0 +1,42 @@
+<div data-ng-controller="LoginCtrl">
+    <div class="alert alert-danger animated fadeIn" ng-show="loginerror">{{loginerror}}</div>
+    <h2>Login</h2>
+    <form id="login_form" name="loginForm" ng-submit="login(loginForm.$valid)" novalidate>
+        <div class="input-wrapper">
+            <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="user.email">
+            <div class="error_message" ng-show="loginForm.$submitted && loginForm.email.$invalid">Invalid email address</div>
+            <span class="pic email"></span>
+        </div>
+        <div class="input-wrapper">
+            <input required id="password_block" name="password" type="{{input.type}}" placeholder="{{input.placeholder}}" ng-model="user.password" ng-minlength="8" ng-maxlength="20">
+            <div class="error_message" ng-show="loginForm.$submitted && loginForm.password.$invalid">
+                <span ng-show="loginForm.password.$error.required">Invalid password</span>
+                <span ng-show="loginForm.password.$error.maxlength || loginForm.password.$error.minlength">Password range: 8-20 characters</span>
+            </div>
+            <span class="pic password {{input.iconClass}}" ng-click="togglePasswordVisible()">
+                <div class="hide_text_password">
+                  {{input.tooltipText}}
+                </div>
+            </span>
+        </div>
+        <div class="forgot_password">
+            <a ui-sref='auth.forgot-password'>Forgot your password?</a>
+        </div>
+        <div class="button_login">
+            <button type="submit" class="submit_button">Login</button>
+        </div>
+        <div class="toggle-action">
+            <p>Don't have an account?</p>
+            <a ui-sref='auth.register'>Sign up</a>
+        </div>
+        <!--<div class="login-w-soc">
+            <div class="title">Or login with:</div>
+             <ul class="soc-networks">
+                 <li><a href="/auth/facebook" class="facebook"></a></li>
+                 <li><a href="/auth/google" class="google"></a></li>
+                 <li><a href="/auth/linkedin" class="linkedin"></a></li>
+                 <li><a href="#" class="github"></a></li>
+             </ul>
+        </div>-->
+    </form>
+</div>

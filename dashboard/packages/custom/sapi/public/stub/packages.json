@@ -1,0 +1,13 @@
+[
+  {
+    "description": "Some description of showcase package 2",
+    "name": "showcase",
+    "version": "0.0.1",
+    "authors": [
+      "1234412312322"
+    ],
+    "keywords": [
+      ""
+    ]
+  }
+]

@@ -1,0 +1,172 @@
+<!-- ########################################################################################### -->
+<!-- ==================================== PLATFORM ============================================= -->
+<!-- ########################################################################################### -->
+<div class="settings inside-content" ng-init="vmi.findGlobalIntegration();">
+    <div class="integration-block">
+        <div class="service-item">
+            <div ng-include="vmi.$stateParams.service"></div>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id='platform'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Platform settings</span>
+        </div>
+        <div class="description">
+            <div>Your platform cmd is:</div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmip.cmd"><i class="fa fa-clone"></i>copy</button>
+            </div>
+            <pre>{{vmip.cmd}}</pre>
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== GITHUB ============================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='github'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Github settings</span>
+        </div>
+        <div class="description">
+            <div>
+                <span>Go to <your-project> -> settings -> webhooks & services</span>
+                <span>click on Add Webhooka and add your webhook URL</span>
+            </div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmigh.cmd"><i class="fa fa-clone"></i>copy</button>
+            </div>
+            <pre>{{vmigh.cmd}}</pre>
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BITBUCKET =========================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='bitbucket'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Bitbucket settings</span>
+        </div>
+        <div class="description">
+            <div>
+                <span>Go to <your-project> -> settings -> webhooks & services</span>
+                <span>click on Add Webhooka and add your webhook URL</span>
+            </div>
+            <div class="text-right">
+                <button class="btn trans border copy-code" clipboard text="vmibb.cmd"><i class="fa fa-clone"></i>copy</button>
+                <br>
+            </div>
+            <pre>{{vmibb.cmd}}</pre>
+            <!-- <pre>https://api.stacksight.io/v0.1/integrations/bitbucket?token={{global.user.profile.token}}&stackId={{stack._id}}</pre> -->
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BACKUPS ============================================= -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='backups'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Custom Backup settings</span>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Your backups URL is: https://api.stacksight.io/v0.1/integrations/backups?token={{global.user.profile.token}}&stackId={{stack._id}}
+                </li>
+                <li>Send the data you would like Stackbot to say using HTTP POST.</li>
+            </ul>
+            <h3>Example</h3>
+            <div>Put your data in a file, say body.json and then use </div>
+            <pre>curl -H "Content-Type: application/json" --data @body.json  $'https://api.stacksight.io/v0.1/integrations/backups?token={{global.user.profile.token}}&stackId={{stack._id}}'
+                        </pre>
+            <div>
+                <pre>{{ vmi.bodyJson | json:4 }}</pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== BACKUP AND MIGRATE =================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='backup_migrate'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Backup and Migrate settings</span>
+        </div>
+        <div class="description">
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== UPDRAFTPLUS =================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='updraftplus'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">Updraftplus settings</span>
+        </div>
+        <div class="description">
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== ACCESSIBILITY =================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='accessibility_pa11y'>
+    <div class="col-xs-8">
+        <span class="m-n icon"><i ng-class="vmi.currentGlobalIntegration.icon"></i></span>
+        <div class="info">
+            <span class="title">accessibility settings</span>
+        </div>
+        <div class="description">
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4 text-right">
+        <div ng-include="'enable-button'"></div>
+    </div>
+</script>
+<!-- ########################################################################################### -->
+<!-- ==================================== ENABLE BUTTON ======================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id='enable-button'>
+    <button ng-click="vmi.currentIntegration.enable = !vmi.currentIntegration.enable; vmi.update();" class="btn btn-rounded" ng-class="(vmi.currentIntegration.enable) ? 'red' : 'green'">
+        <span ng-show="!vmi.currentIntegration.enable">enable</span>
+        <span ng-show="vmi.currentIntegration.enable">disable</span>
+    </button>
+</script>

@@ -1,0 +1,39 @@
+<div id="collaboratorsTab" ng-controller="CollaboratorsController as vmc" ng-show="vm.app" class="full-height">
+    <div class="middle">
+        <div class="search" ng-if="vm.owner || vm.adminCollaborator">
+            <div class="title">Email</div>
+            <form name="collaboratorEmail" ng-submit="vmc.add(collaboratorEmail.$valid);">
+                <div class="form-item input-include-element">
+                    <input name="email" type="email" class="input-text" ng-model="vmc.collaborator.email" id="email" placeholder="Email" required>
+                   <!--  <select name="permissions" id="permissions" ng-options="permission for permission in vmc.permissions" ng-model="vmc.collaborator.permissions[0]"></select> -->
+                    <button class="btn red pull-right" ng-disabled="vmc.disableInvitation"> + Add Collaborator</button>
+                </div>
+            </form>
+        </div>
+        <div class="collaborators">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Permission</th>
+                        <th ng-if="vm.app.author === vmc.global.user._id">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="collaborator in vm.app.collaborators">
+                        <td>{{collaborator.email}}</td>
+                        <td>{{collaborator.status}}</td>
+                        <td>
+                            <div ng-if="collaborator.status !== 'owner'">
+                                <select ng-if="vm.owner" name="permissions" id="permissions" ng-options="permission for permission in vmc.permissions" ng-model="collaborator.permissions[0]" ng-change="vmc.update(collaborator)"></select>
+                                <span ng-if="!vm.owner">{{collaborator.permissions[0]}}</span>
+                            </div>
+                        </td>
+                        <td ng-if="vm.app.author === vmc.global.user._id"><span class="link" ng-if="collaborator.status !== 'owner'"><a href="" ng-click="vmc.remove(collaborator);">Remove</a></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

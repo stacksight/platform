@@ -1,0 +1,23 @@
+@import "mean-compass/sass/base";
+
+#healthTab{
+  margin-top: 40px;
+}
+
+
+.stack-health-type{
+  .header{
+    background: $white !important;
+  }
+  .tab-content{
+    background: $white !important;
+  }
+  .with-sidebar-content{
+    .middle{
+      margin-top: 0 !important;
+      .middle-content {
+        padding: 0 20px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h3 class="modal-title">SEO settings</h3>
+</div>
+<div class="modal-body">
+    <form role="form">
+        <div class="form-group">
+            <label >Image Alt</label>
+            <input ng-model="form.alt" type="input" class="form-control" placeholder="My awesome image">
+        </div>
+        <div class="form-group">
+            <label >Image Title</label>
+            <input ng-model="form.title" type="input" class="form-control" placeholder="Sample title">
+        </div>
+        <div class="form-group">
+            <label >Image Description</label>
+            <input ng-model="form.description" type="input" class="form-control" placeholder="Sample description">
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="$dismiss()">Cancel</button>
+</div>

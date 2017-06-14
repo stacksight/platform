@@ -1,0 +1,57 @@
+<div ng-show="(_.isEmpty(health_object.widgets) && health_object.widgets) ||  (_.isEmpty(health_object.data) && health_object.data)">
+    <div class="blured">
+        <div ng-include="'subscribe'"></div>
+        <div class="no-plugin"></div>
+    </div>
+    <div ng-switch="health_object.category">
+        <div ng-switch-when="backups">
+            <div class="clearfix" ng-include="'stack/views/popups/popup_module.html'"></div>
+        </div>
+        <div ng-switch-when="accessibility">
+            <div class="clearfix" ng-include="'stack/views/popups/popup_nomodule.html'"></div>
+        </div>
+        <div ng-switch-when="seo">
+            <div class="clearfix" ng-include="'stack/views/popups/popup_module.html'"></div>
+        </div>
+        <div ng-switch-when="performance">
+            <div class="clearfix" ng-include="'stack/views/popups/popup_nomodule.html'"></div>
+        </div>
+        <div ng-switch-when="security">
+            <div class="clearfix" ng-include="'stack/views/popups/popup_module.html'"></div>
+        </div>
+        <div ng-switch-when="availability">
+            <div class="clearfix" ng-include="'stack/views/popups/popup_nomodule.html'"></div>
+        </div>
+    </div>
+</div>
+<!-- {{health_object}} -->
+<div class="data-box clearfix" ng-init="health_object = vmh.health_objects[vmh.$stateParams.type];">
+    <div ng-repeat="widgets in health_object.widgets">
+        <div ng-include="'subscribe'"></div>
+        <div class="col-xs-12 text-left main-title-tabs m-t-sm m-b-lg">
+            <div class="col-md-8">
+                <h4>{{health_object.title}}</h4>
+                <p ng-if="health_object.created"><span>Last update: {{health_object.createdAt || health_object.created | date:'dd MMM yyyy, HH:mm'}}</span></p>
+                <span>{{health_object.desc}}</span>
+            </div>
+            <div class="col-md-4">
+                <!--<div class="m-t-sm m-l-none btn-group pull-right" uib-dropdown is-open="status.isopen" id="export-button">-->
+                    <!--<button type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">-->
+                        <!--Export report <span class="caret"></span>-->
+                    <!--</button>-->
+                    <!--<ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">-->
+                        <!--<li role="menuitem" ng-repeat="export_item in export_items"><a href="#">{{export_item}}</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="data-box" ng-repeat="widget in widgets">
+            <div class="" ng-class="widget.class">
+                <div class="clearfix" ng-include="templates[widget.nativedata.type]"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="!health_object.widgets">
+    <div class="clearfix" ng-include="templates[health_object.category]"></div>
+</div>

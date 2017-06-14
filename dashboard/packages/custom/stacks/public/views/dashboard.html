@@ -1,0 +1,271 @@
+<div id="stacks-dashboard">
+    <div id="stacks-list">
+        <div class="top-header list-header">
+            <div class="title">
+                <companies-drop-down selected-stacks="vm.selected_stacks_count" id="hint-drop-down-companies-show"></companies-drop-down>
+            </div>
+            <div class="actions">
+                <button ng-click="">
+                    <span>Update Stacks</span>
+                </button>
+                <button uib-popover-template="'stacksAction'" class="btn-group dropdown" popover-placement="bottom"><i class="fa fa-caret-down"></i></button>
+            </div>
+            <div class="add-stack">
+                <button class="btn btn-default button-add-stack blue" ng-click="vm.openModal()" id="hint-add-stack-button">
+                    <i class="fa fa-plus"></i> Add stack
+                </button>
+            </div>
+
+            <div class="search-banner">
+                <div class="input">
+                    <div class="tags-block">
+                        <ul>
+                            <li ng-repeat="val in vm.sortedTags">
+                                {{val.value}}
+                                <i class="fa fa-times" ng-click="vm.filterByTag({tag: val.index, value: val.value}, stack.company)"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div angucomplete-alt auto-focus
+                         id="search-with-tag-input"
+                         ng-model="subSearch"
+                         pause="300"
+                         selected-object="searchAction"
+                         local-data="search_tags"
+                         default-en-action="searchWithText"
+                         local-search-async="localSearch"
+                         title-field="value"
+                         image-field="pic"
+                         description-field="desc"
+                         minlength="1"
+                         input-class="tag-input"
+                         match-class="highlight"
+                         placeholder="Search Stacks"
+                    ></div>
+                    <!--<input type="text" ng-model="vm.search.name" placeholder="Search Stacks" auto-focus/>-->
+                </div>
+                <div class="cell-container col-sm-1 border stack-check" ng-if="vm.stacks.length > 0">
+                    <label class="wrapper-checkbox red sm">
+                        <input type="checkbox" name="cb-select-all-stacks-dashboard" id="cb-select-all-stacks-dashboard" ng-click="vm.selectAllStacks()"/>
+                        <label for="cb-select-all-stacks-dashboard"></label>
+                    </label>
+                </div>
+                <div class="clear"></div>
+                <!--<button class="advanced-search"><span class="ico-filter"></span> Advanced search</button>-->
+            </div>
+        </div>
+        <div class="middle-content">
+            <div class="col-xs-12 bordered header-list" ng-if="(vm.stacks && vm.stacks.length > 0) && results.length > 0">
+                <div class="cell-container col-sm-1 border ">
+                </div>
+                <div class="cell-container col-sm-3 border">
+                    <span class="title ">Stack</span>
+                </div>
+                <div class="cell-container col-sm-3 border pointer" ng-click="vm.sortByField('score')">
+                    <i class="fa" ng-if="vm.sort_type != false && vm.sort_field =='score'" ng-class="(vm.sort_type == 'asc') ? 'fa-caret-up' : 'fa-caret-down'"></i> <span class="title ">Health</span>
+                </div>
+                <div class="cell-container col-sm-5 border">
+                    <span class="title ">Insights</span>
+                </div>
+            </div>
+            <div class="cube list cursor-pointer" ng-repeat="stack in vm.stacks | filter:vm.search:strict | orderBy:orderStackByCriticalUpdates as results track by stack._id"
+                 ng-init="stack.edit=false; stack.origName=stack.name; vm.stacks = vm.stacks "
+                 ng-class="(vm.selectState == stack._id || vm._.indexOf(selected_stacks_array, stack._id) != -1) ? 'selected' : '' "
+                <div>
+                    <div class="archived-layer" ng-if="stack.archived"></div>
+                    <div ng-click="vm.selectStack(stack)"
+                            ng-dblclick="vm.moveToStack(stack)"
+                            ng-class="stack.archived ? 'archived' : ''">
+                        <div class="cell-container col-sm-1 border stack-check">
+                            <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="cb-{{::stack._id}}" ng-model="vm.selected_stacks[stack._id]" id="cb-{{::stack._id}}" ng-true-value="true" ng-click="vm.checkStack(stack)"/>
+                                <label for="cb-{{::stack._id}}"></label>
+                            </label>
+                        </div>
+                        <div class="cell-container col-sm-3 border stack-container">
+                            <div class="title">
+                                <span class="platform {{::stack.platform}} "></span>
+                                <span class="stack-name" ng-click="vm.moveToStack(stack)">{{::stack.name}}</span>
+                            </div>
+                            <div class="tags" ng-if="stack.tags && stack.tags.length > 0">
+                                <ul>
+                                    <li ng-repeat="tag in stack.tags" popover-append-to-body="true"
+                                        uib-popover-template="vm.tagsPopover.templateUrl"
+                                        ng-click="vm.setPopoverTags(stack.tags)">
+                                        {{::tag.value}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cell-container col-sm-3 border stack-health">
+                            <div ng-if="stack.health_score.security">
+                                <div class="col-sm-4 ico-block no-padding"
+                                     uib-popover="Security score"  popover-placement="bottom" popover-trigger="mouseenter"
+                                     ng-class="stack.health_score.security <= 60 ? 'red' : stack.health_score.security > 60 && stack.health_score.security <= 80 ? 'orange' : 'green'">
+                                    <span class="ico lock-ico"></span>
+                                    <span class="ico-value timer-ico-value">{{::stack.health_score.security}}</span>
+                                </div>
+                            </div>
+                            <div ng-if="!stack.health_score.security">
+                                <div class="col-sm-4 ico-block no-padding gray" ng-click="vm.goOut()"
+                                     uib-popover="Security score"  popover-placement="bottom" popover-trigger="mouseenter">
+                                    <span class="ico lock-ico"></span>
+                                    <span class="ico-value timer-ico-value">?</span>
+                                </div>
+                            </div>
+                            <div ng-if="stack.health_score.performance">
+                                <div class="col-sm-4 ico-block no-padding"
+                                     uib-popover="Performance score"  popover-placement="bottom" popover-trigger="mouseenter"
+                                     ng-class="stack.health_score.performance <= 60 ? 'red' : stack.health_score.performance > 60 && stack.health_score.performance <= 80 ? 'orange' : 'green'">
+                                    <span class="ico timer-ico"></span>
+                                    <span class="ico-value timer-ico-value">{{::stack.health_score.performance}}</span>
+                                </div>
+                            </div>
+                            <div ng-if="!stack.health_score.performance">
+                                <div class="col-sm-4 ico-block no-padding gray" ng-click="vm.goOut()"
+                                     uib-popover="Performance score"  popover-placement="bottom" popover-trigger="mouseenter">
+                                    <span class="ico timer-ico"></span>
+                                    <span class="ico-value timer-ico-value">?</span>
+                                </div>
+                            </div>
+                            <div ng-if="stack.health_score.accessibility">
+                                <div class="col-sm-4 ico-block no-padding"
+                                     uib-popover="Accessibility score"  popover-placement="bottom" popover-trigger="mouseenter"
+                                     ng-class="stack.health_score.accessibility <= 60 ? 'red' : stack.health_score.accessibility > 60 && stack.health_score.accessibility <= 80 ? 'orange' : 'green'">
+                                    <span class="ico pulse-ico"></span>
+                                    <span class="ico-value timer-ico-value">{{::stack.health_score.accessibility}}</span>
+                                </div>
+                            </div>
+                            <div ng-if="!stack.health_score.accessibility">
+                                <div class="col-sm-4 ico-block no-padding gray" ng-click="vm.goOut()"
+                                     uib-popover="Accessibility score"  popover-placement="bottom" popover-trigger="mouseenter">
+                                    <span class="ico pulse-ico"></span>
+                                    <span class="ico-value timer-ico-value">?</span>
+                                </div>
+                            </div>
+                            <!--<div class="col-sm-4 ico-block no-padding">-->
+                            <!--<span class="ico lock-ico"></span>-->
+                            <!--<span class="ico-value lock-ico-value green">85</span>-->
+                            <!--</div>-->
+                            <!--<div class="col-sm-4 ico-block no-padding">-->
+                            <!--<span class="ico timer-ico"></span>-->
+                            <!--<span class="ico-value timer-ico-value green">85</span>-->
+                            <!--</div>-->
+                            <!--<div class="col-sm-4 ico-block no-padding">-->
+                            <!--<span class="ico pulse-ico"></span>-->
+                            <!--<span class="ico-value pulse-ico-value red">45 <sup class="percent">%</sup></span>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="cell-container col-sm-5 border updates stack-insights no-padding">
+                            <div class="col-sm-6 astable">
+                                <div ng-if="stack.health_score.update" class="no-padding vertical">
+                                    <div class="no-padding">
+                        <span>
+                            <div ng-if="stack.health_score.update.critical" class="red">{{::stack.health_score.update.critical}} critical updates required</div>
+                            <div ng-if="stack.health_score.update.available" class="">{{::stack.health_score.update.available}} updates available</div>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 astable">
+                                <div class="vertical">
+                                    <button class="additional-button" ng-click="vm.moveToStackUpdates(stack)" ng-if="vm._.findLastIndex(stack.integrations, {type: 'update'}) != -1">View updates</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cube" ng-if="(vm.stacks && vm.stacks.length > 0) && (!results || results.length == 0)">
+                <div class="no-stacks">
+                    <div>
+                        <img src="/stacks/assets/img/transparent_logo.png" alt="">
+                    </div>
+                    <h3>No results found.</h3>
+                </div>
+            </div>
+            <div class="cube" ng-if="!vm.stacks || vm.stacks.length == 0">
+                <div class="no-stacks">
+                    <div>
+                        <img src="/stacks/assets/img/transparent_logo.png" alt="">
+                    </div>
+                    <h3>You haven't created any stacks yet.</h3>
+                    <span class="desc">Let's get started with stacksight.io Create your first stack!</span>
+                    <div>
+                        <button class="btn btn-default button-add-stack blue" ng-click="vm.openModal()"><i class="fa fa-plus"></i> Add stack</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <events-bar ng-ids="selected_stacks_array" ng-transfer-ids="transfer_stacks_array" ng-stacks-ready="vm.readyToShow"></events-bar>
+</div>
+
+<script type="text/ng-template" id='stack-popover-tags'>
+    <div class="tags" ng-if="vm.tagsPopover.content.length > 0">
+        <ul>
+            <li ng-repeat="tag in vm.tagsPopover.content" ng-click="vm.filterByTag(tag, stack.company)">
+                {{::tag.value}}
+            </li>
+        </ul>
+    </div>
+</script>
+
+<script type="text/ng-template" id="addStackModal">
+    <div id="appPage">
+        <div class="modal-body view-app" id="modalWindow">
+            <span class="close-button" ng-click="vmodal.closeModal()"></span>
+            <div class="middle-content">
+                <div class="wrapper-cubes">
+                    <div class="add-cube-class">
+                        <div class="cube add-stack">
+                            <h3>Add a New Stack</h3>
+                            <div class="">
+                                <div class="form-side">
+                                    <form name="addStack" role="form" novalidate class="form-horizontal">
+                                        <div class="form-item-1">
+                                            <label class="label">Stack URL</label>
+                                            <input name="host" type="text" class="input-text ng-pristine ng-untouched ng-valid" ng-model="vm.stack.host" id="add-stasck-host" required placeholder="http://" http-prefix>
+                                            <span class="desc">what should we call this stack on stacksight</span>
+                                        </div>
+                                        <div class="form-item-1">
+                                            <label class="label">Stack Name</label>
+                                            <input name="name" type="text" class="input-text ng-pristine ng-untouched ng-valid" ng-model="vm.stack.name" id="add-stasck-name" placeholder="Stack name">
+                                            <span class="desc">what is the stack’s URL</span>
+                                        </div>
+                                        <div class="form-item-1">
+                                            <label class="label">Team</label>
+                                            <select name="team" type="text" class="input-text ng-pristine ng-untouched ng-valid" ng-model="vm.stack.company" id="add-stasck-team">
+                                                <option ng-value="company.id" ng-repeat="company in vm.user.companies">{{::company.name}}</option>
+                                            </select>
+                                            <span class="desc">What team should this stack be associated with. <br>Select team may be billed for an this new stack.</span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="stacks-type-side">
+                                    <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && value.enable"
+                                         class="platform platform_checked cursor-pointer"
+                                         ng-class="(vm.stack.platform == key) ? 'selected '+key : key"
+                                         ng-click="vm.addSelectStack(key)">
+                                        <span class="checked"></span>
+                                    </div>
+                                    <div ng-repeat="(key, value) in vm.platforms" ng-if="value.show && !value.enable" class="platform platform_checked disable" ng-class="key">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-xs-6 left">
+                    <button ng-click="vm.addStack(vmodal.closeModal)" class="add-button"><i class="fa fa-plus"></i> Add</button>
+                </div>
+                <div class="col-xs-6 right">
+                    <button ng-click="vmodal.closeModal();" class="close-button-footer">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

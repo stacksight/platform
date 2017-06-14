@@ -1,0 +1,86 @@
+<div ng-controller="StackController as vms" ng-init="findOne();" class="full-height">
+  <side-bar data="sideBarData"></side-bar>
+  <div class="tab-content full-height">
+    <div class="header">
+      <div class="drop-list-of-stacks" ng-if="vms.showStacksDropdows">
+        <input type="search-stacks" placeholder="Search stacks" ng-model="vms.query" />
+        <ul ng-if="vms.allStacks.length > 0">
+          <li ng-repeat="stack_inside in vms.allStacks | filter:vms.filterStackList" ng-click="vms.moveToStack(stack_inside)">
+            <div class="left">
+              <span class="stack-logo platform" ng-class="stack_inside.platform"></span>
+              <h3 ng-if="stack_inside.data.title">{{stack_inside.data.title}}</h3>
+              <h3 ng-if="!stack_inside.data.title">{{stack_inside.name}}</h3>
+              <span class="url">{{stack_inside.host}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span class="stack-logo platform" ng-class="stack.platform"></span>
+      <div class="info-head" ng-class="(vms.showStacksDropdows) ? 'on-open-dropdown' : ''">
+        <div class="left">
+          <h3 ng-if="stack.data.title">{{stack.data.title}} <i class="fa fa-caret-down" ng-click="vms.showStacksDrop()"></i></h3>
+          <h3 ng-if="!stack.data.title && vms.stack.name">{{vms.stack.name}} <i class="fa fa-caret-down" ng-click="vms.showStacksDrop()"></i></h3>
+          <h3 ng-if="!stack.data.title && !vms.stack.name && vms.stack.host">{{vms.stack.host}} <i class="fa fa-caret-down" ng-click="vms.showStacksDrop()"></i></h3>
+          <span class="url">{{vms.stack.host}}</span>
+        </div>
+        <div class="middle">
+          <div class="tags">
+            <div angucomplete-alt id="tag-input"
+                 pause="300"
+                 selected-object="addTag"
+                 local-data="search_tags"
+                 local-search-async="localSearch"
+                 title-field="value"
+                 description-field="desc"
+                 minlength="1"
+                 input-class="tag-input"
+                 match-class="highlight" ng-if="vms.show_taginput"
+            ></div>
+            <span ng-if="!vms.show_taginput" ng-click="showInputTags()" class="add-tag"><i class="fa fa-plus"></i></span>
+            <ul ng-if="vms.stack.tags">
+              <li ng-repeat="tag in vms.stack.tags">{{tag.value}} <i class="fa fa-times" ng-click="removeTag(tag)"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <ul class="users">
+          <li>
+            <a href="javascript:void(0)" class="user_add" ng-click="$state.go('stack.peoplewithparam', {param: 'add'})">
+              <img src="/stack/assets/img/user_add.png" class="user_add" alt="user_add">
+            </a>
+          </li>
+          <li ng-repeat="collaborator in vms.peopleForHeader">
+            <a href="javascript:void(0)" ng-click="$state.go('stack.people')">
+              <img ng-src="{{collaborator.profile.pictures.profile}}" alt="{{collaborator.name}} photo" ng-if="collaborator.profile.pictures.profile"/>
+              <img gravatar-src="'{{collaborator.email}}'" gravatar-size="45" alt="{{collaborator.name}} photo" ng-if="!collaborator.profile.pictures.profile"/>
+            </a>
+          </li>
+          <li><a href="#" class="hidden_users" ng-if="vms.people.length > 3">+{{(vms.hiddenCount)}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div ui-view class="full-height with-sidebar-content" id="stackPageWrapper"></div>
+  </div>
+</div>
+<!-- ########################################################################################### -->
+<!-- ===================== SUBSCRIBE HEADER TEMPLATE =========================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id="subscribe">
+  <div class="subscribe-header" ng-show="vms.billingProvider && !global.user.profile.billing[vms.billingProvider].id">
+    <ul>
+      <li><i class="fa fa-bell"></i></li>
+      <li><span>Upgrade now to enjoy longer history of your events and health profile</span></li>
+      <li><a class="rnd-btn red" ui-sref="profile.upgrade">view plans and pricing</a></li>
+    </ul>
+  </div>
+</script>
+
+<!-- ########################################################################################### -->
+<!-- ===================== IPS TEMPLATE ======================================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id="ips">
+  <div class="ips" ng-show="ips.length > 1">
+    <span ng-repeat="ip in ips" ng-click="searchIp(ip.key);"><a href="">{{ip.key}} ({{ip.doc_count}})</a></span>
+  </div>
+</script>

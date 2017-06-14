@@ -1,0 +1,12 @@
+<div ng-init="vm.findOne();" id="PlatformPage" class="full-height">
+    <div ng-controller="PlatformsController as vmp" ng-init="vmp.init();" class="full-height middle">
+        <div class="middle-content">
+            <div>
+                <div class="icon platform" ng-class="vmp.platform"></div>
+                <div class="din">
+                    <h2>Add <b>{{vmp.platform}}</b> stack to {{vm.app.name}}</h2></div>
+            </div>
+            <div  ng-if="vm.app" style="clear: both;" ng-include="'platforms/views/' + vmp.platform + '.html'"></div>
+        </div>
+    </div>
+</div>

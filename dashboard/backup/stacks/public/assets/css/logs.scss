@@ -1,0 +1,151 @@
+@import "mean-compass/sass/base";
+$border: solid 1px $borderColor;
+#logsTab {
+    .middle {
+        .left-side {
+            width: 70%;
+            float: left;
+            height: 100%;
+            /*padding-top: 25px;*/
+            padding-left: 15px;
+            &.wide {
+                width: 100%;
+            }
+            .logs {
+                /*                font-family: monospace;
+                padding: 20px;
+                overflow-y: auto;
+                height: calc(100% - 250px);
+                .date-title {
+                    background: #fff;
+                    margin: 1rem 0;
+                    padding: .5rem 0;
+                    line-height: 1.2rem;
+                    font-size: 1.2em;
+                    font-family: Lato,appleLogo,sans-serif;
+                    color: #555459;
+                    font-weight: 900;
+                    text-align: center;
+                    cursor: default;
+                    clear: both;
+                    position: relative;
+                    hr {
+                        position: absolute;
+                        border-top: 1px solid #DDD;
+                        width: 100%;
+                        top: 1.1rem;
+                        margin: 0;
+                    }
+                    .date-title-label {
+                        background: #fff;
+                        padding: 0 1rem;
+                        display: inline-block;
+                        margin: 0 auto;
+                        position: relative;
+                    }
+                }*/
+                .log {
+                    position: relative;
+                    border-left: solid 3px transparent;
+                    padding-left: 5px;
+                    .l-content {
+                        max-width: 85%;
+                    }
+                    &.error {
+                        background: rgb(241, 229, 229);
+                        border-left: solid 3px rgb(119, 1, 1);
+                    }
+                    &:hover {
+                        background: #E7EFF2;
+                        border-left: solid 3px #106584;
+                    }
+                    .l-right-content {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        max-width: 15%;
+                        .ip {
+                            color: #737171;
+                        }
+                    }
+                    .l-session {
+                        position: absolute;
+                        top: 0;
+                        right: 110px;
+                    }
+                }
+                .add-comment {
+                    position: absolute;
+                    left: -20px;
+                    width: 10px;
+                    height: 10px;
+                    background: #F05417;
+                    border-radius: 50%;
+                    top: 50%;
+                    margin-top: -5px;
+                    cursor: pointer;
+                }
+                .comment {
+                    text-align: center;
+                    color: #8DC540;
+                    font-weight: bold;
+                    width: 100%
+                }
+            }
+        }
+        .right-side {
+            float: right;
+            height: 100%;
+            width: 30%;
+            .stable-data {
+                border: solid 1px rgb(229, 229, 229);
+                padding: 10px 3px;
+                margin-top: -1px;
+                .item {
+                    display: inline-block;
+                    margin: 5px 10px;
+                    .title {
+                        color: #BCBCBC;
+                        font-size: 0.9em;
+                        text-transform: uppercase;
+                    }
+                    .d-content {
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .dynamic-data {
+                text-align: center;
+                .cpu,
+                .memory {
+                    display: inline-block;
+                    margin-top: 20px;
+                    svg {
+                        width: auto;
+                        height: auto;
+                    }
+                    .outer-bar {
+                        stroke-width: 10px;
+                    }
+                    &.cpu .widget-container {
+                        .progress-bar {
+                            stroke: #8DC540;
+                        }
+                        .normal {
+                            stroke: rgb(196, 196, 196);
+                        }
+                    }
+                    &.memory .widget-container {
+                        .progress-bar {
+                            stroke: #F05417;
+                        }
+                        .normal {
+                            stroke: rgb(196, 196, 196);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

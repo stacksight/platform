@@ -1,0 +1,45 @@
+<section id="sessionsTab" ng-controller="SessionsController as vm" class="full-height" ng-init="vm.find()">
+    <div class="middle" ng-class="{'with-timeline': vm.histogram.length > 1}" id="sessionsContent" load-more="vm.loadMore()" top="{{scrollTopHeight}}">
+        <div ng-include="'subscribe'"></div>
+        <div class="sessions middle-content">
+            <div ng-show="vm.busy">load more ...</div>
+            <div ng-repeat="s in vm.docs">
+                <div class="group-title date" ng-class="{show: s._index !== vm.docs[$index -1]._index}">
+                    <hr/>
+                    <div class="group-title-label">{{::s._source.created | date: 'MMM d, yyyy'}}</div>
+                </div>
+                <div class="session">
+                    <div class="tile-status"></div>
+                    <div class="tile-main">
+                        <h2>
+                            <small>master</small>
+                            <a class="ember-view" ng-href="{{vm.gitRepoUrl}}{{s._source.git.sha}}"> {{::s._source.git.abbreviatedSha}}
+                          </a> 
+                        </h2>
+                        <p class="tile-author">{{s._source.hostname}}</p>
+                    </div>
+                    <div class="column tile-additional medium-6 end">
+                        <div class="column">
+                            <p class="build-status">
+                                <a id="ember1109" class="ember-view" href=""><span class="icon icon-hash"></span>{{s._id}}
+                            </a> </p>
+                            <p class="">
+                                <span class="">{{::s._source.platform}}</span>
+                                <span class="">{{::s._source.architecture}}</span>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p class="" title="112"><span class="icon icon-clock"></span>{{::s._source.created | date: 'short'}}</p>
+                            <p class="" title="Jun 8, 2015 1:01 PM">
+                                <span class="icon icon-cal"></span>
+                                <a href="" ng-click="vm.goTo('logs', s._id)">Logs</a>|<a href="" ng-click="vm.goTo('events', s._id)">Events</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <timeline ng-if="vm.histogram.length > 1" data="vm.histogram" on-change="vm.timelineChange(range)"></timeline>
+        </div>
+</section>

@@ -1,0 +1,928 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 3, integrations.scss */
+.stack-integrations-main #integrationsTab {
+  background: none;
+}
+
+/* line 7, integrations.scss */
+#integrationsTab {
+  margin-top: 63px;
+  position: relative;
+  background-color: #ffffff;
+}
+/* line 10, integrations.scss */
+#integrationsTab.full-height {
+  overflow: hidden;
+}
+/* line 15, integrations.scss */
+#integrationsTab .filter-list {
+  cursor: pointer;
+}
+/* line 19, integrations.scss */
+#integrationsTab .settings .btn-rounded {
+  background-color: transparent;
+  padding: 10px 40px;
+  border-radius: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 378px;
+  margin: 12px auto 0 auto;
+}
+/* line 27, integrations.scss */
+#integrationsTab .settings .btn-rounded.green {
+  border: 2px solid #80C06A;
+  color: #80C06A;
+}
+/* line 31, integrations.scss */
+#integrationsTab .settings .btn-rounded.red {
+  border: 2px solid #EE534F;
+  color: #EE534F;
+}
+/* line 36, integrations.scss */
+#integrationsTab .settings.inside-content {
+  padding: 0;
+  font-size: 14px;
+}
+/* line 39, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block {
+  margin: 0;
+}
+/* line 41, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal !important;
+}
+/* line 46, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item {
+  background: transparent;
+  border: none;
+}
+/* line 49, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item:hover {
+  border: none;
+  cursor: default;
+}
+/* line 53, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .info {
+  width: calc(100% - 90px);
+}
+/* line 55, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .info button {
+  width: 100%;
+  border-radius: 0;
+}
+/* line 60, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .icon {
+  width: 64px;
+  /*padding: 2px;*/
+  /*.platform-sh-icon {
+      margin: 0 auto;
+      width: 45px;
+  }*/
+}
+/* line 67, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .icon i {
+  width: 64px;
+}
+/* line 71, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .description {
+  clear: both;
+  padding-top: 16px;
+}
+/* line 74, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .description .btn.trans {
+  font-weight: normal;
+  font-size: 0.7em;
+  /*float: right;*/
+}
+/* line 79, integrations.scss */
+#integrationsTab .settings.inside-content .integration-block .service-item .description pre {
+  position: relative;
+}
+/* line 87, integrations.scss */
+#integrationsTab .middle {
+  margin-top: 0px;
+}
+/* line 89, integrations.scss */
+#integrationsTab .middle .title {
+  overflow: hidden;
+}
+/* line 91, integrations.scss */
+#integrationsTab .middle .title span.filter-title {
+  font-size: 36px;
+}
+/* line 94, integrations.scss */
+#integrationsTab .middle .title .filter-list {
+  font-size: 22px;
+  padding-left: 6px;
+}
+/* line 103, integrations.scss */
+#integrationsTab .inside-content {
+  padding-top: 56px;
+}
+/* line 106, integrations.scss */
+#integrationsTab .inside-content .header-title h1 {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 112, integrations.scss */
+#integrationsTab .inside-content .integration-block {
+  margin-top: 40px;
+}
+/* line 114, integrations.scss */
+#integrationsTab .inside-content .integration-block .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/* line 119, integrations.scss */
+#integrationsTab .inside-content .integration-block .row {
+  margin: 0 -6px;
+}
+/* line 122, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item-container {
+  padding: 6px;
+}
+/* line 125, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item {
+  color: #454a54;
+  min-height: 136px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  padding: 25px 0px;
+  line-height: initial;
+  position: relative;
+}
+/* line 133, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item:hover {
+  border: 1px solid #dfdfdf;
+}
+/* line 136, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item.enabled {
+  border: 1px solid #58b754;
+}
+/* line 138, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item.enabled:after {
+  content: 'Enabled';
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #58b754;
+  padding: 6px 26px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 12px;
+}
+/* line 150, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item.enabled:hover {
+  border: 1px solid #428b3f;
+}
+/* line 154, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item .info {
+  float: left;
+  margin-left: 26px;
+  width: 65%;
+}
+/* line 158, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item .info .title {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/* line 163, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item .icon {
+  width: 82px;
+  /*padding: 10px;*/
+  border-radius: 41px;
+  border: 1px solid;
+  display: block;
+  float: left;
+  text-align: center;
+  /*background-color: #e15721;*/
+  color: #ffffff;
+  margin-left: 22px;
+}
+/* line 175, integrations.scss */
+#integrationsTab .inside-content .integration-block .service-item .icon i {
+  font-size: 58px;
+  width: 80px;
+  height: 80px;
+}
+/* line 184, integrations.scss */
+#integrationsTab .top {
+  width: 100%;
+}
+/* line 187, integrations.scss */
+#integrationsTab .top-head {
+  height: 90px;
+  position: inherit;
+  width: 100%;
+}
+/* line 192, integrations.scss */
+#integrationsTab .top-head .popover.bottom {
+  max-width: 290px !important;
+  margin-left: -112px;
+}
+/* line 195, integrations.scss */
+#integrationsTab .top-head .popover.bottom > .arrow {
+  left: 89%;
+}
+/* line 203, integrations.scss */
+#integrationsTab .top-head .popup-content {
+  padding: 0 !important;
+  max-width: inherit !important;
+}
+/* line 209, integrations.scss */
+#integrationsTab .top-head .filter-types tr td {
+  padding: 12px 20px !important;
+}
+/* line 212, integrations.scss */
+#integrationsTab .top-head .filter-types tr:not(:last-child) {
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 0;
+}
+/* line 217, integrations.scss */
+#integrationsTab .top-head .filter-types .filter-title {
+  line-height: 32px;
+  padding-left: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 223, integrations.scss */
+#integrationsTab .top-head .filter-types .ico {
+  border-radius: 18px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+}
+/* line 230, integrations.scss */
+#integrationsTab .top-head .filter-types img {
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+  position: absolute;
+}
+/* line 236, integrations.scss */
+#integrationsTab .top-head .filter-types .wrapper-checkbox {
+  height: inherit;
+}
+/* line 240, integrations.scss */
+#integrationsTab .top-head .search-banner {
+  position: inherit;
+  border-bottom: 0px;
+}
+/* line 243, integrations.scss */
+#integrationsTab .top-head .search-banner .title {
+  text-align: left;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 90px;
+}
+/* line 249, integrations.scss */
+#integrationsTab .top-head .search-banner .tag-btn {
+  position: absolute;
+  margin: -63px 15px 0px 0px;
+  right: 15px;
+  top: 102px;
+  margin-top: -18px;
+  width: 37px;
+  height: 37px;
+  border: solid 1px #e0e0e0;
+  border-radius: 50%;
+  font-size: 1.4em;
+  cursor: pointer;
+  background: url("/stack/assets/img/tag.png") no-repeat center;
+}
+/* line 263, integrations.scss */
+#integrationsTab .top-head .search-banner .tag-btn .fa {
+  line-height: 37px;
+  display: block;
+  text-align: center;
+  color: #EE534F;
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+/* line 276, integrations.scss */
+#integrationsTab .middle-content {
+  padding-top: 0px;
+  width: 100%;
+}
+/* line 279, integrations.scss */
+#integrationsTab .middle-content .table .service-item-event {
+  margin: 15px 0;
+}
+/* line 282, integrations.scss */
+#integrationsTab .middle-content .table .service-item-event:nth-child(odd) {
+  background: #fbfbfb;
+}
+/* line 289, integrations.scss */
+#integrationsTab .middle-content .row {
+  height: 50px;
+  line-height: 50px;
+}
+/* line 293, integrations.scss */
+#integrationsTab .middle-content .row .status {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/* line 297, integrations.scss */
+#integrationsTab .middle-content .row .status .is-true i {
+  color: #58b855;
+}
+/* line 302, integrations.scss */
+#integrationsTab .middle-content .row .status .is-false i {
+  color: #EE534F;
+}
+/* line 307, integrations.scss */
+#integrationsTab .middle-content .row .date {
+  color: #979797;
+  font-size: 12px;
+  font-style: italic;
+}
+/* line 312, integrations.scss */
+#integrationsTab .middle-content .row .info_id {
+  padding-left: 68px;
+  font-weight: bold;
+}
+/* line 316, integrations.scss */
+#integrationsTab .middle-content .row .info_text {
+  padding-left: 90px;
+  color: #979797;
+  font-size: 14px;
+}
+/* line 322, integrations.scss */
+#integrationsTab .middle-content .row.title {
+  background-color: #fbfbfb;
+}
+/* line 327, integrations.scss */
+#integrationsTab .middle-content .title {
+  overflow: hidden;
+}
+/* line 330, integrations.scss */
+#integrationsTab .middle-content .title .text {
+  padding-left: 22px;
+  font-size: 18px;
+}
+/* line 334, integrations.scss */
+#integrationsTab .middle-content .title .ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 35px;
+  display: block;
+  float: left;
+  margin-top: 4px;
+}
+/* line 341, integrations.scss */
+#integrationsTab .middle-content .title .ico.top-ico {
+  background: url("/stack/assets/img/arrow_top.png") no-repeat center;
+  background-color: #e89300;
+}
+/* line 345, integrations.scss */
+#integrationsTab .middle-content .title .ico.right-ico {
+  background: url("/stack/assets/img/arrow_right.png") no-repeat center;
+  background-color: #0e6b93;
+}
+/* line 352, integrations.scss */
+#integrationsTab .middle-content .popover, #integrationsTab .middle-content .spmenu {
+  min-width: 256px;
+  font-weight: normal;
+  border-radius: 0;
+}
+/* line 356, integrations.scss */
+#integrationsTab .middle-content .popover.bottom, #integrationsTab .middle-content .spmenu.bottom {
+  border-radius: 0;
+  padding: 0;
+  width: inherit !important;
+  bottom: initial !important;
+  max-width: 400px;
+}
+/* line 364, integrations.scss */
+#integrationsTab .middle-content .popover .popover-title, #integrationsTab .middle-content .spmenu .popover-title {
+  background: transparent;
+  font-weight: bold;
+  border: none;
+  padding: 16px 14px 10px 14px;
+  font-size: 16px;
+}
+/* line 371, integrations.scss */
+#integrationsTab .middle-content .popover .button-close, #integrationsTab .middle-content .spmenu .button-close {
+  position: absolute;
+  top: 15px;
+  right: 7px;
+  color: #a5a5a5;
+  font-size: 14px;
+}
+/* line 378, integrations.scss */
+#integrationsTab .middle-content .popover .popover-content, #integrationsTab .middle-content .spmenu .popover-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0px;
+}
+/* line 383, integrations.scss */
+#integrationsTab .middle-content .popover .popover-content .component-wrapper, #integrationsTab .middle-content .spmenu .popover-content .component-wrapper {
+  margin-top: 112px;
+  overflow: auto;
+}
+/* line 387, integrations.scss */
+#integrationsTab .middle-content .popover .popover-content .component-enabled-wrapper, #integrationsTab .middle-content .spmenu .popover-content .component-enabled-wrapper {
+  margin-top: 70px;
+  overflow: auto;
+}
+/* line 393, integrations.scss */
+#integrationsTab .middle-content .popover .popover, #integrationsTab .middle-content .spmenu .popover {
+  z-index: 10000;
+}
+/* line 396, integrations.scss */
+#integrationsTab .middle-content .popover .popup-content, #integrationsTab .middle-content .spmenu .popup-content {
+  padding: 6px;
+}
+/* line 399, integrations.scss */
+#integrationsTab .middle-content .popover .popup-content .title-pre-content, #integrationsTab .middle-content .spmenu .popup-content .title-pre-content {
+  font-size: 18px;
+  padding: 0px 10px 10px 10px;
+  margin-top: -6px;
+}
+/* line 405, integrations.scss */
+#integrationsTab .middle-content .popover .popup-content-visible-columns, #integrationsTab .middle-content .spmenu .popup-content-visible-columns {
+  max-height: 350px;
+  max-width: 274px;
+}
+/* line 410, integrations.scss */
+#integrationsTab .middle-content .popover .popup-content-filters-list, #integrationsTab .middle-content .spmenu .popup-content-filters-list {
+  max-height: 350px;
+  padding: 6px 0px 0px 0px;
+  max-width: 274px;
+}
+/* line 415, integrations.scss */
+#integrationsTab .middle-content .popover .popup-select-filters-list, #integrationsTab .middle-content .spmenu .popup-select-filters-list {
+  min-width: 348px;
+  padding: 0;
+  max-height: none;
+}
+/* line 420, integrations.scss */
+#integrationsTab .middle-content .popover .form-group, #integrationsTab .middle-content .spmenu .form-group {
+  display: none;
+}
+/* line 423, integrations.scss */
+#integrationsTab .middle-content .popover table, #integrationsTab .middle-content .spmenu table {
+  width: 100%;
+}
+/* line 426, integrations.scss */
+#integrationsTab .middle-content .popover tr, #integrationsTab .middle-content .spmenu tr {
+  border-bottom: 1px solid #ffffff;
+}
+/* line 428, integrations.scss */
+#integrationsTab .middle-content .popover tr.success, #integrationsTab .middle-content .spmenu tr.success {
+  background-color: #ddffdd !important;
+}
+/* line 431, integrations.scss */
+#integrationsTab .middle-content .popover tr.danger, #integrationsTab .middle-content .spmenu tr.danger {
+  background-color: #ffdddd !important;
+}
+/* line 434, integrations.scss */
+#integrationsTab .middle-content .popover tr.warning, #integrationsTab .middle-content .spmenu tr.warning {
+  background-color: #ffffdd !important;
+}
+/* line 438, integrations.scss */
+#integrationsTab .middle-content .popover tr, #integrationsTab .middle-content .popover td, #integrationsTab .middle-content .popover th, #integrationsTab .middle-content .spmenu tr, #integrationsTab .middle-content .spmenu td, #integrationsTab .middle-content .spmenu th {
+  height: 25px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: capitalize;
+}
+/* line 444, integrations.scss */
+#integrationsTab .middle-content .popover td, #integrationsTab .middle-content .popover th, #integrationsTab .middle-content .spmenu td, #integrationsTab .middle-content .spmenu th {
+  padding-left: 12px !important;
+}
+/* line 448, integrations.scss */
+#integrationsTab .middle-content .popover-title {
+  padding: 16px 14px 10px 14px !important;
+}
+/* line 451, integrations.scss */
+#integrationsTab .middle-content .integration {
+  clear: both;
+  overflow: hidden;
+  margin-top: 0px;
+}
+/* line 457, integrations.scss */
+#integrationsTab ul {
+  list-style: disc;
+}
+/* line 460, integrations.scss */
+#integrationsTab .tab-content {
+  margin-left: 0;
+}
+/* line 463, integrations.scss */
+#integrationsTab [class*="icon-"] {
+  background-size: contain;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 468, integrations.scss */
+#integrationsTab [class*="icon-"].icon-bitbucket {
+  background-image: url("/stack/assets/img/integrations/bitbucket.png");
+}
+/* line 471, integrations.scss */
+#integrationsTab [class*="icon-"].icon-platform {
+  background-image: url("/stack/assets/img/integrations/platform.png");
+}
+/* line 474, integrations.scss */
+#integrationsTab [class*="icon-"].icon-github {
+  background-image: url("/stack/assets/img/integrations/github.png");
+}
+/* line 477, integrations.scss */
+#integrationsTab [class*="icon-"].icon-gitlab {
+  background-image: url("/stack/assets/img/integrations/gitlab.png");
+}
+/* line 480, integrations.scss */
+#integrationsTab [class*="icon-"].icon-accessibility {
+  background-image: url("/stack/assets/img/integrations/accessibility.png");
+}
+/* line 483, integrations.scss */
+#integrationsTab [class*="icon-"].icon-security {
+  background-image: url("/stack/assets/img/integrations/security.png");
+}
+/* line 486, integrations.scss */
+#integrationsTab [class*="icon-"].icon-yoast {
+  background-image: url("/stack/assets/img/integrations/yoast.png");
+}
+/* line 489, integrations.scss */
+#integrationsTab [class*="icon-"].icon-performance {
+  background-image: url("/stack/assets/img/integrations/performance.png");
+}
+/* line 492, integrations.scss */
+#integrationsTab [class*="icon-"].icon-backups {
+  background-image: url("/stack/assets/img/integrations/backups.png");
+}
+/* line 495, integrations.scss */
+#integrationsTab [class*="icon-"].icon-backup-migrate {
+  background-image: url("/stack/assets/img/integrations/backup_migrate.png");
+}
+/* line 498, integrations.scss */
+#integrationsTab [class*="icon-"].icon-wp-security {
+  background-image: url("/stack/assets/img/integrations/wp-all-in-one-security.png");
+}
+/* line 501, integrations.scss */
+#integrationsTab [class*="icon-"].icon-updraft {
+  background-image: url("/stack/assets/img/integrations/updraft.png");
+}
+/* line 506, integrations.scss */
+#integrationsTab #slide-menu-integration {
+  padding: 14px 6px;
+  -moz-box-shadow: 10px 14px 30px #000;
+  -webkit-box-shadow: 10px 14px 30px #000;
+  box-shadow: 10px 14px 30px #000;
+  position: fixed;
+  top: 125px;
+  height: 100%;
+  background: #fff;
+  width: 428px;
+  right: -428px;
+  overflow: scroll;
+}
+/* line 518, integrations.scss */
+#integrationsTab #slide-menu-integration .close-button {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  color: #E0E0E0;
+  background: none;
+  border: none;
+  z-index: 9999;
+}
+/* line 527, integrations.scss */
+#integrationsTab #slide-menu-integration .header {
+  overflow: hidden;
+  padding: 0 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 531, integrations.scss */
+#integrationsTab #slide-menu-integration .header .button-close {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: url(/general/assets/img/cross.png);
+  cursor: pointer;
+}
+/* line 541, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_image {
+  float: left;
+}
+/* line 543, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_image img {
+  width: 114px;
+  height: 114px;
+  border-radius: 57px;
+}
+/* line 550, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_info {
+  float: left;
+  margin-left: 18px;
+}
+/* line 553, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_info .user_name {
+  padding-top: 10px;
+  font-size: 18px;
+  padding-top: 6px;
+}
+/* line 558, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_info .user_mail {
+  font-size: 13px;
+}
+/* line 561, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_info .add_button {
+  margin-top: 34px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 566, integrations.scss */
+#integrationsTab #slide-menu-integration .header .user_info .add_button button {
+  background-color: #448aff;
+  border: 1px solid #ffffff;
+  line-height: 36px;
+  width: 242px;
+  text-align: center;
+  color: #FFFFFF;
+  float: right;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 580, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content {
+  padding: 0 14px !important;
+  overflow: auto;
+  max-height: 100%;
+}
+/* line 584, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list {
+  float: left;
+  width: 100%;
+}
+/* line 587, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .header-list {
+  line-height: 48px;
+  margin-bottom: 2px;
+  background: #ffffff;
+  color: #7f7f7f;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 596, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .wrapper-checkbox.sm label {
+  margin-top: 6px;
+}
+/* line 601, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list {
+  padding: 0;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  background: #FFFFFF;
+}
+/* line 603, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list li.stack_item {
+  clear: both;
+  height: 82px;
+  padding: 9px;
+  margin: 0;
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 617, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list.selected {
+  background-color: #f4fcf4;
+}
+/* line 620, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-1, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-2, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-3, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-4, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-5, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-6, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-7, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-8, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-9, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-10, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-11, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .col-sm-12 {
+  height: 71px;
+  padding: 9px;
+}
+/* line 625, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-button button {
+  background: #FFFFFF;
+  color: #ebebeb;
+  width: 132px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  float: right;
+  margin-top: 5px;
+}
+/* line 639, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-check {
+  padding-left: 11px;
+  max-width: 42px;
+}
+/* line 643, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-container {
+  margin-top: 2px;
+}
+/* line 646, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-insights {
+  padding-top: 26px !important;
+}
+/* line 648, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-insights .red {
+  font-weight: bold;
+}
+/* line 651, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-insights .additional-button {
+  float: right;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  background-color: #448aff;
+  line-height: 23px;
+  width: 88px;
+  text-align: center;
+  border: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: -1px;
+}
+/* line 667, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .no-padding {
+  padding: 0;
+  height: initial;
+}
+/* line 671, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .ico-block {
+  margin-top: 11px;
+}
+/* line 673, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .ico-block .red {
+  color: #ee534f;
+}
+/* line 676, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .ico-block .green {
+  color: #58b754;
+}
+/* line 679, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .ico-block img {
+  margin: 4px 0 0 0px;
+  padding: 0;
+  display: block;
+}
+/* line 685, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .ico {
+  display: block;
+  float: left;
+  margin-right: 6px;
+  margin-top: 2px;
+}
+/* line 691, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .lock-ico {
+  width: 13px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-lock.png");
+}
+/* line 697, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .timer-ico {
+  width: 15px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-timer.png");
+}
+/* line 702, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .pulse-ico {
+  width: 17px;
+  height: 14px;
+  background: url("/stacks/assets/img/ico/health-icon-pulse.png");
+  margin-top: 3px;
+}
+/* line 708, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-health .ico-value {
+  font-size: 16px;
+}
+/* line 713, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .stack-name, #integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .updates {
+  padding-top: 16px;
+  color: #51565f;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* line 720, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .title {
+  clear: both;
+  overflow: hidden;
+}
+/* line 723, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .title .platform {
+  width: 18px;
+  height: 18px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: block;
+  float: left;
+  margin: 2px 5px 0 0;
+}
+/* line 733, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .title .stack-name {
+  padding: 0;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 744, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list.selected .tags ul:after {
+  background: -moz-linear-gradient(left, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f4fcf4',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 753, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .tags {
+  clear: both;
+  position: relative;
+}
+/* line 756, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .tags ul {
+  position: relative;
+  margin: 4px 0 0 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+/* line 757, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .tags ul:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 23px;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 53%, white 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 53%, white 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 53%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 779, integrations.scss */
+#integrationsTab #slide-menu-integration .popup-content #stacks-side-list .cube.list .tags ul li {
+  line-height: 16px;
+  padding: 0 7px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  font-weight: bold;
+  color: #51565f;
+  font-size: 10px;
+  margin-right: 2px;
+  border-radius: 2px;
+  display: inline-block;
+}

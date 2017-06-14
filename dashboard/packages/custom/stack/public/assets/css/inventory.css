@@ -1,0 +1,51 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, inventory.scss */
+.stack-inventory .with-sidebar-content .middle {
+  margin-top: 40px !important;
+}
+/* line 7, inventory.scss */
+.stack-inventory .with-sidebar-content .middle .middle-content {
+  padding: 0px !important;
+}
+/* line 9, inventory.scss */
+.stack-inventory .with-sidebar-content .middle .middle-content .last-update {
+  padding: 10px 0;
+  font-size: 22px;
+  font-weight: 100;
+}
+/* line 14, inventory.scss */
+.stack-inventory .with-sidebar-content .middle .middle-content .list-group-item,
+.stack-inventory .with-sidebar-content .middle .middle-content .list-group-item:last-child,
+.stack-inventory .with-sidebar-content .middle .middle-content .list-group-item:first-child {
+  border-radius: 0;
+}

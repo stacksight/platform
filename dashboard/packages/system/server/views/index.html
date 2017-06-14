@@ -1,0 +1,9 @@
+{% extends 'layouts/default.html' %}
+{% block content %}
+  <section data-ui-view class="full-height"></section>
+  <script type="text/javascript">
+    window.user = {{user|json|safe}};
+    window.modules = null;
+    window.host = {{host|json|safe}}
+  </script>
+{% endblock %}

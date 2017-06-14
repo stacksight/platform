@@ -1,0 +1,232 @@
+'use strict';
+
+/* jshint -W098 */
+angular.module('mean.apps').controller('AppsController', ['$scope', 'Global', 'Apps', '$stateParams', 'Platforms', '_', '$state', 'Stacks', 'Updates', 'localStorageService', 'Sapi',
+    function($scope, Global, Apps, $stateParams, Platforms, _, $state, Stacks, Updates, localStorageService, Sapi) {
+        $scope.global = Global;
+        var vm = this;
+        var urlPattern = /(http|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
+
+        vm.viewCube = {
+            plus: true,
+            add: false,
+            platforms: false
+        };
+
+        vm.platforms = Platforms;
+        _.each(vm.platforms, function(value, key) {
+            switch (key) {
+                case 'wordpress':
+                case 'drupal':
+                    vm.platforms[key].enable = true;
+                    break;
+                default:
+                    vm.platforms[key].enable = false
+                    break;
+            }
+        });
+        vm.showLoader = true;
+
+        var statusTypes = Updates.statusTypes;
+
+        vm.create = function(valid) {
+            if (valid) {
+                Apps.create(vm.newapp, function(err, data) {
+                    if (err) return console.log('create app err', err);
+                    vm.apps.push(data);
+                    delete vm.newapp;
+                });
+            }
+        };
+
+
+        vm.update = function(valid, app) {
+            if (valid) {
+                var data = {
+                    app: {
+                        name: app.name
+                    },
+                    action: 'updateDetails'
+                };
+                Apps.update(app._id, data, function(err, data) {
+                    if (err && err.status === 401) return sweetAlert("Canceled!", "You do not have permissions to update this group", "error");
+                    if (err) return console.log('update group err', err);
+                    sweetAlert("Settings saved !", "", "success");
+                });
+            }
+        };
+
+        vm.find = function(page) {
+            delete vm.app;
+            Apps.find(function(err, data) {
+                if (err) return console.log('find apps err', err);
+                vm.apps = data.apps;
+                if (page === 'listPage') getUpdates(vm.apps);
+            });
+        };
+
+        function getUpdates(apps) {
+            Apps.updates(apps, function(err, data) {
+                if (err) {
+                    return console.log('get apps updates err', err);
+                }
+                vm.showLoader = false;
+                vm.appUpdates = data.appUpdates;
+                vm.stacksUpdates = data.stacksUpdates;
+            });
+        };
+
+        vm.findOne = function() {
+            var id = $stateParams.appId;
+            Apps.findOne(id, function(err, doc) {
+                if (err) return console.log('find app err', err);
+                vm.app = doc;
+                vm.app1 = doc;
+                if (!vm.app.stacks.length) {
+                    vm.viewCube.add = true;
+                    vm.viewCube.plus = false;
+                }
+                vm.app.collaborators.forEach(function(collaborator) {
+                    if (collaborator.id === $scope.global.user._id) {
+                        if (collaborator.status === 'owner') vm.owner = collaborator;
+                        if (collaborator.permissions.indexOf('admin') > -1) vm.adminCollaborator = collaborator;
+                    }
+                });
+                getUpdates([vm.app]);
+            });
+            vm.sideBarData = {
+                tabs: [{
+                    title: 'Dashboard',
+                    link: 'app.dashboard.general',
+                    platforms: ['all'],
+                    params: {
+                        appId: $stateParams.appId
+                    }
+                }, {
+                    title: 'Stacks',
+                    link: 'app.stacks',
+                    platforms: ['all'],
+                    params: {
+                        appId: $stateParams.appId
+                    }
+                }, {
+                    title: 'Collaborators',
+                    link: 'app.collaborators',
+                    platforms: ['all'],
+                    params: {
+                        appId: $stateParams.appId
+                    }
+                }, {
+                    title: 'Inventory',
+                    link: 'app.inventory',
+                    platforms: ['all'],
+                    params: {
+                        appId: $stateParams.appId
+                    }
+                }, {
+                    title: 'Policy',
+                    link: 'app.policy',
+                    platforms: ['all'],
+                    params: {
+                        appId: $stateParams.appId
+                    }
+                }, {
+                    title: 'Settings',
+                    link: 'app.settings',
+                    platforms: ['all'],
+                    params: {
+                        appId: $stateParams.appId
+                    }
+                }]
+            };
+        };
+
+        var storageType = localStorageService.getStorageType();
+        var filter_type = localStorageService.get('filter_type');
+        if (!filter_type) {
+            vm.filer_view = 'grid';
+            localStorageService.set('filter_type', 'grid');
+        } else {
+            if (filter_type == 'grid')
+                vm.filer_view = 'grid';
+            else
+                vm.filer_view = 'list';
+        }
+
+        vm.show_add_stack_form_list = false;
+        vm.change_view_filter = function(type) {
+            if (type == 'grid') {
+                vm.filer_view = 'grid';
+                localStorageService.set('filter_type', 'grid');
+            } else {
+                vm.filer_view = 'list';
+                localStorageService.set('filter_type', 'list');
+            }
+        }
+
+        vm.showAddStackForm = function() {
+            if (vm.show_add_stack_form_list == true) {
+                vm.show_add_stack_form_list = false;
+            } else {
+                vm.show_add_stack_form_list = true;
+            }
+        }
+
+        vm.moveToAppPage = function(app, page) {
+            vm.disableCreate = false;
+            var goTo = 'app.' + page;
+            $state.go(goTo, {
+                appId: app._id
+            });
+            delete vm.stack;
+        };
+
+        $scope.$on('stackDeleted', function(event, args) {
+            for (var i in vm.app.stacks) {
+                if (vm.app.stacks[i] === args.stack) {
+                    vm.app.stacks.splice(i, 1);
+                }
+            }
+        });
+
+        vm.delete = function(app) {
+            Apps.delete(app, function(err, data) {
+                if (err && err.status === 401) return sweetAlert("Canceled!", "You do not have permissions to delete this group", "error");
+                if (err) return console.log('delete group err', err);
+                for (var i in vm.apps) {
+                    if (vm.apps[i] === app) {
+                        vm.apps.splice(i, 1);
+                    }
+                }
+                $state.go('apps');
+            });
+        };
+
+        vm.addStack = function(callbackSuccess) {
+            if (!vm.stack || !vm.stack.host) return sweetAlert("", "Stack host is required", "error");
+            if (!urlPattern.test(vm.stack.host)) return sweetAlert("", "Invalid host", "error");
+            vm.viewCube.add = false;
+            vm.viewCube.plus = true;
+            vm.disableCreate = true;
+            var data = {
+                stack: vm.stack,
+                action: 'addStack'
+            };
+            var id = $stateParams.appId;
+            Apps.update(id, data, function(err, stack) {
+                if (err) {
+                    console.log(err);
+                    if (err.status === 401) return sweetAlert("Canceled!", "You do not have permissions to update this group", "error");
+                    vm.disableCreate = false;
+                    return sweetAlert("Canceled!", err.message, "error");
+                }
+                vm.app.stacks.push(stack);
+                vm.stack.id = stack._id;
+                vm.stack = {};
+                if(typeof callbackSuccess === 'function' && callbackSuccess){
+                    callbackSuccess();
+                }
+            });
+        };
+    }
+]);

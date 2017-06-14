@@ -1,0 +1,23 @@
+<div class="explanations">
+    <div class="explanation-item">
+        <label class="label">step 1</label>
+        <div class="field">Copy your token to ~/.mean file from <span class="link red"><a href="https://apps.stacksight.io/#!/profile/general" target="_blank">here</a></span></div>
+    </div>
+    <div class="explanation-item">
+        <label class="label">step 2</label>
+        <div ng-include="'create-field-template'"></div>
+    </div>
+    <div ng-show="vm.stack.id">
+        <div class="explanation-item">
+            <label class="label">step 3</label>
+            <div class="field">
+                <div>Go to the mean.json file of your MEAN project, and input your API key into `id` field.</div>
+                <div>Notice : anonymizedData needs to be true in your mean.json file (of your MEAN project)</div>
+                <div class="wrapper-input">
+                    <input type="text" ng-model="vm.stack.id" readonly/>
+                </div>
+            </div>
+        </div>
+        <div ng-include="'finish-button-template'"></div>
+    </div>
+</div>

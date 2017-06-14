@@ -1,0 +1,132 @@
+@import "mean-compass/sass/base";
+#PlatformPage {
+    .middle-content {
+        margin: 20px;
+        background: white;
+    }
+    .platform {
+        vertical-align: middle;
+    }
+    .explanations {
+        width: 100%;
+        .explanation-item {
+            margin: 40px 0;
+            .label {
+                font-size: 1.1em;
+                text-transform: uppercase;
+                color: $red;
+            }
+            .field {
+                font-size: 1.1em;
+                /*                .wrapper-input {
+                    position: relative;
+                    input, select {
+                        width: 100%;
+                        height: 45px;
+                        border: $border;
+                        padding: 0 10px;
+                    }
+                    .btn.trans {
+                        font-weight: normal;
+                        font-size: 0.7em;
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                }*/
+                div {
+                    margin: 10px 0;
+                }
+                .btn.done {
+                    padding: 15px 100px;
+                }
+            }
+        }
+    }
+    .embed-code {
+        .copy-code {
+            position: absolute;
+            right: 10px;
+        }
+        select {
+            width: 75px;
+        }
+    }
+}
+
+.platform {
+    overflow: hidden;
+
+    &.drupal {
+        background-image: url('/platforms/assets/img/drupal.png');
+    }
+    &.mean {
+        background-image: url('/platforms/assets/img/mean.png');
+    }
+    &.wordpress {
+        background-image: url('/platforms/assets/img/wordpress.png');
+    }
+    &.wix {
+        background-image: url('/platforms/assets/img/wix.png');
+    }
+    &.nodejs {
+        background-image: url('/platforms/assets/img/nodejs.png');
+    }
+    &.php {
+        background-image: url('/platforms/assets/img/php.png');
+    }
+    &.meteor {
+        background-image: url('/platforms/assets/img/meteor.png');
+    }
+    &[class*="magento"] {
+        background-image: url('/platforms/assets/img/magento.png');
+    }
+    &[class*="symfony"] {
+        background-image: url('/platforms/assets/img/php.png');
+    }
+    &.web {
+        background-image: url('/platforms/assets/img/logos.png');
+        background-position: -797px 0 !important;
+    }
+    &.sm {
+        width: 32px;
+        height: 32px;
+        background-image: url('/platforms/assets/img/logos.png');
+        &.drupal {
+            background-position: -23px -75px !important;
+        }
+        &.wordpress {
+            background-position: -94px -75px !important;
+        }
+        &.mean {
+            background-position: -159px -75px !important;
+        }
+        &.meteor {
+            background-position: -228px -75px !important;
+        }
+        &.joomla {
+            background-position: -396px -75px !important;
+        }
+        &.moodle {
+            background-position: -365px -75px !important;
+        }
+        &[class*="magento"] {
+            background-position: -432px -75px !important;
+        }
+        &.php {
+            background-position: -642px -75px !important;
+        }
+        &.nodejs {
+            background-position: -568px -75px !important;
+        }
+        &.web {
+            background-position: -812px -75px !important;
+        }
+        &[class*="symfony"] {
+            background-position: -646px -75px !important;
+        }
+    }
+    &.md {
+        transform: scale(0.6);
+    }
+}

@@ -1,0 +1,12 @@
+<div>
+    <div>{{::data.description}}</div>
+    <div class="components">
+		<div ng-if="::data.img" class="img">
+			<img ng-src="{{::data.img}}">
+		</div>
+		<div ng-if="::data.user" class="user">
+			<img ng-src="{{::data.user.img}}">
+			<div>{{::data.user.name}}</div>
+		</div>
+    </div>
+</div>

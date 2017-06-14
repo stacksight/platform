@@ -1,0 +1,1248 @@
+[
+  {
+    "__v": 1,
+    "_id": "5704bccc4ccec7454357e5a7",
+    "additionAmount": 5,
+    "amount": 5900,
+    "created": "2016-04-06T07:37:48.497Z",
+    "description": "For companies ...",
+    "features": {
+      "56e543a904c4a1cd1fbebec7": {
+        "description": "Real TIme events",
+        "id": "56e543a904c4a1cd1fbebec7",
+        "active": true,
+        "_id": "5704bccc4ccec7454357e5b7",
+        "values": [
+          "events"
+        ]
+      },
+      "56e54a0104c4a1cd1fbebf19": {
+        "description": "Data Retention 14 days description",
+        "id": "56e54a0104c4a1cd1fbebf19",
+        "active": true,
+        "value": "14 days",
+        "_id": "5704bccc4ccec7454357e5b5",
+        "locatedIn": [
+          "card",
+          "table"
+        ],
+        "values": []
+      },
+      "56e54fef04c4a1cd1fbebf64": {
+        "description": "Number of Stacks 5",
+        "id": "56e54fef04c4a1cd1fbebf64",
+        "active": true,
+        "value": "5",
+        "_id": "5704bccc4ccec7454357e5b4",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e54d5b04c4a1cd1fbebf4c": {
+        "description": "SSL",
+        "id": "56e54d5b04c4a1cd1fbebf4c",
+        "active": true,
+        "value": "false",
+        "_id": "5704bccc4ccec7454357e5b2",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e5577cd69557cf45700707": {
+        "description": "BackupSight",
+        "id": "56e5577cd69557cf45700707",
+        "active": true,
+        "value": "true",
+        "_id": "5704bccc4ccec7454357e5b1",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557ead69557cf45700710": {
+        "description": "Compliance Reports",
+        "id": "56e557ead69557cf45700710",
+        "_id": "5704bccc4ccec7454357e5b0",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557fbd69557cf45700712": {
+        "description": "Dedicated Account Manager",
+        "id": "56e557fbd69557cf45700712",
+        "_id": "5704bccc4ccec7454357e5af",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54f0404c4a1cd1fbebf5c": {
+        "description": "Number of Groups ",
+        "id": "56e54f0404c4a1cd1fbebf5c",
+        "_id": "5704bccc4ccec7454357e5ae",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e544cc04c4a1cd1fbebee3": {
+        "description": "Open Source control center description",
+        "id": "56e544cc04c4a1cd1fbebee3",
+        "_id": "5704bccc4ccec7454357e5ad",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557cad69557cf4570070c": {
+        "description": "Priority Support",
+        "id": "56e557cad69557cf4570070c",
+        "active": true,
+        "value": "true",
+        "_id": "5704bccc4ccec7454357e5ac",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54dc404c4a1cd1fbebf54": {
+        "description": "Real Time Logs",
+        "id": "56e54dc404c4a1cd1fbebf54",
+        "active": true,
+        "value": "true",
+        "_id": "5704bccc4ccec7454357e5ab",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e556fcd69557cf457006ff": {
+        "description": "SecureSight",
+        "id": "56e556fcd69557cf457006ff",
+        "_id": "5704bccc4ccec7454357e5aa",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5574cd69557cf45700702": {
+        "description": "SEOSight",
+        "id": "56e5574cd69557cf45700702",
+        "_id": "5704bccc4ccec7454357e5a9",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e6d3917cbffe1526b80c0e": {
+        "description": "allowed Indexes logs,events,updates,sessions",
+        "id": "56e6d3917cbffe1526b80c0e",
+        "active": true,
+        "_id": "5704bccc4ccec7454357e5a8",
+        "locatedIn": [],
+        "values": [
+          "logs",
+          "events",
+          "updates",
+          "sessions"
+        ]
+      },
+      "576bc3d3728c191821809c54": {
+        "description": "logsNotifications ",
+        "active": false,
+        "id": "576bc3d3728c191821809c54",
+        "_id": "582d5507ca99d1c2080482d0",
+        "locatedIn": [],
+        "values": []
+      },
+      "576bd643602d7cf63fee25aa": {
+        "description": "platformNotifications ",
+        "active": false,
+        "id": "576bd643602d7cf63fee25aa",
+        "_id": "582d5507ca99d1c2080482cf",
+        "locatedIn": [],
+        "values": []
+      },
+      "582033fb8da9078c31c6b8c1": {
+        "description": "team support desc undefined",
+        "active": false,
+        "id": "582033fb8da9078c31c6b8c1",
+        "_id": "582d5507ca99d1c2080482ce",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "582c598bca99d1c2080482c4": {
+        "description": "50 stacks",
+        "active": true,
+        "id": "582c598bca99d1c2080482c4",
+        "value": "50",
+        "_id": "582d5507ca99d1c2080482cd",
+        "locatedIn": [
+          "card"
+        ],
+        "values": []
+      }
+    },
+    "flattenFeatures": {
+      "number_of_stacks": "50",
+      "allowedIndexes": [
+        "logs",
+        "events",
+        "updates",
+        "sessions"
+      ],
+      "Real Time Logs": true,
+      "Priority Support": true,
+      "BackupSight": true,
+      "SSL": false,
+      "Number of Stacks": "5",
+      "data retention": "14 days",
+      "realtime": [
+        "events"
+      ]
+    },
+    "id": "dplus",
+    "interval": "month",
+    "name": "dPlus",
+    "stacksIncluded": 7,
+    "stripe": {
+      "trial_period_days": "20",
+      "statement_descriptor": "",
+      "name": "dPlus",
+      "livemode": "false",
+      "interval_count": "1",
+      "interval": "month",
+      "currency": "usd",
+      "created": "1459928255",
+      "amount": "5900",
+      "object": "plan",
+      "id": "dplus"
+    },
+    "trialPeriodDays": 20,
+    "updated": "2016-11-17T06:58:15.785Z",
+    "visible": true,
+    "weight": 200
+  },
+  {
+    "__v": 8,
+    "_id": "5704bad14ccec7454357e596",
+    "additionAmount": 2,
+    "amount": 3900,
+    "created": "2016-04-06T07:29:21.001Z",
+    "description": "for developers ...",
+    "features": {
+      "56e543a904c4a1cd1fbebec7": {
+        "description": "Real TIme logs,events",
+        "id": "56e543a904c4a1cd1fbebec7",
+        "active": true,
+        "_id": "5704bad14ccec7454357e5a6",
+        "values": [
+          "logs",
+          "events"
+        ]
+      },
+      "56e54a0104c4a1cd1fbebf19": {
+        "description": "Data Retention 24 hrs description",
+        "id": "56e54a0104c4a1cd1fbebf19",
+        "active": true,
+        "value": "24 hrs",
+        "_id": "5704bad14ccec7454357e5a4",
+        "locatedIn": [
+          "card",
+          "table"
+        ],
+        "values": []
+      },
+      "56e54fef04c4a1cd1fbebf64": {
+        "description": "Number of Stacks 5",
+        "id": "56e54fef04c4a1cd1fbebf64",
+        "active": true,
+        "value": "5",
+        "_id": "5704bad14ccec7454357e5a3",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e54d5b04c4a1cd1fbebf4c": {
+        "description": "SSL",
+        "id": "56e54d5b04c4a1cd1fbebf4c",
+        "active": true,
+        "value": "true",
+        "_id": "5704bad14ccec7454357e5a1",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e5577cd69557cf45700707": {
+        "description": "BackupSight",
+        "id": "56e5577cd69557cf45700707",
+        "active": true,
+        "value": "false",
+        "_id": "5704bad14ccec7454357e5a0",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557ead69557cf45700710": {
+        "description": "Compliance Reports",
+        "id": "56e557ead69557cf45700710",
+        "active": true,
+        "value": "true",
+        "_id": "5704bad14ccec7454357e59f",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557fbd69557cf45700712": {
+        "description": "Dedicated Account Manager",
+        "id": "56e557fbd69557cf45700712",
+        "active": true,
+        "value": "false",
+        "_id": "5704bad14ccec7454357e59e",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54f0404c4a1cd1fbebf5c": {
+        "description": "Number of Groups 5",
+        "id": "56e54f0404c4a1cd1fbebf5c",
+        "active": true,
+        "_id": "5704bad14ccec7454357e59d",
+        "locatedIn": [
+          "table"
+        ],
+        "values": [
+          "5"
+        ]
+      },
+      "56e544cc04c4a1cd1fbebee3": {
+        "description": "Open Source control center description",
+        "id": "56e544cc04c4a1cd1fbebee3",
+        "active": true,
+        "value": "true",
+        "_id": "5704bad14ccec7454357e59c",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557cad69557cf4570070c": {
+        "description": "Priority Support",
+        "id": "56e557cad69557cf4570070c",
+        "_id": "5704bad14ccec7454357e59b",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54dc404c4a1cd1fbebf54": {
+        "description": "Real Time Logs",
+        "id": "56e54dc404c4a1cd1fbebf54",
+        "_id": "5704bad14ccec7454357e59a",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e556fcd69557cf457006ff": {
+        "description": "SecureSight",
+        "id": "56e556fcd69557cf457006ff",
+        "_id": "5704bad14ccec7454357e599",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5574cd69557cf45700702": {
+        "description": "SEOSight",
+        "id": "56e5574cd69557cf45700702",
+        "_id": "5704bad14ccec7454357e598",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e6d3917cbffe1526b80c0e": {
+        "_id": "5704bad14ccec7454357e597",
+        "active": true,
+        "description": "allowed Indexes logs,events,updates,sessions,health,inventory,integrations,integrations-github,extensions,integrations-platform,integrations-bitbucket",
+        "id": "56e6d3917cbffe1526b80c0e",
+        "locatedIn": [],
+        "values": [
+          "logs",
+          "events",
+          "updates",
+          "sessions",
+          "health",
+          "inventory",
+          "integrations",
+          "integrations-github",
+          "extensions",
+          "integrations-platform",
+          "integrations-bitbucket"
+        ]
+      },
+      "576bc3d3728c191821809c54": {
+        "_id": "576bc417728c191821809c55",
+        "active": true,
+        "description": "logsNotifications error,info",
+        "id": "576bc3d3728c191821809c54",
+        "locatedIn": [],
+        "values": [
+          "error",
+          "info"
+        ]
+      },
+      "576bd643602d7cf63fee25aa": {
+        "description": "platformNotifications error",
+        "active": true,
+        "id": "576bd643602d7cf63fee25aa",
+        "_id": "576bd663602d7cf63fee25ab",
+        "locatedIn": [],
+        "values": [
+          "error"
+        ]
+      },
+      "582033fb8da9078c31c6b8c1": {
+        "description": "team support desc undefined",
+        "active": false,
+        "id": "582033fb8da9078c31c6b8c1",
+        "_id": "582c5b4bca99d1c2080482c7",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "582c598bca99d1c2080482c4": {
+        "description": "5 stacks",
+        "active": true,
+        "id": "582c598bca99d1c2080482c4",
+        "value": "5",
+        "_id": "582c5b4bca99d1c2080482c6",
+        "locatedIn": [
+          "card"
+        ],
+        "values": []
+      }
+    },
+    "flattenFeatures": {
+      "number_of_stacks": "5",
+      "platformNotifications": [
+        "error"
+      ],
+      "logsNotifications": [
+        "error",
+        "info"
+      ],
+      "allowedIndexes": [
+        "logs",
+        "events",
+        "updates",
+        "sessions",
+        "health",
+        "inventory",
+        "integrations",
+        "integrations-github",
+        "extensions",
+        "integrations-platform",
+        "integrations-bitbucket"
+      ],
+      "open source control center": true,
+      "Number of Groups": [
+        "5"
+      ],
+      "Dedicated Account Manager": false,
+      "Compliance Reports": true,
+      "BackupSight": false,
+      "SSL": true,
+      "Number of Stacks": "5",
+      "data retention": "24 hrs",
+      "realtime": [
+        "logs",
+        "events"
+      ]
+    },
+    "id": "dstrandard",
+    "interval": "month",
+    "name": "dStrandard",
+    "popular": true,
+    "stacksIncluded": 3,
+    "stripe": {
+      "trial_period_days": "30",
+      "statement_descriptor": "",
+      "name": "dStrandard",
+      "livemode": "false",
+      "interval_count": "1",
+      "interval": "month",
+      "currency": "usd",
+      "created": "1459927747",
+      "amount": "3900",
+      "object": "plan",
+      "id": "dstrandard"
+    },
+    "trialPeriodDays": 30,
+    "updated": "2016-11-16T13:12:43.653Z",
+    "visible": true,
+    "weight": 100
+  },
+  {
+    "__v": 9,
+    "_id": "56e6d98c7cbffe1526b80d6c",
+    "amount": 27500,
+    "contactUs": true,
+    "created": "2016-03-14T15:32:28.887Z",
+    "description": "Enterprises and startups",
+    "features": {
+      "56e543a904c4a1cd1fbebec7": {
+        "description": "Real TIme logs,events",
+        "id": "56e543a904c4a1cd1fbebec7",
+        "_id": "56e6d98c7cbffe1526b80d7c",
+        "active": true,
+        "values": [
+          "logs",
+          "events"
+        ]
+      },
+      "56e544cc04c4a1cd1fbebee3": {
+        "_id": "56e6d98c7cbffe1526b80d7a",
+        "active": true,
+        "description": "Open Source control center description",
+        "id": "56e544cc04c4a1cd1fbebee3",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54a0104c4a1cd1fbebf19": {
+        "_id": "56e6d98c7cbffe1526b80d79",
+        "active": true,
+        "description": "Data Retention 60 days description",
+        "id": "56e54a0104c4a1cd1fbebf19",
+        "value": "60 days",
+        "locatedIn": [
+          "card",
+          "table"
+        ],
+        "values": []
+      },
+      "56e54d5b04c4a1cd1fbebf4c": {
+        "_id": "56e6d98c7cbffe1526b80d78",
+        "active": true,
+        "description": "SSL",
+        "id": "56e54d5b04c4a1cd1fbebf4c",
+        "value": "true",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e54dc404c4a1cd1fbebf54": {
+        "_id": "56e6d98c7cbffe1526b80d77",
+        "active": true,
+        "description": "Real Time Logs",
+        "id": "56e54dc404c4a1cd1fbebf54",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54fef04c4a1cd1fbebf64": {
+        "_id": "56e6d98c7cbffe1526b80d76",
+        "active": true,
+        "description": "Number of Stacks 10",
+        "id": "56e54fef04c4a1cd1fbebf64",
+        "value": "10",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e556fcd69557cf457006ff": {
+        "_id": "56e6d98c7cbffe1526b80d74",
+        "active": true,
+        "description": "SecureSight",
+        "id": "56e556fcd69557cf457006ff",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5574cd69557cf45700702": {
+        "_id": "56e6d98c7cbffe1526b80d73",
+        "active": true,
+        "description": "SEOSight",
+        "id": "56e5574cd69557cf45700702",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5577cd69557cf45700707": {
+        "_id": "56e6d98c7cbffe1526b80d72",
+        "active": true,
+        "description": "BackupSight",
+        "id": "56e5577cd69557cf45700707",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557cad69557cf4570070c": {
+        "_id": "56e6d98c7cbffe1526b80d71",
+        "active": true,
+        "description": "Priority Support",
+        "id": "56e557cad69557cf4570070c",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557ead69557cf45700710": {
+        "_id": "56e6d98c7cbffe1526b80d70",
+        "active": true,
+        "description": "Compliance Reports",
+        "id": "56e557ead69557cf45700710",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557fbd69557cf45700712": {
+        "_id": "56e6d98c7cbffe1526b80d6f",
+        "active": true,
+        "description": "Dedicated Account Manager",
+        "id": "56e557fbd69557cf45700712",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54f0404c4a1cd1fbebf5c": {
+        "_id": "56e6d98c7cbffe1526b80d6e",
+        "active": true,
+        "description": "Number of Groups Unlimited",
+        "id": "56e54f0404c4a1cd1fbebf5c",
+        "locatedIn": [
+          "table"
+        ],
+        "values": [
+          "Unlimited"
+        ]
+      },
+      "56e6d3917cbffe1526b80c0e": {
+        "_id": "56e6d98c7cbffe1526b80d6d",
+        "active": true,
+        "description": "allowed Indexes integrations,inventory,health,sessions,updates,events,logs,integrations-github,extensions,integrations-platform",
+        "id": "56e6d3917cbffe1526b80c0e",
+        "locatedIn": [],
+        "values": [
+          "integrations",
+          "inventory",
+          "health",
+          "sessions",
+          "updates",
+          "events",
+          "logs",
+          "integrations-github",
+          "extensions",
+          "integrations-platform"
+        ]
+      },
+      "576bc3d3728c191821809c54": {
+        "_id": "57972558f764449c1eef4218",
+        "active": true,
+        "description": "logsNotifications error",
+        "id": "576bc3d3728c191821809c54",
+        "locatedIn": [],
+        "values": [
+          "error"
+        ]
+      },
+      "576bd643602d7cf63fee25aa": {
+        "_id": "57972558f764449c1eef4217",
+        "active": true,
+        "description": "platformNotifications error",
+        "id": "576bd643602d7cf63fee25aa",
+        "locatedIn": [],
+        "values": [
+          "error"
+        ]
+      }
+    },
+    "flattenFeatures": {
+      "platformNotifications": [
+        "error"
+      ],
+      "logsNotifications": [
+        "error"
+      ],
+      "allowedIndexes": [
+        "integrations",
+        "inventory",
+        "health",
+        "sessions",
+        "updates",
+        "events",
+        "logs",
+        "integrations-github",
+        "extensions",
+        "integrations-platform"
+      ],
+      "Number of Groups": [
+        "Unlimited"
+      ],
+      "Dedicated Account Manager": true,
+      "Compliance Reports": true,
+      "Priority Support": true,
+      "BackupSight": true,
+      "SEOSight": true,
+      "SecureSight": true,
+      "Team Support": true,
+      "Number of Stacks": "10",
+      "Real Time Logs": true,
+      "SSL": true,
+      "data retention": "60 days",
+      "open source control center": true,
+      "team support": true,
+      "realtime": [
+        "logs",
+        "events"
+      ]
+    },
+    "id": "enterprise",
+    "interval": "month",
+    "name": "Enterprise",
+    "stripe": {
+      "trial_period_days": "30",
+      "statement_descriptor": "",
+      "name": "Enterprise",
+      "livemode": "true",
+      "interval_count": "1",
+      "interval": "month",
+      "currency": "usd",
+      "created": "1457969549",
+      "amount": "27500",
+      "object": "plan",
+      "id": "enterprise"
+    },
+    "trialPeriodDays": 30,
+    "updated": "2016-09-07T12:35:49.137Z",
+    "visible": true,
+    "weight": 400
+  },
+  {
+    "__v": 11,
+    "_id": "56e54ac204c4a1cd1fbebf25",
+    "additionAmount": 3,
+    "amount": 0,
+    "created": "2016-03-13T11:10:58.401Z",
+    "description": "Open source developers",
+    "features": {
+      "56e543a904c4a1cd1fbebec7": {
+        "description": "Real TIme ",
+        "id": "56e543a904c4a1cd1fbebec7",
+        "_id": "56e54ac204c4a1cd1fbebf29",
+        "values": []
+      },
+      "56e544cc04c4a1cd1fbebee3": {
+        "_id": "56e54ac204c4a1cd1fbebf27",
+        "active": true,
+        "description": "Open Source control center description",
+        "id": "56e544cc04c4a1cd1fbebee3",
+        "value": "true",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54a0104c4a1cd1fbebf19": {
+        "_id": "56e54ac204c4a1cd1fbebf26",
+        "active": true,
+        "description": "Data Retention 24 hrs description",
+        "id": "56e54a0104c4a1cd1fbebf19",
+        "value": "24 hrs",
+        "locatedIn": [
+          "card",
+          "table"
+        ],
+        "values": []
+      },
+      "56e54d5b04c4a1cd1fbebf4c": {
+        "_id": "56e6d46c7cbffe1526b80c42",
+        "active": false,
+        "description": "SSL",
+        "id": "56e54d5b04c4a1cd1fbebf4c",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e54dc404c4a1cd1fbebf54": {
+        "_id": "56e6d46c7cbffe1526b80c41",
+        "active": false,
+        "description": "Real Time Logs",
+        "id": "56e54dc404c4a1cd1fbebf54",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54fef04c4a1cd1fbebf64": {
+        "_id": "56e6d46c7cbffe1526b80c40",
+        "active": false,
+        "description": "Number of Stacks undefined",
+        "id": "56e54fef04c4a1cd1fbebf64",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e556fcd69557cf457006ff": {
+        "_id": "56e6d46c7cbffe1526b80c3e",
+        "active": false,
+        "description": "SecureSight",
+        "id": "56e556fcd69557cf457006ff",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5574cd69557cf45700702": {
+        "_id": "56e6d46c7cbffe1526b80c3d",
+        "active": false,
+        "description": "SEOSight",
+        "id": "56e5574cd69557cf45700702",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5577cd69557cf45700707": {
+        "_id": "56e6d46c7cbffe1526b80c3c",
+        "active": false,
+        "description": "BackupSight",
+        "id": "56e5577cd69557cf45700707",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557cad69557cf4570070c": {
+        "_id": "56e6d46c7cbffe1526b80c3b",
+        "active": false,
+        "description": "Priority Support",
+        "id": "56e557cad69557cf4570070c",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557ead69557cf45700710": {
+        "_id": "56e6d46c7cbffe1526b80c3a",
+        "active": false,
+        "description": "Compliance Reports",
+        "id": "56e557ead69557cf45700710",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557fbd69557cf45700712": {
+        "_id": "56e6d46c7cbffe1526b80c39",
+        "active": false,
+        "description": "Dedicated Account Manager",
+        "id": "56e557fbd69557cf45700712",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54f0404c4a1cd1fbebf5c": {
+        "_id": "56e6d46c7cbffe1526b80c38",
+        "active": false,
+        "description": "Number of Groups ",
+        "id": "56e54f0404c4a1cd1fbebf5c",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e6d3917cbffe1526b80c0e": {
+        "_id": "56e6d46c7cbffe1526b80c37",
+        "active": true,
+        "description": "allowed Indexes events,updates,sessions,health,inventory,integrations,integrations-github,extensions,logs,integrations-platform,integrations-bitbucket",
+        "id": "56e6d3917cbffe1526b80c0e",
+        "locatedIn": [],
+        "values": [
+          "events",
+          "updates",
+          "sessions",
+          "health",
+          "inventory",
+          "integrations",
+          "integrations-github",
+          "extensions",
+          "logs",
+          "integrations-platform",
+          "integrations-bitbucket"
+        ]
+      },
+      "576bc3d3728c191821809c54": {
+        "description": "logsNotifications info",
+        "active": true,
+        "id": "576bc3d3728c191821809c54",
+        "_id": "57d009b7678cc98e62246668",
+        "locatedIn": [],
+        "values": [
+          "info"
+        ]
+      },
+      "576bd643602d7cf63fee25aa": {
+        "description": "platformNotifications error",
+        "active": true,
+        "id": "576bd643602d7cf63fee25aa",
+        "_id": "57d009b7678cc98e62246667",
+        "locatedIn": [],
+        "values": [
+          "error"
+        ]
+      },
+      "582033fb8da9078c31c6b8c1": {
+        "description": "team support desc 6",
+        "active": true,
+        "id": "582033fb8da9078c31c6b8c1",
+        "value": "6",
+        "_id": "582034178da9078c31c6b8c2",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "582c598bca99d1c2080482c4": {
+        "_id": "582c5aefca99d1c2080482c5",
+        "active": true,
+        "description": "1 stack",
+        "id": "582c598bca99d1c2080482c4",
+        "locatedIn": [
+          "card"
+        ],
+        "overrideDesc": "1 stack",
+        "value": "1",
+        "values": []
+      }
+    },
+    "flattenFeatures": {
+      "number_of_stacks": "1",
+      "team support": "6",
+      "platformNotifications": [
+        "error"
+      ],
+      "logsNotifications": [
+        "info"
+      ],
+      "allowedIndexes": [
+        "events",
+        "updates",
+        "sessions",
+        "health",
+        "inventory",
+        "integrations",
+        "integrations-github",
+        "extensions",
+        "logs",
+        "integrations-platform",
+        "integrations-bitbucket"
+      ],
+      "data retention": "24 hrs",
+      "open source control center": true
+    },
+    "id": "free",
+    "interval": "month",
+    "name": "Free",
+    "stacksIncluded": 1,
+    "stripe": {
+      "trial_period_days": "",
+      "statement_descriptor": "",
+      "name": "Free",
+      "livemode": "true",
+      "interval_count": "1",
+      "interval": "month",
+      "currency": "usd",
+      "created": "1457867458",
+      "amount": "0",
+      "object": "plan",
+      "id": "free"
+    },
+    "updated": "2016-11-17T08:23:17.224Z",
+    "visible": true,
+    "weight": 0
+  },
+  {
+    "__v": 0,
+    "_id": "582d6994f50fb04e08daeec4",
+    "amount": 5700,
+    "created": "2016-11-17T08:25:56.704Z",
+    "description": "For saraf company",
+    "features": {
+      "56e543a904c4a1cd1fbebec7": {
+        "description": "Real TIme ",
+        "id": "56e543a904c4a1cd1fbebec7",
+        "_id": "582d6994f50fb04e08daeed6",
+        "values": []
+      },
+      "56e54a0104c4a1cd1fbebf19": {
+        "description": "Data Retention 60 days description",
+        "id": "56e54a0104c4a1cd1fbebf19",
+        "active": true,
+        "value": "60 days",
+        "_id": "582d6994f50fb04e08daeed5",
+        "locatedIn": [
+          "card",
+          "table"
+        ],
+        "values": []
+      },
+      "56e54fef04c4a1cd1fbebf64": {
+        "description": "Number of Stacks undefined",
+        "id": "56e54fef04c4a1cd1fbebf64",
+        "_id": "582d6994f50fb04e08daeed4",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e54d5b04c4a1cd1fbebf4c": {
+        "description": "SSL",
+        "id": "56e54d5b04c4a1cd1fbebf4c",
+        "_id": "582d6994f50fb04e08daeed3",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "56e5577cd69557cf45700707": {
+        "description": "BackupSight",
+        "id": "56e5577cd69557cf45700707",
+        "_id": "582d6994f50fb04e08daeed2",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557ead69557cf45700710": {
+        "description": "Compliance Reports",
+        "id": "56e557ead69557cf45700710",
+        "_id": "582d6994f50fb04e08daeed1",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557fbd69557cf45700712": {
+        "description": "Dedicated Account Manager",
+        "id": "56e557fbd69557cf45700712",
+        "_id": "582d6994f50fb04e08daeed0",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54f0404c4a1cd1fbebf5c": {
+        "description": "Number of Groups ",
+        "id": "56e54f0404c4a1cd1fbebf5c",
+        "_id": "582d6994f50fb04e08daeecf",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e544cc04c4a1cd1fbebee3": {
+        "description": "Open Source control center description",
+        "id": "56e544cc04c4a1cd1fbebee3",
+        "_id": "582d6994f50fb04e08daeece",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e557cad69557cf4570070c": {
+        "description": "Priority Support",
+        "id": "56e557cad69557cf4570070c",
+        "_id": "582d6994f50fb04e08daeecd",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e54dc404c4a1cd1fbebf54": {
+        "description": "Real Time Logs",
+        "id": "56e54dc404c4a1cd1fbebf54",
+        "_id": "582d6994f50fb04e08daeecc",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e556fcd69557cf457006ff": {
+        "description": "SecureSight",
+        "id": "56e556fcd69557cf457006ff",
+        "_id": "582d6994f50fb04e08daeecb",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e5574cd69557cf45700702": {
+        "description": "SEOSight",
+        "id": "56e5574cd69557cf45700702",
+        "_id": "582d6994f50fb04e08daeeca",
+        "locatedIn": [
+          "table"
+        ],
+        "values": []
+      },
+      "56e6d3917cbffe1526b80c0e": {
+        "description": "allowed Indexes logs,events,updates,sessions,health,inventory,integrations,integrations-github,extensions,integrations-platform,integrations-bitbucket",
+        "id": "56e6d3917cbffe1526b80c0e",
+        "active": true,
+        "_id": "582d6994f50fb04e08daeec9",
+        "locatedIn": [],
+        "values": [
+          "logs",
+          "events",
+          "updates",
+          "sessions",
+          "health",
+          "inventory",
+          "integrations",
+          "integrations-github",
+          "extensions",
+          "integrations-platform",
+          "integrations-bitbucket"
+        ]
+      },
+      "576bc3d3728c191821809c54": {
+        "description": "logsNotifications info,error",
+        "id": "576bc3d3728c191821809c54",
+        "active": true,
+        "_id": "582d6994f50fb04e08daeec8",
+        "locatedIn": [],
+        "values": [
+          "info",
+          "error"
+        ]
+      },
+      "576bd643602d7cf63fee25aa": {
+        "description": "platformNotifications build,error",
+        "id": "576bd643602d7cf63fee25aa",
+        "active": true,
+        "_id": "582d6994f50fb04e08daeec7",
+        "locatedIn": [],
+        "values": [
+          "build",
+          "error"
+        ]
+      },
+      "582033fb8da9078c31c6b8c1": {
+        "description": "team support desc 50",
+        "id": "582033fb8da9078c31c6b8c1",
+        "active": true,
+        "value": "50",
+        "_id": "582d6994f50fb04e08daeec6",
+        "locatedIn": [
+          "table",
+          "card"
+        ],
+        "values": []
+      },
+      "582c598bca99d1c2080482c4": {
+        "description": "unlimited stacks",
+        "id": "582c598bca99d1c2080482c4",
+        "active": true,
+        "value": "unlimited",
+        "_id": "582d6994f50fb04e08daeec5",
+        "locatedIn": [
+          "card"
+        ],
+        "values": []
+      }
+    },
+    "flattenFeatures": {
+      "number_of_stacks": "unlimited",
+      "team support": "50",
+      "platformNotifications": [
+        "build",
+        "error"
+      ],
+      "logsNotifications": [
+        "info",
+        "error"
+      ],
+      "allowedIndexes": [
+        "logs",
+        "events",
+        "updates",
+        "sessions",
+        "health",
+        "inventory",
+        "integrations",
+        "integrations-github",
+        "extensions",
+        "integrations-platform",
+        "integrations-bitbucket"
+      ],
+      "data retention": "60 days"
+    },
+    "id": "saraf_enterprise",
+    "interval": "month",
+    "name": "Saraf Enterprise",
+    "stripe": {
+      "trial_period_days": "30",
+      "statement_descriptor": "",
+      "name": "Saraf Enterprise",
+      "livemode": "false",
+      "interval_count": "1",
+      "interval": "month",
+      "currency": "usd",
+      "created": "1479371102",
+      "amount": "5700",
+      "object": "plan",
+      "id": "saraf_enterprise"
+    },
+    "trialPeriodDays": 30,
+    "updated": "2016-11-17T08:29:50.846Z",
+    "visible": true,
+    "weight": 300
+  }
+]

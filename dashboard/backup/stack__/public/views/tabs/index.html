@@ -1,0 +1,41 @@
+<div ng-controller="StacksController as vms" ng-init="findOne();" class="full-height">
+    <side-bar data="sideBarData">
+        <div class="side-bar-title" ui-sref="app.stacks({appId: stack.app._id})"><span class="ico-sidebar levelup"></span><a href="">{{stack.app.name}}</a></div>
+        <div class="side-bar-link grey title" ng-click="sideBarData.isCollapse = !sideBarData.isCollapse">
+            <a href=""><span class="platform sm" ng-class="stack.platform" ng-show="stack.platform"></span>
+            <span>{{stack.name}}</span></a>
+            <i ng-class="{'fa-angle-down': sideBarData.isCollapse}" class="fa fa-angle-up"></i>
+        </div>
+        <div uib-collapse="sideBarData.isCollapse">
+            <div ng-repeat="stack1 in stack.app.stacks" class="side-bar-link grey" ng-class="{active: stack1._id === stack._id }" ng-click="changeStack(stack1);">
+                <a href=""> <span class="platform sm" ng-class="stack1.platform"></span>
+                    <span>{{stack1.name}}</span>
+                </a>
+            </div>
+        </div>
+    </side-bar>
+    <div class="tab-content full-height">
+        <div ui-view class="full-height with-sidebar-content"></div>
+    </div>
+</div>
+<!-- ########################################################################################### -->
+<!-- ===================== SUBSCRIBE HEADER TEMPLATE =========================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id="subscribe">
+    <div class="subscribe-header" ng-show="vms.billingProvider && !global.user.profile.billing[vms.billingProvider].id">
+        <ul>
+            <li><i class="fa fa-bell"></i></li>
+            <li><span>Events are currently saved for up to <b>24 hours only</b>, upgrade to PRO and retain past events <b>for up to 30 days.</b></li>
+            <li><a class="rnd-btn red" ui-sref="plans">view plans and pricing</a></li>
+        </ul>
+    </div>
+</script>
+
+<!-- ########################################################################################### -->
+<!-- ===================== IPS TEMPLATE ======================================================== -->
+<!-- ########################################################################################### -->
+<script type="text/ng-template" id="ips">
+    <div class="ips" ng-show="ips.length > 1">
+        <span ng-repeat="ip in ips" ng-click="searchIp(ip.key);"><a href="">{{ip.key}} ({{ip.doc_count}})</a></span>
+    </div>
+</script>

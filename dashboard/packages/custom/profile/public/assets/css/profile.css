@@ -1,0 +1,1056 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 4, profile.scss */
+[class*="profile-"] .profile-pic-section {
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+/* line 7, profile.scss */
+[class*="profile-"] .profile-pic-section .profile_header {
+  padding: 8px 0 0 0;
+}
+/* line 9, profile.scss */
+[class*="profile-"] .profile-pic-section .profile_header .user_info {
+  padding-left: 14px;
+}
+/* line 11, profile.scss */
+[class*="profile-"] .profile-pic-section .profile_header .user_info .status {
+  text-transform: capitalize;
+}
+/* line 15, profile.scss */
+[class*="profile-"] .profile-pic-section .profile_header .user_image, [class*="profile-"] .profile-pic-section .profile_header .user_info {
+  float: left;
+  font-weight: lighter;
+  color: #454a54;
+}
+/* line 19, profile.scss */
+[class*="profile-"] .profile-pic-section .profile_header .user_image h3, [class*="profile-"] .profile-pic-section .profile_header .user_info h3 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  color: #454a54;
+}
+/* line 27, profile.scss */
+[class*="profile-"] .profile-pic-section img {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+}
+/* line 32, profile.scss */
+[class*="profile-"] .profile-pic-section #stackPageWrapper {
+  clear: both;
+}
+
+/* line 41, profile.scss */
+#ProfilePage .tab-content {
+  margin-top: 40px;
+}
+/* line 44, profile.scss */
+#ProfilePage form {
+  width: 500px;
+  max-width: 100%;
+}
+/* line 48, profile.scss */
+#ProfilePage .btn {
+  margin: 10px 0;
+}
+/* line 51, profile.scss */
+#ProfilePage .section-space {
+  margin-bottom: 20px;
+}
+
+/* line 57, profile.scss */
+#generalTab,
+#passwordTab,
+#billingTab,
+#notificationsTab,
+#profileIntegrationsTab,
+#upgradeTab {
+  background: #FFFFFF;
+  padding: 30px 28px;
+  overflow: hidden;
+}
+/* line 66, profile.scss */
+#generalTab form,
+#passwordTab form,
+#billingTab form,
+#notificationsTab form,
+#profileIntegrationsTab form,
+#upgradeTab form {
+  color: #454a54;
+}
+/* line 68, profile.scss */
+#generalTab form label,
+#passwordTab form label,
+#billingTab form label,
+#notificationsTab form label,
+#profileIntegrationsTab form label,
+#upgradeTab form label {
+  color: #d2d2d2;
+  font-size: 12px;
+}
+/* line 72, profile.scss */
+#generalTab form input,
+#passwordTab form input,
+#billingTab form input,
+#notificationsTab form input,
+#profileIntegrationsTab form input,
+#upgradeTab form input {
+  border: none;
+  line-height: 22px;
+  font-size: 18px;
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: 16px;
+}
+/* line 78, profile.scss */
+#generalTab form input:focus,
+#passwordTab form input:focus,
+#billingTab form input:focus,
+#notificationsTab form input:focus,
+#profileIntegrationsTab form input:focus,
+#upgradeTab form input:focus {
+  border-bottom: 2px solid #eb4753;
+}
+/* line 83, profile.scss */
+#generalTab h4,
+#passwordTab h4,
+#billingTab h4,
+#notificationsTab h4,
+#profileIntegrationsTab h4,
+#upgradeTab h4 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+/* line 89, profile.scss */
+#generalTab #customer_opinion .dyn_prices, #generalTab #customer_opinion .plans_block, #generalTab #customer_opinion .for_inputs, #generalTab #customer_opinion #plan_cards_dyn,
+#passwordTab #customer_opinion .dyn_prices,
+#passwordTab #customer_opinion .plans_block,
+#passwordTab #customer_opinion .for_inputs,
+#passwordTab #customer_opinion #plan_cards_dyn,
+#billingTab #customer_opinion .dyn_prices,
+#billingTab #customer_opinion .plans_block,
+#billingTab #customer_opinion .for_inputs,
+#billingTab #customer_opinion #plan_cards_dyn,
+#notificationsTab #customer_opinion .dyn_prices,
+#notificationsTab #customer_opinion .plans_block,
+#notificationsTab #customer_opinion .for_inputs,
+#notificationsTab #customer_opinion #plan_cards_dyn,
+#profileIntegrationsTab #customer_opinion .dyn_prices,
+#profileIntegrationsTab #customer_opinion .plans_block,
+#profileIntegrationsTab #customer_opinion .for_inputs,
+#profileIntegrationsTab #customer_opinion #plan_cards_dyn,
+#upgradeTab #customer_opinion .dyn_prices,
+#upgradeTab #customer_opinion .plans_block,
+#upgradeTab #customer_opinion .for_inputs,
+#upgradeTab #customer_opinion #plan_cards_dyn {
+  padding: 0;
+  margin: 0;
+}
+/* line 93, profile.scss */
+#generalTab #customer_opinion .for_inputs,
+#passwordTab #customer_opinion .for_inputs,
+#billingTab #customer_opinion .for_inputs,
+#notificationsTab #customer_opinion .for_inputs,
+#profileIntegrationsTab #customer_opinion .for_inputs,
+#upgradeTab #customer_opinion .for_inputs {
+  border-right: none;
+}
+/* line 96, profile.scss */
+#generalTab #customer_opinion .for_inputs #plan_cards_dyn ul,
+#passwordTab #customer_opinion .for_inputs #plan_cards_dyn ul,
+#billingTab #customer_opinion .for_inputs #plan_cards_dyn ul,
+#notificationsTab #customer_opinion .for_inputs #plan_cards_dyn ul,
+#profileIntegrationsTab #customer_opinion .for_inputs #plan_cards_dyn ul,
+#upgradeTab #customer_opinion .for_inputs #plan_cards_dyn ul {
+  margin-bottom: 0;
+}
+/* line 99, profile.scss */
+#generalTab #customer_opinion .for_inputs #plan_cards_dyn button,
+#passwordTab #customer_opinion .for_inputs #plan_cards_dyn button,
+#billingTab #customer_opinion .for_inputs #plan_cards_dyn button,
+#notificationsTab #customer_opinion .for_inputs #plan_cards_dyn button,
+#profileIntegrationsTab #customer_opinion .for_inputs #plan_cards_dyn button,
+#upgradeTab #customer_opinion .for_inputs #plan_cards_dyn button {
+  display: none;
+}
+/* line 104, profile.scss */
+#generalTab #customer_opinion .plans_block,
+#passwordTab #customer_opinion .plans_block,
+#billingTab #customer_opinion .plans_block,
+#notificationsTab #customer_opinion .plans_block,
+#profileIntegrationsTab #customer_opinion .plans_block,
+#upgradeTab #customer_opinion .plans_block {
+  width: 100% !important;
+}
+/* line 108, profile.scss */
+#generalTab .for_inputs,
+#passwordTab .for_inputs,
+#billingTab .for_inputs,
+#notificationsTab .for_inputs,
+#profileIntegrationsTab .for_inputs,
+#upgradeTab .for_inputs {
+  float: left;
+  width: 346px;
+  padding-right: 72px;
+  border-right: 1px solid #e2e2e2;
+}
+/* line 111, profile.scss */
+#generalTab .for_inputs #upgrade_form_block input:focus,
+#passwordTab .for_inputs #upgrade_form_block input:focus,
+#billingTab .for_inputs #upgrade_form_block input:focus,
+#notificationsTab .for_inputs #upgrade_form_block input:focus,
+#profileIntegrationsTab .for_inputs #upgrade_form_block input:focus,
+#upgradeTab .for_inputs #upgrade_form_block input:focus {
+  border-bottom: 2px solid #448aff;
+}
+/* line 117, profile.scss */
+#generalTab .for_inputs #upgrade_form_block .promotion .form-item-1 input,
+#passwordTab .for_inputs #upgrade_form_block .promotion .form-item-1 input,
+#billingTab .for_inputs #upgrade_form_block .promotion .form-item-1 input,
+#notificationsTab .for_inputs #upgrade_form_block .promotion .form-item-1 input,
+#profileIntegrationsTab .for_inputs #upgrade_form_block .promotion .form-item-1 input,
+#upgradeTab .for_inputs #upgrade_form_block .promotion .form-item-1 input {
+  line-height: 55px;
+  width: 100%;
+  position: relative;
+  padding: 6px 120px 6px 6px;
+}
+/* line 118, profile.scss */
+#generalTab .for_inputs #upgrade_form_block .promotion .form-item-1 input:focus,
+#passwordTab .for_inputs #upgrade_form_block .promotion .form-item-1 input:focus,
+#billingTab .for_inputs #upgrade_form_block .promotion .form-item-1 input:focus,
+#notificationsTab .for_inputs #upgrade_form_block .promotion .form-item-1 input:focus,
+#profileIntegrationsTab .for_inputs #upgrade_form_block .promotion .form-item-1 input:focus,
+#upgradeTab .for_inputs #upgrade_form_block .promotion .form-item-1 input:focus {
+  border: 1px solid #d2d2d2;
+  padding: 6px 120px 6px 6px;
+}
+/* line 127, profile.scss */
+#generalTab .for_inputs #upgrade_form_block .promotion .form-item-1 .apply-btn,
+#passwordTab .for_inputs #upgrade_form_block .promotion .form-item-1 .apply-btn,
+#billingTab .for_inputs #upgrade_form_block .promotion .form-item-1 .apply-btn,
+#notificationsTab .for_inputs #upgrade_form_block .promotion .form-item-1 .apply-btn,
+#profileIntegrationsTab .for_inputs #upgrade_form_block .promotion .form-item-1 .apply-btn,
+#upgradeTab .for_inputs #upgrade_form_block .promotion .form-item-1 .apply-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+/* line 135, profile.scss */
+#generalTab .for_inputs #upgrade_form_block .form-item-1 .required,
+#passwordTab .for_inputs #upgrade_form_block .form-item-1 .required,
+#billingTab .for_inputs #upgrade_form_block .form-item-1 .required,
+#notificationsTab .for_inputs #upgrade_form_block .form-item-1 .required,
+#profileIntegrationsTab .for_inputs #upgrade_form_block .form-item-1 .required,
+#upgradeTab .for_inputs #upgrade_form_block .form-item-1 .required {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #EE534F;
+}
+/* line 144, profile.scss */
+#generalTab .for_inputs #upgrade_form_block .form-item-1 .cancel-button,
+#passwordTab .for_inputs #upgrade_form_block .form-item-1 .cancel-button,
+#billingTab .for_inputs #upgrade_form_block .form-item-1 .cancel-button,
+#notificationsTab .for_inputs #upgrade_form_block .form-item-1 .cancel-button,
+#profileIntegrationsTab .for_inputs #upgrade_form_block .form-item-1 .cancel-button,
+#upgradeTab .for_inputs #upgrade_form_block .form-item-1 .cancel-button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+/* line 150, profile.scss */
+#generalTab .for_inputs #upgrade_form_block select,
+#passwordTab .for_inputs #upgrade_form_block select,
+#billingTab .for_inputs #upgrade_form_block select,
+#notificationsTab .for_inputs #upgrade_form_block select,
+#profileIntegrationsTab .for_inputs #upgrade_form_block select,
+#upgradeTab .for_inputs #upgrade_form_block select {
+  margin-top: 30px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+}
+/* line 161, profile.scss */
+#generalTab .for_inputs.second,
+#passwordTab .for_inputs.second,
+#billingTab .for_inputs.second,
+#notificationsTab .for_inputs.second,
+#profileIntegrationsTab .for_inputs.second,
+#upgradeTab .for_inputs.second {
+  border-right: none;
+  margin-left: 40px;
+}
+/* line 170, profile.scss */
+#generalTab .for_inputs .footer,
+#passwordTab .for_inputs .footer,
+#billingTab .for_inputs .footer,
+#notificationsTab .for_inputs .footer,
+#profileIntegrationsTab .for_inputs .footer,
+#upgradeTab .for_inputs .footer {
+  text-align: center;
+  margin-top: 46px;
+}
+/* line 174, profile.scss */
+#generalTab .for_inputs button, #generalTab .for_inputs a.contact_us,
+#passwordTab .for_inputs button,
+#passwordTab .for_inputs a.contact_us,
+#billingTab .for_inputs button,
+#billingTab .for_inputs a.contact_us,
+#notificationsTab .for_inputs button,
+#notificationsTab .for_inputs a.contact_us,
+#profileIntegrationsTab .for_inputs button,
+#profileIntegrationsTab .for_inputs a.contact_us,
+#upgradeTab .for_inputs button,
+#upgradeTab .for_inputs a.contact_us {
+  width: initial;
+  border-radius: 0 !important;
+  background: #448aff;
+  color: #FFFFFF;
+  padding: 0 42px;
+  line-height: 42px;
+}
+/* line 182, profile.scss */
+#generalTab .for_inputs a.contact_us,
+#passwordTab .for_inputs a.contact_us,
+#billingTab .for_inputs a.contact_us,
+#notificationsTab .for_inputs a.contact_us,
+#profileIntegrationsTab .for_inputs a.contact_us,
+#upgradeTab .for_inputs a.contact_us {
+  display: block;
+  text-align: center;
+  line-height: 44px;
+  width: 100%;
+  color: #FFFFFF;
+  background: #448aff;
+  text-transform: uppercase;
+  border: none;
+}
+/* line 193, profile.scss */
+#generalTab .for_inputs .plan-coloumn, #generalTab .for_inputs .card-coloumn, #generalTab .for_inputs .billing-coloumn,
+#passwordTab .for_inputs .plan-coloumn,
+#passwordTab .for_inputs .card-coloumn,
+#passwordTab .for_inputs .billing-coloumn,
+#billingTab .for_inputs .plan-coloumn,
+#billingTab .for_inputs .card-coloumn,
+#billingTab .for_inputs .billing-coloumn,
+#notificationsTab .for_inputs .plan-coloumn,
+#notificationsTab .for_inputs .card-coloumn,
+#notificationsTab .for_inputs .billing-coloumn,
+#profileIntegrationsTab .for_inputs .plan-coloumn,
+#profileIntegrationsTab .for_inputs .card-coloumn,
+#profileIntegrationsTab .for_inputs .billing-coloumn,
+#upgradeTab .for_inputs .plan-coloumn,
+#upgradeTab .for_inputs .card-coloumn,
+#upgradeTab .for_inputs .billing-coloumn {
+  color: #4d4d4d;
+}
+/* line 194, profile.scss */
+#generalTab .for_inputs .plan-coloumn .col-title, #generalTab .for_inputs .card-coloumn .col-title, #generalTab .for_inputs .billing-coloumn .col-title,
+#passwordTab .for_inputs .plan-coloumn .col-title,
+#passwordTab .for_inputs .card-coloumn .col-title,
+#passwordTab .for_inputs .billing-coloumn .col-title,
+#billingTab .for_inputs .plan-coloumn .col-title,
+#billingTab .for_inputs .card-coloumn .col-title,
+#billingTab .for_inputs .billing-coloumn .col-title,
+#notificationsTab .for_inputs .plan-coloumn .col-title,
+#notificationsTab .for_inputs .card-coloumn .col-title,
+#notificationsTab .for_inputs .billing-coloumn .col-title,
+#profileIntegrationsTab .for_inputs .plan-coloumn .col-title,
+#profileIntegrationsTab .for_inputs .card-coloumn .col-title,
+#profileIntegrationsTab .for_inputs .billing-coloumn .col-title,
+#upgradeTab .for_inputs .plan-coloumn .col-title,
+#upgradeTab .for_inputs .card-coloumn .col-title,
+#upgradeTab .for_inputs .billing-coloumn .col-title {
+  text-transform: uppercase;
+}
+/* line 198, profile.scss */
+#generalTab .for_inputs .plan-coloumn .plan, #generalTab .for_inputs .card-coloumn .plan, #generalTab .for_inputs .billing-coloumn .plan,
+#passwordTab .for_inputs .plan-coloumn .plan,
+#passwordTab .for_inputs .card-coloumn .plan,
+#passwordTab .for_inputs .billing-coloumn .plan,
+#billingTab .for_inputs .plan-coloumn .plan,
+#billingTab .for_inputs .card-coloumn .plan,
+#billingTab .for_inputs .billing-coloumn .plan,
+#notificationsTab .for_inputs .plan-coloumn .plan,
+#notificationsTab .for_inputs .card-coloumn .plan,
+#notificationsTab .for_inputs .billing-coloumn .plan,
+#profileIntegrationsTab .for_inputs .plan-coloumn .plan,
+#profileIntegrationsTab .for_inputs .card-coloumn .plan,
+#profileIntegrationsTab .for_inputs .billing-coloumn .plan,
+#upgradeTab .for_inputs .plan-coloumn .plan,
+#upgradeTab .for_inputs .card-coloumn .plan,
+#upgradeTab .for_inputs .billing-coloumn .plan {
+  margin: 0;
+}
+/* line 200, profile.scss */
+#generalTab .for_inputs .plan-coloumn .plan .name, #generalTab .for_inputs .card-coloumn .plan .name, #generalTab .for_inputs .billing-coloumn .plan .name,
+#passwordTab .for_inputs .plan-coloumn .plan .name,
+#passwordTab .for_inputs .card-coloumn .plan .name,
+#passwordTab .for_inputs .billing-coloumn .plan .name,
+#billingTab .for_inputs .plan-coloumn .plan .name,
+#billingTab .for_inputs .card-coloumn .plan .name,
+#billingTab .for_inputs .billing-coloumn .plan .name,
+#notificationsTab .for_inputs .plan-coloumn .plan .name,
+#notificationsTab .for_inputs .card-coloumn .plan .name,
+#notificationsTab .for_inputs .billing-coloumn .plan .name,
+#profileIntegrationsTab .for_inputs .plan-coloumn .plan .name,
+#profileIntegrationsTab .for_inputs .card-coloumn .plan .name,
+#profileIntegrationsTab .for_inputs .billing-coloumn .plan .name,
+#upgradeTab .for_inputs .plan-coloumn .plan .name,
+#upgradeTab .for_inputs .card-coloumn .plan .name,
+#upgradeTab .for_inputs .billing-coloumn .plan .name {
+  font-weight: normal;
+}
+/* line 204, profile.scss */
+#generalTab .for_inputs .plan-coloumn .btn, #generalTab .for_inputs .card-coloumn .btn, #generalTab .for_inputs .billing-coloumn .btn,
+#passwordTab .for_inputs .plan-coloumn .btn,
+#passwordTab .for_inputs .card-coloumn .btn,
+#passwordTab .for_inputs .billing-coloumn .btn,
+#billingTab .for_inputs .plan-coloumn .btn,
+#billingTab .for_inputs .card-coloumn .btn,
+#billingTab .for_inputs .billing-coloumn .btn,
+#notificationsTab .for_inputs .plan-coloumn .btn,
+#notificationsTab .for_inputs .card-coloumn .btn,
+#notificationsTab .for_inputs .billing-coloumn .btn,
+#profileIntegrationsTab .for_inputs .plan-coloumn .btn,
+#profileIntegrationsTab .for_inputs .card-coloumn .btn,
+#profileIntegrationsTab .for_inputs .billing-coloumn .btn,
+#upgradeTab .for_inputs .plan-coloumn .btn,
+#upgradeTab .for_inputs .card-coloumn .btn,
+#upgradeTab .for_inputs .billing-coloumn .btn {
+  border-radius: 0;
+  background: #448aff;
+  color: #FFFFFF;
+  line-height: 44px;
+  padding: 0 26px;
+}
+/* line 211, profile.scss */
+#generalTab .for_inputs .plan-coloumn .link, #generalTab .for_inputs .card-coloumn .link, #generalTab .for_inputs .billing-coloumn .link,
+#passwordTab .for_inputs .plan-coloumn .link,
+#passwordTab .for_inputs .card-coloumn .link,
+#passwordTab .for_inputs .billing-coloumn .link,
+#billingTab .for_inputs .plan-coloumn .link,
+#billingTab .for_inputs .card-coloumn .link,
+#billingTab .for_inputs .billing-coloumn .link,
+#notificationsTab .for_inputs .plan-coloumn .link,
+#notificationsTab .for_inputs .card-coloumn .link,
+#notificationsTab .for_inputs .billing-coloumn .link,
+#profileIntegrationsTab .for_inputs .plan-coloumn .link,
+#profileIntegrationsTab .for_inputs .card-coloumn .link,
+#profileIntegrationsTab .for_inputs .billing-coloumn .link,
+#upgradeTab .for_inputs .plan-coloumn .link,
+#upgradeTab .for_inputs .card-coloumn .link,
+#upgradeTab .for_inputs .billing-coloumn .link {
+  padding-left: 38px;
+}
+/* line 213, profile.scss */
+#generalTab .for_inputs .plan-coloumn .link .cancel_plan, #generalTab .for_inputs .card-coloumn .link .cancel_plan, #generalTab .for_inputs .billing-coloumn .link .cancel_plan,
+#passwordTab .for_inputs .plan-coloumn .link .cancel_plan,
+#passwordTab .for_inputs .card-coloumn .link .cancel_plan,
+#passwordTab .for_inputs .billing-coloumn .link .cancel_plan,
+#billingTab .for_inputs .plan-coloumn .link .cancel_plan,
+#billingTab .for_inputs .card-coloumn .link .cancel_plan,
+#billingTab .for_inputs .billing-coloumn .link .cancel_plan,
+#notificationsTab .for_inputs .plan-coloumn .link .cancel_plan,
+#notificationsTab .for_inputs .card-coloumn .link .cancel_plan,
+#notificationsTab .for_inputs .billing-coloumn .link .cancel_plan,
+#profileIntegrationsTab .for_inputs .plan-coloumn .link .cancel_plan,
+#profileIntegrationsTab .for_inputs .card-coloumn .link .cancel_plan,
+#profileIntegrationsTab .for_inputs .billing-coloumn .link .cancel_plan,
+#upgradeTab .for_inputs .plan-coloumn .link .cancel_plan,
+#upgradeTab .for_inputs .card-coloumn .link .cancel_plan,
+#upgradeTab .for_inputs .billing-coloumn .link .cancel_plan {
+  line-height: 44px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #c5c5c5;
+}
+/* line 220, profile.scss */
+#generalTab .for_inputs .plan-coloumn .charge, #generalTab .for_inputs .card-coloumn .charge, #generalTab .for_inputs .billing-coloumn .charge,
+#passwordTab .for_inputs .plan-coloumn .charge,
+#passwordTab .for_inputs .card-coloumn .charge,
+#passwordTab .for_inputs .billing-coloumn .charge,
+#billingTab .for_inputs .plan-coloumn .charge,
+#billingTab .for_inputs .card-coloumn .charge,
+#billingTab .for_inputs .billing-coloumn .charge,
+#notificationsTab .for_inputs .plan-coloumn .charge,
+#notificationsTab .for_inputs .card-coloumn .charge,
+#notificationsTab .for_inputs .billing-coloumn .charge,
+#profileIntegrationsTab .for_inputs .plan-coloumn .charge,
+#profileIntegrationsTab .for_inputs .card-coloumn .charge,
+#profileIntegrationsTab .for_inputs .billing-coloumn .charge,
+#upgradeTab .for_inputs .plan-coloumn .charge,
+#upgradeTab .for_inputs .card-coloumn .charge,
+#upgradeTab .for_inputs .billing-coloumn .charge {
+  font-size: 14px;
+  line-height: 40px;
+}
+/* line 223, profile.scss */
+#generalTab .for_inputs .plan-coloumn .charge span, #generalTab .for_inputs .card-coloumn .charge span, #generalTab .for_inputs .billing-coloumn .charge span,
+#passwordTab .for_inputs .plan-coloumn .charge span,
+#passwordTab .for_inputs .card-coloumn .charge span,
+#passwordTab .for_inputs .billing-coloumn .charge span,
+#billingTab .for_inputs .plan-coloumn .charge span,
+#billingTab .for_inputs .card-coloumn .charge span,
+#billingTab .for_inputs .billing-coloumn .charge span,
+#notificationsTab .for_inputs .plan-coloumn .charge span,
+#notificationsTab .for_inputs .card-coloumn .charge span,
+#notificationsTab .for_inputs .billing-coloumn .charge span,
+#profileIntegrationsTab .for_inputs .plan-coloumn .charge span,
+#profileIntegrationsTab .for_inputs .card-coloumn .charge span,
+#profileIntegrationsTab .for_inputs .billing-coloumn .charge span,
+#upgradeTab .for_inputs .plan-coloumn .charge span,
+#upgradeTab .for_inputs .card-coloumn .charge span,
+#upgradeTab .for_inputs .billing-coloumn .charge span {
+  padding-right: 76px;
+}
+/* line 228, profile.scss */
+#generalTab .for_inputs .billing-coloumn,
+#passwordTab .for_inputs .billing-coloumn,
+#billingTab .for_inputs .billing-coloumn,
+#notificationsTab .for_inputs .billing-coloumn,
+#profileIntegrationsTab .for_inputs .billing-coloumn,
+#upgradeTab .for_inputs .billing-coloumn {
+  padding-right: 0;
+  width: 440px;
+}
+/* line 231, profile.scss */
+#generalTab .for_inputs .billing-coloumn .col-title,
+#passwordTab .for_inputs .billing-coloumn .col-title,
+#billingTab .for_inputs .billing-coloumn .col-title,
+#notificationsTab .for_inputs .billing-coloumn .col-title,
+#profileIntegrationsTab .for_inputs .billing-coloumn .col-title,
+#upgradeTab .for_inputs .billing-coloumn .col-title {
+  margin-bottom: 10px;
+}
+/* line 234, profile.scss */
+#generalTab .for_inputs .billing-coloumn .more,
+#passwordTab .for_inputs .billing-coloumn .more,
+#billingTab .for_inputs .billing-coloumn .more,
+#notificationsTab .for_inputs .billing-coloumn .more,
+#profileIntegrationsTab .for_inputs .billing-coloumn .more,
+#upgradeTab .for_inputs .billing-coloumn .more {
+  margin-top: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 240, profile.scss */
+#generalTab .for_inputs .card-coloumn,
+#passwordTab .for_inputs .card-coloumn,
+#billingTab .for_inputs .card-coloumn,
+#notificationsTab .for_inputs .card-coloumn,
+#profileIntegrationsTab .for_inputs .card-coloumn,
+#upgradeTab .for_inputs .card-coloumn {
+  margin-top: 42px;
+}
+/* line 242, profile.scss */
+#generalTab .for_inputs .card-coloumn .owner, #generalTab .for_inputs .card-coloumn .card_num,
+#passwordTab .for_inputs .card-coloumn .owner,
+#passwordTab .for_inputs .card-coloumn .card_num,
+#billingTab .for_inputs .card-coloumn .owner,
+#billingTab .for_inputs .card-coloumn .card_num,
+#notificationsTab .for_inputs .card-coloumn .owner,
+#notificationsTab .for_inputs .card-coloumn .card_num,
+#profileIntegrationsTab .for_inputs .card-coloumn .owner,
+#profileIntegrationsTab .for_inputs .card-coloumn .card_num,
+#upgradeTab .for_inputs .card-coloumn .owner,
+#upgradeTab .for_inputs .card-coloumn .card_num {
+  font-size: 18px;
+  line-height: 38px;
+}
+/* line 248, profile.scss */
+#generalTab .for_avatars,
+#passwordTab .for_avatars,
+#billingTab .for_avatars,
+#notificationsTab .for_avatars,
+#profileIntegrationsTab .for_avatars,
+#upgradeTab .for_avatars {
+  float: left;
+  margin-left: 40px;
+  position: relative;
+  min-width: 470px;
+}
+/* line 253, profile.scss */
+#generalTab .for_avatars img,
+#passwordTab .for_avatars img,
+#billingTab .for_avatars img,
+#notificationsTab .for_avatars img,
+#profileIntegrationsTab .for_avatars img,
+#upgradeTab .for_avatars img {
+  height: 92px;
+  width: 92px;
+  border-radius: 46px;
+}
+/* line 258, profile.scss */
+#generalTab .for_avatars .b-wixmedia-image-directive__toolbar,
+#passwordTab .for_avatars .b-wixmedia-image-directive__toolbar,
+#billingTab .for_avatars .b-wixmedia-image-directive__toolbar,
+#notificationsTab .for_avatars .b-wixmedia-image-directive__toolbar,
+#profileIntegrationsTab .for_avatars .b-wixmedia-image-directive__toolbar,
+#upgradeTab .for_avatars .b-wixmedia-image-directive__toolbar {
+  background-color: #ffffff;
+  border-radius: 0px;
+  bottom: 26px;
+  left: 124px;
+  border-radius: 0;
+  line-height: 44px;
+  border: solid 1px #448aff;
+  color: #448aff;
+  visibility: visible;
+  height: 44px;
+  width: 114px;
+  max-width: 114px;
+}
+/* line 271, profile.scss */
+#generalTab .for_avatars .b-wixmedia-image-directive__toolbar label,
+#passwordTab .for_avatars .b-wixmedia-image-directive__toolbar label,
+#billingTab .for_avatars .b-wixmedia-image-directive__toolbar label,
+#notificationsTab .for_avatars .b-wixmedia-image-directive__toolbar label,
+#profileIntegrationsTab .for_avatars .b-wixmedia-image-directive__toolbar label,
+#upgradeTab .for_avatars .b-wixmedia-image-directive__toolbar label {
+  margin: 0;
+  padding: 0;
+}
+/* line 275, profile.scss */
+#generalTab .for_avatars .b-wixmedia-image-directive__toolbar .btn,
+#passwordTab .for_avatars .b-wixmedia-image-directive__toolbar .btn,
+#billingTab .for_avatars .b-wixmedia-image-directive__toolbar .btn,
+#notificationsTab .for_avatars .b-wixmedia-image-directive__toolbar .btn,
+#profileIntegrationsTab .for_avatars .b-wixmedia-image-directive__toolbar .btn,
+#upgradeTab .for_avatars .b-wixmedia-image-directive__toolbar .btn {
+  border: none;
+  color: #448aff;
+}
+/* line 279, profile.scss */
+#generalTab .for_avatars .b-wixmedia-image-directive__toolbar i,
+#passwordTab .for_avatars .b-wixmedia-image-directive__toolbar i,
+#billingTab .for_avatars .b-wixmedia-image-directive__toolbar i,
+#notificationsTab .for_avatars .b-wixmedia-image-directive__toolbar i,
+#profileIntegrationsTab .for_avatars .b-wixmedia-image-directive__toolbar i,
+#upgradeTab .for_avatars .b-wixmedia-image-directive__toolbar i {
+  display: none;
+}
+/* line 283, profile.scss */
+#generalTab .for_avatars .additional,
+#passwordTab .for_avatars .additional,
+#billingTab .for_avatars .additional,
+#notificationsTab .for_avatars .additional,
+#profileIntegrationsTab .for_avatars .additional,
+#upgradeTab .for_avatars .additional {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+}
+/* line 287, profile.scss */
+#generalTab .for_avatars .additional span,
+#passwordTab .for_avatars .additional span,
+#billingTab .for_avatars .additional span,
+#notificationsTab .for_avatars .additional span,
+#profileIntegrationsTab .for_avatars .additional span,
+#upgradeTab .for_avatars .additional span {
+  color: #adadad;
+  text-transform: uppercase;
+  padding-left: 10px;
+  line-height: 44px;
+}
+/* line 296, profile.scss */
+#generalTab .profile-pic-section,
+#passwordTab .profile-pic-section,
+#billingTab .profile-pic-section,
+#notificationsTab .profile-pic-section,
+#profileIntegrationsTab .profile-pic-section,
+#upgradeTab .profile-pic-section {
+  margin-bottom: 55px;
+}
+/* line 298, profile.scss */
+#generalTab .profile-pic-section .b-wixmedia-image-directive__toolbar,
+#passwordTab .profile-pic-section .b-wixmedia-image-directive__toolbar,
+#billingTab .profile-pic-section .b-wixmedia-image-directive__toolbar,
+#notificationsTab .profile-pic-section .b-wixmedia-image-directive__toolbar,
+#profileIntegrationsTab .profile-pic-section .b-wixmedia-image-directive__toolbar,
+#upgradeTab .profile-pic-section .b-wixmedia-image-directive__toolbar {
+  background: transparent;
+  visibility: visible;
+  left: 120px;
+  top: 50%;
+  margin-top: -18px;
+}
+/* line 306, profile.scss */
+#generalTab .profile-pic-section wixmedia-image img,
+#passwordTab .profile-pic-section wixmedia-image img,
+#billingTab .profile-pic-section wixmedia-image img,
+#notificationsTab .profile-pic-section wixmedia-image img,
+#profileIntegrationsTab .profile-pic-section wixmedia-image img,
+#upgradeTab .profile-pic-section wixmedia-image img {
+  border-radius: 50%;
+}
+
+/* line 314, profile.scss */
+#passwordTab .for_inputs {
+  border-right: none !important;
+}
+
+/* line 320, profile.scss */
+#billingTab .plan {
+  border: none;
+  margin-top: 0;
+  padding: 0;
+}
+/* line 324, profile.scss */
+#billingTab .plan .name {
+  text-align: left;
+  font-size: 1.45em;
+  font-weight: bold;
+  color: #EE534F;
+}
+/* line 332, profile.scss */
+#billingTab .plan ul li span {
+  font-size: 1em;
+}
+
+/* line 341, profile.scss */
+#slackTab {
+  width: 500px;
+}
+
+/* line 345, profile.scss */
+#platformTab {
+  width: 500px;
+}
+
+/* line 349, profile.scss */
+#profileIntegrationsTab {
+  /*    .wrapper-profile-integration {
+          margin-bottom: 15px;
+      }*/
+}
+/* line 351, profile.scss */
+#profileIntegrationsTab ul.ivh-treeview ul.ivh-treeview {
+  padding-left: 40px;
+}
+
+/* line 360, profile.scss */
+#notificationsTab .wrapper-notification-settings, #notificationsTab .wrapper-profile-integration, #profileIntegrationsTab .wrapper-notification-settings, #profileIntegrationsTab .wrapper-profile-integration {
+  max-width: 640px;
+  /* .flex-grow-1 {
+      margin-left: 30px;
+  }*/
+}
+/* line 361, profile.scss */
+#notificationsTab .wrapper-notification-settings:first-child, #notificationsTab .wrapper-profile-integration:first-child, #profileIntegrationsTab .wrapper-notification-settings:first-child, #profileIntegrationsTab .wrapper-profile-integration:first-child {
+  margin: 0px;
+}
+/* line 365, profile.scss */
+#notificationsTab .wrapper-notification-settings .link a:hover::after, #notificationsTab .wrapper-notification-settings .link a:focus::after, #notificationsTab .wrapper-profile-integration .link a:hover::after, #notificationsTab .wrapper-profile-integration .link a:focus::after, #profileIntegrationsTab .wrapper-notification-settings .link a:hover::after, #profileIntegrationsTab .wrapper-notification-settings .link a:focus::after, #profileIntegrationsTab .wrapper-profile-integration .link a:hover::after, #profileIntegrationsTab .wrapper-profile-integration .link a:focus::after {
+  height: 1px;
+}
+/* line 368, profile.scss */
+#notificationsTab .wrapper-notification-settings a, #notificationsTab .wrapper-profile-integration a, #profileIntegrationsTab .wrapper-notification-settings a, #profileIntegrationsTab .wrapper-profile-integration a {
+  font-weight: lighter;
+}
+/* line 371, profile.scss */
+#notificationsTab .wrapper-notification-settings .line, #notificationsTab .wrapper-profile-integration .line, #profileIntegrationsTab .wrapper-notification-settings .line, #profileIntegrationsTab .wrapper-profile-integration .line {
+  margin: 10px 70px 10px 0;
+}
+/* line 374, profile.scss */
+#notificationsTab .wrapper-notification-settings .cb-space, #notificationsTab .wrapper-profile-integration .cb-space, #profileIntegrationsTab .wrapper-notification-settings .cb-space, #profileIntegrationsTab .wrapper-profile-integration .cb-space {
+  margin-left: 30px;
+}
+/* line 380, profile.scss */
+#notificationsTab .wrapper-notification-settings label, #notificationsTab .wrapper-profile-integration label, #profileIntegrationsTab .wrapper-notification-settings label, #profileIntegrationsTab .wrapper-profile-integration label {
+  font-weight: 600;
+}
+/* line 383, profile.scss */
+#notificationsTab .wrapper-notification-settings form, #notificationsTab .wrapper-profile-integration form, #profileIntegrationsTab .wrapper-notification-settings form, #profileIntegrationsTab .wrapper-profile-integration form {
+  margin: 20px 0 20px 30px;
+  display: table;
+}
+/* line 386, profile.scss */
+#notificationsTab .wrapper-notification-settings form .column, #notificationsTab .wrapper-profile-integration form .column, #profileIntegrationsTab .wrapper-notification-settings form .column, #profileIntegrationsTab .wrapper-profile-integration form .column {
+  float: left;
+  margin-right: 70px;
+}
+/* line 389, profile.scss */
+#notificationsTab .wrapper-notification-settings form .column div:first-child, #notificationsTab .wrapper-profile-integration form .column div:first-child, #profileIntegrationsTab .wrapper-notification-settings form .column div:first-child, #profileIntegrationsTab .wrapper-profile-integration form .column div:first-child {
+  color: #949494;
+  margin-top: 1px;
+  margin-bottom: 15px;
+}
+/* line 394, profile.scss */
+#notificationsTab .wrapper-notification-settings form .column .frequency-opt, #notificationsTab .wrapper-profile-integration form .column .frequency-opt, #profileIntegrationsTab .wrapper-notification-settings form .column .frequency-opt, #profileIntegrationsTab .wrapper-profile-integration form .column .frequency-opt {
+  margin: 8px 0;
+}
+/* line 399, profile.scss */
+#notificationsTab .wrapper-notification-settings .subtype, #notificationsTab .wrapper-profile-integration .subtype, #profileIntegrationsTab .wrapper-notification-settings .subtype, #profileIntegrationsTab .wrapper-profile-integration .subtype {
+  margin-left: 50px;
+}
+/* line 402, profile.scss */
+#notificationsTab .wrapper-notification-settings .section-space, #notificationsTab .wrapper-profile-integration .section-space, #profileIntegrationsTab .wrapper-notification-settings .section-space, #profileIntegrationsTab .wrapper-profile-integration .section-space {
+  margin: 20px 0 20px 30px;
+}
+/* line 406, profile.scss */
+#notificationsTab .btn, #profileIntegrationsTab .btn {
+  width: initial;
+  border-radius: 0 !important;
+  background: #448aff;
+  color: #FFFFFF;
+  padding: 0 42px;
+  line-height: 42px;
+}
+/* line 414, profile.scss */
+#notificationsTab .regular-radio:checked + label:after, #profileIntegrationsTab .regular-radio:checked + label:after {
+  background: #448aff;
+}
+/* line 417, profile.scss */
+#notificationsTab .wrapper-checkbox.red label:after, #profileIntegrationsTab .wrapper-checkbox.red label:after {
+  border-color: #448aff;
+}
+/* line 421, profile.scss */
+#notificationsTab .wrapper-profile-integration .cb-space, #profileIntegrationsTab .wrapper-profile-integration .cb-space {
+  margin: 0;
+}
+
+/* line 426, profile.scss */
+#upgradeTab {
+  color: #4e4e4e;
+  width: inherit;
+}
+/* line 429, profile.scss */
+#upgradeTab .for_inputs {
+  width: 100%;
+}
+/* line 432, profile.scss */
+#upgradeTab .plans_block {
+  overflow: hidden;
+  float: left;
+  width: calc(100% - 362px) !important;
+}
+/* line 438, profile.scss */
+#upgradeTab .plans_block ul.main {
+  margin: 0;
+  padding: 0;
+}
+/* line 441, profile.scss */
+#upgradeTab .plans_block ul.main li {
+  padding: 0;
+  width: 246px;
+  display: inline-block;
+  vertical-align: bottom;
+  border: 1px solid #dadada;
+  overflow: hidden;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+/* line 451, profile.scss */
+#upgradeTab .plans_block ul.main li.most-popular .head {
+  border-bottom: none;
+}
+/* line 455, profile.scss */
+#upgradeTab .plans_block ul.main li .head {
+  line-height: 68px;
+  border-bottom: 1px solid #dadada;
+  padding: 0px 18px;
+  font-size: 24px;
+  text-align: center;
+  color: #448aff;
+}
+/* line 463, profile.scss */
+#upgradeTab .plans_block ul.main li .popular {
+  background: #8dc63f;
+  width: 100%;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+/* line 471, profile.scss */
+#upgradeTab .plans_block ul.main li .price {
+  font-size: 16px;
+  text-align: center;
+}
+/* line 474, profile.scss */
+#upgradeTab .plans_block ul.main li .price sup {
+  font-size: 26px;
+}
+/* line 477, profile.scss */
+#upgradeTab .plans_block ul.main li .price .value {
+  font-size: 56px;
+}
+/* line 480, profile.scss */
+#upgradeTab .plans_block ul.main li .price .personal {
+  font-size: 26px;
+  line-height: 80px;
+}
+/* line 485, profile.scss */
+#upgradeTab .plans_block ul.main li .desc {
+  padding: 0 16px 0px 16px;
+  font-size: 15px;
+  text-align: left;
+}
+/* line 490, profile.scss */
+#upgradeTab .plans_block ul.main li hr {
+  margin: 14px auto;
+  width: 114px;
+  height: 1px;
+}
+/* line 495, profile.scss */
+#upgradeTab .plans_block ul.main li .info {
+  margin: 0 16px 26px 16px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+/* line 500, profile.scss */
+#upgradeTab .plans_block ul.main li .info button {
+  line-height: 42px;
+  width: 100%;
+  color: #FFFFFF;
+  background: #448aff;
+  text-transform: uppercase;
+  border: none;
+}
+/* line 501, profile.scss */
+#upgradeTab .plans_block ul.main li .info button.current {
+  color: #448aff;
+  background: #FFFFFF;
+  border: 1px solid #448aff;
+}
+/* line 513, profile.scss */
+#upgradeTab .plans_block ul.main li .info ul {
+  padding: 0;
+  margin-bottom: 38px;
+  list-style-type: disc;
+}
+/* line 517, profile.scss */
+#upgradeTab .plans_block ul.main li .info ul li {
+  color: #ee534f;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: list-item;
+  overflow: inherit;
+  margin-left: 16px;
+}
+/* line 520, profile.scss */
+#upgradeTab .plans_block ul.main li .info ul li span {
+  color: #4e4e4e;
+}
+/* line 521, profile.scss */
+#upgradeTab .plans_block ul.main li .info ul li span.false {
+  opacity: 0.4;
+}
+/* line 540, profile.scss */
+#upgradeTab .opinions_block {
+  float: left;
+  padding-left: 72px;
+}
+/* line 543, profile.scss */
+#upgradeTab .opinions_block .users {
+  width: 290px;
+  overflow: hidden;
+}
+/* line 546, profile.scss */
+#upgradeTab .opinions_block .users ul {
+  margin: 32px 0 0 0;
+  padding: 0;
+}
+/* line 549, profile.scss */
+#upgradeTab .opinions_block .users ul li {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+/* line 552, profile.scss */
+#upgradeTab .opinions_block .users ul li .text {
+  position: relative;
+  padding: 28px 16px;
+  border: 1px solid #448aff;
+  border-radius: 8px;
+}
+/* line 553, profile.scss */
+#upgradeTab .opinions_block .users ul li .text .arrow {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #448aff;
+  position: absolute;
+  bottom: -9px;
+  left: 10px;
+}
+/* line 554, profile.scss */
+#upgradeTab .opinions_block .users ul li .text .arrow:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid #ffffff;
+  position: absolute;
+  bottom: 1px;
+  left: -7px;
+}
+/* line 580, profile.scss */
+#upgradeTab .opinions_block .users ul li .user {
+  margin-top: 20px;
+}
+/* line 582, profile.scss */
+#upgradeTab .opinions_block .users ul li .user .photo {
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  float: left;
+}
+/* line 588, profile.scss */
+#upgradeTab .opinions_block .users ul li .user .photo img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 19px;
+}
+/* line 595, profile.scss */
+#upgradeTab .opinions_block .users ul li .user .info {
+  padding-left: 12px;
+  float: left;
+  font-weight: bold;
+  max-width: 250px;
+}

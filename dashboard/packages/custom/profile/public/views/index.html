@@ -1,0 +1,17 @@
+<div class="full-height">
+    <side-bar data="sideBarData"></side-bar>
+    <div class="tab-content full-height">
+        <div class="profile-pic-section">
+            <div class="profile_header">
+                <span class="user_image">
+                    <img ng-src="{{profileImage.url}}" alt="Profile image">
+                </span>
+                <span class="user_info">
+                    <h3>{{global.user.name}}</h3>
+                    <span class="status">{{global.user.roles.join(' ')}}</span>
+                </span>
+            </div>
+        </div>
+        <div ui-view class="full-height with-sidebar-content" id="stackPageWrapper"></div>
+    </div>
+</div>

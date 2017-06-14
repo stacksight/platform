@@ -1,0 +1,38 @@
+<div class="top-head">
+    <div class="search-banner">
+        <div class="title">Github</div>
+    </div>
+</div>
+<div class="item">
+    <div class="table">
+        <div ng-repeat="item in vmigh.docs" class="">
+            <div ng-repeat="commit in item.data.commits">
+                <div class="row service-item-event-odd">
+                    <div class="col-xs-6 title">
+                        <span ng-switch on="commit.distinct">
+                            <i class="ico top-ico" ng-switch-when="false"></i>
+                            <i class="ico right-ico" ng-switch-default></i>
+                        </span>
+                        <span class="text"><strong>{{commit.author.name}}</strong> <span ng-if="commit.distinct == true">pushed to</span> <span ng-if="commit.distinct == false">branched to</span> <strong>{{item.data.ref}}</strong></span>
+                    </div>
+                    <div class="col-xs-4">
+                        <span class="status">
+                            <span class="is-true"><i class="fa fa-check-circle" aria-hidden="true"></i> Success</span>
+                        <!--<span class="is-false" ng-if="!item.result == 'success'"><i class="fa fa-minus-circle" aria-hidden="true"></i> Fail</span>-->
+                        </span>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="date" am-time-ago="commit.timestamp"></span>
+                    </div>
+                </div>
+                <!-- <p>{{item.data.log}}</p> -->
+                <div class="row service-item-event-even">
+                    <div class="col-xs-12">
+                        <span class="info_id">{{commit.id}}</span>
+                        <span class="info_text">{{commit.message}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

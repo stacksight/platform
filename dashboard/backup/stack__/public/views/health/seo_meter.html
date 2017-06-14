@@ -1,0 +1,15 @@
+<div class="gauge text-center" d3-gauge width="400" height="210"
+     id="seo-meter"
+     min-value="0"
+     max-value="seo_meter.point_max"
+     start-color="#d05350"
+     middle-color="#f2cd32"
+     end-color="#7cb65c"
+     over-color="#ebebeb"
+     step="100"
+     value="seo_meter.point_cur">
+</div>
+<div class="container text-center">
+    <h4><strong>SEO Strenth: {{seo_meter.point_cur}}</strong></h4>
+    <span>Maximum score: {{seo_meter.point_max}}</span>
+</div>

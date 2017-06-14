@@ -1,0 +1,345 @@
+@import "mean-compass/sass/base";
+
+.stack-dashboard{
+  .content-side{
+    width: calc(100% - #{$eventBarWidth});
+    float: left;
+    overflow: hidden;
+    .cell-container{
+      width: 100%;
+      padding: 0;
+      float: left;
+      .header{
+        height: 54px;
+        clear: both;
+        margin:0 0 14px 0;
+        width: 100%;
+        padding-left: 55px;
+        position: relative;
+        .stack-logo{
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+        .top{
+          padding-top: 3px;
+          h3{
+            font-weight: bold;
+            color: #454a54;
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+        .bottom{
+          margin-top: 4px;
+          .tags{
+            float: right;
+            .add-tag{
+              height: 16px;
+              width: 16px;
+              border-radius: 8px;
+              background: #448aff;
+              color: #FFFFFF;
+              float: right;
+              line-height: 16px;
+              margin: 3px 0 0 3px;
+              padding: 0;
+              text-align: center;
+              font-size: 11px;
+              cursor: pointer;
+            }
+            #tag-input{
+              float: right;
+              input{
+                border: 1px solid #eeeeee;
+                margin-top: -5px;
+                margin-left: 3px;
+                z-index: 1000;
+                display: block;
+                padding: 0 8px;
+                line-height: 24px;
+                font-size: 11px;
+              }
+              .angucomplete-holder {
+                position: relative;
+              }
+
+              .angucomplete-dropdown {
+                border-color: #ececec;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 2px;
+                width: 250px;
+                padding: 6px;
+                cursor: pointer;
+                z-index: 9999;
+                position: absolute;
+                /*top: 32px;
+                left: 0px;
+                */
+                margin-top: -6px;
+                background-color: #ffffff;
+              }
+
+              .angucomplete-searching {
+                color: #acacac;
+                font-size: 14px;
+              }
+
+              .angucomplete-description {
+                font-size: 14px;
+              }
+
+              .angucomplete-row {
+                padding: 5px;
+                color: #000000;
+                margin-bottom: 4px;
+                clear: both;
+              }
+
+              .angucomplete-selected-row {
+                background-color: lightblue;
+                color: #ffffff;
+              }
+
+              .angucomplete-image-holder {
+                padding-top: 2px;
+                float: left;
+                margin-right: 10px;
+                margin-left: 5px;
+              }
+
+              .angucomplete-image {
+                height: 34px;
+                width: 34px;
+                border-radius: 50%;
+                border-color: #ececec;
+                border-style: solid;
+                border-width: 1px;
+              }
+
+              .angucomplete-image-default {
+                /* Add your own default image here
+                 background-image: url('/assets/default.png');
+                */
+                background-position: center;
+                background-size: contain;
+                height: 34px;
+                width: 34px;
+              }
+              .angucomplete-dropdown{
+                margin: -1px 0 0 3px;
+                width: 124px;
+                border-radius: 0px;
+                border: 1px solid #e2e2e2;
+                position: inherit;
+                padding: 0;
+                .angucomplete-row, .angucomplete-searching{
+                  &.angucomplete-selected-row{
+                    background: #F3F3F3;
+                    color: #010101;
+                  }
+                  color: #010101;
+                  font-size: 11px;
+                  border-bottom: 1px solid #e3e3e3;
+                  padding: 0 8px;
+                  line-height: 25px;
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                  .angucomplete-title{
+                    order: 2;
+                  }
+                  .angucomplete-description{
+                    order: 1;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #71c06d;
+                    line-height: 6px;
+                    display: block;
+                    padding-top: 6px;
+                  }
+                  &:last-child{
+                    border-bottom: none;
+                  }
+                }
+              }
+            }
+            ul{
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              float: right;
+              li{
+                &:hover{
+                  i{
+                    display: block;
+                  }
+                  border: 1px solid #878787;
+                }
+                i{
+                  float: right;
+                  font-size: 12px;
+                  cursor: pointer;
+                  padding-left: 3px;
+                  display: none;
+                  float: right;
+                }
+                &:last-child{
+                  margin-right: 0px;
+                }
+                cursor: default;
+                float: left;
+                border: 1px solid #eeeeee;
+                border-radius: 4px;
+                background: $white;
+                margin-right: 3px;
+                padding: 4px 8px;
+                font-size: 9px;
+                color: #454a54;
+              }
+            }
+          }
+        }
+        .url{
+          font-size: 13px;
+          color: #454a54;
+          font-weight: lighter;
+        }
+      }
+      .content-block{
+        background: $white;
+        width: 100%;
+      }
+    }
+  }
+
+  .right-side{
+    width: $eventBarWidth;
+    float: right;
+    .cell-container{
+      background: $white;
+      height: 54px;
+      line-height: 54px;
+      width: $eventBarWidthClear;
+      clear: both;
+      margin:0 0 14px 0;
+      padding: 0;
+      float: right;
+      &.ico-block{
+        font-size: 18px;
+        &:last-child{
+          border-right: none;
+        }
+        .green{
+          color: $green;
+        }
+        .red{
+          color: $red;
+        }
+        .ico-sub-block{
+          border-right: 1px solid #eaeaea;
+          text-align: center;
+        }
+        .ico{
+          width: 18px;
+          height: 18px;
+          padding-right: 22px;
+          &.ico-lock{
+            width: 13px;
+            height: 17px;
+            background: url('/stack/assets/img/ico/health-icon-lock.png') no-repeat  0px 3px;
+          }
+          &.ico-timer{
+            width: 15px;
+            height: 17px;
+            background: url('/stack/assets/img/ico/health-icon-timer.png') no-repeat  0px 3px;
+          }
+          &.ico-pulse{
+            width: 17px;
+            height: 14px;
+            background: url('/stack/assets/img/ico/health-icon-pulse.png') no-repeat 0px 5px;
+            margin-top: 3px;
+          }
+          &.ico-warning{
+            width: 17px;
+            height: 17px;
+            background: url('/stack/assets/img/ico/health-icon-warning.png') no-repeat  0px 3px;
+          }
+        }
+      }
+    }
+
+    #stack-event-list{
+      background: $white;
+      float: right;
+      width: $eventBarWidthClear;
+      box-shadow: -4px 0px 12px 0px rgba(0, 0, 0, 0.1);
+      .middle, .middle-content{
+        padding: 0;
+        margin: 0;
+      }
+      #eventsTab{
+        padding: 12px;
+      }
+      #events-header{
+        .title{
+          text-align: left;
+          font-weight: bold;
+          font-size: 16px;
+          padding-left: 6px;
+        }
+        .search{
+          margin-top: 18px;
+          input[type="text"]{
+            border: 1px solid #ececec;
+            height: 32px;
+            padding: 0 11px;
+            line-height: 30px;
+            float: left;
+            width: 290px;
+          }
+          select{
+            float: right;
+            height: 32px;
+            border: 1px solid #ececec;
+            border-radius: 0px;
+            background: #FFFFFF;
+            width: 142px;
+            -webkit-appearance: none;
+            padding: 0 11px;
+          }
+        }
+      }
+      #eventsTab {
+        .events {
+          .event {
+            .wrapper-icon {
+              margin-right: 12px;
+              float: left;
+            }
+            .e-content {
+              width: 85%;
+              .e-time{
+                width: 60px;
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

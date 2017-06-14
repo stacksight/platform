@@ -1,0 +1,26 @@
+<div class="col-xs-12 m-t-lg" id="detail-list">
+    <div class="data-box" ng-repeat="listws in widget | chunkBy: 2">
+        <div class="col-md-6" ng-repeat="listw in listws">
+            <h4>{{listw.title}} ({{listw.points}})</h4>
+            <table class="table borderless-bt">
+                <tr ng-repeat="list_item in listw.data" class="datalist-title">
+                    <td>
+                        <a href="{{list_item.link}}" target="_blank">{{list_item.title}}</a>
+                        <div class="clearfix"></div>
+                        <span ng-bind-html="list_item.desc"></span>
+                    </td>
+                    <td>
+                        <div class="item html">
+                            <span class="circle" style="color: {{listw.color}}"><span class="ng-hide" ng-show="listw.type == 'completed'">+</span>{{list_item.points}}</span>
+                            <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <circle id="circle" class="circle_animation" r="20" cy="22" cx="22" stroke-width="4" stroke="{{listw.color}}" fill="none"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="25" viewBox="0 0 270.875 203.969">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon-stacks" class="cls-1" d="M464.5,157.692l103.1-42.643,31.349,12.966L464.5,183.625l-134.445-55.61L361.4,115.049Zm0,45.384,103.1-42.644L598.944,173.4,464.5,229.01,330.051,173.4,361.4,160.432Zm0-176.055,134.448,55.61L464.5,138.241,330.051,82.631Z" transform="translate(-329.063 -26.031)"/>
+</svg>

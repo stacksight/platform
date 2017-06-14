@@ -1,0 +1,25 @@
+<div class="" data-ng-controller="StripeController as Stripe" ng-init="Stripe.getSettings()">
+  <h1>Stripe Admin</h1>
+  
+    <form>
+
+        <h2>Testing Keys</h2>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label>Private</label>
+                <input type="text" class="form-control" ng-model="stripe.settings.privateKey" placehold="Private"/>
+            </div>
+            <div class="col-md-3">
+                <label>Public</label>
+                <input type="text" class="form-control" ng-model="stripe.settings.publicKey" placeholder="Public"/>
+            </div>
+            <div class="col-md-2">
+
+                <input type="submit" class="btn"
+                       ng-click="Stripe.updateSettings()" value="Update"/>
+            </div>
+        </div>        
+
+  </form>
+
+</div>

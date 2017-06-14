@@ -1,0 +1,16 @@
+[
+  {
+    "opinion": "Running a 100% digital based business is not an easy task, my online assets must be running at all time, with full security to my customers for their private medical information, secure and fully backed up. With Stacksight I get a full stack analysis of my sites, and make sure my business is safe.",
+    "name": "Zvi Zahavi",
+    "position": "Customer Care",
+    "company": "Medical Opinion",
+    "photo": "http://stacksight.io/wp-content/uploads/2016/11/596485f3-029c-4878-8950-299e2a9cab6a-e1479214869663.jpg"
+  },
+  {
+    "opinion": "Stacksight is one of these tools that help me automate and scale my knowledge and DevOps know-how, so I can monitor my clients projects at all times, and build a level of compliance for them, which fits the industry’s best practices",
+    "name": "Michal Segal",
+    "position": "Customer Support",
+    "company": "Linnovate Technologies",
+    "photo": "http://stacksight.io/wp-content/uploads/2016/11/imageme-e1479211087313.jpg"
+  }
+]

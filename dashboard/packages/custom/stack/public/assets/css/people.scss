@@ -1,0 +1,519 @@
+@import "mean-compass/sass/base";
+
+.stack-people,
+.stack-peoplewithparam{
+  .content-side {
+    overflow: hidden;
+    margin-top: 84px;
+    .cell-container {
+      width: 100%;
+      padding: 0;
+      float: left;
+      .header {
+        height: 54px;
+        clear: both;
+        margin: 5px 0 0 0;
+        width: calc(82.5% - 7px);
+        padding-left: 55px;
+        padding-bottom: 64px;
+        position: fixed;
+        top: 44px;
+        background: #f3f3f3;
+        z-index: 100;
+        padding-top: 12px;
+        overflow: hidden;
+        border-bottom: 1px solid #dbdbdb;
+        .stack-logo {
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          left: 10px;
+          top: 22px;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          z-index: 101;
+        }
+        .drop-list-of-stacks{
+          background: #ffffff;
+          height: 412px;
+          position: absolute;
+          display: block;
+          width: calc(((100% - 290px) / 2) + 55px);
+          z-index: 100;
+          top: -12px;
+          left: -4px;
+          box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.1);
+          padding-top: 82px;
+          input{
+            width: 100%;
+            border: 1px solid #efefef;
+            border-right: none;
+            border-left: none;
+            line-height: 50px;
+            padding: 0 20px 0 42px;
+            color: #e3e3e3;
+            font-size: 16px;
+            font-weight: 300;
+            background: url("/stacks/assets/img/ico_search.png") no-repeat 12px;
+          }
+          ::-webkit-input-placeholder {
+            color:#e3e3e3;
+            font-style: italic
+          }
+          ::-moz-placeholder {
+            color:#e3e3e3;
+            font-style: italic
+          }
+          :-moz-placeholder{
+            color:#e3e3e3;
+            font-style: italic
+          }
+          :-ms-input-placeholder{
+            color:#e3e3e3;
+            font-style: italic
+          }
+          ul{
+            height: 278px;
+            overflow: auto;
+            margin: 0;
+            padding: 0;
+            li{
+              overflow: hidden;
+              padding: 11px 22px 11px 16px;
+              cursor: pointer;
+              &:hover{
+                background: #e3e3e3;
+              }
+              .stack-logo{
+                position: relative;
+                display: block;
+                float: left;
+                width: 28px;
+                height: 28px;
+                top: 4px;
+                left: 0;
+              }
+              h3{
+                font-weight: bold;
+                color: #454a54;
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-left: 32px;
+                line-height: 16px;
+              }
+
+              .url{
+                font-size: 10px;
+                color: #454a54;
+                font-weight: lighter;
+                padding-left: 32px;
+                line-height: 10px;
+              }
+            }
+          }
+        }
+        .info-head{
+          width: calc(100% - 290px);
+          position: relative;
+          z-index: 101;
+
+          .left {
+            float:left;
+            padding-top: 3px;
+            width: 50%;
+            position: relative;
+            h3 {
+              font-weight: bold;
+              color: #454a54;
+              margin: 0;
+              padding: 0;
+              font-size: 24px;
+              display: block;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+
+          }
+          .middle {
+            float: left;
+            margin-top: 4px;
+            padding-right: 24px;
+            border-right: 1px solid #d3d3d3;
+            width: 50%;
+            height: 44px;
+            padding-top: 12px;
+            .tags {
+              float: right;
+              .add-tag {
+                height: 16px;
+                width: 16px;
+                border-radius: 8px;
+                background: #448aff;
+                color: #FFFFFF;
+                float: right;
+                line-height: 16px;
+                margin: 3px 0 0 3px;
+                padding: 0;
+                text-align: center;
+                font-size: 11px;
+                cursor: pointer;
+              }
+              #tag-input {
+                float: right;
+                input {
+                  border: 1px solid #eeeeee;
+                  margin-top: -5px;
+                  margin-left: 3px;
+                  z-index: 1000;
+                  display: block;
+                  padding: 0 8px;
+                  line-height: 24px;
+                  font-size: 11px;
+                }
+                .angucomplete-holder {
+                  position: relative;
+                }
+
+                .angucomplete-dropdown {
+                  border-color: #ececec;
+                  border-width: 1px;
+                  border-style: solid;
+                  border-radius: 2px;
+                  width: 250px;
+                  padding: 6px;
+                  cursor: pointer;
+                  z-index: 9999;
+                  position: absolute;
+                  /*top: 32px;
+                  left: 0px;
+                  */
+                  margin-top: -6px;
+                  background-color: #ffffff;
+                }
+
+                .angucomplete-searching {
+                  color: #acacac;
+                  font-size: 14px;
+                }
+
+                .angucomplete-description {
+                  font-size: 14px;
+                }
+
+                .angucomplete-row {
+                  padding: 5px;
+                  color: #000000;
+                  margin-bottom: 4px;
+                  clear: both;
+                }
+
+                .angucomplete-selected-row {
+                  background-color: lightblue;
+                  color: #ffffff;
+                }
+
+                .angucomplete-image-holder {
+                  padding-top: 2px;
+                  float: left;
+                  margin-right: 10px;
+                  margin-left: 5px;
+                }
+
+                .angucomplete-image {
+                  height: 34px;
+                  width: 34px;
+                  border-radius: 50%;
+                  border-color: #ececec;
+                  border-style: solid;
+                  border-width: 1px;
+                }
+
+                .angucomplete-image-default {
+                  /* Add your own default image here
+                   background-image: url('/assets/default.png');
+                  */
+                  background-position: center;
+                  background-size: contain;
+                  height: 34px;
+                  width: 34px;
+                }
+                .angucomplete-dropdown {
+                  margin: -1px 0 0 3px;
+                  width: 124px;
+                  border-radius: 0px;
+                  border: 1px solid #e2e2e2;
+                  position: inherit;
+                  padding: 0;
+                  .angucomplete-row, .angucomplete-searching {
+                    &.angucomplete-selected-row {
+                      background: #F3F3F3;
+                      color: #010101;
+                    }
+                    color: #010101;
+                    font-size: 11px;
+                    border-bottom: 1px solid #e3e3e3;
+                    padding: 0 8px;
+                    line-height: 25px;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    .angucomplete-title {
+                      order: 2;
+                    }
+                    .angucomplete-description {
+                      order: 1;
+                      font-size: 12px;
+                      font-weight: bold;
+                      text-transform: uppercase;
+                      color: #71c06d;
+                      line-height: 6px;
+                      display: block;
+                      padding-top: 6px;
+                    }
+                    &:last-child {
+                      border-bottom: none;
+                    }
+                  }
+                }
+              }
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                float: right;
+                li {
+                  &:hover {
+                    i {
+                      display: block;
+                    }
+                    border: 1px solid #878787;
+                  }
+                  i {
+                    float: right;
+                    font-size: 12px;
+                    cursor: pointer;
+                    padding-left: 3px;
+                    display: none;
+                    float: right;
+                  }
+                  &:last-child {
+                    margin-right: 0px;
+                  }
+                  cursor: default;
+                  float: left;
+                  border: 1px solid #eeeeee;
+                  border-radius: 4px;
+                  background: $white;
+                  margin-right: 3px;
+                  padding: 4px 8px;
+                  font-size: 9px;
+                  color: #454a54;
+                }
+              }
+            }
+          }
+
+        }.right{
+           float: right;
+           padding-left: 24px;
+           width: 290px;
+           margin-top: 4px;
+           ul{
+             margin: 0;
+             padding: 0;
+             &.users{
+               li{
+                 &:last-child{
+                   margin-right: 0;
+                 }
+                 float: left;
+                 margin-right: 8px;
+                 img{
+                   &.user_add{
+                     width: 27px;
+                     height: 20px;
+                   }
+                   width: 45px;
+                   height: 45px;
+                 }
+                 a{
+                   &:hover{
+                     text-decoration: none;
+                   }
+                   display: block;
+                   width: 45px;
+                   height: 45px;
+                   border-radius: 23px;
+                   line-height: 40px;
+                   margin: 0 auto;
+                   text-align: center;
+                   overflow: hidden;
+                   &.user_add{
+                     background: #448aff;
+                   }
+                   &.hidden_users{
+                     background: #e4e4e4;
+                     color: #7f7f7f;
+                     line-height: 45px;
+                     font-size: 24px;
+                   }
+                 }
+               }
+             }
+           }
+         }
+        .url {
+          font-size: 13px;
+          color: #454a54;
+          font-weight: lighter;
+        }
+        i.fa-caret-down{
+          position: absolute;
+          top: 10px;
+          right: -8px;
+          cursor: pointer;
+        }
+      }
+      .content-block {
+        width: 100%;
+        padding: 0px 0px 24px 24px;
+        .title{
+          overflow: hidden;
+          h3{
+            float: left;
+            padding-top: 4px;
+            margin: 0;
+            font-size: 28px;
+          }
+          .add_user_button{
+            float: right;
+            button{
+              i{
+                padding-right: 8px;
+              }
+
+              background: #448aff;
+              padding: 0 20px;
+              line-height: 42px;
+              border: none;
+              color: #FFFFFF;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .content-container{
+          clear: both;
+          h4{
+            margin-bottom: 24px;
+          }
+          .users_group{
+            margin: 18px 0 30px 0;
+            clear: both;
+            ul{
+              margin: 0;
+              padding: 0;
+              li{
+                width: 274px;
+                height: 247px;
+                float: left;
+                background: #FFFFFF;
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                margin: 0 26px 26px 0;
+                text-align: center;
+                .label{
+                  &.status{
+                    
+                  }
+                  height: 28px;
+                  float: right;
+                  line-height: 25px;
+                  margin: 14px 12px 0px 0px;
+                  text-align: right;
+                  font-size: 10px;
+                  text-transform: uppercase;
+                  display: block;
+                  span{
+                    padding: 9px 8px;
+                    border-radius: 12px;
+                    &.gray{
+                      color: #ffffff;
+                      background: #d4d4d4;
+                    }
+                    &.blue{
+                      color: #ffffff;
+                      background: #448aff;
+                    }
+                    &.green{
+                      color: #ffffff;
+                      background: #58b754;
+                    }
+                    &.magenta{
+                      color: #ffffff;
+                      background: #7a51a0;
+                    }
+                  }
+                }
+                .clearfix{
+                  &.user-info-block{
+                    margin-top: 42px;
+                  }
+                  clear: both;
+                  color: #000000;
+                  .user-name{
+                    font-size: 18px;
+                    padding-top: 6px;
+                  }
+                  .user-email{
+                    font-size: 13px;
+                  }
+                  .additional-info{
+                    padding-top: 16px;
+                    font-size: 12px;
+                    position: relative;
+                    a{
+                      padding: 0 10px;
+                      border-right: 1px solid #000000;
+                      &:last-child{
+                        padding-right: 0;
+                        border-right: none;
+                      }
+                    }
+                    span{
+
+                      &.action{
+                        padding-right: 14px;
+                        img{
+                          border-radius: 0;
+                          width: inherit;
+                          height: inherit;
+                        }
+                        display: block;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0;
+                      }
+                    }
+                  }
+                }
+
+                img{
+                  width: 114px;
+                  height: 114px;
+                  border-radius: 57px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

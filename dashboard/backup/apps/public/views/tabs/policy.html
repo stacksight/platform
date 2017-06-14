@@ -1,0 +1,33 @@
+<section id="policyTab" class="full-height" ng-if="vm.app" ng-init="vmp.init()">
+    <div class="middle">
+        <div class="middle-content">
+            <div class="left">
+                <div class="title">
+                    <div><h3>{{vm.app.name}} Policy</h3></div>
+                    <div class="descriptopn">Select policy strength for each category</div>
+                </div>
+                <div ng-repeat="slide in vmp.slides" class="wrapper-policy">
+                    <div class="s-label">{{slide.title}}</div>
+                    <rzslider rz-slider-model="slide.value" rz-slider-options="slide.options"></rzslider>
+                </div>
+                <div id="result-of-save-policy" style="display: none"></div>
+            </div>
+             <div class="right">
+                 <div class="title">
+                    <h3>Level of service</h3>
+                    <span>Select business type for preset level or use the bars to set strength.</span>
+                 </div>
+                <div class="buttons" ng-if="vmp.buttons">
+                    <ul class="buttons">
+                        <li class="btn" ng-repeat="button in vmp.buttons">
+                            <button ng-click="vmp.changePolicySettings(button.id)">
+                                <span class="ico" ng-class="button.ico"></span>
+                                {{button.name}}
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

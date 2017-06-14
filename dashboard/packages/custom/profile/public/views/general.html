@@ -1,0 +1,40 @@
+<section id="generalTab">
+    <div class="for_inputs">
+        <form name="profileDetails">
+            <div class="form-item-1">
+                <label class="label">Name</label>
+                <input name="name" type="text" class="input-text" ng-model="vm.global.user.name">
+            </div>
+            <div class="form-item-1">
+                <label class="label">Email</label>
+                <input name="email" type="email" class="input-text" ng-model="vm.global.user.email" readonly>
+            </div>
+            <div class="form-item-1">
+                <label class="label">Api Key</label>
+                <input name="apikey" type="text" class="input-text" ng-model="vm.global.user.profile.token" readonly>
+            </div>
+            <!--         <div class="form-item-1" ng-class="{empty: !vm.global.user.location.city}">
+                        <label class="label">City</label>
+                        <input name="email" type="text" class="input-text" ng-model="vm.global.user.location.city" placeholder="CITY">
+                    </div>
+                    <div class="form-item-1" ng-class="{empty: !vm.global.user.location.state}">
+                        <label class="label">State</label>
+                        <input name="email" type="text" class="input-text" ng-model="vm.global.user.location.state" placeholder="STATE">
+                    </div>
+                    <div class="form-item-1" ng-class="{empty: !vm.global.user.location.country}">
+                        <label class="label">Country</label>
+                        <input name="email" type="text" class="input-text" ng-model="vm.global.user.location.country" placeholder="COUNTRY">
+                    </div> -->
+            <div class="form-item-1 footer">
+                <button class="btn rnd-btn red lg" ng-click="vm.update(profileDetails.$valid)">Update Profile</button>
+            </div>
+        </form>
+    </div>
+    <div class="for_avatars">
+        <wixmedia-image ng-model="profileImage" style="width: 100px; height: 100px;" placeholderText="Add Profile Image" width="100" height="100"></wixmedia-image>
+        <div class="additional">
+            <span>or</span>
+            <span><a href="#">Import from gravatar</a></span>
+        </div>
+    </div>
+</section>

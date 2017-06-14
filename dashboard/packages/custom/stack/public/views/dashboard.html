@@ -1,0 +1,98 @@
+<div id="stack-dashboard" ng-controller="GroupDashboardController as vmd"  ng-init="vmd.init()">
+    <div class="content-side">
+        <div class="cell-container">
+            <div class="content-block">
+                <div class="cell-container stack-health ico-block">
+                    <div class="col-sm-3 no-padding ico-sub-block" ng-if="vms._.findLastIndex(stack.integrations, {type: 'security'}) != -1"
+                         uib-popover="Security score"  popover-placement="bottom" popover-trigger="mouseenter">
+                        <div ng-repeat="health in stack.integrations[vms._.findLastIndex(stack.integrations, {type: 'security'})].data">
+                            <div class="ico-v-container" ng-class="health.toFixed(2) <= 60 ? 'red' : health.toFixed(2) > 60 && health.toFixed(2) <= 80 ? 'orange' :  'green'">
+                                <span class="ico ico-lock"></span>
+                                <span class="ico-value timer-ico-value">{{health.toFixed(2)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 no-padding ico-sub-block" ng-if="vms._.findLastIndex(stack.integrations, {type: 'performance'}) != -1"
+                         uib-popover="Performance score"  popover-placement="bottom" popover-trigger="mouseenter">
+                        <div ng-repeat="security in stack.integrations[vms._.findLastIndex(stack.integrations, {type: 'performance'})].data">
+                            <div class="ico-v-container" ng-class="security.toFixed(2) <= 60 ? 'red' : security.toFixed(2) > 60 &&  security.toFixed(2) <=80 ? 'orange' : 'green'">
+                                <span class="ico ico-timer"></span>
+                                <span class="ico-value timer-ico-value">{{security.toFixed(2)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 no-padding ico-sub-block" ng-if="vms._.findLastIndex(stack.integrations, {type: 'accessibility'}) != -1"
+                         uib-popover="Accessibility score"  popover-placement="bottom" popover-trigger="mouseenter">
+                        <div ng-repeat="accessability in stack.integrations[vms._.findLastIndex(stack.integrations, {type: 'accessibility'})].data">
+                            <div class="ico-v-container" ng-class="accessability.toFixed(2) <= 60 ? 'red' : accessability.toFixed(2) > 60 && accessability.toFixed(2) <= 80 ? 'orange' : 'green'">
+                                <span class="ico ico-pulse"></span>
+                                <span class="ico-value timer-ico-value">{{accessability.toFixed(2)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 no-padding ico-sub-block" ng-if="vms._.findLastIndex(stack.integrations, {type: 'update'}) != -1"
+                         uib-popover="Critical updates"  popover-placement="bottom" popover-trigger="mouseenter">
+                        <div ng-repeat="update in stack.integrations[vms._.findLastIndex(stack.integrations, {type: 'update'})].data">
+                            <div class="ico-v-container" ng-class="update.toFixed(2) <= 60 ? 'red' : update.toFixed(2) > 60 && update.toFixed(2) <= 80 ? 'orange' : 'green'">
+                                <span class="ico ico-pulse"></span>
+                                <span class="ico-value timer-ico-value">{{update.toFixed(2)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="dashboardChartTab" class="full-height">
+                    <div class="middle">
+                        <div class="health middle-content">
+                            <input date-range-picker class="form-control date-picker" type="text" ng-model="vmd.datePicker.date" min="vmd.datePicker.min" max="vmd.datePicker.max" options="vmd.datePicker.opts" />
+                            <div class="middle m-n">
+                                <div class="health middle-content clearfix clear" style="background-color: #fff">
+                                    <line-chart options="generalChart"></line-chart>
+                                    <div ng-init="vmd.initType('general');"></div>
+                                </div>
+                            </div>
+                            <div class="insights">
+                                <div class="insights-header">
+                                    <h3>Insights</h3>
+                                </div>
+                                <div class="content" ng-if="vmd.insights">
+                                    <ul>
+                                        <li ng-repeat="(key, value) in vmd.insights.bool">
+                                            <div class="text">
+                                                <div class="title">{{value.title}}</div>
+                                                <div class="description" ng-bind-html="value.desc"></div>
+                                            </div>
+                                            <!--<div class="ico-v-container">
+                                                <span class="ico ico-lock"></span>
+                                                <span class="ico-value lock-ico-value green"><span class="value">+{{point.points}}</span></span>
+                                            </div>-->
+                                        </li>
+                                    </ul>
+                                    <ul ng-if="vmd.insights.pointslist">
+                                        <li ng-repeat="point in vmd.insights.pointslist.pending.data">
+                                            <div class="text">
+                                                <div class="title">{{point.title}}</div>
+                                                <div class="description">{{point.desc}}</div>
+                                            </div>
+                                            <div class="ico-v-container">
+                                                <span class="ico ico-lock"></span>
+                                                <span class="ico-value lock-ico-value green"><span class="value">+{{point.points}}</span></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <span>{{vmd.readyToShow}}</span>
+        <events-bar ng-ids="stackId" ng-stacks-ready="vmd.readyToShow"></events-bar>
+    </div>
+
+</div>
+<script type="text/ng-template" id="stackListPopover">
+</script>
+

@@ -1,0 +1,15 @@
+<div>
+    <canvas class="chart chart-line-with-line" chart-data="options.data" chart-colours="options.colors" chart-redline="options.redline.value" chart-labels="options.labels" chart-legend="false" chart-series="options.series" chart-click="options.click" chart-options="options.chartOptions" chart-hover="options.onHover" height="240" width="800">
+    </canvas>
+    <div class="chart-legend">
+        <ul class="line-legend">
+            <li ng-repeat="(key, value) in options.series">
+                <span ng-if="options.name == 'generalChart'" ng-style="{ 'border-radius': 0, 'border': '2px solid '+options.colors[key],  'background' : ((options.show[key] === true) ? options.colors[key] : 'white'), 'cursor': 'pointer'}" title="Show/hide corresponding line on chart" ng-click="options.show[key] = !options.show[key]; options.handleShow()">
+                </span>
+                <span ng-if="options.name != 'generalChart'" ng-style="{ 'border-radius': 0, 'border': '2px solid '+options.colors[key],  'background' : ((options.show[key] === true) ? options.colors[key] : 'white'), 'cursor': 'pointer'}" title="Show/hide corresponding line on chart">
+                </span> {{ value }}
+            </li>
+        </ul>
+    </div>
+    <hr/>
+</div>

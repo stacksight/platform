@@ -1,0 +1,85 @@
+<div id="stack-people" ng-init="vmp.find()">
+    <div class="content-side">
+        <div class="cell-container">
+            <div class="content-block">
+                <div class="title">
+                    <h3>People</h3>
+                    <div class="add_user_button">
+                        <button ng-click="vmp.open()"><i class="fa fa-plus"></i> Invite user to stack</button>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="users_group">
+                        <!--<div class="title">-->
+                            <!--<h4>Lior's team</h4>-->
+                        <!--</div>-->
+                        <div class="users">
+                            <ul ng-if="vmp.people">
+                                <li ng-repeat="collaborator in vmp.people">
+                                    <div ng-if="collaborator.permissions">
+                                        <div class="label" ng-repeat="status in collaborator.permissions"><span class="green">{{status}}</span></div>
+                                    </div>
+                                    <div ng-if="collaborator.status">
+                                        <div class="label status"><span class="green">{{collaborator.status}}</span></div>
+                                    </div>
+                                    <div class="clearfix user-info-block">
+                                        <div class="photo">
+                                            <img ng-src="{{collaborator.profile.pictures.profile}}" alt="{{collaborator.name}} photo" ng-if="collaborator.profile.pictures.profile"/>
+                                            <img gravatar-src="'{{collaborator.email}}'" alt="{{collaborator.name}} photo" ng-if="!collaborator.profile.pictures.profile"/>
+                                        </div>
+                                        <div class="user-name">{{collaborator.name}}</div>
+                                        <div class="user-email">{{collaborator.email}}</div>
+                                        <div class="additional-info">
+                                            <!--29 stacks-->
+                                            <span class="action">
+                                                <a href="javascript:void(0)" ng-click="vmp.removeUser(collaborator)">
+                                                    <img src="/stack/assets/img/ico_trash.png" alt="trash"></a>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--<div ng-if="!vmp.people"><h3>No data</h3></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="peopleModalContent">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add people to <strong>{{vmp.stack_name}}</strong> stack</h3>
+        <button class="close-button" ng-click="vmp.cancel()"></button>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <input type="text" class="find-people" placeholder="Search people" ng-model="vmp.search.name"/>
+        <ul class="people-list-wrapper">
+            <li ng-repeat="item in vmp.people | filter:vmp.search"  ng-click="$event.preventDefault(); vmp.selectItem(item)" ng-class="(vmp.selected_people[item._id]) ? 'selected' : ''">
+                <div class="user_block">
+                    <div class="checked left"></div>
+                    <div class="user_image left">
+                        <img ng-src="{{item.profile.pictures.profile}}" alt="{{item.email}} photo" ng-if="item.profile.pictures.profile"/>
+                        <img gravatar-src="'{{collaborator.email}}'" gravatar-size="46" alt="{{item.email}} photo" ng-if="!item.profile.pictures.profile"/>
+                    </div>
+                    <div class="user_info left">
+                        <div class="user-name">{{item.name}}</div>
+                        <div class="user-email">{{item.email}}</div>
+                    </div>
+                </div>
+                <!--<a href="#" ng-click="$event.preventDefault(); vmp.selected.item = item">{{ item }}</a>-->
+            </li>
+        </ul>
+        <div class="vshadow"></div>
+        <input type="email" name="input" ng-model="vmp.collobrator_email" class="invite-people-by-email" placeholder="Not listed Above?  Invite by email address (use , to add multiple people)"/>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-add" type="button" ng-click="vmp.ok()" ng-if="vmp.selected_people_count > 0 || vmp.collobrator_email">
+            <i class="fa fa-plus"></i> Add <span ng-if="vmp.selected_people_count > 0">{{vmp.selected_people_count}}</span> <span ng-if="vmp.collobrator_email">1</span> people
+        </button>
+        <button class="btn btn-cancel" type="button" ng-click="vmp.cancel()">Cancel</button>
+    </div>
+</script>

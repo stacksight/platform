@@ -1,0 +1,48 @@
+#inventoryTab{
+  .search{
+    input{
+      width: 100% !important;
+    }
+  }
+
+  table{
+    width: 100%;
+    color: #454a54;
+  }
+  th{
+    text-transform: uppercase !important;
+    color: #aaaaaa;
+  }
+  tr{
+    border-bottom: 1px solid #ffffff;
+    &.success{
+      background-color: #ddffdd !important;
+      color: #454a54;
+      i{
+        color: #57b653;
+      }
+    }
+    &.danger{
+      background-color: #ee534f !important;
+      color: #ffffff;
+      i{
+        color: #ffffff;
+      }
+    }
+    &.warning{
+      background-color: #ffffdd !important;
+    }
+  }
+  tr, td, th{
+    height: 25px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-transform: capitalize;
+  }
+  td, th{
+    padding-left: 12px !important;
+  }
+  .center{
+    text-align: center;
+  }
+}

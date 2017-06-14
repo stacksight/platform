@@ -1,0 +1,50 @@
+<div id="stack-inventory-list" class="evbar">
+    <div id="inventoryTab">
+        <div class="middle middle-bar">
+            <div ng-include="'subscribe'"></div>
+            <div class="events middle-content">
+                <div ng-if="(countInventoryItems > 0)" id="inventory-header" class="text-center top-filters">
+                    <div class="title"> {{precessedInventory.length}}
+                        Components {{search.label}}
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="Search" ng-model="search.label"/>
+                    </div>
+                </div>
+                <div ng-if="countInventoryItems == 0 && !busy" id="ev-no-data" class="text-center">
+                    <span class="clear clearfix no-found-text">No inventory logged</span>
+                </div>
+                <div ng-if="countInventoryItems > 0 && !busy" class="components-list">
+                    <table ng-if="(precessedInventory | filter:search:strict).length == 0" class="components-list-table">
+                        <tr>
+                            <td>Components not found...</td>
+                        </tr>
+                    </table>
+                    <!--ng-if="(precessedInventory|filter:search:strict).length > 0"-->
+                    <table  class="components-list-table">
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Version</th>
+                        </tr>
+                        <tr ng-repeat="inv in precessedInventory | filter:search:strict" ng-class="(inv.active == true) ? 'success' : 'danger'">
+                            <td>{{inv.label}}</td>
+                            <td>{{inv.type}}</td>
+                            <td class="center">
+                                <span class="public-true" ng-if="inv.active == true">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </span>
+                                <span class="public-false" ng-if="inv.active != true">
+                                <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                            </span>
+                            </td>
+                            <td>{{inv.version}} </td>
+                        </tr>
+                    </table>
+                </div>
+                <div ng-show="busy" class="loader red">Loading...</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div ng-show="global.isAdmin">
+    <!--<div ng-click="addImage()" class="b-wixmedia-image-directive__placeholder-button">
+        All collections(admin)
+    </div>-->
+</div>
+<div class="b-wixmedia-image-directive__placeholder" ng-if="!value.url">
+    <!--<div ng-click="addImage()" class="b-wixmedia-image-directive__placeholder-button">-->
+    <!--{{placeholderText}}-->
+    <!--<div ng-if="width">{{width}}x{{height}}</div>-->
+    <!--</div>-->
+    <label for="wixUploadImage">
+        <div class="btn btn-warning" ng-disabled="uploadInProgress"><i class="fa" ng-class="{
+      'fa-spin': uploadInProgress,
+      'fa-refresh': uploadInProgress,
+      'fa-cloud-upload': !uploadInProgress
+    }"></i>{{ uploadInProgress ? ' Uploading...' : ' Upload profile image' }}</button>
+            <input id="wixUploadImage" type="file" nv-file-select uploader="uploader" type="button">
+        </div>
+    </label>
+</div>
+<div ng-switch="value.href">
+    <img title="{{value.title}}" alt="{{value.alt}}" ng-switch-when="" ng-src="{{value.url}}" ng-if="!isArray(value.url) && value.url" class="b-wixmedia-image-directive__picture">
+    <a href="{{value.href}}" target="{{value.target || '_self'}}" ng-switch-default><img title="{{value.title}}" alt="{{value.alt}}" ng-src="{{value.url}}" ng-if="!isArray(value.url) && value.url" class="b-wixmedia-image-directive__picture"></a>
+</div>
+<div ng-if="isArray(value.url)">
+    <carousel ng-style="{ height: height ? height + 'px' : 'auto'}">
+        <slide ng-repeat="img in value.url">
+            <div ng-switch="value.href">
+                <img style="margin: auto;" ng-switch-when="" ng-src="{{img}}" class="b-wixmedia-image-directive__picture">
+                <a href="{{value.href}}" target="{{value.target || '_self'}}" ng-switch-default><img style="margin: auto;" ng-src="{{img}}" class="b-wixmedia-image-directive__picture"></a>
+            </div>
+        </slide>
+    </carousel>
+</div>
+<!--<div ng-if="value.url" class="b-wixmedia-image-directive__toolbar">
+    <div class="">
+        <label for="wixUploadImage">
+            <div class="btn rnd-btn red trans" ng-disabled="uploadInProgress"><i class="fa" ng-class="{
+      'fa-spin': uploadInProgress,
+      'fa-refresh': uploadInProgress,
+      'fa-cloud-upload': !uploadInProgress
+    }"></i>{{ uploadInProgress ? ' Uploading...' : ' Change' }}</button>
+                <input id="wixUploadImage" type="file" nv-file-select uploader="uploader" type="button">
+            </div>
+        </label>
+    </div>
+</div>-->

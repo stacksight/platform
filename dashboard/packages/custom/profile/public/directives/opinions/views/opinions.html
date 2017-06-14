@@ -1,0 +1,28 @@
+<div id="customer_opinion">
+    <div class="opinions">
+        <h4>What our customers think</h4>
+        <div class="users" ng-if="opinions">
+            <ul>
+                <li ng-repeat="opinion in opinions">
+                    <div class="text">"{{opinion.opinion}}"<span class="arrow"></span></div>
+                    <div class="user">
+                        <div class="photo">
+                            <img src="{{opinion.photo}}" alt="user">
+                        </div>
+                        <div class="info">
+                            <div class="name">{{opinion.name}}</div>
+                            <div class="company">{{opinion.position}}<span ng-if="opinion.company">, {{opinion.company}}</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dyn_prices">
+        <div class="plans_block">
+            <div class="for_inputs">
+                <ul id="plan_cards_dyn" class="main"></ul>
+            </div>
+        </div>
+    </div>
+</div>

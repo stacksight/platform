@@ -1,0 +1,19 @@
+@import "mean-compass/sass/base";
+.subscribe-header {
+    padding: 10px 17px;
+    ul {
+        display: table;
+        width: 100%;
+        background-color: $grey;
+        color: white;
+        li {
+            display: table-cell;
+            height: 80px;
+            vertical-align: middle;
+            &:first-child {
+                font-size: 2em;
+                color: $red;
+            }
+        }
+    }
+}

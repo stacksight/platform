@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon-levelup" class="cls-1" d="M16.25,132V117.776l-4.2,4.09L11,120.844,17,115l6,5.844-1.05,1.022-4.2-4.09V132h-1.5ZM16,130h7v2H16v-2Z" transform="translate(-11 -115)"/>
+</svg>

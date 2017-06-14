@@ -1,0 +1,48 @@
+<section id="dashboardChartTab" ng-controller="GroupDashboardController as vmd" ng-if="vm.app" class="full-height" ng-init="vmd.init()">
+    <div class="middle">
+        <div class="health middle-content">
+            <input date-range-picker class="form-control date-picker" type="text" ng-model="vmd.datePicker.date" min="vmd.datePicker.min" max="vmd.datePicker.max" options="vmd.datePicker.opts" />
+            <hr class="tabs-line" />
+            <div class="middle m-n">
+                <div class="header">
+                    <div class="left">
+                        <div>
+                            <h2>{{tabs[vmd.currentType].inner_title}}</h2>
+                        </div>
+                        <div>
+                            <h4>{{tabs[vmd.currentType].description}}</h4></div>
+                    </div>
+                    <div class="right">
+                        <span class="score">{{vmd.avgGroupScore[vmd.currentType].avgScore}}</span>
+                        <span class="desc">{{tabs[vmd.currentType].score_title | uppercase}}</span>
+                    </div>
+                </div>
+                <div class="health middle-content clearfix clear" style="background-color: #fff">
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ############################################################-->
+<!-- ============================ STACKS BELOW THRESHOLD ======= -->
+<!-- ############################################################ -->
+<!-- WILL BE MOVED TO A DIRECTIVE-->
+<script type="text/ng-template" id='stacks-below-threshold-template'>
+    <div class="stacks-bwlow-threshold">
+        <div class="title">stacks below threshold</div>
+        <div class="sub-title">Tasks that are below the set minimum threshold for the group.</div>
+        <ul class="list list-group sites-list">
+            <li ng-repeat="stack in vmd.stacks| orderBy: 'distance'" class="list-group-item list cursor-pointer" ui-sref="stack.health.type({id: stack._id, type: vmd.currentType})">
+                <!-- <span>score: {{vmd.Math.floor(vmd.stackScore[stack._id].score )}}</span> -->
+                <div class="platform {{stack.platform}} sm"></div>
+                <div class="info">
+                    <span class="platform-type">{{stack.platform}}</span>
+                    <h4>{{stack.name}}</h4>
+                    <span class="domain">{{stack.host}}</span>
+                </div>
+                <span class="badge">{{stack.distance}}</span>
+            </li>
+        </ul>
+    </div>
+</script>

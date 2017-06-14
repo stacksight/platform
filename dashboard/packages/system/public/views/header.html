@@ -1,0 +1,50 @@
+<div class="page-header" data-ng-controller="HeaderController">
+    <div class="inner">
+        <div class="logo pull-left">
+            <a class="brand" ui-sref="home" mean-token="'site-title'" href="#!/"></a>
+        </div>
+        <companies-drop-down></companies-drop-down>
+        <div class="account">
+            <div class="text-edit">
+                <div class="pull-right" data-ng-show="global.authenticated" mean-token-editable></div>
+                <div class="pull-right" data-ng-show="global.authenticated" mean-translate></div>
+            </div>
+            <ul class="navbar-nav nav auth-link" data-ng-hide="global.authenticated">
+                <li><a ui-sref='auth.register'>Join</a></li>
+                <li class="divider-vertical"></li>
+                <li><a ui-sref='auth.login'>Log In</a></li>
+            </ul>
+            <ul class="navbar-nav nav" data-ng-show="global.authenticated">
+                <li class="dropdown" uib-dropdown>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" uib-dropdown-toggle>
+                        <span class="user-name">{{global.user.name}}</span>
+                        <img class="profile-pic" ng-src="{{global.user.profile.pictures.profile}}v1/fill/w_31,h_31,al_c,q_76,usm_2.7_0.0_0.2/file.png" />
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!--<li class="group" ng-if="companies">
+                            <span class="title">Team</span>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)" ng-click="gotToCompany({id: 'all', name: 'All stacks'})">All stacks</a>
+                                </li>
+                                <li ng-repeat="company in companies">
+                                    <a href="javascript:void(0)" ng-click="gotToCompany(company)">{{company.name}}</a>
+                                </li>
+                            </ul>
+                        </li>-->
+                        <li class="group">
+                            <!--<span class="title">Profile</span>-->
+                            <ul>
+                                <li><a ui-sref="profile.upgrade">Upgrade Plan</a></li>
+                                <li><a ui-sref="profile.general">Profile</a></li>
+                                <li><a href="/logout">Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="pull-right" style="line-height: 48px;"><a ui-sref="profile.notifications"><i class="fa fa-bell" aria-hidden="true"></i></a></div>
+        <feedback class="header-feedback"></feedback>
+    </div>
+</div>

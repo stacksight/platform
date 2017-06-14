@@ -1,0 +1,15 @@
+.introjs-hint-pulse{
+  border: 5px solid rgba(237, 66, 78, 0.47);
+  color: #ED424E;
+  font-size: 10px;
+  &:after{
+    content: "\f128";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    position: absolute;
+    top: -1px;
+    left: 2px;
+    text-decoration:none;
+  }
+}

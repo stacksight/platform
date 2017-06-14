@@ -1,0 +1,58 @@
+<div id="keysTab" data-ng-controller="KeysController as vm" ng-init="vm.getKeys()">
+    <h4>Add Key</h4>
+
+    <form name="addKey" class="net-form" role="form" novalidate="">
+
+        <div class="form-item" ng-class="{ 'has-error' : submitted && addKey.title.$invalid }">
+            <label class="label">Title</label>
+            <input name="title" type="text" class="input-text" ng-model="vm.key.title" id="title" placeholder="Title" required>
+        </div>
+
+
+        <div class="form-item" ng-class="{ 'has-error' : submitted && addKey.key.$invalid }">
+            <label class="label">Key</label>
+            <input name="key" type="text" class="input-text" ng-model="vm.key.key" id="key" placeholder="Key" required>
+        </div>
+
+        <div class="form-item">
+            <button type="submit" class="btn btn-info" ng-click="vm.add(addKey.$valid);">Add</button>
+        </div>
+    </form>
+
+    <div class="wrapper-keys">
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">My Keys</div>
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Created</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="key in vm.keys">
+                    <th scope="row">{{$index+1}}</th>
+                    <td>{{key.title}}</td>
+                    <td>{{key.created_at| date:'medium'}}</td>
+                    <td><a href="" ng-click="vm.selectedKey = key">show</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel panel-default selected" ng-show="vm.selectedKey">
+            <div class="panel-heading">{{vm.selectedKey.title}} content</div>
+            <div>{{vm.selectedKey.key}}</div>
+        </div>
+        <div class="link blue"><a ng-href="{{global.gitlabUrl}}/profile/keys">keys management</a></div>
+    </div>
+</div>
+
+
+
+

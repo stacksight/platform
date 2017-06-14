@@ -1,0 +1,101 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, dashboard.scss */
+.content .container {
+  padding: 0;
+  width: 100%;
+}
+
+/* line 12, dashboard.scss */
+.navbar {
+  position: fixed;
+  height: 50px;
+  min-height: 50px;
+}
+/* line 16, dashboard.scss */
+.navbar .page-header {
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+/* line 22, dashboard.scss */
+.navbar .page-header .inner .account {
+  height: 100%;
+}
+/* line 24, dashboard.scss */
+.navbar .page-header .inner .account .text-edit {
+  padding: 0;
+}
+/* line 28, dashboard.scss */
+.navbar .page-header .inner .navbar-nav {
+  height: 100%;
+}
+
+/* line 42, dashboard.scss */
+.dropdown {
+  margin-left: 10px;
+  font-size: 1em;
+  height: 100%;
+}
+/* line 46, dashboard.scss */
+.dropdown .dropdown-toggle {
+  line-height: 50px;
+  padding: 0 18px !important;
+}
+/* line 50, dashboard.scss */
+.dropdown .dropdown-menu {
+  margin-left: -30px;
+}
+
+/* line 55, dashboard.scss */
+.dropdown .user-name {
+  margin-right: 16px;
+}
+
+/* line 58, dashboard.scss */
+.dropdown .profile-pic {
+  border-radius: 50%;
+  margin-right: 8px;
+  max-width: 31px;
+  max-height: 31px;
+}
+
+/* line 65, dashboard.scss */
+.page-header .main-menu {
+  margin-right: 300px;
+}
+
+/* line 69, dashboard.scss */
+.page-header .main-menu ul {
+  font-size: 1.3em;
+}

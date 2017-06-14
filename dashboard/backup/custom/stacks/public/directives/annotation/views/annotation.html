@@ -1,0 +1,7 @@
+<div style="position: relative;">
+    <div class="comment" ng-show="!showInput" title="{{data.created | date: 'MMM d, yyyy HH:mm' }}" ng-click="showInput=true">{{data.content}}</div>
+    <div ng-show="showInput">
+        <input type="text" class="comment" ng-enter="addAnnotation();" ng-model="data.content" />
+    </div>
+    <div class="din add-comment" ng-click="showInput=true;"></div>
+</div>

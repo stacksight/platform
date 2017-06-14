@@ -1,0 +1,55 @@
+<section id="settingsTab" class="full-height">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title">stack settings</div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle-content">
+            <form name="stackSettings" ng-if="stack" class="left-col">
+                <div class="form-item-1">
+                    <label class="label">Stack Id</label>
+                    <input name="id" type="text" class="input-text" ng-model="stack._id" readonly ng-required="true">
+                </div>
+                 <div class="form-item-1">
+                    <label class="label">Access Token</label>
+                    <input name="id" type="text" class="input-text" ng-model="stack.company.owner.token" readonly>
+                </div>
+                <div class="form-item-1" ng-class="{empty: !stack.name}">
+                    <label class="label">Name</label>
+                    <input name="name" type="text" class="input-text" ng-model="stack.name" placeholder="NAME" ng-required="true">
+                </div>
+                <div class="form-item-1" ng-class="{empty: !stack.host}">
+                    <label class="label">Domain</label>
+                    <input name="domain" type="text" class="input-text" ng-model="stack.host" placeholder="DOMAIN" http-prefix>
+                </div>
+                <div class="form-item-1">
+                    <div ng-repeat="(key, value) in vms.platforms" ng-if="value.show && value.enable" class="platform cursor-pointer platform_checked" ng-class="(stack.platform == key) ? 'selected '+key : key" ng-click="stack.platform = key;">
+                        <span class="checked"></span>
+                    </div>
+                    <div ng-repeat="(key, value) in vms.platforms" ng-if="value.show && !value.enable" class="platform disable platform_checked" ng-class="key">
+                    </div>
+                </div>
+                <div class="form-item-1">
+                    <button class="btn rnd-btn blue" ng-click="vms.update(stackSettings.$valid, stack ,'settingsTab')">Update Stack Settings</button>
+                    <button class="btn rnd-btn red" ng-click="vms.deleteStack(stack)">Delete stack</button>
+                </div>
+            </form>
+            <div class="right-col" id="PlatformPage">
+                <div ng-if="stack.platform !== 'web' && stack.platform">
+                    <div ng-include="'platforms/views/' + stack.platform + '.html'"></div>
+                    <!--<h2>Stack embed code</h2>
+                    <embed-code ng-if="stack.platform" stack="stack"></embed-code>-->
+                </div>
+                <div ng-if="stack.platform === 'web'"><br>
+                    <h2>Complete your integration</h2>
+                    <span>select your platform: </span>
+                    <a>wordbpress</a> |
+                    <a>drupal</a> .
+                    <br> In order to complete integrating your stack, check out our <a href="http://stacksight.io/docs">docs</a> page for plugin download instructions or <a href="mailto:support@stacksight.io?Subject=Tech%20support" target="_top">contact us </a>for
+                    support.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

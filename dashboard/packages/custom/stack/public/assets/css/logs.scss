@@ -1,0 +1,126 @@
+@import "mean-compass/sass/base";
+$border: solid 1px $borderColor;
+
+#logsTab {
+    background: #ffffff;
+    overflow: hidden;
+    .middle {
+        margin-top: calc(#{$appsSearchPannel} + 28px);
+        .left-side {
+            width: 70%;
+            float: left;
+            height: 100%;
+            padding-left: 15px;
+            margin-bottom: 67px;
+            &.wide {
+                width: 100%;
+            }
+            .logs {
+                .log {
+                    position: relative;
+                    border-left: solid 3px transparent;
+                    padding-left: 5px;
+                    .l-content {
+                        max-width: 85%;
+                    }
+                    &.error {
+                        background: rgb(241, 229, 229);
+                        border-left: solid 3px rgb(119, 1, 1);
+                    }
+                    &:hover {
+                        background: #E7EFF2;
+                        border-left: solid 3px #106584;
+                    }
+                    .l-right-content {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        max-width: 15%;
+                        .ip {
+                            color: #737171;
+                        }
+                    }
+                    .l-session {
+                        position: absolute;
+                        top: 0;
+                        right: 110px;
+                    }
+                }
+                .add-comment {
+                    position: absolute;
+                    left: -20px;
+                    width: 10px;
+                    height: 10px;
+                    background: #F05417;
+                    border-radius: 50%;
+                    top: 50%;
+                    margin-top: -5px;
+                    cursor: pointer;
+                }
+                .comment {
+                    text-align: center;
+                    color: #8DC540;
+                    font-weight: bold;
+                    width: 100%
+                }
+            }
+        }
+        .right-side {
+            float: right;
+            height: 100%;
+            width: 30%;
+            .stable-data {
+                border: solid 1px rgb(229, 229, 229);
+                padding: 10px 3px;
+                margin-top: -1px;
+                .item {
+                    display: inline-block;
+                    margin: 5px 10px;
+                    .title {
+                        color: #BCBCBC;
+                        font-size: 0.9em;
+                        text-transform: uppercase;
+                    }
+                    .d-content {
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .dynamic-data {
+                text-align: center;
+                .cpu,
+                .memory {
+                    display: inline-block;
+                    margin-top: 20px;
+                    svg {
+                        width: auto;
+                        height: auto;
+                    }
+                    .outer-bar {
+                        stroke-width: 10px;
+                    }
+                    &.cpu .widget-container {
+                        .progress-bar {
+                            stroke: #8DC540;
+                        }
+                        .normal {
+                            stroke: rgb(196, 196, 196);
+                        }
+                    }
+                    &.memory .widget-container {
+                        .progress-bar {
+                            stroke: #F05417;
+                        }
+                        .normal {
+                            stroke: rgb(196, 196, 196);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .timeline{
+        background: #FFFFFF;
+    }
+}

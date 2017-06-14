@@ -1,0 +1,26 @@
+<section id="availabilityTab" class="full-height" ng-controller="AvailabilityController as vma">
+    <div class="top">
+        <div class="search-banner">
+            <div class="title"><a ng-href="{{vma.global.uptimeHost}}/dashboard/checks/{{vma.first.check._id }}">{{vma.first.check.url}}</a> availability </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div ng-include="'subscribe'"></div>
+        <div class="middle-content">
+            <div ng-repeat="(date, events) in vma.availabilities">
+                <h4>{{date}}</h4>
+                <ul>
+                    <li ng-repeat="event in events" ng-init="event._date = vma.moment(event.timestamp)">
+                        <span class="label label-default" title="{{ event._date }}">{{event._date.format('LT')}}</span>
+                        <span class="label" title="{{date}}">{{date.format('LT')}}</span>
+                        <span class="label" ng-class="(event.message == 'paused' || event.message == 'restarted') ? 'label-info' : (event.message == 'up') ? 'label-success' : 'label-danger'">{{event.message}}</span>
+                        <span><a ng-href="{{vma.global.uptimeHost}}/dashboard/checks/{{event.check._id }}">{{event.check.url}}</a></span>
+                        <span ng-if="event.message === 'paused' || event.message === 'restarted'"> was {{event.message}}</span>
+                        <span ng-if="event.message === 'down'"> went down ({{event.details}})</span>
+                        <span ng-if="event.message === 'up'"> is now up</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

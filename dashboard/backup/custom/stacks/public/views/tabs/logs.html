@@ -1,0 +1,63 @@
+<section id="logsTab" ng-controller="LogsController as vm" class="full-height" ng-init="vm.find()">
+    <div class="top">
+        <div class="search-banner">
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" placeholder="Search Log" ng-model="text" ng-change="vm.searchText(text)" />
+            <div ng-include="'ips'"></div>
+        </div>
+    </div>
+    <div class="middle" ng-class="{anchor: vm.anchor, 'with-timeline': vm.histogram.length > 1}" id="logsContent" load-more="vm.loadMore()" top="{{scrollTopHeight}}">
+        <div ng-include="'subscribe'"></div>
+        <div class="left-side" ng-class="{wide: !vm.platforms[stack.platform].cpuMem}">
+            <div class="logs middle-content" text-selection>
+            <div ng-show="vm.busy" class="loader red">Loading...</div>
+                <div ng-repeat="log in vm.docs">
+                    <div class="group-title date" ng-class="{show: log._created !== vm.docs[$index -1]._created}">
+                        <hr/>
+                        <div class="group-title-label">{{::log._source.created | date: 'MMM d, yyyy'}}</div>
+                    </div>
+                    <div class="group-title session" id="{{sessionKey}}" ng-class="{show: log._source.session !== vm.docs[$index -1]._source.session}">
+                        <hr/>
+                        <div class="group-title-label">{{::log._source.session}}</div>
+                    </div>
+                    <annotation data="vm.annotations[log._id]" type="logs" id="{{log._id}}" stack-id="{{stack._id}}"></annotation>
+                    <div class="date-logs-values log " ng-mouseover="vm.logHover(log)" ng-class="::log._source.method">
+                        <div class="l-content">
+                            <div ng-show="log._source.type === 'request'">
+                                <span class="text-uppercase">{{::log._source.method}}</span>
+                                <a ng-href="{{app.envs[env].content}}{{log._source.content}}" ng-show="log._source.content.split('/')[1] === 'api'">{{::log._source.content}}</a>
+                                <span ng-hide="log._source.content.split('/')[1] === 'api'">{{::log._source.content}}</span> {{::log._source.status}}
+                            </div>
+                            <div ng-hide="log._source.type === 'request'">
+                                <span class="text-uppercase">{{::log._source.method}}</span> {{::log._source.content}}
+                            </div>
+                        </div>
+                        <div class="l-right-content">
+                            <span>{{::log._source.created | date: 'HH:mm:ss'}}</span> |
+                            <span class="ip">{{::log._source.ip}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side" ng-show="vm.sessionData || vm.cpuAvg">
+            <div class="stable-data" ng-show="vm.sessionData">
+                <div ng-repeat="data in vm.sessionData" class="item">
+                    <div class="title">{{data.label}}</div>
+                    <div class="d-content">{{data.content}}</div>
+                </div>
+            </div>
+            <div class="dynamic-data" ng-if="vm.cpuAvg">
+                <div class="cpu">
+                    <div class="widget-container" data-expected="{{vm.cpuAvg}}" data-actual="{{vm.cpu}}" indicator-widget data-config="vm.indicatorConfig" data-title="CPU"></div>
+                </div>
+                <div class="memory">
+                    <div class="widget-container" data-expected="{{vm.memAvg}}" data-actual="{{vm.memory}}" indicator-widget data-config="vm.indicatorConfig" data-title="MEMORY"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <timeline ng-if="vm.histogram.length > 1" data="vm.histogram" on-change="vm.timelineChange(range)"></timeline>
+    </div>
+</section>

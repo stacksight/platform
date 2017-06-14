@@ -1,0 +1,697 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, people.scss */
+.stack-people .content-side,
+.stack-peoplewithparam .content-side {
+  overflow: hidden;
+  margin-top: 84px;
+}
+/* line 8, people.scss */
+.stack-people .content-side .cell-container,
+.stack-peoplewithparam .content-side .cell-container {
+  width: 100%;
+  padding: 0;
+  float: left;
+}
+/* line 12, people.scss */
+.stack-people .content-side .cell-container .header,
+.stack-peoplewithparam .content-side .cell-container .header {
+  height: 54px;
+  clear: both;
+  margin: 5px 0 0 0;
+  width: calc(82.5% - 7px);
+  padding-left: 55px;
+  padding-bottom: 64px;
+  position: fixed;
+  top: 44px;
+  background: #f3f3f3;
+  z-index: 100;
+  padding-top: 12px;
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+}
+/* line 26, people.scss */
+.stack-people .content-side .cell-container .header .stack-logo,
+.stack-peoplewithparam .content-side .cell-container .header .stack-logo {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 101;
+}
+/* line 38, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks {
+  background: #ffffff;
+  height: 412px;
+  position: absolute;
+  display: block;
+  width: calc(((100% - 290px) / 2) + 55px);
+  z-index: 100;
+  top: -12px;
+  left: -4px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.1);
+  padding-top: 82px;
+}
+/* line 49, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks input,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks input {
+  width: 100%;
+  border: 1px solid #efefef;
+  border-right: none;
+  border-left: none;
+  line-height: 50px;
+  padding: 0 20px 0 42px;
+  color: #e3e3e3;
+  font-size: 16px;
+  font-weight: 300;
+  background: url("/stacks/assets/img/ico_search.png") no-repeat 12px;
+}
+/* line 61, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ::-webkit-input-placeholder,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ::-webkit-input-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 65, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ::-moz-placeholder,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ::-moz-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 69, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks :-moz-placeholder,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks :-moz-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 73, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks :-ms-input-placeholder,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks :-ms-input-placeholder {
+  color: #e3e3e3;
+  font-style: italic;
+}
+/* line 77, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ul,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ul {
+  height: 278px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+/* line 82, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ul li,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ul li {
+  overflow: hidden;
+  padding: 11px 22px 11px 16px;
+  cursor: pointer;
+}
+/* line 86, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ul li:hover,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ul li:hover {
+  background: #e3e3e3;
+}
+/* line 89, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ul li .stack-logo,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ul li .stack-logo {
+  position: relative;
+  display: block;
+  float: left;
+  width: 28px;
+  height: 28px;
+  top: 4px;
+  left: 0;
+}
+/* line 98, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ul li h3,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ul li h3 {
+  font-weight: bold;
+  color: #454a54;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 32px;
+  line-height: 16px;
+}
+/* line 112, people.scss */
+.stack-people .content-side .cell-container .header .drop-list-of-stacks ul li .url,
+.stack-peoplewithparam .content-side .cell-container .header .drop-list-of-stacks ul li .url {
+  font-size: 10px;
+  color: #454a54;
+  font-weight: lighter;
+  padding-left: 32px;
+  line-height: 10px;
+}
+/* line 122, people.scss */
+.stack-people .content-side .cell-container .header .info-head,
+.stack-peoplewithparam .content-side .cell-container .header .info-head {
+  width: calc(100% - 290px);
+  position: relative;
+  z-index: 101;
+}
+/* line 127, people.scss */
+.stack-people .content-side .cell-container .header .info-head .left,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .left {
+  float: left;
+  padding-top: 3px;
+  width: 50%;
+  position: relative;
+}
+/* line 132, people.scss */
+.stack-people .content-side .cell-container .header .info-head .left h3,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .left h3 {
+  font-weight: bold;
+  color: #454a54;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 145, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle {
+  float: left;
+  margin-top: 4px;
+  padding-right: 24px;
+  border-right: 1px solid #d3d3d3;
+  width: 50%;
+  height: 44px;
+  padding-top: 12px;
+}
+/* line 153, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags {
+  float: right;
+}
+/* line 155, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags .add-tag,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags .add-tag {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: #448aff;
+  color: #FFFFFF;
+  float: right;
+  line-height: 16px;
+  margin: 3px 0 0 3px;
+  padding: 0;
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+}
+/* line 169, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input {
+  float: right;
+}
+/* line 171, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input input,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input input {
+  border: 1px solid #eeeeee;
+  margin-top: -5px;
+  margin-left: 3px;
+  z-index: 1000;
+  display: block;
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 11px;
+}
+/* line 181, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-holder,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-holder {
+  position: relative;
+}
+/* line 185, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown {
+  border-color: #ececec;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  width: 250px;
+  padding: 6px;
+  cursor: pointer;
+  z-index: 9999;
+  position: absolute;
+  /*top: 32px;
+  left: 0px;
+  */
+  margin-top: -6px;
+  background-color: #ffffff;
+}
+/* line 202, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-searching,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-searching {
+  color: #acacac;
+  font-size: 14px;
+}
+/* line 207, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-description,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-description {
+  font-size: 14px;
+}
+/* line 211, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-row,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-row {
+  padding: 5px;
+  color: #000000;
+  margin-bottom: 4px;
+  clear: both;
+}
+/* line 218, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-selected-row,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-selected-row {
+  background-color: lightblue;
+  color: #ffffff;
+}
+/* line 223, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image-holder,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image-holder {
+  padding-top: 2px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+/* line 230, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border-color: #ececec;
+  border-style: solid;
+  border-width: 1px;
+}
+/* line 239, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image-default,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-image-default {
+  /* Add your own default image here
+   background-image: url('/assets/default.png');
+  */
+  background-position: center;
+  background-size: contain;
+  height: 34px;
+  width: 34px;
+}
+/* line 248, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown {
+  margin: -1px 0 0 3px;
+  width: 124px;
+  border-radius: 0px;
+  border: 1px solid #e2e2e2;
+  position: inherit;
+  padding: 0;
+}
+/* line 255, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching {
+  color: #010101;
+  font-size: 11px;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0 8px;
+  line-height: 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* line 256, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row.angucomplete-selected-row,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching.angucomplete-selected-row {
+  background: #F3F3F3;
+  color: #010101;
+}
+/* line 268, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-title,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-title {
+  order: 2;
+}
+/* line 271, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row .angucomplete-description,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching .angucomplete-description {
+  order: 1;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #71c06d;
+  line-height: 6px;
+  display: block;
+  padding-top: 6px;
+}
+/* line 281, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child, .stack-people .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-row:last-child,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags #tag-input .angucomplete-dropdown .angucomplete-searching:last-child {
+  border-bottom: none;
+}
+/* line 287, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+/* line 292, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags ul li {
+  cursor: default;
+  float: left;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-right: 3px;
+  padding: 4px 8px;
+  font-size: 9px;
+  color: #454a54;
+}
+/* line 293, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li:hover,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags ul li:hover {
+  border: 1px solid #878787;
+}
+/* line 294, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li:hover i,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags ul li:hover i {
+  display: block;
+}
+/* line 299, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li i,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags ul li i {
+  float: right;
+  font-size: 12px;
+  cursor: pointer;
+  padding-left: 3px;
+  display: none;
+  float: right;
+}
+/* line 307, people.scss */
+.stack-people .content-side .cell-container .header .info-head .middle .tags ul li:last-child,
+.stack-peoplewithparam .content-side .cell-container .header .info-head .middle .tags ul li:last-child {
+  margin-right: 0px;
+}
+/* line 324, people.scss */
+.stack-people .content-side .cell-container .header .right,
+.stack-peoplewithparam .content-side .cell-container .header .right {
+  float: right;
+  padding-left: 24px;
+  width: 290px;
+  margin-top: 4px;
+}
+/* line 329, people.scss */
+.stack-people .content-side .cell-container .header .right ul,
+.stack-peoplewithparam .content-side .cell-container .header .right ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 333, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li {
+  float: left;
+  margin-right: 8px;
+}
+/* line 334, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li:last-child,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li:last-child {
+  margin-right: 0;
+}
+/* line 339, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li img,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li img {
+  width: 45px;
+  height: 45px;
+}
+/* line 340, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li img.user_add,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li img.user_add {
+  width: 27px;
+  height: 20px;
+}
+/* line 347, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li a,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+/* line 348, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li a:hover,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li a:hover {
+  text-decoration: none;
+}
+/* line 359, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li a.user_add,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li a.user_add {
+  background: #448aff;
+}
+/* line 362, people.scss */
+.stack-people .content-side .cell-container .header .right ul.users li a.hidden_users,
+.stack-peoplewithparam .content-side .cell-container .header .right ul.users li a.hidden_users {
+  background: #e4e4e4;
+  color: #7f7f7f;
+  line-height: 45px;
+  font-size: 24px;
+}
+/* line 373, people.scss */
+.stack-people .content-side .cell-container .header .url,
+.stack-peoplewithparam .content-side .cell-container .header .url {
+  font-size: 13px;
+  color: #454a54;
+  font-weight: lighter;
+}
+/* line 378, people.scss */
+.stack-people .content-side .cell-container .header i.fa-caret-down,
+.stack-peoplewithparam .content-side .cell-container .header i.fa-caret-down {
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  cursor: pointer;
+}
+/* line 385, people.scss */
+.stack-people .content-side .cell-container .content-block,
+.stack-peoplewithparam .content-side .cell-container .content-block {
+  width: 100%;
+  padding: 0px 0px 24px 24px;
+}
+/* line 388, people.scss */
+.stack-people .content-side .cell-container .content-block .title,
+.stack-peoplewithparam .content-side .cell-container .content-block .title {
+  overflow: hidden;
+}
+/* line 390, people.scss */
+.stack-people .content-side .cell-container .content-block .title h3,
+.stack-peoplewithparam .content-side .cell-container .content-block .title h3 {
+  float: left;
+  padding-top: 4px;
+  margin: 0;
+  font-size: 28px;
+}
+/* line 396, people.scss */
+.stack-people .content-side .cell-container .content-block .title .add_user_button,
+.stack-peoplewithparam .content-side .cell-container .content-block .title .add_user_button {
+  float: right;
+}
+/* line 398, people.scss */
+.stack-people .content-side .cell-container .content-block .title .add_user_button button,
+.stack-peoplewithparam .content-side .cell-container .content-block .title .add_user_button button {
+  background: #448aff;
+  padding: 0 20px;
+  line-height: 42px;
+  border: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+/* line 399, people.scss */
+.stack-people .content-side .cell-container .content-block .title .add_user_button button i,
+.stack-peoplewithparam .content-side .cell-container .content-block .title .add_user_button button i {
+  padding-right: 8px;
+}
+/* line 412, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container {
+  clear: both;
+}
+/* line 414, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container h4,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container h4 {
+  margin-bottom: 24px;
+}
+/* line 417, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group {
+  margin: 18px 0 30px 0;
+  clear: both;
+}
+/* line 420, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 423, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li {
+  width: 274px;
+  height: 247px;
+  float: left;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 26px 26px 0;
+  text-align: center;
+}
+/* line 431, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .label,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .label {
+  height: 28px;
+  float: right;
+  line-height: 25px;
+  margin: 14px 12px 0px 0px;
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  display: block;
+}
+/* line 443, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .label span,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .label span {
+  padding: 9px 8px;
+  border-radius: 12px;
+}
+/* line 446, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .label span.gray,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .label span.gray {
+  color: #ffffff;
+  background: #d4d4d4;
+}
+/* line 450, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .label span.blue,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .label span.blue {
+  color: #ffffff;
+  background: #448aff;
+}
+/* line 454, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .label span.green,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .label span.green {
+  color: #ffffff;
+  background: #58b754;
+}
+/* line 458, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .label span.magenta,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .label span.magenta {
+  color: #ffffff;
+  background: #7a51a0;
+}
+/* line 464, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix {
+  clear: both;
+  color: #000000;
+}
+/* line 465, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix.user-info-block,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix.user-info-block {
+  margin-top: 42px;
+}
+/* line 470, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .user-name,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .user-name {
+  font-size: 18px;
+  padding-top: 6px;
+}
+/* line 474, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .user-email,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .user-email {
+  font-size: 13px;
+}
+/* line 477, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info {
+  padding-top: 16px;
+  font-size: 12px;
+  position: relative;
+}
+/* line 481, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info a,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info a {
+  padding: 0 10px;
+  border-right: 1px solid #000000;
+}
+/* line 484, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info a:last-child,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info a:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+/* line 491, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info span.action,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info span.action {
+  padding-right: 14px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+/* line 493, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info span.action img,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li .clearfix .additional-info span.action img {
+  border-radius: 0;
+  width: inherit;
+  height: inherit;
+}
+/* line 507, people.scss */
+.stack-people .content-side .cell-container .content-block .content-container .users_group ul li img,
+.stack-peoplewithparam .content-side .cell-container .content-block .content-container .users_group ul li img {
+  width: 114px;
+  height: 114px;
+  border-radius: 57px;
+}

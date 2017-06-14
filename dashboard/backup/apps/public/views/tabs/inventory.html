@@ -1,0 +1,455 @@
+<div>YYY</div>
+<section id="inventoryTab" class="full-height" ng-controller="InventoryController as vmin" ng-if="vm.app" ng-init="vmin.init()">
+    <div class="top top-head">
+        <div class="search-banner">
+            <i class="fa fa-search ico-search"></i>
+            <auto-search options="vmin.autoSearchOpts" exec="vmin.search(item, model, label);" no-text="vmin.noText();" no-result-changed="vmin.noResultChanged(noResults, value)"></auto-search>
+            <!-- <input type="text" ng-model="search.name" placeholder="Search Stacks" auto-focus/> -->
+            <!--  <button class="btn rnd-btn red filter-button" ng-click="vmin.modalOpen('lg')">
+                <i class="ico-filter"></i>
+                Advanced filter
+            </button> -->
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle-content">
+            <div ng-show="vmin.showLoader" class="loader red">Loading...</div>
+            <div id="inv-no-data" class="list-header" ng-show="!vmin.stacks.length">
+                <div class="text-left">
+                    <h2>{{vm.app.name}} stacks (0)</h2>
+                </div>
+                <div class="pd-lg no-found-text">
+                    <hr/>
+                    <div class="pd" ng-show="vmin.showAddStacks">
+                        <span class="">There are currently no stacks in {{vm.app.name}} </span>
+                        <div><a ui-sref="app.stacks(tab.params)" class="btn rnd-btn red">Add your first stack</a></div>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+            <div class="list-header top-header" ng-show="vmin.stacks.length">
+                <div class="title">
+                    <span>
+                        <span class="filter-title">{{vmin.title}}</span>
+                    <!--  <span class="filter-list"
+                              uib-popover-template="'filters-list'"
+                              popover-placement="bottom"
+                              uib-popover-trigger="open"
+                              popover-title="Saved Filters"
+                              popover-is-open= "isOpen"
+                              popover-toggle><i class="fa fa-caret-down" aria-hidden="true"></i></span> -->
+                    </span>
+                    <!--<h2>{{vm.app.name}} stacks ({{vmin.stacks.length}})</h2>-->
+                </div>
+                <div class="view-type">
+                    <div class="filter-block">
+                        <div class="filter-icon" ng-click="vmin.change_view_filter('grid')">
+                            <span class="grid">
+                                <i class="fa fa-th" ng-class="(vmin.filer_view == 'grid') ? 'active' : ''"></i>
+                            </span>
+                        </div>
+                        <div class="filter-icon" ng-click="vmin.change_view_filter('list')">
+                            <span class="list">
+                                <i class="fa fa-bars" ng-class="(vmin.filer_view == 'list') ? 'active' : ''"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+            <div ng-include="'inventory-stacks-grid'" ng-if="vmin.filer_view == 'grid' && vmin.stacks.length > 0"></div>
+            <div ng-include="'inventory-stacks-list'" ng-if="vmin.filer_view == 'list' && vmin.stacks.length > 0"></div>
+        </div>
+    </div>
+</section>
+<script type="text/ng-template" id="components-list">
+        <h3 class="popover-title">Components</h3>
+        <div class="component-wrapper full-height">
+            <div class="head-popup popup-content">
+                <div class="title-pre-content">{{vmin.stack.name}} ({{vmin.stack.inventory.length}})</div>
+                <div class="search">
+                    <i class="fa fa-search ico-search"></i>
+                    <input type="text" class="search-input" placeholder="Search" ng-model="search.label" />
+                </div>
+                <div class="filter-state">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="checkbox_block">
+                            <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="search_enabled_{{vmin.stack._id}}" id="search_enabled_{{vmin.stack._id}}" ng-model="vmin.stacksFilters[vmin.stack._id].search_enabled"/>
+                                <label for="search_enabled_{{vmin.stack._id}}"></label>
+                            </label>
+                            <span class="title">Enabled</span>
+                        </div>
+
+                        <div class="checkbox_block">
+                            <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="search_disabled_{{vmin.stack._id}}" id="search_disabled_{{vmin.stack._id}}" ng-model="vmin.stacksFilters[vmin.stack._id].search_disabled"/>
+                                <label for="search_disabled_{{vmin.stack._id}}"></label>
+                            </label>
+                            <span class="title">Disabled</span>
+                        </div>
+
+                        <div class="checkbox_block">
+                            <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="search_modules_{{vmin.stack._id}}" id="search_modules_{{vmin.stack._id}}" ng-model="vmin.stacksFilters[vmin.stack._id].search_modules"/>
+                                <label for="search_modules_{{vmin.stack._id}}"></label>
+                            </label>
+                            <span class="title">Modules/Plugins</span>
+                        </div>
+
+                        <div class="checkbox_block">
+                            <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="search_themes_{{vmin.stack._id}}" id="search_themes_{{vmin.stack._id}}" ng-model="vmin.stacksFilters[vmin.stack._id].search_themes"/>
+                                <label for="search_themes_{{vmin.stack._id}}"></label>
+                            </label>
+                            <span class="title">Themes</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <span class="button-close" ng-click="vmin.triggerSlideMenuPopover(vmin.stack, 'menu-stack' + vmin.stack._id);">
+                <i class="fa fa-times-circle cursor-pointer"></i>
+            </span>
+            <div class="popup-content content-components">
+                <div class="loader red" ng-show="vmin.stack.showLoader">Loading...</div>
+                <table ng-if="(vmin.stack.inventory|filter:search:strict | filter:vmin.componentAllFilter).length == 0" class="components-list-table">
+                    <tr>
+                        <td>Components not found...</td>
+                    </tr>
+                </table>
+                <table ng-if="(vmin.stack.inventory|filter:search:strict | filter:vmin.componentAllFilter).length > 0" class="components-list-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Version</th>
+                    </tr>
+                    <tr ng-repeat="inv in vmin.stack.inventory | filter:search:strict | filter:vmin.componentAllFilter" ng-class="(inv.active == true) ? 'success' : 'danger'">
+                        <td>{{inv.label}}</td>
+                        <td>{{inv.type}}</td>
+                        <td>
+                            <span class="public-true" ng-if="inv.active == true">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </span>
+
+                            <span class="public-false" ng-if="inv.active != true">
+                                <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                            </span>
+                        </td>
+                        <td>{{inv.version}} </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</script>
+<script type="text/ng-template" id='inventory-stacks-grid'>
+    <ul class="{{vmin.filer_view}} list-group sites-list">
+        <li ng-repeat="stack in vmin.stacks | filter:search:strict" ng-init="vmin.initStack(stack._id)" class="list-group-item {{vmin.filer_view}} cursor-pointer" ui-sref="stack.inventory({id: stack._id})">
+            <div class="platform {{stack.platform}}"></div>
+            <div class="info">
+                <span class="platform-type">
+                            {{stack.platform}}
+                        </span>
+                <h4>{{stack.name}}</h4>
+                <span class="domain">{{stack.domain}}</span>
+            </div>
+        </li>
+    </ul>
+</script>
+<script type="text/ng-template" id='visible-columns-list'>
+    <span class="button-close" ng-click="popoverCtrl.toggle()">
+        <i class="fa fa-times-circle cursor-pointer"></i>
+    </span>
+    <div class="popup-content popup-content-visible-columns">
+        <table class="visible-columns-table">
+            <tbody>
+                <tr ng-repeat="(key,col) in vmin.filter.visible_columns">
+                    <td>
+                        <input type="checkbox" ng-checked="col.visible" ng-click="vmin.uvisibleColumn(key)" />
+                    </td>
+                    <td class="no-padding">{{col.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+<script type="text/ng-template" id='filters-list'>
+    <span class="button-close" ng-click="popoverCtrl.toggle()">
+        <i class="fa fa-times-circle cursor-pointer"></i>
+    </span>
+    <div class="popup-content popup-content-filters-list">
+        <table class="filter-list-table" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr ng-repeat="(key,col) in vmin.filter.presets" ng-class="(col._id == vmin.setted_preset) ? 'active' : ''">
+                    <td class="no-padding" ng-click="vmin.setFilter($event, col)">
+                        <span class="text">{{col.title}}</span>
+                    </td>
+                    <td class="no-padding text-right">
+                        <i class="fa fa-pencil" aria-hidden="true" ng-click="vmin.editFilter(col._id)"></i>
+                        <i class="fa fa-trash" aria-hidden="true" ng-click="vmin.deleteFilter(col._id)"></i>
+                    </td>
+                </tr>
+                <tr class="last-filter-element">
+                    <td colspan="2">
+                        <span><i class="fa fa-plus" aria-hidden="true"></i> Add currect filter</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+<script type="text/ng-template" id='inventory-stacks-list'>
+    <div class="clear table">
+        <table st-table="vmin.stacks" class="table table-inventory">
+            <thead>
+                <tr>
+                    <th ng-show="vmin.filter.visible_columns.actions_checkbox.visible == true">
+                        <a href=""  uib-popover-template="'actions-list'" popover-placement="top" uib-popover-trigger="open" popover-title="Actions" popover-is-open="isOpen" popover-toggle>{{vmin.filter.visible_columns.actions_checkbox.name}}</a>
+                        <span>
+                        <span class="label-sm">select all</span>
+                         <label class="wrapper-checkbox red sm">
+                                <input type="checkbox" name="cb-check-all" id="cb-check-all" ng-model="vmin.selectedAll" ng-click="vmin.checkAll()"/>
+                                <label for="cb-check-all"></label>
+                         </label>
+                        </span>
+                    </th>
+                    <th st-sort="platform" ng-show="vmin.filter.visible_columns.stack_ico.visible == true">{{vmin.filter.visible_columns.stack_ico.name}}</th>
+                    <th st-sort="data.title" ng-show="vmin.filter.visible_columns.stack_title.visible == true">{{vmin.filter.visible_columns.stack_title.name}}</th>
+                    <th st-sort="name" ng-show="vmin.filter.visible_columns.name.visible == true">{{vmin.filter.visible_columns.name.name}}</th>
+                    <th st-sort="data.url" ng-show="vmin.filter.visible_columns.url.visible == true">{{vmin.filter.visible_columns.url.name}}</th>
+                    <th ng-show="vmin.filter.visible_columns.active_theme.visible == true">{{vmin.filter.visible_columns.active_theme.name}}</th>
+                    <th st-sort="data.public" ng-show="vmin.filter.visible_columns.public.visible == true">{{vmin.filter.visible_columns.public.name}}</th>
+                    <th st-sort="data.usedSpace" ng-show="vmin.filter.visible_columns.space_used.visible == true">{{vmin.filter.visible_columns.space_used.name}}</th>
+                    <th st-sort="" ng-show="vmin.filter.visible_columns.installed_components.visible == true">{{vmin.filter.visible_columns.installed_components.name}}</th>
+                    <th st-sort="data.lastLogin.time" ng-show="vmin.filter.visible_columns.last_login.visible == true">{{vmin.filter.visible_columns.last_login.name}}</th>
+                    <th st-sort="data.owner.user_mail" ng-show="vmin.filter.visible_columns.owner.visible == true">{{vmin.filter.visible_columns.owner.name}}</th>
+                    <th ng-show="vmin.filter.visible_columns.gravity_forms.visible == true">{{vmin.filter.visible_columns.gravity_forms.name}}</th>
+                    <th st-sort="data.stacksightVersion" ng-show="vmin.filter.visible_columns.sts_version.visible == true">{{vmin.filter.visible_columns.sts_version.name}}</th>
+                    <th ng-show="vmin.filter.visible_columns.wpml_language.visible == true">{{vmin.filter.visible_columns.wpml_language.name}}</th>
+                    <th class="no-border">
+                        <span class="table-menu" uib-popover-template="'visible-columns-list'" popover-placement="left" uib-popover-trigger="open" popover-title="Visible columns" popover-is-open="isOpen" popover-toggle>
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stack in vmin.stacks" ng-init="vmin.initStack(stack._id)" class="tr-stacks-row {{stack._id}}">
+                    <td ng-show="vmin.filter.visible_columns.actions_checkbox.visible == true">
+                        <!-- <input type="checkbox" ng-model="stack.data.owner" ng-true-value="stack.data.owner.email" ng-false-value="" ng-change="string" > -->
+                        <label class="wrapper-checkbox red sm">
+                            <input type="checkbox" name="cb-{{stack._id}}" id="cb-{{stack._id}}" ng-model="stack.selected" />
+                            <label for="cb-{{stack._id}}"></label>
+                        </label>
+                    </td>
+                    <td class="text-center" ng-show="vmin.filter.visible_columns.stack_ico.visible == true">
+                        <!-- <span class="platform md {{stack.platform}}"></span> -->
+                        <span class="platform sm {{stack.platform}}"></span>
+                        <!--<img ng-src="/platforms/assets/img/{{stack.platform}}.png" alt="{{stack.platform}}" />-->
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.stack_title.visible == true">
+                        <a ui-sref="stack.inventory({id: stack._id})">{{stack.data.title}}</a>
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.name.visible == true">
+                        <a ui-sref="stack.inventory({id: stack._id})">{{stack.name}}</a>
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.url.visible == true"><a ng-href="{{stack.data.url}}" title="{{stack.data.url}}" target="_blank">{{stack.data.url}}</a></td>
+                    <td ng-show="vmin.filter.visible_columns.active_theme.visible == true">{{vmin.info[stack._id].active_themes}}</td>
+                    <td class="text-center" ng-show="vmin.filter.visible_columns.public.visible == true">
+                        <span class="public-true" ng-show="stack.data.public === '1' || stack.data.public === 1 || stack.data.public === true">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                        <span class="public-false" ng-show="stack.data.public === '0' || stack.data.public === 0 || stack.data.public === false">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                    </span>
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.space_used.visible == true">{{stack.data.usedSpace * 1024 | bytes}}</td>
+                    <td ng-show="vmin.filter.visible_columns.installed_components.visible == true">
+                        <!-- {{stack.inventory.length | filter:{"type": "plugin"} }} -->
+                        {{vmin.info[stack._id].count_all}}
+                        <span class="plugins" id="components-list-block" ng-click="vmin.triggerSlideMenuPopover(stack, 'menu-' + stack._id);"> <i class="fa fa-bars" aria-hidden="true"></i></span></span>
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.last_login.visible == true">
+                        <div ng-show="stack.data.lastLogin">
+                            <div ng-if="stack.data.lastLogin.user_link">
+                                <a ng-href="{{stack.data.lastLogin.user_link}}" target="_blank">{{ stack.data.lastLogin.user_name || stack.data.lastLogin.user_login || stack.data.lastLogin.user_mail }}</a> - {{stack.data.lastLogin.time * 1000 | date: 'MMM d yyyy, HH:mm'}}
+                            </div>
+                            <div ng-if="!stack.data.lastLogin.user_link">
+                                {{ stack.data.lastLogin.user_name || stack.data.lastLogin.user_login || stack.data.lastLogin.user_mail }} - {{stack.data.lastLogin.time * 1000 | date: 'MMM d yyyy, HH:mm'}}
+                            </div>
+                        </div>
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.owner.visible == true">
+                        <div ng-if="stack.data.owner.user_mail">
+                            <a href="mailto:{{stack.data.owner.user_mail}}">{{ stack.data.owner.user_name || stack.data.owner.user_login || stack.data.owner.user_mail }}</a>
+                        </div>
+                        <div ng-if="!stack.data.owner.user_mail && stack.data.owner.user_link">
+                            <a ng-href="{{stack.data.owner.user_link}}" target="_blank">{{ stack.data.owner.user_name || stack.data.owner.user_login}}</a>
+                        </div>
+                        <div ng-if="!stack.data.owner.user_mail && !stack.data.owner.user_link">
+                            {{ stack.data.owner.user_name || stack.data.owner.user_login}}
+                        </div>
+                    </td>
+                    <td ng-show="vmin.filter.visible_columns.gravity_forms.visible == true">-</td>
+                    <td ng-show="vmin.filter.visible_columns.sts_version.visible == true">{{stack.data.stacksightVersion}}</td>
+                    <td ng-show="vmin.filter.visible_columns.wpml_language.visible == true">{{stack.data.wpmlLang}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-slide-menu id="slide-menu" position="right" class="spmenu spmenu-vertical spmenu-right">
+        <div ng-include src="'components-list'" class="full-height"></div>
+    </ng-slide-menu>
+</script>
+<script type="text/ng-template" id="filter-list-template">
+    <div class="popup-content popup-select-filters-list">
+        <uib-tabset active="active" vertical="true" id="modal-filters">
+            <uib-tab index="$index + 1" heading="{{item.title}}" ng-repeat="(key, item) in items">
+                <ul class="list-of-options">
+                    <li ng-repeat="(option_key, option) in item.options">
+                        <a href="" ng-click="selectOption(option_key, option)">{{option.title}}</a>
+                    </li>
+                </ul>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</script>
+<script type="text/ng-template" id="filter-list-edit-template">
+    <div class="popup-content popup-select-filters-list">
+        <uib-tabset active="active" vertical="true" id="modal-filters">
+            <uib-tab index="$index + 1" heading="{{item.title}}" ng-repeat="(key, item) in items">
+                <ul class="list-of-options">
+                    <li ng-repeat="(option_key, option) in item.options">
+                        <a href="" ng-click="selectOption(option_key, option, id)">{{option.title}}</a>
+                    </li>
+                </ul>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</script>
+<script type="text/ng-template" id="advancedFilterModal">
+    <div class="modal-header">
+        <h3 class="modal-title">Advanced filter</h3>
+    </div>
+    <span class="button-close-modal" ng-click="cancel()">
+        <i class="fa fa-times-circle cursor-pointer"></i>
+    </span>
+    <div class="modal-body">
+        <div class="pre-content">
+            <span>create an advanced filter by choose from a wide variety of stack properties, and selecting the desired value to filter by. Combine multiple properties for even more refined filters, and save for later</span>
+        </div>
+        <div class="tabs-modal-content">
+            <table ng-if="filters_enabled" id="table-view-filters-enabled">
+                <tbody>
+                    <tr ng-repeat="(filter_key, filter) in filters_enabled">
+                        <td><strong>{{filter_options[filter_key].title}}</strong></td>
+                        <td>
+                            <div ng-switch="filter_options[filter_key].type">
+                                <div ng-switch-when="select">
+                                    <select name="singleOfTypeFilter" ng-model="filters_enabled[filter_key].type" class="wrapp">
+                                        <option value="{{filter_option.value}}" ng-repeat="filter_option in filter_options[filter_key].options">{{filter_option.title}}</option>
+                                    </select>
+                                    <select name="singleOfValueFilter" ng-model="filters_enabled[filter_key].value" class="wrapp">
+                                        <option value="{{filter_value_option.value}}" ng-repeat="filter_value_option in _.findWhere(filter_options[filter_key].options, {value: filters_enabled[filter_key].type}).options">{{filter_value_option.title}}</option>
+                                    </select>
+                                </div>
+                                <div ng-switch-default>
+                                    <input type="text" ng-model="filters_enabled[filter_key].value" class="wrapp" />
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="button-close" ng-click="removeActiveFilter(filter_key)">
+                                <i class="fa fa-times-circle cursor-pointer"></i>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <span id="filter-dummy-select" class="filter-dummy-select" uib-popover-template="'filter-list-template'" ng-if="using_all_filters !== true" popover-placement="bottom" uib-popover-trigger="open" popover-is-open="isOpen" popover-toggle>Filter by <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn rnd-btn red" type="button" ng-click="ok()">Apply</button>
+        <button class="no-styles" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<script type="text/ng-template" id="editFilterModal">
+    <div class="modal-header">
+        <h3 class="modal-title">Edit filter "{{title}}"</h3>
+    </div>
+    <span class="button-close-modal" ng-click="cancel()">
+        <i class="fa fa-times-circle cursor-pointer"></i>
+    </span>
+    <div class="modal-body">
+        <!--<div class="pre-content">-->
+        <!--<span>Edit filter</span>-->
+        <!--</div>-->
+        <div class="tabs-modal-content">
+            <table ng-if="filters_enabled" id="table-edit-filters-enabled">
+                <tbody>
+                    <tr ng-repeat="(filter_key, filter) in filters_enabled">
+                        <td><strong>{{filter_options[filter_key].title}}</strong></td>
+                        <td>
+                            <div ng-switch="filter_options[filter_key].type">
+                                <div ng-switch-when="select">
+                                    <select name="singleOfTypeFilter" ng-model="filters_enabled[filter_key].type" class="wrapp">
+                                        <option value="{{filter_option.value}}" ng-repeat="filter_option in filter_options[filter_key].options">{{filter_option.title}}</option>
+                                    </select>
+                                    <select name="singleOfValueFilter" ng-model="filters_enabled[filter_key].value" class="wrapp">
+                                        <option value="{{filter_value_option.value}}" ng-repeat="filter_value_option in _.findWhere(filter_options[filter_key].options, {value: filters_enabled[filter_key].type}).options">{{filter_value_option.title}}</option>
+                                    </select>
+                                </div>
+                                <div ng-switch-default>
+                                    <input type="text" ng-model="filters_enabled[filter_key].value" class="wrapp" />
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="button-close" ng-click="removeActiveFilter(filter_key, id)">
+                                <i class="fa fa-times-circle cursor-pointer"></i>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="filter-dummy-select" uib-popover-template="'filter-list-edit-template'" ng-if="using_all_edit_filters !== true" popover-placement="bottom" uib-popover-trigger="open" popover-is-open="isOpen" popover-toggle>Filter by <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn rnd-btn red" type="button" ng-click="ok()">Save</button>
+        <button class="no-styles" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<script type="text/ng-template" id="sendEmailModal">
+    <div class="modal-header">
+        <h3 class="modal-title">Send email to the sites owners</h3>
+    </div>
+    <span class="button-close-modal" ng-click="cancel()">
+        <i class="fa fa-times-circle cursor-pointer"></i>
+    </span>
+    <div class="modal-body">
+        <div class="tabs-modal-content">
+            <form novalidate name="sendEmailForm">
+                <textarea rows="5" name="email-body" id="email-body" ng-model="body" ng-required="true"></textarea>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="submit" class="btn rnd-btn red" value="Send" ng-click="ok(sendEmailForm.$valid)"/>
+        <button class="no-styles" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<script type="text/ng-template" id="actions-list">
+    <div class="popup-content">
+     <span class="button-close" ng-click="popoverCtrl.toggle()">
+        <i class="fa fa-times-circle cursor-pointer"></i>
+    </span>
+        <ul>
+            <li ng-repeat="action in vmin.actions" ng-click="vmin.openEmailModal('lg'); isOpen = false;;"><a href="">{{action.title}}</a></li>
+        </ul>
+    </div>
+</script>

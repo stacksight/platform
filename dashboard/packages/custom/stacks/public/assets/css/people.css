@@ -1,0 +1,825 @@
+/*-----------------------------------------------
+           Imports and Definitions
+-----------------------------------------------*/
+/*-----------------------------------------------
+                    Path
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Sprites
+-----------------------------------------------*/
+/* line 56, icons-smart/*.png */
+.icons-smart-sprite {
+  background-image: url('../public/assets/img/icons-smart-s6bb19a849f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../../../../mean-compass/sass/_settings.scss */
+.icons-smart-sprite, .page-header .logo {
+  /*background: url('/mean-compass/assets/img/icons-smart-s6bb19a849f.png') no-repeat;*/
+}
+
+/*-----------------------------------------------
+                   Colors
+-----------------------------------------------*/
+/*-----------------------------------------------
+                   Variables
+-----------------------------------------------*/
+/*-----------------------------------------------
+                       END
+-----------------------------------------------*/
+/* -------------- sprite-icon -------------- */
+/* --------------- font-icon --------------- */
+/* line 5, people.scss */
+#stacks-people .top-header .actions {
+  float: right;
+  margin-top: -44px;
+  margin-right: 184px;
+}
+/* line 12, people.scss */
+#stacks-people .top-header .actions ul li {
+  line-height: 45px;
+}
+/* line 16, people.scss */
+#stacks-people .top-header .actions button {
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: #448aff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 23, people.scss */
+#stacks-people .top-header .actions button:active {
+  box-shadow: none;
+}
+/* line 27, people.scss */
+#stacks-people .top-header .actions .popover {
+  background: #FFFFFF;
+  border-radius: 0;
+  padding: 0;
+}
+/* line 37, people.scss */
+#stacks-people .top-header .add-stack {
+  float: right;
+  margin-top: -52px;
+  height: 45px;
+}
+/* line 41, people.scss */
+#stacks-people .top-header .add-stack .btn {
+  width: 140px;
+  height: 44px;
+}
+/* line 44, people.scss */
+#stacks-people .top-header .add-stack .btn.blue {
+  background-color: #448aff;
+  border: 1px solid #ffffff;
+}
+/* line 50, people.scss */
+#stacks-people .top-header .search-banner {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 8px;
+  position: relative;
+}
+/* line 55, people.scss */
+#stacks-people .top-header .search-banner:before {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 11px;
+  background: url("/system/assets/img/ico/search-ico.png");
+  content: '';
+  left: 16px;
+}
+/* line 65, people.scss */
+#stacks-people .top-header .search-banner button.advanced-search {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 18px;
+  height: 38px;
+  text-transform: uppercase;
+  color: #448aff;
+  font-weight: bold;
+}
+/* line 75, people.scss */
+#stacks-people .top-header .search-banner button.advanced-search .ico-filter {
+  width: 13px;
+  height: 13px;
+  background: url("/stacks/assets/img/ico/blue_filter.png");
+  display: block;
+  position: absolute;
+  right: 132px;
+  top: 12px;
+}
+/* line 86, people.scss */
+#stacks-people .top-header .search-banner input {
+  width: 100%;
+  height: 38px;
+  padding-left: 38px;
+  border: none;
+  font-style: italic;
+}
+/* line 94, people.scss */
+#stacks-people .top-header .view-type {
+  width: 6%;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 119, people.scss */
+#stacks-people .middle-content .spmenu {
+  margin-top: 58px;
+  background: #ffffff;
+  position: fixed;
+}
+/* line 123, people.scss */
+#stacks-people .middle-content .spmenu .head-popup {
+  position: absolute;
+  top: 40px;
+}
+/* line 126, people.scss */
+#stacks-people .middle-content .spmenu .head-popup .search-input {
+  line-height: 32px;
+  width: 100%;
+  padding-left: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #E4E4E4;
+}
+/* line 134, people.scss */
+#stacks-people .middle-content .spmenu .head-popup .ico-search {
+  color: #DEDEDE;
+  font-size: 18px;
+  position: absolute;
+  top: 44px;
+  left: 22px;
+}
+/* line 141, people.scss */
+#stacks-people .middle-content .spmenu .head-popup .filter-types {
+  margin-top: 1px;
+}
+/* line 144, people.scss */
+#stacks-people .middle-content .spmenu .head-popup button {
+  font-weight: 300;
+}
+/* line 146, people.scss */
+#stacks-people .middle-content .spmenu .head-popup button.is_active {
+  text-decoration: underline;
+  font-weight: 900;
+}
+/* line 152, people.scss */
+#stacks-people .middle-content .spmenu.spmenu-open {
+  -moz-box-shadow: 10px 0px 30px #000;
+  -webkit-box-shadow: 10px 0px 30px #000;
+  box-shadow: 10px 0px 30px #000;
+}
+/* line 157, people.scss */
+#stacks-people .middle-content .spmenu h3 {
+  font-size: 20px;
+  padding: 0px 10px 10px 10px;
+  margin-top: -6px;
+}
+/* line 162, people.scss */
+#stacks-people .middle-content .spmenu h4 {
+  color: #000;
+}
+/* line 165, people.scss */
+#stacks-people .middle-content .spmenu a {
+  display: block;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+/* line 170, people.scss */
+#stacks-people .middle-content .spmenu a:hover {
+  background: #65CFF0;
+}
+/* line 173, people.scss */
+#stacks-people .middle-content .spmenu a:active {
+  background: #65CFF0;
+  color: #000;
+}
+/* line 177, people.scss */
+#stacks-people .middle-content .spmenu a span {
+  color: #000;
+}
+/* line 180, people.scss */
+#stacks-people .middle-content .spmenu a input {
+  margin: 5px 10px 0 0 !important;
+}
+/* line 185, people.scss */
+#stacks-people .middle-content .spmenu-vertical {
+  width: 450px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+/* line 190, people.scss */
+#stacks-people .middle-content .spmenu-vertical a,
+#stacks-people .middle-content .spmenu-vertical label {
+  padding: 0;
+}
+/* line 194, people.scss */
+#stacks-people .middle-content .spmenu-vertical hr {
+  clear: both;
+  position: absolute;
+  bottom: 0px;
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 201, people.scss */
+#stacks-people .middle-content .spmenu-vertical .menu-item-actions,
+#stacks-people .middle-content .spmenu-vertical .menu-item-edit-actions {
+  margin-top: 10px;
+}
+/* line 204, people.scss */
+#stacks-people .middle-content .spmenu-vertical .menu-item-actions a,
+#stacks-people .middle-content .spmenu-vertical .menu-item-edit-actions a {
+  display: inline;
+}
+/* line 207, people.scss */
+#stacks-people .middle-content .spmenu-vertical .menu-item-actions i,
+#stacks-people .middle-content .spmenu-vertical .menu-item-edit-actions i {
+  color: #FFF;
+}
+/* line 210, people.scss */
+#stacks-people .middle-content .spmenu-vertical .menu-item-actions .menu-item-action-separator,
+#stacks-people .middle-content .spmenu-vertical .menu-item-edit-actions .menu-item-action-separator {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  margin: 0 5px;
+}
+/* line 219, people.scss */
+#stacks-people .middle-content .spmenu-right {
+  right: -450px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 222, people.scss */
+#stacks-people .middle-content .spmenu-right a.spmenu-button {
+  right: 450px;
+  top: 10px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* line 233, people.scss */
+#stacks-people .middle-content .spmenu,
+#stacks-people .middle-content .spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 239, people.scss */
+#stacks-people .middle-content #components-list-block + div.popover {
+  min-width: 450px;
+  position: absolute;
+  top: 67px !important;
+  right: 0;
+  left: initial !important;
+  height: 100%;
+}
+/* line 247, people.scss */
+#stacks-people .middle-content .popover {
+  padding: 0;
+}
+/* line 249, people.scss */
+#stacks-people .middle-content .popover.bottom {
+  max-width: 290px !important;
+  margin-left: -112px;
+}
+/* line 252, people.scss */
+#stacks-people .middle-content .popover.bottom > .arrow {
+  left: 89%;
+}
+/* line 260, people.scss */
+#stacks-people .middle-content .popup-content {
+  padding: 0 !important;
+  max-width: inherit !important;
+}
+/* line 264, people.scss */
+#stacks-people .middle-content .team-block {
+  margin-top: 6px;
+  padding: 12px;
+}
+/* line 267, people.scss */
+#stacks-people .middle-content .team-block .content-block {
+  width: 100%;
+  padding: 0px 0px 24px 0px;
+}
+/* line 270, people.scss */
+#stacks-people .middle-content .team-block .content-block .title {
+  overflow: hidden;
+}
+/* line 272, people.scss */
+#stacks-people .middle-content .team-block .content-block .title h3 {
+  float: left;
+  padding-top: 4px;
+  margin: 0;
+  font-size: 28px;
+}
+/* line 278, people.scss */
+#stacks-people .middle-content .team-block .content-block .title .add_user_button {
+  float: right;
+}
+/* line 280, people.scss */
+#stacks-people .middle-content .team-block .content-block .title .add_user_button button {
+  background: #448aff;
+  padding: 0 20px;
+  line-height: 42px;
+  border: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+/* line 281, people.scss */
+#stacks-people .middle-content .team-block .content-block .title .add_user_button button i {
+  padding-right: 8px;
+}
+/* line 294, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container {
+  clear: both;
+}
+/* line 296, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container h4 {
+  margin-bottom: 24px;
+}
+/* line 299, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group {
+  margin: 18px 0 30px 0;
+  clear: both;
+}
+/* line 302, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group .active {
+  background: #ebf2ff;
+  border: 1px solid #448aff;
+}
+/* line 306, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group .active span.selected-ico {
+  display: block;
+}
+/* line 311, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 314, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li {
+  width: 274px;
+  height: 247px;
+  float: left;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 26px 26px 0;
+  text-align: center;
+  position: relative;
+}
+/* line 316, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li span.selected-ico {
+  display: none;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #448aff;
+  font-size: 24px;
+}
+/* line 323, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li span.selected-ico .fa-circle {
+  font-size: 18px;
+}
+/* line 330, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li:hover .additional-info .whover {
+  display: none !important;
+}
+/* line 333, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li:hover .additional-info .hover {
+  display: block !important;
+}
+/* line 346, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .user-name, #stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .user-email {
+  cursor: pointer;
+}
+/* line 349, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .label {
+  height: 28px;
+  float: right;
+  line-height: 25px;
+  margin: 14px 12px 0px 12px;
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  display: block;
+}
+/* line 358, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .label span {
+  padding: 9px 8px;
+  border-radius: 12px;
+}
+/* line 361, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .label span.gray {
+  color: #ffffff;
+  background: #d4d4d4;
+}
+/* line 365, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .label span.blue {
+  color: #ffffff;
+  background: #448aff;
+}
+/* line 369, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .label span.green {
+  color: #ffffff;
+  background: #58b754;
+}
+/* line 373, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .label span.magenta {
+  color: #ffffff;
+  background: #7a51a0;
+}
+/* line 379, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix {
+  clear: both;
+  color: #000000;
+}
+/* line 382, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .user-name {
+  font-size: 18px;
+  padding-top: 6px;
+}
+/* line 386, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .user-email {
+  font-size: 13px;
+}
+/* line 389, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .additional-info {
+  padding-top: 16px;
+  font-size: 12px;
+  position: relative;
+}
+/* line 390, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .additional-info .hover {
+  display: none;
+}
+/* line 396, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .additional-info a {
+  padding: 0 10px;
+  border-right: 1px solid #000000;
+}
+/* line 399, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .additional-info a:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+/* line 406, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .additional-info span.action {
+  padding-right: 14px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+/* line 408, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li .clearfix .additional-info span.action img {
+  border-radius: 0;
+  width: inherit;
+  height: inherit;
+}
+/* line 422, people.scss */
+#stacks-people .middle-content .team-block .content-block .content-container .users_group ul li img {
+  width: 114px;
+  height: 114px;
+  border-radius: 57px;
+}
+/* line 433, people.scss */
+#stacks-people .middle-content #slide-menu {
+  padding: 14px 6px;
+  -moz-box-shadow: 10px 14px 30px #000;
+  -webkit-box-shadow: 10px 14px 30px #000;
+  box-shadow: 10px 14px 30px #000;
+}
+/* line 438, people.scss */
+#stacks-people .middle-content #slide-menu .header {
+  overflow: hidden;
+  padding: 0 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 442, people.scss */
+#stacks-people .middle-content #slide-menu .header .button-close {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: url(/general/assets/img/cross.png);
+  cursor: pointer;
+}
+/* line 452, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_image {
+  float: left;
+}
+/* line 454, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_image img {
+  width: 114px;
+  height: 114px;
+  border-radius: 57px;
+}
+/* line 461, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_info {
+  float: left;
+  margin-left: 18px;
+}
+/* line 464, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_info .user_name {
+  padding-top: 10px;
+  font-size: 18px;
+  padding-top: 6px;
+}
+/* line 469, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_info .user_mail {
+  font-size: 13px;
+}
+/* line 472, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_info .add_button {
+  margin-top: 34px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 477, people.scss */
+#stacks-people .middle-content #slide-menu .header .user_info .add_button button {
+  background-color: #448aff;
+  border: 1px solid #ffffff;
+  line-height: 36px;
+  width: 242px;
+  text-align: center;
+  color: #FFFFFF;
+  float: right;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 491, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content {
+  padding: 0 14px !important;
+  overflow: auto;
+  max-height: 100%;
+}
+/* line 495, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list {
+  float: left;
+  width: 100%;
+}
+/* line 498, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .header-list {
+  line-height: 48px;
+  margin-bottom: 2px;
+  background: #ffffff;
+  color: #7f7f7f;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 507, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .wrapper-checkbox.sm label {
+  margin-top: 6px;
+}
+/* line 512, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list {
+  padding: 0;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  background: #FFFFFF;
+}
+/* line 514, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list li.stack_item {
+  clear: both;
+  height: 82px;
+  padding: 9px;
+  margin: 0;
+  border-bottom: 1px solid #eaeaea;
+}
+/* line 528, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list.selected {
+  background-color: #f4fcf4;
+}
+/* line 531, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-1, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-2, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-3, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-4, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-5, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-6, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-7, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-8, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-9, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-10, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-11, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .col-sm-12 {
+  height: 71px;
+  padding: 9px;
+}
+/* line 536, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-button button {
+  background: #FFFFFF;
+  color: #ebebeb;
+  width: 132px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  float: right;
+  margin-top: 5px;
+}
+/* line 550, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-check {
+  padding-left: 11px;
+  max-width: 42px;
+}
+/* line 554, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-container {
+  margin-top: 2px;
+}
+/* line 557, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-insights {
+  padding-top: 26px !important;
+}
+/* line 559, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-insights .red {
+  font-weight: bold;
+}
+/* line 562, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-insights .additional-button {
+  float: right;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  background-color: #448aff;
+  line-height: 23px;
+  width: 88px;
+  text-align: center;
+  border: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: -1px;
+}
+/* line 578, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .no-padding {
+  padding: 0;
+  height: initial;
+}
+/* line 582, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .ico-block {
+  margin-top: 11px;
+}
+/* line 584, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .ico-block .red {
+  color: #ee534f;
+}
+/* line 587, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .ico-block .green {
+  color: #58b754;
+}
+/* line 590, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .ico-block img {
+  margin: 4px 0 0 0px;
+  padding: 0;
+  display: block;
+}
+/* line 596, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .ico {
+  display: block;
+  float: left;
+  margin-right: 6px;
+  margin-top: 2px;
+}
+/* line 602, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .lock-ico {
+  width: 13px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-lock.png");
+}
+/* line 608, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .timer-ico {
+  width: 15px;
+  height: 17px;
+  background: url("/stacks/assets/img/ico/health-icon-timer.png");
+}
+/* line 613, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .pulse-ico {
+  width: 17px;
+  height: 14px;
+  background: url("/stacks/assets/img/ico/health-icon-pulse.png");
+  margin-top: 3px;
+}
+/* line 619, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-health .ico-value {
+  font-size: 16px;
+}
+/* line 624, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .stack-name, #stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .updates {
+  padding-top: 16px;
+  color: #51565f;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* line 631, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .title {
+  clear: both;
+  overflow: hidden;
+}
+/* line 634, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .title .platform {
+  width: 18px;
+  height: 18px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  display: block;
+  float: left;
+  margin: 2px 5px 0 0;
+}
+/* line 644, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .title .stack-name {
+  padding: 0;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 655, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list.selected .tags ul:after {
+  background: -moz-linear-gradient(left, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(244, 252, 244, 0) 0%, #f4fcf4 53%, #f4fcf4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f4fcf4',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 664, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .tags {
+  clear: both;
+  position: relative;
+}
+/* line 667, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .tags ul {
+  position: relative;
+  margin: 4px 0 0 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+/* line 668, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .tags ul:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 23px;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 53%, white 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 53%, white 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 53%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 690, people.scss */
+#stacks-people .middle-content #slide-menu .popup-content #stacks-side-list .cube.list .tags ul li {
+  line-height: 16px;
+  padding: 0 7px;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  font-weight: bold;
+  color: #51565f;
+  font-size: 10px;
+  margin-right: 2px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* line 712, people.scss */
+ul.popover-options {
+  margin: 0;
+  padding: 0;
+}
+/* line 715, people.scss */
+ul.popover-options .arrow {
+  display: none !important;
+}
+/* line 718, people.scss */
+ul.popover-options li {
+  padding: 14px 20px;
+  line-height: 10px;
+  cursor: pointer;
+}
+/* line 722, people.scss */
+ul.popover-options li:hover {
+  background: #f5f5f5;
+}
+/* line 725, people.scss */
+ul.popover-options li span {
+  color: #353535;
+}

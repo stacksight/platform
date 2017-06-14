@@ -1,0 +1,21 @@
+{
+    "name": "sapi",
+    "version": "0.0.1",
+    "description": "Some description of sapi",
+    "author": {
+        "name": "mean scaffold"
+    },
+    "mean": "0.4.3",
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    },
+    "scripts": {
+        "postinstall": "bower install"
+    },
+    "dependencies": {
+        "path": "latest",
+        "request": "latest"
+    },
+    "license": "MIT"
+}

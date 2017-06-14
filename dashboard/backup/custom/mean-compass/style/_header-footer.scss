@@ -1,0 +1,106 @@
+@import "mean-compass/sass/base";
+@mixin headerFooter($sideBarWidth, $displayMenuIcon, $marginLogo) {
+    .navbar {
+        background-color: $white;
+        border: none;
+        border-bottom: none;
+        .page-header {
+            .logo {
+                background: $white;
+                width: 190px;
+                height: $headerHeight;
+                margin-left: $marginLogo;
+                .brand {
+                    line-height: $headerHeight;
+                    width: 100%;
+                    text-align: center;
+                    display: inline-block;
+                    background-image: url("/system/assets/img/logo/logo_white.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 100%;
+                }
+            }
+            .account {
+                float: right;
+                ul {
+                    li {
+                        a {
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            font-size: 0.8em;
+                            &.dropdown-toggle {
+                                text-transform: capitalize;
+                                background: transparent;
+                                color: #5e5e5e;
+                                font-size: 1em;
+                                &:hover,
+                                &:active {
+                                    color: #5e5e5e;
+                                }
+                            }
+                        }
+                    }
+                    &.dropdown-menu {
+                        li {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub-header {
+        background: white;
+        /*padding: $mainContentPadding;*/
+        .title {
+            font-size: 2.5em;
+        }
+    }
+}
+
+.navbar {
+    position: fixed;
+    height: $headerHeight;
+    min-height: $headerHeight;
+    .page-header {
+        padding: 0;
+        width: $networkWidth;
+        margin: 0 auto;
+        height: 100%;
+        .inner {
+            height: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            .account {
+                height: 100%;
+                .text-edit {
+                    padding: 0;
+                }
+            }
+            .navbar-nav {
+                height: 100%;
+                li {
+                    a {
+                        &:focus,
+                        &:hover {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 3000px) {
+    @include headerFooter($sideBarWidth: $sideBarWidth, $displayMenuIcon: none, $marginLogo: 0);
+}
+
+@media screen and (max-width: 1024px) {
+    @include headerFooter($sideBarWidth: $sideBar1024Width, $displayMenuIcon: none, $marginLogo: 0);
+}
+
+@media screen and (max-width: 480px) {
+    @include headerFooter($sideBarWidth: $sideBar1024Width, $displayMenuIcon: inline-block, $marginLogo: 20px);
+}
