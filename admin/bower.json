@@ -1,0 +1,34 @@
+{
+    "name": "mean",
+    "dependencies": {
+        "jquery": "latest",
+        "angular": "latest",
+        "angular-resource": "latest",
+        "angular-cookies": "latest",
+        "angular-mocks": "latest",
+        "angular-route": "latest",
+        "bootstrap": "latest",
+        "angular-bootstrap": "latest",
+        "angular-ui-router": "latest",
+        "json3": "latest",
+        "es5-shim": "latest",
+        "angular-sanitize": "latest",
+        "angular-animate": "latest",
+        "angular-touch": "latest",
+        "font-awesome": "latest",
+        "oclazyload": "latest",
+        "angular-loading-bar": "latest",
+        "angular-toggle-switch": "latest",
+        "metisMenu": "latest",
+        "angular-chart.js": "latest",
+        "web-bootstrap": "./node_modules/meanio/resources/web-bootstrap.js"
+    },
+    "devDependencies": {
+        "angular-mocks": "latest",
+        "angular-scenario": "latest"
+    },
+    "resolutions": {
+        "bootstrap": "latest"
+    },
+    "appPath": "app"
+}

@@ -1,0 +1,33 @@
+{
+    "core": {
+        "css": {
+            "bower_components/build/css/dist.min.css": [
+                "bower_components/metisMenu/dist/metisMenu.min.css",
+                "bower_components/angular-loading-bar/build/loading-bar.min.css",
+                "bower_components/font-awesome/css/font-awesome.min.css",
+                "bower_components/angular-chart.js/dist/angular-chart.css"
+            ]
+        },
+        "js": {
+            "bower_components/build/js/dist.min.js": [
+                "bower_components/jquery/dist/jquery.min.js",
+                "bower_components/angular/angular.min.js",
+                "bower_components/bootstrap/dist/js/bootstrap.min.js",
+
+                "bower_components/angular-mocks/angular-mocks.js",
+                "bower_components/angular-cookies/angular-cookies.min.js",
+                "bower_components/angular-resource/angular-resource.min.js",
+                "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+                "bower_components/json3/lib/json3.min.js",
+                "bower_components/oclazyload/dist/ocLazyLoad.min.js",
+                "bower_components/angular-loading-bar/build/loading-bar.min.js",
+
+                "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+                "bower_components/metisMenu/dist/metisMenu.min.js",
+                "bower_components/Chart.js/Chart.min.js",
+                "bower_components/angular-chart.js/dist/angular-chart.min.js",
+                "bower_components/web-bootstrap/index.js"
+            ]
+        }
+    }
+}

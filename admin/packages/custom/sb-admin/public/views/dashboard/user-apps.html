@@ -1,0 +1,66 @@
+<div class="row" ng-init="vmu.find(); vmu.apps();">
+    <div class="col-lg-12" ng-show="vmu.user">
+        <h1 class="page-header">{{vmu.user.name}}'s apps</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Owner ({{vmu.apps.owner.length}})
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="panel-group" id="accordionO">
+                    <div class="panel panel-default" ng-repeat="app in vmu.apps.owner">
+                        <div class="panel-heading" style="background-color:rgba(245, 245, 245, 0.26)">
+                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionO" href="#collapseO{{$index}}">{{app.name}} ({{vmu.stacks[app._id].owner.length + vmu.stacks[app._id].collaborator.length}})</a>
+                                        </h4>
+                        </div>
+                        <div id="collapseO{{$index}}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="nav nav-second-level">
+                                    <li ng-repeat="stack in vmu.stacks[app._id].owner" class="text-primary">{{stack.name}}</li>
+                                    <li ng-repeat="stack in vmu.stacks[app._id].collaborator" class="text-success">{{stack.name}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Collaborator ({{vmu.apps.collaborator.length}})
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="panel-group" id="accordionC">
+                    <div class="panel panel-default" ng-repeat="app in vmu.apps.collaborator">
+                        <div class="panel-heading" style="background-color:rgba(245, 245, 245, 0.26)">
+                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordionC" href="#collapseC{{$index}}">{{app.name}} ({{vmu.stacks[app._id].owner.length + vmu.stacks[app._id].collaborator.length}})</a>
+                                        </h4>
+                        </div>
+                        <div id="collapseC{{$index}}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="nav nav-second-level">
+                                    <li ng-repeat="stack in vmu.stacks[app._id].owner" class="text-primary">{{stack.name}}</li>
+                                    <li ng-repeat="stack in vmu.stacks[app._id].collaborator" class="text-success">{{stack.name}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+    </div>
+    <!-- /.row -->
