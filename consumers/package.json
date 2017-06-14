@@ -1,0 +1,12 @@
+{
+  "name": "stacksight-consumers",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "busmq": "latest",
+    "elasticsearch": "latest",
+    "pa11y": "latest",
+    "lodash": "latest",
+    "googleapis": "latest"
+  }
+}
