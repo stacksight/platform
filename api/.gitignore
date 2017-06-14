@@ -1,0 +1,7 @@
+node_modules
+access
+/config/env/*
+!/config/env/all.js
+!/config/env/common.js
+
+.idea/

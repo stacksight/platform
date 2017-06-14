@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+var debug = require('debug')('mean-network-api');
+var app = require('../app');
+var config = require('../config');
+var mongoose = require('mongoose');
+var sockets = require('../providers/socket');
+
+mongoose.connect(config.db);
+
+require('../config/application')(app);
+
+// Move this at some point
+app.use(function(req,res,next) {
+	req.gitlab = app.get('gitlab');
+	next();
+});
+
+console.log(app.get('port'));
+var server = app.listen(app.get('port'));
+
+var io = require('socket.io')(server);
+
+io.on('connection', function(socket) {
+	socket.emit('user joined', {success: true});
+    socket.on('user joined token', function(data) {
+    	sockets._new(data.id, socket);
+    });
+});
